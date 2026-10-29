@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200" height="330" viewBox="0 0 1200 330"
+     role="img" aria-labelledby="title desc">
+  <title id="title">Конвейер сборки и оптимизации Tachyon Lists</title>
+  <desc id="desc">Четыре этапа работы build_lists.py: параллельная загрузка из 8 апстримов, декомпиляция и слияние в RuleBucket, сжатие дерева доменов и подсетей для роутеров с малой памятью, компиляция бинарных наборов .srs и публикация каталога.</desc>
+
+  <defs>
+    <linearGradient id="pipe-bg" x1="0" y1="0" x2="1200" y2="330" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#080B12"/>
+      <stop offset="100%" stop-color="#0C121E"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="330" rx="20" fill="url(#pipe-bg)"/>
+  <rect x="1" y="1" width="1198" height="328" rx="19" fill="none" stroke="#1E293B" stroke-width="1.5"/>
+
+  <!-- Section Title -->
+  <text x="40" y="46" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="26" font-weight="800">Архитектура конвейера сборки (build_lists.py · каждые 6 часов)</text>
+  <text x="40" y="74" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18">От разрозненных внешних баз к компактным дедуплицированным правилам без избыточной нагрузки на ОЗУ роутера</text>
+
+  <!-- Step 1 -->
+  <g transform="translate(36, 98)">
+    <rect x="0" y="0" width="264" height="200" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="1.2"/>
+    <rect x="0" y="0" width="264" height="6" rx="3" fill="#38BDF8"/>
+    <text x="18" y="36" fill="#38BDF8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18" font-weight="700">ЭТАП 01 · FETCH &amp; DLC</text>
+    <text x="18" y="66" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="21" font-weight="700">Сбор в 16 потоков</text>
+    <text x="18" y="96" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">Скачивание .srs, .json,</text>
+    <text x="18" y="120" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">.txt и .lst с ретраями.</text>
+    <text x="18" y="150" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">Рекурсивное раскрытие</text>
+    <text x="18" y="174" fill="#38BDF8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">include: и @attr</text>
+  </g>
+
+  <!-- Arrow 1 -> 2 -->
+  <path d="M 304 198 L 320 198" stroke="#475569" stroke-width="2"/>
+  <polygon points="317,193 325,198 317,203" fill="#475569"/>
+
+  <!-- Step 2 -->
+  <g transform="translate(326, 98)">
+    <rect x="0" y="0" width="264" height="200" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="1.2"/>
+    <rect x="0" y="0" width="264" height="6" rx="3" fill="#818CF8"/>
+    <text x="18" y="36" fill="#818CF8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18" font-weight="700">ЭТАП 02 · DECOMPILE</text>
+    <text x="18" y="66" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="21" font-weight="700">Слияние RuleBucket</text>
+    <text x="18" y="96" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">Декомпиляция чужих .srs</text>
+    <text x="18" y="120" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">через sing-box compiler.</text>
+    <text x="18" y="150" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">Наложение локальных</text>
+    <text x="18" y="174" fill="#A5B4FC" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">custom/{domains,exclude}</text>
+  </g>
+
+  <!-- Arrow 2 -> 3 -->
+  <path d="M 594 198 L 610 198" stroke="#475569" stroke-width="2"/>
+  <polygon points="607,193 615,198 607,203" fill="#475569"/>
+
+  <!-- Step 3 -->
+  <g transform="translate(616, 98)">
+    <rect x="0" y="0" width="264" height="200" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="1.2"/>
+    <rect x="0" y="0" width="264" height="6" rx="3" fill="#A855F7"/>
+    <text x="18" y="36" fill="#C084FC" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18" font-weight="700">ЭТАП 03 · RAM PRUNING</text>
+    <text x="18" y="66" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="21" font-weight="700">Сжатие дерева и сети</text>
+    <text x="18" y="96" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">Удаление поддоменов,</text>
+    <text x="18" y="120" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">покрытых суффиксом.</text>
+    <text x="18" y="150" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">Агрегация подсетей</text>
+    <text x="18" y="174" fill="#D8B4FE" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">collapse_addresses()</text>
+  </g>
+
+  <!-- Arrow 3 -> 4 -->
+  <path d="M 884 198 L 900 198" stroke="#475569" stroke-width="2"/>
+  <polygon points="897,193 905,198 897,203" fill="#475569"/>
+
+  <!-- Step 4 -->
+  <g transform="translate(906, 98)">
+    <rect x="0" y="0" width="258" height="200" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="1.2"/>
+    <rect x="0" y="0" width="258" height="6" rx="3" fill="#10B981"/>
+    <text x="18" y="36" fill="#34D399" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18" font-weight="700">ЭТАП 04 · ARTIFACTS</text>
+    <text x="18" y="66" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="21" font-weight="700">Выпуск 5 форматов</text>
+    <text x="18" y="96" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">Компиляция .srs v3 без</text>
+    <text x="18" y="120" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">ip_cidr в доменных базах.</text>
+    <text x="18" y="150" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">Хеши SHA-256 и индекс</text>
+    <text x="18" y="174" fill="#6EE7B7" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">release/catalog.json</text>
+  </g>
+</svg>
