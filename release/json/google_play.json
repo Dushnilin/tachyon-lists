@@ -1,0 +1,45 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain_suffix": [
+        "android-safebrowsing.google.com",
+        "android.clients.google.com",
+        "app-measurement.com",
+        "beacons.gvt2.com",
+        "connectivitycheck.gstatic.com",
+        "digitalassetlinks.googleapis.com",
+        "firebaseinstallations.googleapis.com",
+        "google-ohttp-relay-safebrowsing.fastly-edge.com",
+        "googleads.g.doubleclick.net",
+        "googleplay.com",
+        "gvt1.com",
+        "infinitedata-pa.googleapis.com",
+        "lh3.googleusercontent.com",
+        "mtalk.google.com",
+        "ota-cache1.googlezip.net",
+        "ota-cache2.googlezip.net",
+        "ota-cache3.googlezip.net",
+        "ota.googlezip.net",
+        "play-apps-features.googleusercontent.com",
+        "play-fe.googleapis.com",
+        "play-games.googleusercontent.com",
+        "play-lh.googleusercontent.com",
+        "play.google.com",
+        "play.googleapis.com",
+        "playconsole.static.usercontent.goog",
+        "playgateway-pa.googleapis.com",
+        "playstoregatewayadapter-pa.googleapis.com",
+        "prod-lt-playstoregatewayadapter-pa.googleapis.com",
+        "quake-pa.googleapis.com",
+        "safebrowsing.googleapis.com",
+        "voledevice-pa.googleapis.com",
+        "xn--ngstr-lra8j.com"
+      ],
+      "domain_regex": [
+        "^r+[0-9]+(---|\\.)sn-(2x3|ni5|j5o)\\w{5}\\.googlevideo\\.com$",
+        "^r+[0-9]+(---|\\.)sn-(2x3|ni5|j5o)\\w{5}\\.xn--ngstr-lra8j\\.com$"
+      ]
+    }
+  ]
+}

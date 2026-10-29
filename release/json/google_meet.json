@@ -1,0 +1,18 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain_suffix": [
+        "hangouts.googleapis.com",
+        "meet.google.com",
+        "meetings.clients6.google.com",
+        "meetings.googleapis.com"
+      ],
+      "ip_cidr": [
+        "74.125.247.128/32",
+        "74.125.250.0/24",
+        "142.250.82.0/24"
+      ]
+    }
+  ]
+}

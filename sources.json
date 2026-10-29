@@ -1,0 +1,839 @@
+{
+  "version": 1,
+  "repository": "https://github.com/Dushnilin/tachyon-lists",
+  "upstreams": {
+    "roscomvpn_geosite_data": "https://raw.githubusercontent.com/hydraponique/roscomvpn-geosite/master/data",
+    "roscomvpn_geosite_srs": "https://raw.githubusercontent.com/hydraponique/roscomvpn-geosite/master/release/sing-box",
+    "roscomvpn_geoip_srs": "https://raw.githubusercontent.com/hydraponique/roscomvpn-geoip/master/release/sing-box",
+    "runetfreedom_geosite_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite",
+    "runetfreedom_geoip_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geoip",
+    "itdoginfo_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download",
+    "itdoginfo_raw": "https://raw.githubusercontent.com/itdoginfo/allow-domains/refs/heads/main",
+    "metacubex_geosite": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite",
+    "metacubex_geoip": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip"
+  },
+  "lists": [
+    {
+      "id": "russia_inside",
+      "group": "regional",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Россия (внутри) — сводный реестр заблокированных и ограниченных в РФ ресурсов",
+      "description": "Главный сводный список обхода блокировок внутри России: объединяет домены из реестра РКН, списки Re:filter, Antifilter и популярные зарубежные сервисы, закрывшие доступ для российских IP.",
+      "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/russia_inside.srs",
+      "sources": [
+        { "type": "srs", "url": "{itdoginfo_srs}/russia_inside.srs" },
+        { "type": "srs", "url": "{roscomvpn_geosite_srs}/category-geoblock-ru.srs" }
+      ]
+    },
+    {
+      "id": "geoblock",
+      "group": "regional",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Геоблок — зарубежные сервисы, закрывшие доступ с российских IP",
+      "description": "Единая база из 150+ иностранных платформ, SaaS, банков и облаков, возвращающих ошибку 403 / Unavailable in your region из РФ: PayPal, Wise, Revolut, Notion, Canva, Trello, Jira, Atlassian, Zoom, Intel, Dell, Broadcom, VMware, Coursera, Udemy, JetBrains, GitLab, Adobe, Autodesk, Grammarly, Medium, Docker, DigiCert и др.",
+      "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/geoblock.srs",
+      "sources": [
+        { "type": "srs", "url": "{itdoginfo_srs}/geoblock.srs" },
+        { "type": "srs", "url": "{roscomvpn_geosite_srs}/category-geoblock-ru.srs" }
+      ]
+    },
+    {
+      "id": "block",
+      "group": "regional",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Реестр РКН (прямые блокировки) — домены из выгрузки Роскомнадзора",
+      "description": "Сайты и сервисы, официально внесённые в единый реестр запрещённых ресурсов Роскомнадзора и блокируемые на ТСПУ провайдеров.",
+      "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/block.srs",
+      "sources": [
+        { "type": "srs", "url": "{itdoginfo_srs}/block.srs" }
+      ]
+    },
+    {
+      "id": "ru_blocked",
+      "group": "regional",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Реестр РКН и Антизапрет (очищенный) — актуальные заблокированные домены",
+      "description": "Очищенный и дедуплицированный список реально действующих заблокированных в РФ доменов (объединение Антизапрета и выгрузки РКН без мёртвых и мусорных доменов).",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-ru-blocked.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-ru-blocked.srs" }
+      ]
+    },
+    {
+      "id": "ru_blocked_all",
+      "group": "regional",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Реестр РКН (полный) — все заблокированные домены, поддомены и зеркала",
+      "description": "Полная нефильтрованная выгрузка всех доменов, поддоменов и зеркал из реестра блокировок РФ, включая региональные ограничения и блокировки ТСПУ.",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-ru-blocked-all.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-ru-blocked-all.srs" }
+      ]
+    },
+    {
+      "id": "antifilter",
+      "group": "regional",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Antifilter Community — народный список обхода блокировок и ТСПУ",
+      "description": "Курируемый сообществом Antifilter.download список доменов и сервисов, заблокированных РКН или замедляемых оборудованием ТСПУ в России.",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-antifilter-download-community.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-antifilter-download-community.srs" }
+      ]
+    },
+    {
+      "id": "refilter",
+      "group": "regional",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Re:filter — выверенный список блокировок и геоблока без лишних доменов",
+      "description": "Тщательно модерируемый проект Re:filter: включает проверенные домены заблокированных ресурсов и западных сервисов с геоблоком без избыточных правил.",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-refilter.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-refilter.srs" }
+      ]
+    },
+    {
+      "id": "russia_outside",
+      "group": "regional",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Россия (снаружи) — сервисы РФ для доступа из-за рубежа",
+      "description": "Российские банки, Госуслуги, маркетплейсы (Ozon, Wildberries), онлайн-кинотеатры (Кинопоиск, Иви, Wink, Okko) и госсайты, не открывающиеся с зарубежных IP-адресов.",
+      "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/russia_outside.srs",
+      "sources": [
+        { "type": "srs", "url": "{itdoginfo_srs}/russia_outside.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-ru-available-only-inside.srs" }
+      ]
+    },
+    {
+      "id": "ukraine_inside",
+      "group": "regional",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Украина (внутри) — ресурсы с ограниченным доступом в Украине",
+      "description": "Сайты, соцсети, почтовые и медийные сервисы, доступ к которым ограничен на территории Украины.",
+      "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/ukraine_inside.srs",
+      "sources": [
+        { "type": "srs", "url": "{itdoginfo_srs}/ukraine_inside.srs" }
+      ]
+    },
+    {
+      "id": "ru_whitelist",
+      "group": "direct",
+      "kind": "domains",
+      "recommended_action": "direct",
+      "title": "Белый список РФ (Direct) — Госуслуги, банки, маркетплейсы, капчи и госсайты",
+      "description": "Критически важные российские сервисы, которые нельзя пускать через VPN: Госуслуги, ФНС (nalog.ru), Честный ЗНАК, Мос.ру, Сбербанк, Т-Банк, Альфа-Банк, ВТБ, Ozon, Wildberries, Авито, Яндекс, VK, РЖД, корневые сертификаты и проверочные домены. Направляйте НАПРЯМУЮ (Direct).",
+      "fallback_srs": "https://raw.githubusercontent.com/hydraponique/roscomvpn-geosite/master/release/sing-box/whitelist.srs",
+      "sources": [
+        { "type": "srs", "url": "{roscomvpn_geosite_srs}/whitelist.srs" }
+      ]
+    },
+    {
+      "id": "ru_domains",
+      "group": "direct",
+      "kind": "domains",
+      "recommended_action": "direct",
+      "title": "Рунет и СНГ (Direct) — доменные зоны .ru, .рф, .su, .by, .kz и компании РФ",
+      "description": "Все национальные доменные зоны России и СНГ (.ru, .рф, .su, .рус, .москва, .дети, .татар, .by, .бел, .kz, .қаз), а также международные домены российских компаний (Яндекс, VK, Mail.ru, Kaspersky, 1С, 2ГИС, Rutube). Направляйте НАПРЯМУЮ (Direct).",
+      "fallback_srs": "https://raw.githubusercontent.com/hydraponique/roscomvpn-geosite/master/release/sing-box/category-ru.srs",
+      "sources": [
+        { "type": "srs", "url": "{roscomvpn_geosite_srs}/category-ru.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-category-ru.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/category-ru.json" }
+      ]
+    },
+    {
+      "id": "ru_only_inside",
+      "group": "direct",
+      "kind": "domains",
+      "recommended_action": "direct",
+      "title": "Только из РФ (Direct) — госпорталы, банки и сервисы, блокирующие VPN IP",
+      "description": "Российские государственные порталы, банки, суды, ЕМИАС, региональные сервисы ЖКХ и операторы связи, которые жёстко блокируют вход с любых зарубежных и серверных IP-адресов. Направляйте строго НАПРЯМУЮ (Direct).",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-ru-available-only-inside.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-ru-available-only-inside.srs" }
+      ]
+    },
+    {
+      "id": "push",
+      "group": "direct",
+      "kind": "domains",
+      "recommended_action": "direct",
+      "title": "Push-уведомления (Direct) — Apple APNs, Google FCM, Huawei, Xiaomi, Samsung",
+      "description": "Серверы доставки мобильных и системных push-уведомлений: Apple APNs (push.apple.com), Google FCM (mtalk.google.com, fcm.googleapis.com), Huawei Push, Xiaomi MiPush, Samsung Push и Windows WNS. Направляйте НАПРЯМУЮ (Direct) для мгновенной доставки уведомлений и экономии заряда батареи.",
+      "fallback_srs": "https://raw.githubusercontent.com/hydraponique/roscomvpn-geosite/master/release/sing-box/push.srs",
+      "sources": [
+        { "type": "srs", "url": "{roscomvpn_geosite_srs}/push.srs" }
+      ]
+    },
+    {
+      "id": "ai_all",
+      "group": "ai",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Нейросети и ИИ (все) — OpenAI, Claude, Gemini, Grok, Perplexity, Cursor, Midjourney",
+      "description": "Единый полный список всех зарубежных ИИ-сервисов, закрывших доступ из РФ: OpenAI (ChatGPT, Sora), Anthropic (Claude), Google (Gemini, AI Studio, NotebookLM), xAI (Grok), Perplexity, Microsoft Copilot, GitHub Copilot, Cursor, Windsurf, Codeium, Midjourney, ElevenLabs, Runway, Suno, Udio, Hugging Face, Replicate, Poe, OpenRouter, DeepSeek и Groq.",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-category-ai-!cn.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-category-ai-!cn.srs" },
+        { "type": "srs", "url": "{roscomvpn_geosite_srs}/google-deepmind.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/category-ai-!cn.json" }
+      ]
+    },
+    {
+      "id": "openai",
+      "group": "ai",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "OpenAI — ChatGPT, Sora, GPT API, o1/o3 и CDN-ресурсы",
+      "description": "Все домены и поддомены OpenAI: chatgpt.com, chat.openai.com, sora.com, platform.openai.com, api.openai.com, oaistatic.com, oaiusercontent.com и шлюзы авторизации.",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-openai.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-openai.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/openai.json" }
+      ]
+    },
+    {
+      "id": "anthropic",
+      "group": "ai",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Anthropic — Claude AI, Claude Code, Console и API",
+      "description": "Домены нейросети Claude и инструментов разработки Anthropic: claude.ai, anthropic.com, console.anthropic.com, api.anthropic.com, claudemcpclient.com и CDN.",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-anthropic.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-anthropic.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/anthropic.json" }
+      ]
+    },
+    {
+      "id": "google_ai",
+      "group": "ai",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Google AI — Gemini, AI Studio, NotebookLM, DeepMind и Vertex AI",
+      "description": "Все домены ИИ-экосистемы Google: gemini.google.com, aistudio.google.com, notebooklm.google.com, makersuite.google.com, deepmind.google, bard.google.com и generativelanguage.googleapis.com.",
+      "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/google_ai.srs",
+      "sources": [
+        { "type": "srs", "url": "{itdoginfo_srs}/google_ai.srs" },
+        { "type": "srs", "url": "{roscomvpn_geosite_srs}/google-deepmind.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-google-gemini.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/google-gemini.json" }
+      ]
+    },
+    {
+      "id": "xai",
+      "group": "ai",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "xAI — нейросеть Grok (grok.com, x.ai и API)",
+      "description": "Домены искусственного интеллекта xAI Илона Маска: grok.com, x.ai, console.x.ai, api.x.ai и медиа-CDN Grok.",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-xai.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-xai.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/xai.json" }
+      ]
+    },
+    {
+      "id": "youtube",
+      "group": "media",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "YouTube — видеосервис, YouTube Music, Studio и кэш-серверы (googlevideo / ytimg)",
+      "description": "Полный набор доменов YouTube: youtube.com, youtu.be, googlevideo.com (видеопотоки GGC), ytimg.com (превью), ggpht.com (аватарки каналов), youtubei.googleapis.com и YouTube Music.",
+      "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/youtube.srs",
+      "sources": [
+        { "type": "srs", "url": "{itdoginfo_srs}/youtube.srs" },
+        { "type": "srs", "url": "{roscomvpn_geosite_srs}/youtube.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-youtube.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/youtube.json" }
+      ]
+    },
+    {
+      "id": "twitch",
+      "group": "media",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Twitch — стриминговая платформа, видеопотоки (ttvnw.net) и чат",
+      "description": "Все домены платформы Twitch (twitch.tv, ttvnw.net, jtvnw.net, live-video.net). Для снятия лимита 720p и отключения рекламы без проксирования самого видеопотока используйте список «Twitch (без рекламы и 1080p+)».",
+      "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/twitch.srs",
+      "sources": [
+        { "type": "srs", "url": "{roscomvpn_geosite_srs}/twitch.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-twitch.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/twitch.json" }
+      ]
+    },
+    {
+      "id": "twitch_ads",
+      "group": "media",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Twitch (без рекламы и 1080p+) — серверы манифестов качества видео и рекламы",
+      "description": "Узкий список серверов выбора качества потока и рекламных вставок Twitch (usher.ttvnw.net, gql.twitch.tv, edge.ads.twitch.tv). Направьте его в Прокси (оставив остальной Twitch напрямую): видеопоток пойдёт напрямую без нагрузки на VPN, но пропадёт реклама и вернётся качество 1080p60 / 1440p!",
+      "fallback_srs": "https://raw.githubusercontent.com/hydraponique/roscomvpn-geosite/master/release/sing-box/twitch-ads.srs",
+      "sources": [
+        { "type": "srs", "url": "{roscomvpn_geosite_srs}/twitch-ads.srs" }
+      ]
+    },
+    {
+      "id": "spotify",
+      "group": "media",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Spotify — музыкальный стриминг, аудио-CDN и клиентские API",
+      "description": "Все домены Spotify: spotify.com, scdn.co, spotifycdn.com, audio-ak-spotify-com.akamaized.net, psavn.com и серверы авторизации приложений.",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-spotify.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-spotify.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/spotify.json" }
+      ]
+    },
+    {
+      "id": "netflix",
+      "group": "media",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Netflix — онлайн-кинотеатр, видеопотоки (nflxvideo.net) и статика",
+      "description": "Домены видеосервиса Netflix: netflix.com, nflxvideo.net, nflximg.net, nflxso.net, nflxext.com и проверка скорости fast.com.",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-netflix.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-netflix.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/netflix.json" }
+      ]
+    },
+    {
+      "id": "tiktok",
+      "group": "media",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "TikTok — приложение, веб-версия и медиа-CDN ByteDance",
+      "description": "Домены TikTok и ByteDance (tiktok.com, tiktokv.com, tiktokcdn.com, byteoversea.com, musical.ly) для просмотра новых видео и стримов без региональных ограничений в РФ.",
+      "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/tiktok.srs",
+      "sources": [
+        { "type": "srs", "url": "{itdoginfo_srs}/tiktok.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-tiktok.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/tiktok.json" }
+      ]
+    },
+    {
+      "id": "hdrezka",
+      "group": "media",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "HDRezka — онлайн-кинотеатр, видео-балансеры (Voidboost) и актуальные зеркала",
+      "description": "Домены, зеркала и CDN видеопотоков онлайн-кинотеатра HDRezka (rezka.ag, hdrezka.ag, voidboost.cc, stream.voidboost.cc и связанные балансеры).",
+      "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/hdrezka.srs",
+      "sources": [
+        { "type": "srs", "url": "{itdoginfo_srs}/hdrezka.srs" }
+      ]
+    },
+    {
+      "id": "anime",
+      "group": "media",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Аниме — Shikimori, AnimeGO, Jut.su, Kodik, Anilibria, Crunchyroll",
+      "description": "Популярные аниме-порталы, базы данных и видеоплееры: Shikimori, AnimeGO, Jut.su, YummyAnime, Anilibria, Kodik, Sibnet, Crunchyroll и MyAnimeList.",
+      "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/anime.srs",
+      "sources": [
+        { "type": "srs", "url": "{itdoginfo_srs}/anime.srs" }
+      ]
+    },
+    {
+      "id": "pinterest",
+      "group": "media",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Pinterest — фотохостинг, пины и серверы изображений (pinimg.com)",
+      "description": "Домены визуальной соцсети Pinterest: pinterest.com, pin.it и CDN картинок i.pinimg.com / s.pinimg.com (устраняет проблему бесконечной загрузки картинок на ТСПУ).",
+      "fallback_srs": "https://raw.githubusercontent.com/hydraponique/roscomvpn-geosite/master/release/sing-box/pinterest.srs",
+      "sources": [
+        { "type": "srs", "url": "{roscomvpn_geosite_srs}/pinterest.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-pinterest.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/pinterest.json" }
+      ]
+    },
+    {
+      "id": "discord",
+      "group": "social",
+      "kind": "subnets",
+      "recommended_action": "proxy",
+      "title": "Discord — мессенджер, чаты, CDN вложений и голосовые шлюзы",
+      "description": "Все домены и подсети Discord: discord.com, discord.gg, discordapp.com, discordapp.net, discord.media и голосовые серверы.",
+      "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/discord.srs",
+      "sources": [
+        { "type": "srs", "url": "{itdoginfo_srs}/discord.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-discord.srs" },
+        { "type": "plain_subnets", "url": "{itdoginfo_raw}/Subnets/IPv4/discord.lst" },
+        { "type": "plain_subnets", "url": "{itdoginfo_raw}/Subnets/IPv6/discord.lst" }
+      ]
+    },
+    {
+      "id": "telegram",
+      "group": "social",
+      "kind": "mixed",
+      "recommended_action": "proxy",
+      "title": "Telegram — мессенджер, веб-клиенты, Telegraph и все датацентры (DC1–DC5)",
+      "description": "Домены (telegram.org, t.me, web.telegram.org, telegra.ph, telesco.pe) и официальные IPv4/IPv6-подсети всех датацентров Telegram для работы звонков, кружочков и быстрой загрузки медиа.",
+      "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/telegram.srs",
+      "sources": [
+        { "type": "srs", "url": "{itdoginfo_srs}/telegram.srs" },
+        { "type": "srs", "url": "{roscomvpn_geosite_srs}/telegram.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-telegram.srs" },
+        { "type": "srs", "url": "{runetfreedom_geoip_srs}/geoip-telegram.srs" },
+        { "type": "plain_subnets", "url": "{itdoginfo_raw}/Subnets/IPv4/telegram.lst" },
+        { "type": "plain_subnets", "url": "{itdoginfo_raw}/Subnets/IPv6/telegram.lst" }
+      ]
+    },
+    {
+      "id": "meta",
+      "group": "social",
+      "kind": "mixed",
+      "recommended_action": "proxy",
+      "title": "Meta — Instagram, Facebook, Threads, Messenger и медиа-серверы (fbcdn)",
+      "description": "Все домены и IP-подсети компании Meta: instagram.com, cdninstagram.com, facebook.com, fbcdn.net, threads.net и messenger.com (без WhatsApp).",
+      "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/meta.srs",
+      "sources": [
+        { "type": "srs", "url": "{itdoginfo_srs}/meta.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-meta.srs" },
+        { "type": "srs", "url": "{runetfreedom_geoip_srs}/geoip-facebook.srs" },
+        { "type": "plain_subnets", "url": "{itdoginfo_raw}/Subnets/IPv4/meta.lst" },
+        { "type": "plain_subnets", "url": "{itdoginfo_raw}/Subnets/IPv6/meta.lst" }
+      ]
+    },
+    {
+      "id": "twitter",
+      "group": "social",
+      "kind": "mixed",
+      "recommended_action": "proxy",
+      "title": "X (Twitter) — соцсеть, короткие ссылки t.co и медиа-CDN (twimg.com)",
+      "description": "Домены и IP-подсети соцсети X / Twitter: x.com, twitter.com, t.co, twimg.com, abs.twimg.com, pbs.twimg.com и video.twimg.com.",
+      "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/twitter.srs",
+      "sources": [
+        { "type": "srs", "url": "{itdoginfo_srs}/twitter.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-twitter.srs" },
+        { "type": "srs", "url": "{runetfreedom_geoip_srs}/geoip-twitter.srs" },
+        { "type": "plain_subnets", "url": "{itdoginfo_raw}/Subnets/IPv4/twitter.lst" },
+        { "type": "plain_subnets", "url": "{itdoginfo_raw}/Subnets/IPv6/twitter.lst" }
+      ]
+    },
+    {
+      "id": "steam",
+      "group": "gaming",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Steam — магазин, сообщество, инвентарь, чат и CDN загрузок Valve",
+      "description": "Все домены экосистемы Valve и Steam: store.steampowered.com, steamcommunity.com, steamstatic.com, steamusercontent.com, steamcontent.com и steamserver.net.",
+      "fallback_srs": "https://raw.githubusercontent.com/hydraponique/roscomvpn-geosite/master/release/sing-box/steam.srs",
+      "sources": [
+        { "type": "srs", "url": "{roscomvpn_geosite_srs}/steam.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-steam.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/steam.json" }
+      ]
+    },
+    {
+      "id": "epicgames",
+      "group": "gaming",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Epic Games — EGS, Fortnite, Unreal Engine, Rocket League и EasyAntiCheat",
+      "description": "Домены Epic Games Store, Fortnite, Rocket League, Fall Guys, движка Unreal Engine, Fab/Quixel и античита EasyAntiCheat (epicgames.com, unrealengine.com, fortnite.com, easy.ac).",
+      "fallback_srs": "https://raw.githubusercontent.com/hydraponique/roscomvpn-geosite/master/release/sing-box/epicgames.srs",
+      "sources": [
+        { "type": "srs", "url": "{roscomvpn_geosite_srs}/epicgames.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-epicgames.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/epicgames.json" }
+      ]
+    },
+    {
+      "id": "riot",
+      "group": "gaming",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Riot Games — Valorant, League of Legends, TFT, Riot Client и Vanguard",
+      "description": "Сервисы авторизации, обновлений и матчей Riot Games: riotgames.com, leagueoflegends.com, playvalorant.com, pvp.net и riotcdn.net.",
+      "fallback_srs": "https://raw.githubusercontent.com/hydraponique/roscomvpn-geosite/master/release/sing-box/riot.srs",
+      "sources": [
+        { "type": "srs", "url": "{roscomvpn_geosite_srs}/riot.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-riot.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/riot.json" }
+      ]
+    },
+    {
+      "id": "origin",
+      "group": "gaming",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "EA / Origin — EA App, Apex Legends, Battlefield, EA Sports FC и Sims",
+      "description": "Домены Electronic Arts: ea.com, origin.com, tnt-ea.com, apexlegends.com и серверы авторизации и загрузки игр EA App.",
+      "fallback_srs": "https://raw.githubusercontent.com/hydraponique/roscomvpn-geosite/master/release/sing-box/origin.srs",
+      "sources": [
+        { "type": "srs", "url": "{roscomvpn_geosite_srs}/origin.srs" }
+      ]
+    },
+    {
+      "id": "roblox",
+      "group": "gaming",
+      "kind": "mixed",
+      "recommended_action": "proxy",
+      "title": "Roblox — игровая платформа, лаунчер, Roblox Studio и игровые серверы",
+      "description": "Все домены и игровые IP-подсети Roblox: roblox.com, rbxcdn.com, rbx.com, robloxlabs.com и голосовой чат.",
+      "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/roblox.srs",
+      "sources": [
+        { "type": "srs", "url": "{itdoginfo_srs}/roblox.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-roblox.srs" },
+        { "type": "plain_subnets", "url": "{itdoginfo_raw}/Subnets/IPv4/roblox.lst" }
+      ]
+    },
+    {
+      "id": "supercell",
+      "group": "gaming",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Supercell — Brawl Stars, Clash Royale, Clash of Clans, Squad Busters",
+      "description": "Игровые серверы, домены авторизации Supercell ID и CDN обновлений для всех мобильных игр Supercell (блокируют вход с российских и белорусских IP).",
+      "fallback_srs": "https://raw.githubusercontent.com/ushan0v/sing-box-supercell-ruleset/main/supercell.srs",
+      "sources": [
+        { "type": "srs", "url": "https://raw.githubusercontent.com/ushan0v/sing-box-supercell-ruleset/main/supercell.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/supercell.json" }
+      ]
+    },
+    {
+      "id": "escapefromtarkov",
+      "group": "gaming",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Escape from Tarkov — лаунчер, сайт, API профилей и серверы Battlestate Games",
+      "description": "Домены игры Escape from Tarkov и EFT: Arena (escapefromtarkov.com, tarkov.com, battlestategames.com и CDN обновлений).",
+      "fallback_srs": "https://raw.githubusercontent.com/hydraponique/roscomvpn-geosite/master/release/sing-box/escapefromtarkov.srs",
+      "sources": [
+        { "type": "srs", "url": "{roscomvpn_geosite_srs}/escapefromtarkov.srs" }
+      ]
+    },
+    {
+      "id": "faceit",
+      "group": "gaming",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "FACEIT — киберспортивная платформа CS2, античит и матчмейкинг",
+      "description": "Домены платформы FACEIT (faceit.com, faceit-cdn.net) для открытия лобби, статистики и работы клиента без бесконечной загрузки.",
+      "fallback_srs": "https://raw.githubusercontent.com/hydraponique/roscomvpn-geosite/master/release/sing-box/faceit.srs",
+      "sources": [
+        { "type": "srs", "url": "{roscomvpn_geosite_srs}/faceit.srs" }
+      ]
+    },
+    {
+      "id": "apple",
+      "group": "tech",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Apple — App Store, iCloud, обновления iOS/macOS, Apple Music, TV+ и Intelligence",
+      "description": "Все домены экосистемы Apple: apple.com, icloud.com, mzstatic.com, aaplimg.com, cdn-apple.com, itunes.apple.com и серверы Apple Intelligence / Siri.",
+      "fallback_srs": "https://raw.githubusercontent.com/hydraponique/roscomvpn-geosite/master/release/sing-box/apple.srs",
+      "sources": [
+        { "type": "srs", "url": "{roscomvpn_geosite_srs}/apple.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-apple.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/apple.json" }
+      ]
+    },
+    {
+      "id": "microsoft",
+      "group": "tech",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Microsoft — Windows Update, Office 365, OneDrive, Xbox Live, Teams и Azure",
+      "description": "Все сервисы Microsoft: microsoft.com, live.com, office.com, sharepoint.com, onedrive.com, xbox.com, microsoftonline.com, visualstudio.com и серверы обновлений Windows.",
+      "fallback_srs": "https://raw.githubusercontent.com/hydraponique/roscomvpn-geosite/master/release/sing-box/microsoft.srs",
+      "sources": [
+        { "type": "srs", "url": "{roscomvpn_geosite_srs}/microsoft.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-microsoft.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/microsoft.json" }
+      ]
+    },
+    {
+      "id": "google_play",
+      "group": "tech",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Google Play — магазин приложений Android, обновления и APK-серверы (gvt1/gvt2)",
+      "description": "Домены магазина Google Play и скачивания приложений Android: play.google.com, play.googleapis.com, android.clients.google.com, gvt1.com, gvt2.com и xn--ngstr-lra8j.com.",
+      "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/google_play.srs",
+      "sources": [
+        { "type": "srs", "url": "{itdoginfo_srs}/google_play.srs" },
+        { "type": "srs", "url": "{roscomvpn_geosite_srs}/google-play.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-google-play.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/google-play.json" }
+      ]
+    },
+    {
+      "id": "github",
+      "group": "tech",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "GitHub — репозитории, GitHub Actions, Packages, Pages, Raw и Gist",
+      "description": "Все домены GitHub: github.com, githubusercontent.com, githubassets.com, ghcr.io, github.io, gist.github.com и api.github.com.",
+      "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/github.srs",
+      "sources": [
+        { "type": "srs", "url": "{roscomvpn_geosite_srs}/github.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-github.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/github.json" }
+      ]
+    },
+    {
+      "id": "docker",
+      "group": "tech",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Docker — Docker Hub, реестр образов (registry-1.docker.io) и пакеты",
+      "description": "Домены Docker, закрывшие скачивание контейнеров с российских IP: docker.com, hub.docker.com, docker.io, registry-1.docker.io, production.cloudflare.docker.com и download.docker.com.",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-docker.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-docker.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/docker.json" }
+      ]
+    },
+    {
+      "id": "hodca",
+      "group": "tech",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Центры сертификации (CA) — проверка SSL/TLS (OCSP / CRL): DigiCert, Sectigo, Let's Encrypt",
+      "description": "Серверы проверки отзыва SSL-сертификатов (OCSP и CRL) мировых удостоверяющих центров: DigiCert, Sectigo, Comodo, GlobalSign, Entrust, Let's Encrypt и Amazon Trust (устраняет зависания при открытии HTTPS-сайтов из-за геоблока OCSP).",
+      "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/hodca.srs",
+      "sources": [
+        { "type": "srs", "url": "{itdoginfo_srs}/hodca.srs" }
+      ]
+    },
+    {
+      "id": "cloudflare",
+      "group": "infra",
+      "kind": "subnets",
+      "recommended_action": "proxy",
+      "title": "Cloudflare — IPv4/IPv6-подсети CDN и защиты от DDoS (обход блокировки ECH)",
+      "description": "Официальные IP-подсети Cloudflare для обхода блокировки TLS ECH (Encrypted Client Hello) и сайтов за Cloudflare на ТСПУ.",
+      "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/cloudflare.srs",
+      "sources": [
+        { "type": "srs", "url": "{itdoginfo_srs}/cloudflare.srs" },
+        { "type": "srs", "url": "{runetfreedom_geoip_srs}/geoip-cloudflare.srs" },
+        { "type": "plain_subnets", "url": "{itdoginfo_raw}/Subnets/IPv4/cloudflare.lst" },
+        { "type": "plain_subnets", "url": "{itdoginfo_raw}/Subnets/IPv6/cloudflare.lst" }
+      ]
+    },
+    {
+      "id": "cloudfront",
+      "group": "infra",
+      "kind": "subnets",
+      "recommended_action": "proxy",
+      "title": "Amazon CloudFront — IP-подсети глобальной CDN-сети AWS",
+      "description": "Диапазоны IP-адресов CDN Amazon CloudFront, на которых работают тысячи зарубежных сайтов, игр и API, часто попадающих под веерные блокировки подсетей.",
+      "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/cloudfront.srs",
+      "sources": [
+        { "type": "srs", "url": "{itdoginfo_srs}/cloudfront.srs" },
+        { "type": "srs", "url": "{runetfreedom_geoip_srs}/geoip-cloudfront.srs" },
+        { "type": "plain_subnets", "url": "{itdoginfo_raw}/Subnets/IPv4/cloudfront.lst" },
+        { "type": "plain_subnets", "url": "{itdoginfo_raw}/Subnets/IPv6/cloudfront.lst" }
+      ]
+    },
+    {
+      "id": "fastly",
+      "group": "infra",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Fastly CDN — домены и инфраструктура сети доставки контента Fastly",
+      "description": "Домены и подсети CDN-провайдера Fastly (fastly.net, fastlylb.net, fsdn.com), используемого Reddit, GitHub, StackOverflow, PyPI и многими западными сервисами.",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-fastly.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-fastly.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/fastly.json" },
+        { "type": "srs", "url": "{runetfreedom_geoip_srs}/geoip-fastly.srs" }
+      ]
+    },
+    {
+      "id": "hetzner",
+      "group": "infra",
+      "kind": "subnets",
+      "recommended_action": "proxy",
+      "title": "Hetzner — IP-подсети европейских датацентров Hetzner (Германия и Финляндия)",
+      "description": "Подсети популярного европейского хостинга Hetzner Online, часто блокируемые ТСПУ целыми диапазонами.",
+      "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/hetzner.srs",
+      "sources": [
+        { "type": "srs", "url": "{itdoginfo_srs}/hetzner.srs" },
+        { "type": "plain_subnets", "url": "{itdoginfo_raw}/Subnets/IPv4/hetzner.lst" },
+        { "type": "plain_subnets", "url": "{itdoginfo_raw}/Subnets/IPv6/hetzner.lst" }
+      ]
+    },
+    {
+      "id": "ovh",
+      "group": "infra",
+      "kind": "subnets",
+      "recommended_action": "proxy",
+      "title": "OVHcloud — IP-подсети европейских датацентров OVH",
+      "description": "Подсети облачного провайдера OVHcloud, на которых размещено множество игровых серверов, веб-проектов и API.",
+      "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/ovh.srs",
+      "sources": [
+        { "type": "srs", "url": "{itdoginfo_srs}/ovh.srs" },
+        { "type": "plain_subnets", "url": "{itdoginfo_raw}/Subnets/IPv4/ovh.lst" },
+        { "type": "plain_subnets", "url": "{itdoginfo_raw}/Subnets/IPv6/ovh.lst" }
+      ]
+    },
+    {
+      "id": "digitalocean",
+      "group": "infra",
+      "kind": "subnets",
+      "recommended_action": "proxy",
+      "title": "DigitalOcean — IP-подсети облачного хостинга DigitalOcean",
+      "description": "Подсети облачного хостинга DigitalOcean, большая часть которых заблокирована или ограничена на ТСПУ в РФ.",
+      "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/digitalocean.srs",
+      "sources": [
+        { "type": "srs", "url": "{itdoginfo_srs}/digitalocean.srs" },
+        { "type": "plain_subnets", "url": "{itdoginfo_raw}/Subnets/IPv4/digitalocean.lst" },
+        { "type": "plain_subnets", "url": "{itdoginfo_raw}/Subnets/IPv6/digitalocean.lst" }
+      ]
+    },
+    {
+      "id": "news",
+      "group": "other",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "СМИ и новости — заблокированные независимые информационные издания и медиа",
+      "description": "Независимые российские и мировые новостные агентства, издания и аналитические порталы, заблокированные в РФ (Meduza, BBC, DW, Euronews, Радио Свобода и др.).",
+      "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/news.srs",
+      "sources": [
+        { "type": "srs", "url": "{itdoginfo_srs}/news.srs" }
+      ]
+    },
+    {
+      "id": "torrent",
+      "group": "other",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Торренты и трекеры — RuTracker, Rutor, NNM-Club, Kinozal, LostFilm, Nyaa",
+      "description": "Торрент-трекеры, индексаторы и публичные анонсеры: RuTracker, Rutor, NNM-Club, Kinozal, Rustorka, Tapochek, LostFilm, The Pirate Bay, 1337x, YTS и Nyaa.",
+      "fallback_srs": "https://raw.githubusercontent.com/hydraponique/roscomvpn-geosite/master/release/sing-box/torrent.srs",
+      "sources": [
+        { "type": "srs", "url": "{roscomvpn_geosite_srs}/torrent.srs" }
+      ]
+    },
+    {
+      "id": "tor",
+      "group": "other",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Tor и анонимайзеры — проект Tor, мосты, I2P, Freenet и Psiphon",
+      "description": "Домены и узлы Tor Project (torproject.org), каталогов мостов, I2P, Tails, Whonix и инструментов обхода цензуры.",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-tor.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-tor.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/tor.json" },
+        { "type": "srs", "url": "{runetfreedom_geoip_srs}/geoip-tor.srs" }
+      ]
+    },
+    {
+      "id": "porn",
+      "group": "other",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Сайты 18+ (Adult) — Pornhub, XVideos, xHamster, OnlyFans, Fansly, Chaturbate",
+      "description": "Крупнейшие сайты для взрослых, видео-CDN и платформы подписок 18+, заблокированные в РФ или требующие авторизацию через ВК.",
+      "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/porn.srs",
+      "sources": [
+        { "type": "srs", "url": "{itdoginfo_srs}/porn.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-category-porn.srs" }
+      ]
+    },
+    {
+      "id": "ads_hagezi_pro",
+      "group": "block",
+      "kind": "domains",
+      "recommended_action": "block",
+      "title": "Реклама и трекеры (Hagezi Pro) — блокировка рекламы, аналитики и фишинга",
+      "description": "Сбалансированный список блокировки рекламных сетей, счётчиков аналитики, мобильных баннеров и фишинга (Hagezi Multi PRO). Используйте в секции с действием «Блокировать» (Block).",
+      "fallback_srs": "https://github.com/zxc-rv/ad-filter/releases/latest/download/adlist.srs",
+      "sources": [
+        { "type": "srs", "url": "https://github.com/zxc-rv/ad-filter/releases/latest/download/adlist.srs" }
+      ]
+    },
+    {
+      "id": "win_spy",
+      "group": "block",
+      "kind": "domains",
+      "recommended_action": "block",
+      "title": "Телеметрия Windows (Block) — домены слежки, диагностики и рекламы Microsoft",
+      "description": "Серверы сбора телеметрии, отчётов об ошибках и рекламных идентификаторов Windows 10/11 (vortex.data.microsoft.com, telecommand.telemetry.microsoft.com, settings-win.data.microsoft.com). Используйте в секции с действием «Блокировать» (Block).",
+      "fallback_srs": "https://raw.githubusercontent.com/hydraponique/roscomvpn-geosite/master/release/sing-box/win-spy.srs",
+      "sources": [
+        { "type": "srs", "url": "{roscomvpn_geosite_srs}/win-spy.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/win-spy.json" }
+      ]
+    },
+    {
+      "id": "google_meet",
+      "group": "internal",
+      "kind": "mixed",
+      "recommended_action": "proxy",
+      "title": "Google Meet — видеоконференции и медиа-серверы",
+      "description": "Домены и подсети видеозвонков Google Meet.",
+      "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/google_meet.srs",
+      "sources": [
+        { "type": "srs", "url": "{itdoginfo_srs}/google_meet.srs" }
+      ]
+    },
+    {
+      "id": "geosite_ru",
+      "group": "internal",
+      "kind": "domains",
+      "recommended_action": "direct",
+      "title": "GeoSite RU — все домены российского сегмента",
+      "description": "Системная база доменов Рунета для маршрутизации национального трафика.",
+      "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ru.srs",
+      "sources": [
+        { "type": "srs", "url": "{roscomvpn_geosite_srs}/category-ru.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/category-ru.json" }
+      ]
+    },
+    {
+      "id": "geoip_ru",
+      "group": "internal",
+      "kind": "subnets",
+      "recommended_action": "direct",
+      "title": "GeoIP RU — IPv4/IPv6 подсети Российской Федерации",
+      "description": "Системная база IP-подсетей России.",
+      "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/ru.srs",
+      "sources": [
+        { "type": "singbox_json", "url": "{metacubex_geoip}/ru.json" }
+      ]
+    },
+    {
+      "id": "geoip_us",
+      "group": "internal",
+      "kind": "subnets",
+      "recommended_action": "proxy",
+      "title": "GeoIP US — IPv4/IPv6 подсети США",
+      "description": "Системная база IP-подсетей США.",
+      "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/us.srs",
+      "sources": [
+        { "type": "singbox_json", "url": "{metacubex_geoip}/us.json" }
+      ]
+    },
+    {
+      "id": "geoip_cn",
+      "group": "internal",
+      "kind": "subnets",
+      "recommended_action": "direct",
+      "title": "GeoIP CN — IPv4/IPv6 подсети Китая",
+      "description": "Системная база IP-подсетей КНР.",
+      "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/cn.srs",
+      "sources": [
+        { "type": "singbox_json", "url": "{metacubex_geoip}/cn.json" }
+      ]
+    }
+  ]
+}
