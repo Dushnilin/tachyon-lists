@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-10-29T12:51:58Z",
+  "generated_at": "2026-10-29T13:50:19Z",
   "repository": "https://github.com/Dushnilin/tachyon-lists",
   "total_lists": 61,
   "lists": [
@@ -14,7 +14,7 @@
       "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/russia_inside.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 1607,
+        "domain_suffix": 74418,
         "domain_keyword": 105,
         "domain_regex": 5,
         "ipv4_cidr": 0,
@@ -26,7 +26,7 @@
         "domains": "release/domains/russia_inside.lst",
         "subnets": null
       },
-      "sha256_srs": "fd13789059ee39a02eb90f6a8cb72790b25cfa26aa68067c413bac5582856d6f"
+      "sha256_srs": "784c079d89894e5a8d13948ac20da46c90b429fb5ac8ed79aec2e2a95eb9f462"
     },
     {
       "id": "geoblock",
@@ -38,7 +38,7 @@
       "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/geoblock.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 931,
+        "domain_suffix": 946,
         "domain_keyword": 105,
         "domain_regex": 5,
         "ipv4_cidr": 0,
@@ -50,7 +50,7 @@
         "domains": "release/domains/geoblock.lst",
         "subnets": null
       },
-      "sha256_srs": "a261c009a2da81b471be9fac6635df76352ecfc032b73fa4a5ab3e54184c3454"
+      "sha256_srs": "2876d44513071f4f6e9a0adc0daf56c40bdec5918e7c76c4e5413ab0bd026040"
     },
     {
       "id": "block",
@@ -302,7 +302,7 @@
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-category-ai-!cn.srs",
       "counts": {
         "domain": 21,
-        "domain_suffix": 195,
+        "domain_suffix": 200,
         "domain_keyword": 0,
         "domain_regex": 1,
         "ipv4_cidr": 0,
@@ -314,7 +314,7 @@
         "domains": "release/domains/ai_all.lst",
         "subnets": null
       },
-      "sha256_srs": "11678cde2ac436e3c10753e09df8d8b881ddb93c12eb0b3da735a3a39837b332"
+      "sha256_srs": "7f472f4bdf5a3ece33d4978f4e5035b6a451eb181df6d480e2514f21d107c2b9"
     },
     {
       "id": "openai",
@@ -374,7 +374,7 @@
       "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/google_ai.srs",
       "counts": {
         "domain": 3,
-        "domain_suffix": 51,
+        "domain_suffix": 55,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -386,7 +386,7 @@
         "domains": "release/domains/google_ai.lst",
         "subnets": null
       },
-      "sha256_srs": "312b12998cbbdce95780988a72e3b98583c60bb4dc37b39fac4f9f0e11769e50"
+      "sha256_srs": "2d541c23cef3592497cd0cc19e6a08cb2ba23d6382c3b8ce8c66e4447f169451"
     },
     {
       "id": "xai",
@@ -398,7 +398,7 @@
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-xai.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 4,
+        "domain_suffix": 5,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -410,7 +410,7 @@
         "domains": "release/domains/xai.lst",
         "subnets": null
       },
-      "sha256_srs": "42417b05be73bfb225051a6ef9366907a0ead2e87967f47d940af6c03ee95ac2"
+      "sha256_srs": "73411671033a5cd6874316c4b4d21b88e6f08793d2d9652de1c3fc0bb69d63bb"
     },
     {
       "id": "youtube",
@@ -541,8 +541,8 @@
       "description": "[Маршрут: Только в Прокси / VPN — региональный блок РФ] Домены TikTok и ByteDance (tiktok.com, tiktokv.com, tiktokcdn.com, byteoversea.com, musical.ly) для просмотра новых видео и стримов без региональных ограничений в РФ.",
       "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/tiktok.srs",
       "counts": {
-        "domain": 6,
-        "domain_suffix": 32,
+        "domain": 5,
+        "domain_suffix": 45,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -554,7 +554,7 @@
         "domains": "release/domains/tiktok.lst",
         "subnets": null
       },
-      "sha256_srs": "9b10356fe5b623bee036e2e1d520dab8c866a06b9a420fa3ab448ed2d2652d00"
+      "sha256_srs": "1f8608de8b63863f7bf05d47c84171b141e4af516f32c9353d323c66e27006d8"
     },
     {
       "id": "hdrezka",
@@ -638,7 +638,7 @@
       "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/discord.srs",
       "counts": {
         "domain": 1,
-        "domain_suffix": 27,
+        "domain_suffix": 28,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 8,
@@ -650,7 +650,7 @@
         "domains": "release/domains/discord.lst",
         "subnets": "release/subnets/discord.lst"
       },
-      "sha256_srs": "890c5d37041bf08520c37810783d43f99914b56833043f2e56e780bf637abb63"
+      "sha256_srs": "832c789076151e5f6063d23f4dba6e07b04c15f2da9caebc6286c624f666b810"
     },
     {
       "id": "telegram",
@@ -686,7 +686,7 @@
       "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/meta.srs",
       "counts": {
         "domain": 1,
-        "domain_suffix": 549,
+        "domain_suffix": 550,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 80,
@@ -698,7 +698,7 @@
         "domains": "release/domains/meta.lst",
         "subnets": "release/subnets/meta.lst"
       },
-      "sha256_srs": "d368e2edb3427692ce1a3be44c50718f42ee92fb6c6858395921a9ccfae29ca4"
+      "sha256_srs": "26fb85765234b54a086030a83b5279dfeae66482591a3954bcd79814ab4b5773"
     },
     {
       "id": "twitter",

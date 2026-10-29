@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200" height="84" viewBox="0 0 1200 84"
+     role="img" aria-labelledby="title desc">
+  <title id="title">02 — Архитектура и конвейер сборки</title>
+  <desc id="desc">Раздел архитектуры четырехэтапного конвейера сборки и оптимизации списков build_lists.py.</desc>
+  <defs>
+    <linearGradient id="sec2-bg" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0D1224"/>
+      <stop offset="100%" stop-color="#080C14"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="84" rx="14" fill="url(#sec2-bg)"/>
+  <rect x="1" y="1" width="1198" height="82" rx="13" fill="none" stroke="#1E293B" stroke-width="1.2"/>
+  <rect x="0" y="18" width="5" height="48" rx="2.5" fill="#818CF8"/>
+  <rect x="28" y="22" width="68" height="40" rx="8" fill="#0F172A" stroke="#818CF8" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="62" y="48" text-anchor="middle" fill="#818CF8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" font-weight="700">02</text>
+  <text x="116" y="42" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="800">КАК РАБОТАЕТ КОНВЕЙЕР ОПТИМИЗАЦИИ (BUILD_LISTS.PY)</text>
+  <text x="116" y="66" fill="#94A3B8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">Декомпиляция, срезка избыточных поддоменов под domain_suffix и агрегация CIDR-префиксов для OpenWrt</text>
+</svg>

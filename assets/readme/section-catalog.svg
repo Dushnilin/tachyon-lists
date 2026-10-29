@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200" height="84" viewBox="0 0 1200 84"
+     role="img" aria-labelledby="title desc">
+  <title id="title">04 — Каталог списков и маршрутов (61 категория)</title>
+  <desc id="desc">Раздел каталога списков: 56 основных пользовательских категорий и 5 системных гео-баз ядра Tachyon.</desc>
+  <defs>
+    <linearGradient id="sec4-bg" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#09191E"/>
+      <stop offset="100%" stop-color="#080C14"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="84" rx="14" fill="url(#sec4-bg)"/>
+  <rect x="1" y="1" width="1198" height="82" rx="13" fill="none" stroke="#1E293B" stroke-width="1.2"/>
+  <rect x="0" y="18" width="5" height="48" rx="2.5" fill="#10B981"/>
+  <rect x="28" y="22" width="68" height="40" rx="8" fill="#0F172A" stroke="#10B981" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="62" y="48" text-anchor="middle" fill="#34D399" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" font-weight="700">04</text>
+  <text x="116" y="42" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="800">КАТАЛОГ СПИСКОВ И МАРШРУТОВ (56 ОСНОВНЫХ + 5 СИСТЕМНЫХ)</text>
+  <text x="116" y="66" fill="#94A3B8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">Автообновляемые базы доменов и подсетей с рекомендациями маршрутизации Proxy / Direct / Block</text>
+</svg>

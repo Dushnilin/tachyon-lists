@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200" height="510" viewBox="0 0 1200 510"
+     role="img" aria-labelledby="title desc">
+  <title id="title">Витрина 61 категории списков маршрутизации по группам</title>
+  <desc id="desc">Сетка из 9 тематических групп каталога Tachyon Lists: Региональные и РКН (8), Прямой маршрут Direct (4), Нейросети и ИИ (5), Видео и Медиа (9), Соцсети и Мессенджеры (4), Игры и Лаунчеры (8), ИТ и Экосистемы (6), CDN и Облака (6), Прочее, Блок и Системные базы (11).</desc>
+
+  <defs>
+    <linearGradient id="cat-bg" x1="0" y1="0" x2="1200" y2="510" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#070A10"/>
+      <stop offset="100%" stop-color="#0B111C"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="510" rx="20" fill="url(#cat-bg)"/>
+  <rect x="1" y="1" width="1198" height="508" rx="19" fill="none" stroke="#1E293B" stroke-width="1.5"/>
+
+  <!-- ROW 1 -->
+  <!-- Group 1: Regional -->
+  <g transform="translate(28, 26)">
+    <rect x="0" y="0" width="368" height="142" rx="12" fill="#0F172A" stroke="#A855F7" stroke-width="1.2" stroke-opacity="0.6"/>
+    <text x="18" y="30" fill="#E9D5FF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="700">Региональные и РКН (8)</text>
+    <rect x="278" y="12" width="74" height="24" rx="6" fill="#26143B"/>
+    <text x="315" y="29" text-anchor="middle" fill="#C084FC" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" font-weight="700">Proxy</text>
+    <text x="18" y="60" fill="#38BDF8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">russia_inside · geoblock · block</text>
+    <text x="18" y="84" fill="#38BDF8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">ru_blocked · ru_blocked_all</text>
+    <text x="18" y="108" fill="#38BDF8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">antifilter · refilter · russia_outside</text>
+    <text x="18" y="130" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16">Обход ТСПУ, реестра РКН и геоблока по IP</text>
+  </g>
+
+  <!-- Group 2: Direct -->
+  <g transform="translate(416, 26)">
+    <rect x="0" y="0" width="368" height="142" rx="12" fill="#0F172A" stroke="#10B981" stroke-width="1.2" stroke-opacity="0.6"/>
+    <text x="18" y="30" fill="#A7F3D0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="700">Прямой маршрут в РФ (4)</text>
+    <rect x="278" y="12" width="74" height="24" rx="6" fill="#0B2922"/>
+    <text x="315" y="29" text-anchor="middle" fill="#34D399" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" font-weight="700">Direct</text>
+    <text x="18" y="60" fill="#34D399" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">ru_whitelist (456 дом. / 6,710 CIDR)</text>
+    <text x="18" y="84" fill="#34D399" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">ru_domains (891 дом. / 36,835 CIDR)</text>
+    <text x="18" y="108" fill="#34D399" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">ru_only_inside · push</text>
+    <text x="18" y="130" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16">Госуслуги, банки, Рунет и мобильные Push</text>
+  </g>
+
+  <!-- Group 3: AI -->
+  <g transform="translate(804, 26)">
+    <rect x="0" y="0" width="368" height="142" rx="12" fill="#0F172A" stroke="#38BDF8" stroke-width="1.2" stroke-opacity="0.6"/>
+    <text x="18" y="30" fill="#BAE6FD" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="700">Нейросети и ИИ (5)</text>
+    <rect x="278" y="12" width="74" height="24" rx="6" fill="#26143B"/>
+    <text x="315" y="29" text-anchor="middle" fill="#C084FC" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" font-weight="700">Proxy</text>
+    <text x="18" y="60" fill="#38BDF8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">ai_all (сводный — 216 доменов)</text>
+    <text x="18" y="84" fill="#38BDF8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">openai · anthropic</text>
+    <text x="18" y="108" fill="#38BDF8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">google_ai · xai</text>
+    <text x="18" y="130" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16">ChatGPT, Claude, Gemini, Grok, Cursor, Copilot</text>
+  </g>
+
+  <!-- ROW 2 -->
+  <!-- Group 4: Media -->
+  <g transform="translate(28, 184)">
+    <rect x="0" y="0" width="368" height="142" rx="12" fill="#0F172A" stroke="#818CF8" stroke-width="1.2" stroke-opacity="0.6"/>
+    <text x="18" y="30" fill="#C7D2FE" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="700">Видео, музыка и медиа (9)</text>
+    <rect x="278" y="12" width="74" height="24" rx="6" fill="#26143B"/>
+    <text x="315" y="29" text-anchor="middle" fill="#C084FC" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" font-weight="700">Proxy</text>
+    <text x="18" y="60" fill="#A5B4FC" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">youtube · twitch · twitch_ads</text>
+    <text x="18" y="84" fill="#A5B4FC" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">spotify · netflix · tiktok</text>
+    <text x="18" y="108" fill="#A5B4FC" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">hdrezka · anime · pinterest</text>
+    <text x="18" y="130" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16">GGC-кэши, стриминг без рекламы и CDN</text>
+  </g>
+
+  <!-- Group 5: Social -->
+  <g transform="translate(416, 184)">
+    <rect x="0" y="0" width="368" height="142" rx="12" fill="#0F172A" stroke="#38BDF8" stroke-width="1.2" stroke-opacity="0.6"/>
+    <text x="18" y="30" fill="#E0F2FE" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="700">Соцсети и мессенджеры (4)</text>
+    <rect x="278" y="12" width="74" height="24" rx="6" fill="#26143B"/>
+    <text x="315" y="29" text-anchor="middle" fill="#C084FC" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" font-weight="700">Proxy</text>
+    <text x="18" y="60" fill="#38BDF8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">discord (домены + голосовые CIDR)</text>
+    <text x="18" y="84" fill="#38BDF8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">telegram (домены + DC1–DC5 CIDR)</text>
+    <text x="18" y="108" fill="#38BDF8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">meta · twitter</text>
+    <text x="18" y="130" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16">Звонки, голосовые шлюзы и медиа-серверы</text>
+  </g>
+
+  <!-- Group 6: Gaming -->
+  <g transform="translate(804, 184)">
+    <rect x="0" y="0" width="368" height="142" rx="12" fill="#0F172A" stroke="#F59E0B" stroke-width="1.2" stroke-opacity="0.6"/>
+    <text x="18" y="30" fill="#FDE68A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="700">Игры и лаунчеры (8)</text>
+    <rect x="278" y="12" width="74" height="24" rx="6" fill="#26143B"/>
+    <text x="315" y="29" text-anchor="middle" fill="#C084FC" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" font-weight="700">Proxy</text>
+    <text x="18" y="60" fill="#FBBF24" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">steam · epicgames · riot</text>
+    <text x="18" y="84" fill="#FBBF24" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">origin · roblox · supercell</text>
+    <text x="18" y="108" fill="#FBBF24" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">escapefromtarkov · faceit</text>
+    <text x="18" y="130" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16">Матчмейкинг, античиты, голосовой чат и CDN</text>
+  </g>
+
+  <!-- ROW 3 -->
+  <!-- Group 7: Tech & Cloud/CDN -->
+  <g transform="translate(28, 342)">
+    <rect x="0" y="0" width="368" height="142" rx="12" fill="#0F172A" stroke="#38BDF8" stroke-width="1.2" stroke-opacity="0.55"/>
+    <text x="18" y="30" fill="#E0F2FE" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="700">ИТ, CDN и облака (12)</text>
+    <rect x="278" y="12" width="74" height="24" rx="6" fill="#26143B"/>
+    <text x="315" y="29" text-anchor="middle" fill="#C084FC" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" font-weight="700">Proxy</text>
+    <text x="18" y="60" fill="#38BDF8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">apple · microsoft · google_play</text>
+    <text x="18" y="84" fill="#38BDF8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">github · docker · hodca</text>
+    <text x="18" y="108" fill="#38BDF8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">cloudflare · cloudfront · fastly</text>
+    <text x="18" y="130" fill="#94A3B8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">hetzner · ovh · digitalocean</text>
+  </g>
+
+  <!-- Group 8: Other & Block -->
+  <g transform="translate(416, 342)">
+    <rect x="0" y="0" width="368" height="142" rx="12" fill="#0F172A" stroke="#F43F5E" stroke-width="1.2" stroke-opacity="0.6"/>
+    <text x="18" y="30" fill="#FECDD3" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="700">Торренты, Tor и Блок (6)</text>
+    <rect x="248" y="12" width="104" height="24" rx="6" fill="#31101E"/>
+    <text x="300" y="29" text-anchor="middle" fill="#FB7185" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" font-weight="700">Proxy/Block</text>
+    <text x="18" y="60" fill="#CBD5E1" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">news · torrent · tor · porn</text>
+    <text x="18" y="88" fill="#FB7185" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">ads_hagezi_pro (210,918 доменов)</text>
+    <text x="18" y="112" fill="#FB7185" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">win_spy (телеметрия Windows)</text>
+    <text x="18" y="132" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16">Трекеры, мосты Tor, Hagezi Pro и слежка ОС</text>
+  </g>
+
+  <!-- Group 9: Internal System -->
+  <g transform="translate(804, 342)">
+    <rect x="0" y="0" width="368" height="142" rx="12" fill="#0F172A" stroke="#64748B" stroke-width="1.2" stroke-dasharray="6 4" stroke-opacity="0.7"/>
+    <text x="18" y="30" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="700">Системные гео-базы (5)</text>
+    <rect x="278" y="12" width="74" height="24" rx="6" fill="#1E293B"/>
+    <text x="315" y="29" text-anchor="middle" fill="#94A3B8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" font-weight="700">sys</text>
+    <text x="18" y="60" fill="#CBD5E1" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">google_meet · geosite_ru</text>
+    <text x="18" y="84" fill="#34D399" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">geoip_ru · geoip_cn (Direct)</text>
+    <text x="18" y="108" fill="#C084FC" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">geoip_us (Proxy)</text>
+    <text x="18" y="130" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16">Системные таблицы маршрутизации Tachyon</text>
+  </g>
+</svg>

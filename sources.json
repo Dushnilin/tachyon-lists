@@ -25,7 +25,9 @@
       "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/russia_inside.srs",
       "sources": [
         { "type": "srs", "url": "{itdoginfo_srs}/russia_inside.srs" },
-        { "type": "srs", "url": "{roscomvpn_geosite_srs}/category-geoblock-ru.srs" }
+        { "type": "srs", "url": "{roscomvpn_geosite_srs}/category-geoblock-ru.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-refilter.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-ru-blocked.srs" }
       ]
     },
     {
