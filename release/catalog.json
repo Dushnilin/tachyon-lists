@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-10-29T13:50:19Z",
+  "generated_at": "2026-10-29T17:34:27Z",
   "repository": "https://github.com/Dushnilin/tachyon-lists",
   "total_lists": 61,
   "lists": [
@@ -21,12 +21,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/russia_inside.trs",
         "srs": "release/sing-box/russia_inside.srs",
         "json": "release/json/russia_inside.json",
         "domains": "release/domains/russia_inside.lst",
         "subnets": null
       },
-      "sha256_srs": "784c079d89894e5a8d13948ac20da46c90b429fb5ac8ed79aec2e2a95eb9f462"
+      "sha256_trs": "9a6ccfde527cee1be78d4c084bfb0d37117b59c8eccbac197cb72dd9d5482c43",
+      "sha256_srs": "26ac9d12843e12ee995b2ea72b5f48a2f6e7fae26a8f6294008913126cbf0f7c"
     },
     {
       "id": "geoblock",
@@ -45,12 +47,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/geoblock.trs",
         "srs": "release/sing-box/geoblock.srs",
         "json": "release/json/geoblock.json",
         "domains": "release/domains/geoblock.lst",
         "subnets": null
       },
-      "sha256_srs": "2876d44513071f4f6e9a0adc0daf56c40bdec5918e7c76c4e5413ab0bd026040"
+      "sha256_trs": "6b684bf9bd481fba52c317a190f82fab4bce2d2292942c289c7c47eda90a9c8e",
+      "sha256_srs": "5ed567f8403545db247d3c795e1209498941110212984b075f66f603c5ed53e6"
     },
     {
       "id": "block",
@@ -69,12 +73,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/block.trs",
         "srs": "release/sing-box/block.srs",
         "json": "release/json/block.json",
         "domains": "release/domains/block.lst",
         "subnets": null
       },
-      "sha256_srs": "467e4a42583e1f652605613d81bc59c9e3300e67fdf63a719397597826360c16"
+      "sha256_trs": "3e0e60e7fc53932e111fece823b3b5f36ad5c033cc269c13e8700dac8fcfd76d",
+      "sha256_srs": "6de2977189352e55c9e35ab6e7460f062d6800fb3bb8bb7167310d38866257fb"
     },
     {
       "id": "ru_blocked",
@@ -93,12 +99,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/ru_blocked.trs",
         "srs": "release/sing-box/ru_blocked.srs",
         "json": "release/json/ru_blocked.json",
         "domains": "release/domains/ru_blocked.lst",
         "subnets": "release/subnets/ru_blocked.lst"
       },
-      "sha256_srs": "f03958701a130fcb220cf262ca2a204ea0b8fce034ad4f7efb25c68620a602bf"
+      "sha256_trs": "233dc908dc3c930c33711ace056e1237660caff2d1c4c7c9f1597366813d0c6d",
+      "sha256_srs": "3d10c554684ce252d0098354dc40d15d42512f3d8125c0b4f6219d849582eafd"
     },
     {
       "id": "ru_blocked_all",
@@ -117,12 +125,14 @@
         "ipv6_cidr": 4
       },
       "files": {
+        "trs": "release/tachyon/ru_blocked_all.trs",
         "srs": "release/sing-box/ru_blocked_all.srs",
         "json": "release/json/ru_blocked_all.json",
         "domains": "release/domains/ru_blocked_all.lst",
         "subnets": "release/subnets/ru_blocked_all.lst"
       },
-      "sha256_srs": "1a311ed27f16d2e5d7a9d742a5bf1e3c39023ce93c28acb0fce09cdd4853c11d"
+      "sha256_trs": "e8603292abd7a626cb07d3bf7ab3d2f5a88521cba62b9bab9280fc1124179930",
+      "sha256_srs": "79da6a08365e83f7a43d81d8419d974c1dc44e28c8ab86ddae92181a25f147b8"
     },
     {
       "id": "antifilter",
@@ -141,12 +151,14 @@
         "ipv6_cidr": 4
       },
       "files": {
+        "trs": "release/tachyon/antifilter.trs",
         "srs": "release/sing-box/antifilter.srs",
         "json": "release/json/antifilter.json",
         "domains": "release/domains/antifilter.lst",
         "subnets": "release/subnets/antifilter.lst"
       },
-      "sha256_srs": "bd168474ed30c6a99b243ca5b3d665dc06684254ba7bdbb4e56f5fe551248ae3"
+      "sha256_trs": "0775a2538d9f4fdd44e4b11808a2fdc6dca3b3b0328f00945e532a26d2df58d9",
+      "sha256_srs": "8ed3292c991dd7ecd32722bf9e392dcb3cc5fbeb3a6ca1b745eb7ff153191ac5"
     },
     {
       "id": "refilter",
@@ -165,12 +177,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/refilter.trs",
         "srs": "release/sing-box/refilter.srs",
         "json": "release/json/refilter.json",
         "domains": "release/domains/refilter.lst",
         "subnets": "release/subnets/refilter.lst"
       },
-      "sha256_srs": "5a866f32f38261cd4415217bb485623e7beb6040e7b37918d2af19cffa79ed4b"
+      "sha256_trs": "1341fc4e21c90a9c3be41f9bab3f790d9e6fe56345dc22401fef7a3c156a3d64",
+      "sha256_srs": "5c9c79d8efc8962a3b7590a67c65e6ad3c757ee08b631da0342d29b24b289b83"
     },
     {
       "id": "russia_outside",
@@ -189,12 +203,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/russia_outside.trs",
         "srs": "release/sing-box/russia_outside.srs",
         "json": "release/json/russia_outside.json",
         "domains": "release/domains/russia_outside.lst",
         "subnets": null
       },
-      "sha256_srs": "e7ba6e14035cb5c00b9fb2a50b5cfeef505140091010c245057fd8f6a0abbcd4"
+      "sha256_trs": "c53fd7ebb76d25f44ece6a353e2b9060ac78e457eade01d7bd80bbbd4d0354d4",
+      "sha256_srs": "0ca38e2e873fe28ddfd93f623e39ea30dfc16f6749f4c2405141115e134619c2"
     },
     {
       "id": "ru_whitelist",
@@ -213,12 +229,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/ru_whitelist.trs",
         "srs": "release/sing-box/ru_whitelist.srs",
         "json": "release/json/ru_whitelist.json",
         "domains": "release/domains/ru_whitelist.lst",
         "subnets": "release/subnets/ru_whitelist.lst"
       },
-      "sha256_srs": "2bf650aa08173b32aa8b08484c5521e67c0ef29328ed448383a5ca6d46e732c5"
+      "sha256_trs": "483f9caa17e050f653f823d78b141fe1ef1b20d33dd9e3f78b267a584d4bc67a",
+      "sha256_srs": "a024b44ba77649631b355a13e884748b04cda6577bc2b557d4afa91b2220b8b0"
     },
     {
       "id": "ru_domains",
@@ -237,12 +255,14 @@
         "ipv6_cidr": 89
       },
       "files": {
+        "trs": "release/tachyon/ru_domains.trs",
         "srs": "release/sing-box/ru_domains.srs",
         "json": "release/json/ru_domains.json",
         "domains": "release/domains/ru_domains.lst",
         "subnets": "release/subnets/ru_domains.lst"
       },
-      "sha256_srs": "1e281621e23c7aa7cb2fc9302e3666906c430a223f4f6617a4c00af262d3db42"
+      "sha256_trs": "76558dfd804f721588ed691deee73606b91e0f71706ee269dcc660c70c2904de",
+      "sha256_srs": "16a119d998eb4c4820937f31a3e21bfddad3e886f19f45bdf3ac56c1398fe36c"
     },
     {
       "id": "ru_only_inside",
@@ -261,12 +281,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/ru_only_inside.trs",
         "srs": "release/sing-box/ru_only_inside.srs",
         "json": "release/json/ru_only_inside.json",
         "domains": "release/domains/ru_only_inside.lst",
         "subnets": null
       },
-      "sha256_srs": "53d819476e6cc708bb480d65fb42f570a5dba5fb46ce566c9e0d7b271274d504"
+      "sha256_trs": "c425c0b491b5cf1602f6c205ef7b4f75db3d4e317f841ccab7f2044a2d8b86f8",
+      "sha256_srs": "8575c64b7a439a1480042d459f58b1f0bb84efdcf100dce1f1d2859a88e049fa"
     },
     {
       "id": "push",
@@ -285,12 +307,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/push.trs",
         "srs": "release/sing-box/push.srs",
         "json": "release/json/push.json",
         "domains": "release/domains/push.lst",
         "subnets": null
       },
-      "sha256_srs": "671f585e4b0c2de4228bd66b7fd04d84d52ead4d5c96aa12cd5872a58b47f989"
+      "sha256_trs": "3c489bb6f92afa9be76c075f88c5b7f59865a9667a529400577a486fef464610",
+      "sha256_srs": "f64368d93b1d4ceb999520b3e030dc42a8f019ffc29d8e13a369a200e12e0f2c"
     },
     {
       "id": "ai_all",
@@ -309,12 +333,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/ai_all.trs",
         "srs": "release/sing-box/ai_all.srs",
         "json": "release/json/ai_all.json",
         "domains": "release/domains/ai_all.lst",
         "subnets": null
       },
-      "sha256_srs": "7f472f4bdf5a3ece33d4978f4e5035b6a451eb181df6d480e2514f21d107c2b9"
+      "sha256_trs": "09243acb31a18bd857dfc6b983438f512fd1e9bcb8319466fd56e5707bf94d39",
+      "sha256_srs": "b0037d806f1953865ff563c4f0dacb0159f019057558c0cb24f8d3fbad5d4cf8"
     },
     {
       "id": "openai",
@@ -333,12 +359,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/openai.trs",
         "srs": "release/sing-box/openai.srs",
         "json": "release/json/openai.json",
         "domains": "release/domains/openai.lst",
         "subnets": null
       },
-      "sha256_srs": "e1053b446e5f343c243e7e6253125b34d2e5c95ece5a22b1f6d9c40f6b4bde48"
+      "sha256_trs": "c0c6e3da796e0a51eaca13d5f134712bc6e2c3ddf2312b344fa080d040962637",
+      "sha256_srs": "6742ed2144bd48169de4b86fa5bdcaee2decff634d7a1841a185a89ebe82b8aa"
     },
     {
       "id": "anthropic",
@@ -357,12 +385,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/anthropic.trs",
         "srs": "release/sing-box/anthropic.srs",
         "json": "release/json/anthropic.json",
         "domains": "release/domains/anthropic.lst",
         "subnets": null
       },
-      "sha256_srs": "bc61c67eba62d69dc29ac270479b68723b506b62efd38a343d810705f832d29a"
+      "sha256_trs": "aa3e305226a5aa0b2cd8d41882ef6ebbb2b90bccf12791970ed0078876d2a3ee",
+      "sha256_srs": "1ddc3c667a575360c0d0408a94cf13a3dd369505a2f0d4ed62a4ccdbc6646e37"
     },
     {
       "id": "google_ai",
@@ -381,12 +411,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/google_ai.trs",
         "srs": "release/sing-box/google_ai.srs",
         "json": "release/json/google_ai.json",
         "domains": "release/domains/google_ai.lst",
         "subnets": null
       },
-      "sha256_srs": "2d541c23cef3592497cd0cc19e6a08cb2ba23d6382c3b8ce8c66e4447f169451"
+      "sha256_trs": "1bbf1f52b99a41bec3a1bbf40af0c5e34175431ee3c5c05f212f2187593570f7",
+      "sha256_srs": "8fb66978c63c5a609b6360a9067fb54c66c7eb9748f7e991dd3533d39684e10b"
     },
     {
       "id": "xai",
@@ -405,12 +437,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/xai.trs",
         "srs": "release/sing-box/xai.srs",
         "json": "release/json/xai.json",
         "domains": "release/domains/xai.lst",
         "subnets": null
       },
-      "sha256_srs": "73411671033a5cd6874316c4b4d21b88e6f08793d2d9652de1c3fc0bb69d63bb"
+      "sha256_trs": "c446adffd8af17fd3eb6d1dc33e29fd49ced8936fb99037d2a1707ac0dafe95e",
+      "sha256_srs": "114c0c3466d3499bb257d96906bfa07510a0a305af37b9753eb213ae91941dc6"
     },
     {
       "id": "youtube",
@@ -429,12 +463,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/youtube.trs",
         "srs": "release/sing-box/youtube.srs",
         "json": "release/json/youtube.json",
         "domains": "release/domains/youtube.lst",
         "subnets": null
       },
-      "sha256_srs": "db8a5c20eac647627c78fc2682ea5d2af084605ae7c05d36ba35548a6e920bc8"
+      "sha256_trs": "52dd4982a97940d47c1339b3c7f76545f19cadbf5f195bf98ca647ebcb451e1f",
+      "sha256_srs": "3991a5b342e8b043d3e14b7f649fbbbe828d6efb7fe27acfcf8cbdf340ace11e"
     },
     {
       "id": "twitch",
@@ -453,12 +489,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/twitch.trs",
         "srs": "release/sing-box/twitch.srs",
         "json": "release/json/twitch.json",
         "domains": "release/domains/twitch.lst",
         "subnets": null
       },
-      "sha256_srs": "09989b4e0dc929b4ee2958bf6fff665194c8eaf5f25254ab8d42f6876b6ad669"
+      "sha256_trs": "bbfb88a1070d4176c1008fd88fe4909cb3877ac319c1069566be67131a6cef67",
+      "sha256_srs": "28d67b87af369bc857287ff39938d8c2f6eccfd3c2aa30aa59afa26e7b130de8"
     },
     {
       "id": "twitch_ads",
@@ -477,12 +515,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/twitch_ads.trs",
         "srs": "release/sing-box/twitch_ads.srs",
         "json": "release/json/twitch_ads.json",
         "domains": "release/domains/twitch_ads.lst",
         "subnets": null
       },
-      "sha256_srs": "d7e632adeb6622360c4eb90176877c583d5ee9a0362c8407cde3b088dd47b492"
+      "sha256_trs": "908a1ac231b69d3ecd710977af090cfbf47c07b0c53fd18023fe027581c1637c",
+      "sha256_srs": "158a9f8f3b99154704e58de64d8897fab6bc97bd83ccf6e7c73ee41a0671e3b7"
     },
     {
       "id": "spotify",
@@ -501,12 +541,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/spotify.trs",
         "srs": "release/sing-box/spotify.srs",
         "json": "release/json/spotify.json",
         "domains": "release/domains/spotify.lst",
         "subnets": null
       },
-      "sha256_srs": "53cc6079222b7dd1abe76c0819efe832ecca036c5ed800c64c0f961a34f7a7e6"
+      "sha256_trs": "d68202956dc258bd5b68a01304c3339f692f912eabe4e7e3445dc32ee1477c8a",
+      "sha256_srs": "257a8062c5f342a95365105e2ea8f9a061924388a7dc68c5caecb6bf6ffded4c"
     },
     {
       "id": "netflix",
@@ -525,12 +567,14 @@
         "ipv6_cidr": 86
       },
       "files": {
+        "trs": "release/tachyon/netflix.trs",
         "srs": "release/sing-box/netflix.srs",
         "json": "release/json/netflix.json",
         "domains": "release/domains/netflix.lst",
         "subnets": "release/subnets/netflix.lst"
       },
-      "sha256_srs": "f4737d8c944af70827e183cb9acdcc69fbe71ec6d00bf07e38086c7ee14f437b"
+      "sha256_trs": "1ed287b56738feb7c53c401c1b8bda6b78e66e74b6b2bf897241e0556a8c9fdc",
+      "sha256_srs": "b044682f5d4948bb60b6c90b7f5d0c094087a8848481e78236d4a91ced5611d8"
     },
     {
       "id": "tiktok",
@@ -549,12 +593,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/tiktok.trs",
         "srs": "release/sing-box/tiktok.srs",
         "json": "release/json/tiktok.json",
         "domains": "release/domains/tiktok.lst",
         "subnets": null
       },
-      "sha256_srs": "1f8608de8b63863f7bf05d47c84171b141e4af516f32c9353d323c66e27006d8"
+      "sha256_trs": "b42105b5df9ea697a08eaa1647ad0365379f3949e86a474c4d4b79c1a167844a",
+      "sha256_srs": "53ef3f50dc03f93e45f9203971f2e784c53eec37fdc055a7165edcd50a2a0127"
     },
     {
       "id": "hdrezka",
@@ -573,12 +619,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/hdrezka.trs",
         "srs": "release/sing-box/hdrezka.srs",
         "json": "release/json/hdrezka.json",
         "domains": "release/domains/hdrezka.lst",
         "subnets": null
       },
-      "sha256_srs": "f8f6405d2c8e0ed196da65250c38d451d54ed03898cc6798223883a2aa07314a"
+      "sha256_trs": "47d32f6a457aacea0570c9e1bbc4de8696713e245123b723827552d3a0854ec7",
+      "sha256_srs": "ff19010f776703fe0eaf24436034cfb73400a8c027dc6aaff33406d07e432f96"
     },
     {
       "id": "anime",
@@ -597,12 +645,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/anime.trs",
         "srs": "release/sing-box/anime.srs",
         "json": "release/json/anime.json",
         "domains": "release/domains/anime.lst",
         "subnets": null
       },
-      "sha256_srs": "0bc97d59066be1c860d67e5ec7edd806be7d8e6d9a9773d8a8edd3f6ececa087"
+      "sha256_trs": "e1ad6d7935e04efeb33cbff5bc1fed832f58287ef58a756cb507f3cca3ed4795",
+      "sha256_srs": "68c7290d1b95e90f05725b7dcb3b300fa79c09595e93167b687c0dbaf38c1d7c"
     },
     {
       "id": "pinterest",
@@ -621,12 +671,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/pinterest.trs",
         "srs": "release/sing-box/pinterest.srs",
         "json": "release/json/pinterest.json",
         "domains": "release/domains/pinterest.lst",
         "subnets": null
       },
-      "sha256_srs": "d4f9716d527b35fe9f850fb86417721116c4a357bac436b1ce31348f7a9465a4"
+      "sha256_trs": "04ebdab4279fe4e35a388373a004603358670bcdb2eab2c3e0653dcffc943d6c",
+      "sha256_srs": "254a081c60d5c9b9eb04436b9af118a0f113a69ca733d26f6454901523dcf39f"
     },
     {
       "id": "discord",
@@ -645,12 +697,14 @@
         "ipv6_cidr": 1
       },
       "files": {
+        "trs": "release/tachyon/discord.trs",
         "srs": "release/sing-box/discord.srs",
         "json": "release/json/discord.json",
         "domains": "release/domains/discord.lst",
         "subnets": "release/subnets/discord.lst"
       },
-      "sha256_srs": "832c789076151e5f6063d23f4dba6e07b04c15f2da9caebc6286c624f666b810"
+      "sha256_trs": "214bd12fcf308984cd55a797c7c0c31788131158d130b7a5fbe7a9044fc1ada5",
+      "sha256_srs": "d877d6ed4c004c3bfd60a6cccc2542bb1cbd7d93ada4bdbe2eedd13279b6974d"
     },
     {
       "id": "telegram",
@@ -669,12 +723,14 @@
         "ipv6_cidr": 4
       },
       "files": {
+        "trs": "release/tachyon/telegram.trs",
         "srs": "release/sing-box/telegram.srs",
         "json": "release/json/telegram.json",
         "domains": "release/domains/telegram.lst",
         "subnets": "release/subnets/telegram.lst"
       },
-      "sha256_srs": "147d9e0749f78d9b22d17db50c654d160ce8b4a02097a6ef22ecccbabc36ceaf"
+      "sha256_trs": "edd1b13d08c8dff57cbd4322a92ea8655e8e2ee2c03413bdfb56cbf238bf5f9c",
+      "sha256_srs": "817edff816e41655af06e74870f6e8920015f5a2f45bf1d3899e26b16997490a"
     },
     {
       "id": "meta",
@@ -693,12 +749,14 @@
         "ipv6_cidr": 40
       },
       "files": {
+        "trs": "release/tachyon/meta.trs",
         "srs": "release/sing-box/meta.srs",
         "json": "release/json/meta.json",
         "domains": "release/domains/meta.lst",
         "subnets": "release/subnets/meta.lst"
       },
-      "sha256_srs": "26fb85765234b54a086030a83b5279dfeae66482591a3954bcd79814ab4b5773"
+      "sha256_trs": "6c0044b361eac6110e7fb757d6b0b0d22f6c5bdcbbd6846832897f02ac2cb54f",
+      "sha256_srs": "8c18a159fe4a3ba247c3a03ead2c29eb7f53a56151f50999b486492c18a70ca8"
     },
     {
       "id": "twitter",
@@ -717,12 +775,14 @@
         "ipv6_cidr": 3
       },
       "files": {
+        "trs": "release/tachyon/twitter.trs",
         "srs": "release/sing-box/twitter.srs",
         "json": "release/json/twitter.json",
         "domains": "release/domains/twitter.lst",
         "subnets": "release/subnets/twitter.lst"
       },
-      "sha256_srs": "6b67a9bc29af5fb29b44dba0311b2bd59b96452bcc553731320b3b3ee527a61f"
+      "sha256_trs": "c16960fca1670788158abf2970d1d6f9b8f5fdb84d35096d5b038f95a6f01776",
+      "sha256_srs": "8b0f781783982319916b26904b77521bd57a5bf3caae283950d049c7d14b3919"
     },
     {
       "id": "steam",
@@ -741,12 +801,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/steam.trs",
         "srs": "release/sing-box/steam.srs",
         "json": "release/json/steam.json",
         "domains": "release/domains/steam.lst",
         "subnets": null
       },
-      "sha256_srs": "562df61321425f42ff93805263fd8c6279345298c9aa43c3a0bac91c6dff935f"
+      "sha256_trs": "d85eacc001c13b5bcc8039d29791b4b84c89bf2a8c4f79ae2be861c23c6e1f9b",
+      "sha256_srs": "27f26304a018f844037b26b2012846a3a69a9205d20469555465c6e4faddad09"
     },
     {
       "id": "epicgames",
@@ -765,12 +827,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/epicgames.trs",
         "srs": "release/sing-box/epicgames.srs",
         "json": "release/json/epicgames.json",
         "domains": "release/domains/epicgames.lst",
         "subnets": null
       },
-      "sha256_srs": "c14224f8f5986d50cfd382f6d414b6f7aad381f8f19280d419d24aa8c2b53bee"
+      "sha256_trs": "522c7a5e44a5588851b45c1a589c7730406b3fc0583407a532bdc202c0970e6e",
+      "sha256_srs": "6c42e5aa40f9e1a984332f1d2354db45f5b96e2d1d090cbd67f40c78e9315427"
     },
     {
       "id": "riot",
@@ -789,12 +853,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/riot.trs",
         "srs": "release/sing-box/riot.srs",
         "json": "release/json/riot.json",
         "domains": "release/domains/riot.lst",
         "subnets": null
       },
-      "sha256_srs": "cdf8e0f8a94740945443f5556e7dd0a144845a3a11cd4e34d6041e8c87fb147b"
+      "sha256_trs": "a27a685f2974b7c8fd539cb689c6731a79b01a9b2e0a92fd53b624015b528170",
+      "sha256_srs": "b8fdc4742d945b93bff19f1f944c26b6578bec7e9a61ab57bf978fd300fe7b05"
     },
     {
       "id": "origin",
@@ -813,12 +879,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/origin.trs",
         "srs": "release/sing-box/origin.srs",
         "json": "release/json/origin.json",
         "domains": "release/domains/origin.lst",
         "subnets": null
       },
-      "sha256_srs": "4490c529b7344e944570b251ca04cbed135708b40120ea50d45a8c67db7f8e3a"
+      "sha256_trs": "5a172eacb5ba2e5d4a298d0b1e9d6ea02e8b3caeb35ef6265826d8152eed2c04",
+      "sha256_srs": "330325a9277aa65827d98484233daad33cbf10663bb5f1071ee21f9e07ca4f99"
     },
     {
       "id": "roblox",
@@ -837,12 +905,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/roblox.trs",
         "srs": "release/sing-box/roblox.srs",
         "json": "release/json/roblox.json",
         "domains": "release/domains/roblox.lst",
         "subnets": "release/subnets/roblox.lst"
       },
-      "sha256_srs": "f198cdeaa803dd6264a8adcb78410f89705ce122367b2ade54883bfbc9157ea3"
+      "sha256_trs": "cf0a8de1756b251f4bf9aa85d938a276f1441a6bf1adcadaf78b68d2b6de70d0",
+      "sha256_srs": "4ea405ac3aa77ee660d088d8f871cfc958afb6a6264dac283c0577922a4fbae0"
     },
     {
       "id": "supercell",
@@ -861,12 +931,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/supercell.trs",
         "srs": "release/sing-box/supercell.srs",
         "json": "release/json/supercell.json",
         "domains": "release/domains/supercell.lst",
         "subnets": null
       },
-      "sha256_srs": "73041a1165c9b3d698ba4a256f13da71a303779901bd807f97ed5657790c5b45"
+      "sha256_trs": "b2635aee59084ab42048bbbe3e141366e1650470e2f72db641419346503357bd",
+      "sha256_srs": "932c99a22f8a98863d20164cc58575179e29a44f6a2e160c7ddcfd71dccd654a"
     },
     {
       "id": "escapefromtarkov",
@@ -885,12 +957,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/escapefromtarkov.trs",
         "srs": "release/sing-box/escapefromtarkov.srs",
         "json": "release/json/escapefromtarkov.json",
         "domains": "release/domains/escapefromtarkov.lst",
         "subnets": null
       },
-      "sha256_srs": "986dc235907095187b7532fbee1935ce52bc4bbd048b3fbd478ac7f231e00a1a"
+      "sha256_trs": "6039c56c3488dc6fd4b493d570cab8490f145e37e2bf5474e458fb02bfbe0048",
+      "sha256_srs": "4029e1e9a02df4930913ae91ca82e901d3e316447d3b413d9dc69fb3ecea589e"
     },
     {
       "id": "faceit",
@@ -909,12 +983,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/faceit.trs",
         "srs": "release/sing-box/faceit.srs",
         "json": "release/json/faceit.json",
         "domains": "release/domains/faceit.lst",
         "subnets": null
       },
-      "sha256_srs": "c4d64ba670e1bb4e6d0feb351001182d4a2b59b561e5fb170781a4612b06b5da"
+      "sha256_trs": "8009e043d297716a9aba36921576ab6ee52d5b886e54943e0add83cae58df3cf",
+      "sha256_srs": "40e62bee74ea038b5ce8c2faf643b463a7b2bd2da115e18c65c4c826141491b8"
     },
     {
       "id": "apple",
@@ -933,12 +1009,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/apple.trs",
         "srs": "release/sing-box/apple.srs",
         "json": "release/json/apple.json",
         "domains": "release/domains/apple.lst",
         "subnets": null
       },
-      "sha256_srs": "0b209468c258f945dd10c19f141983a6707d23d30fe4a24954ec70341ab7d1ac"
+      "sha256_trs": "030d90a58b66e8aba618ac52ebd31c5e70b5bc80dd9f566d3144ebbc1f5b4135",
+      "sha256_srs": "0ce5bea29f89bdf8c58f57e37c1ee1953d21cbe69f40e54ca6c4d0e8aca96913"
     },
     {
       "id": "microsoft",
@@ -957,12 +1035,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/microsoft.trs",
         "srs": "release/sing-box/microsoft.srs",
         "json": "release/json/microsoft.json",
         "domains": "release/domains/microsoft.lst",
         "subnets": null
       },
-      "sha256_srs": "6d56361c5ed456e2ec185d55992b9d1ed75d9d98d8a856b968dd48d21bc9884f"
+      "sha256_trs": "c45e80f4066cc99c3cead39a8306a601f2ec9b047515b77e5244275edb15a181",
+      "sha256_srs": "7384069e438245c44e53178e6d55b2e0bc96a1d496557fcf244ba3e4adc375df"
     },
     {
       "id": "google_play",
@@ -981,12 +1061,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/google_play.trs",
         "srs": "release/sing-box/google_play.srs",
         "json": "release/json/google_play.json",
         "domains": "release/domains/google_play.lst",
         "subnets": null
       },
-      "sha256_srs": "71f7dba1d6de708c68444119b8346b87ec3045e0e0643275da5f0c2c7c43cb50"
+      "sha256_trs": "f10b7bcd9554a22ece51f6036a965ca8e195d01d70c31d1530667df057b8a8f3",
+      "sha256_srs": "e0b57b27f677530891f03821a13f47f400d82a8752148b2faff2b462ad860eaf"
     },
     {
       "id": "github",
@@ -1005,12 +1087,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/github.trs",
         "srs": "release/sing-box/github.srs",
         "json": "release/json/github.json",
         "domains": "release/domains/github.lst",
         "subnets": null
       },
-      "sha256_srs": "73f06edc2cb95efd2e26c1fc2e03decad28f2825e565eddcc63b0944007e8b77"
+      "sha256_trs": "83c79a267033c7e72076575b77269731592f713704c0739352b606fcfef9fdb2",
+      "sha256_srs": "7e840c9e8e6134a7d29e06229bbb9bae6fb9a8a6f2dc5129ec277ad3a2848b06"
     },
     {
       "id": "docker",
@@ -1029,12 +1113,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/docker.trs",
         "srs": "release/sing-box/docker.srs",
         "json": "release/json/docker.json",
         "domains": "release/domains/docker.lst",
         "subnets": null
       },
-      "sha256_srs": "351a8702ab546f8918d71a0de4ef2df5016b9b68d422810f86bc134c0327a470"
+      "sha256_trs": "bb5d366969befe60745c1f80cf9612185548e6a2162790bcf8d93634ad17540a",
+      "sha256_srs": "cd44914b6ad111094433ace9b2a42acd8754d70570c6597d4fa23c11ae8a5e03"
     },
     {
       "id": "hodca",
@@ -1053,12 +1139,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/hodca.trs",
         "srs": "release/sing-box/hodca.srs",
         "json": "release/json/hodca.json",
         "domains": "release/domains/hodca.lst",
         "subnets": null
       },
-      "sha256_srs": "2f1a9d1cce212a823b85725b30bd8bab18699c964440bed6108a5cd71952d7a8"
+      "sha256_trs": "8e70e43a0a65389818dfeb8247d20a538c6004940eb0412a3b3c4fab22eba62a",
+      "sha256_srs": "abf010f007784ce92e0d0a0058f5d717322c4d576d2a47cd8c21c176c3133949"
     },
     {
       "id": "cloudflare",
@@ -1077,12 +1165,14 @@
         "ipv6_cidr": 80
       },
       "files": {
+        "trs": "release/tachyon/cloudflare.trs",
         "srs": "release/sing-box/cloudflare.srs",
         "json": "release/json/cloudflare.json",
         "domains": "release/domains/cloudflare.lst",
         "subnets": "release/subnets/cloudflare.lst"
       },
-      "sha256_srs": "4e4028d525c220d9156713f23d85c5017a1dbfe72bb50c0cdea06b4f5a6681c2"
+      "sha256_trs": "aa3e27d2b9eff3c42d2c76aef2b0e6116271ece12f4d69937b58da53bcec6447",
+      "sha256_srs": "97f60e53c7909fc0c70cbcf2d8adb530b49f501513212b2ac16191b9781f4546"
     },
     {
       "id": "cloudfront",
@@ -1101,12 +1191,14 @@
         "ipv6_cidr": 64
       },
       "files": {
+        "trs": "release/tachyon/cloudfront.trs",
         "srs": "release/sing-box/cloudfront.srs",
         "json": "release/json/cloudfront.json",
         "domains": "release/domains/cloudfront.lst",
         "subnets": "release/subnets/cloudfront.lst"
       },
-      "sha256_srs": "19832b1e4c97c11723de86da10f74a6728d8bcede5936b59f8e459d156affb84"
+      "sha256_trs": "00615a943a4a87a4130721b7e414736f6753922bb09d3a0388ca2870066521d6",
+      "sha256_srs": "0050eb19491f179937ec7cd2f8bb088a9b172fc69a748d0b6575dfbe02e5e915"
     },
     {
       "id": "fastly",
@@ -1125,12 +1217,14 @@
         "ipv6_cidr": 39
       },
       "files": {
+        "trs": "release/tachyon/fastly.trs",
         "srs": "release/sing-box/fastly.srs",
         "json": "release/json/fastly.json",
         "domains": "release/domains/fastly.lst",
         "subnets": "release/subnets/fastly.lst"
       },
-      "sha256_srs": "49b118342348519199f03bfb96286c729aefd4e5c56b5dcc2637cb65ba8d8cd4"
+      "sha256_trs": "8193e0b89c1d315a67ab851770680c5b09ec7c256d39350128e1739edbaa6cbf",
+      "sha256_srs": "ebb7faaeb3efe5c46feafa6c6cc46a19ca0205a15c7064d00775ecb1c8e42d60"
     },
     {
       "id": "hetzner",
@@ -1149,12 +1243,14 @@
         "ipv6_cidr": 4
       },
       "files": {
+        "trs": "release/tachyon/hetzner.trs",
         "srs": "release/sing-box/hetzner.srs",
         "json": "release/json/hetzner.json",
         "domains": "release/domains/hetzner.lst",
         "subnets": "release/subnets/hetzner.lst"
       },
-      "sha256_srs": "d8324ba472f1c28fe81ab92ef11252dd007c6719aba4326877a819dd88c6bf74"
+      "sha256_trs": "e1443ecc3e26090d44aa19bcd3ae2613aa4c4d66d26490be1d7ee1c3ea6fc137",
+      "sha256_srs": "aae01292b73e8a19e2df1f1bf2696fd54c2eb192ddeda0d05ca92c0aff56c57a"
     },
     {
       "id": "ovh",
@@ -1173,12 +1269,14 @@
         "ipv6_cidr": 7
       },
       "files": {
+        "trs": "release/tachyon/ovh.trs",
         "srs": "release/sing-box/ovh.srs",
         "json": "release/json/ovh.json",
         "domains": "release/domains/ovh.lst",
         "subnets": "release/subnets/ovh.lst"
       },
-      "sha256_srs": "860f76b01e0b4dc1f06ec5f07584d2a55f309ae24e638115ffe19dbcb3eecea4"
+      "sha256_trs": "b160aec1fad3fc98146f9066cf5fee058f1c6988f319af8d0a9866015012e917",
+      "sha256_srs": "8b03d3927b16c97ff4424e6eed452272397667adf7e0d5c689ac074d6839738c"
     },
     {
       "id": "digitalocean",
@@ -1197,12 +1295,14 @@
         "ipv6_cidr": 13
       },
       "files": {
+        "trs": "release/tachyon/digitalocean.trs",
         "srs": "release/sing-box/digitalocean.srs",
         "json": "release/json/digitalocean.json",
         "domains": "release/domains/digitalocean.lst",
         "subnets": "release/subnets/digitalocean.lst"
       },
-      "sha256_srs": "3161c432071da0223844915679eee4d36d075829e2e6a1f507e2cef4e9f3ebe8"
+      "sha256_trs": "36ddadcd71096417d901e010c058e2abd9972dc1e0a569e20d38078b2fbfafa8",
+      "sha256_srs": "959f8861d67dee1017cf02a862331b2ba5adc0e5463d269e88eedfc966a815b2"
     },
     {
       "id": "news",
@@ -1221,12 +1321,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/news.trs",
         "srs": "release/sing-box/news.srs",
         "json": "release/json/news.json",
         "domains": "release/domains/news.lst",
         "subnets": null
       },
-      "sha256_srs": "c89648d6f274147073a706f5bd23cd8c5dd493764cf0dcfb4f6dbeb289308ea1"
+      "sha256_trs": "c6009a70ae23210d9d8945ec851152c09a4a05892bf44c7a484ec5f28691d5e9",
+      "sha256_srs": "1e806253348915ac7b24bfada4376ec89a9d6db549bc4573d5f9d03dce7e0a4a"
     },
     {
       "id": "torrent",
@@ -1245,12 +1347,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/torrent.trs",
         "srs": "release/sing-box/torrent.srs",
         "json": "release/json/torrent.json",
         "domains": "release/domains/torrent.lst",
         "subnets": null
       },
-      "sha256_srs": "09f8b2d0274a6faf9dbd20f14b3ff2fa6043ad8ecc51a0eb6d4dad3cec527593"
+      "sha256_trs": "6557caad5cf3b96be8d87ed1e5785a3ece3840a6f325d4aa5c27cc3423ecff65",
+      "sha256_srs": "96c56ab15aa4b5f10d0ef2add95e6bf0ee30344ce25c174b03a6b42682522d12"
     },
     {
       "id": "tor",
@@ -1269,12 +1373,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/tor.trs",
         "srs": "release/sing-box/tor.srs",
         "json": "release/json/tor.json",
         "domains": "release/domains/tor.lst",
         "subnets": "release/subnets/tor.lst"
       },
-      "sha256_srs": "9eaf761eb1c5b2d68de8225b0447bcceefc5b443bd6d354158dbc1c21f00f654"
+      "sha256_trs": "f22f8192ae9725b38b3dcbd0569839161af330fdfff2f3affe589a6b7c0cedf3",
+      "sha256_srs": "d15e66344599c3a75d79c559325116a8655bc21f406ec9c094fc7665a6f68008"
     },
     {
       "id": "porn",
@@ -1293,12 +1399,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/porn.trs",
         "srs": "release/sing-box/porn.srs",
         "json": "release/json/porn.json",
         "domains": "release/domains/porn.lst",
         "subnets": null
       },
-      "sha256_srs": "d8e63db1d1dfbe9ef18b8c034d56f80116227b364603fb2aef065feec8330774"
+      "sha256_trs": "1924c8c18f10bf23e9f2224fb3c90adea040ffcd31daee8b1593e2e9220251f4",
+      "sha256_srs": "ffb8a180fb96694c5e7f81ac50059278843c868d0038096861f18c9b5f3c4556"
     },
     {
       "id": "ads_hagezi_pro",
@@ -1317,12 +1425,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/ads_hagezi_pro.trs",
         "srs": "release/sing-box/ads_hagezi_pro.srs",
         "json": "release/json/ads_hagezi_pro.json",
         "domains": "release/domains/ads_hagezi_pro.lst",
         "subnets": null
       },
-      "sha256_srs": "c0fb8f5fa3ba911c2c0cd407eee54050e85f2a96543ec1dbc08ea9c42e28084f"
+      "sha256_trs": "151b009dcd394b893b5468b16f7262a93c89fdc730e5f1eaa83a29a72e2ddf55",
+      "sha256_srs": "9b45c9102175ec98dd06af940fb132069e2fcfc5081e93af5b4b313d7b78b227"
     },
     {
       "id": "win_spy",
@@ -1341,12 +1451,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/win_spy.trs",
         "srs": "release/sing-box/win_spy.srs",
         "json": "release/json/win_spy.json",
         "domains": "release/domains/win_spy.lst",
         "subnets": null
       },
-      "sha256_srs": "3cf5f191dea10c03ebc9711a9d7a0e2182a57daadacb310894f93582eda1fba1"
+      "sha256_trs": "2d8bc981a259b994a7cf8ad957114f5b9587bbb7731a4d3cdfc5daa86f8c1cd3",
+      "sha256_srs": "0954dd86d5bd5fc3817bb7fbfb6a518d23ceeb3eff959cc4ff38d59446ee3a93"
     },
     {
       "id": "google_meet",
@@ -1365,12 +1477,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/google_meet.trs",
         "srs": "release/sing-box/google_meet.srs",
         "json": "release/json/google_meet.json",
         "domains": "release/domains/google_meet.lst",
         "subnets": "release/subnets/google_meet.lst"
       },
-      "sha256_srs": "262be1732296289a07fe15b190234f6f16a0dc3792d01249d2b4153734ee70b5"
+      "sha256_trs": "e248d91086af956fb4877b128b31ad163f18559b2aa52ea0dba6b6fe62b297a5",
+      "sha256_srs": "b99281396ecb353667b4ee7f24c6a946284cc8fe3d6db0cf6aff9889a1969c77"
     },
     {
       "id": "geosite_ru",
@@ -1389,12 +1503,14 @@
         "ipv6_cidr": 0
       },
       "files": {
+        "trs": "release/tachyon/geosite_ru.trs",
         "srs": "release/sing-box/geosite_ru.srs",
         "json": "release/json/geosite_ru.json",
         "domains": "release/domains/geosite_ru.lst",
         "subnets": null
       },
-      "sha256_srs": "1e281621e23c7aa7cb2fc9302e3666906c430a223f4f6617a4c00af262d3db42"
+      "sha256_trs": "76558dfd804f721588ed691deee73606b91e0f71706ee269dcc660c70c2904de",
+      "sha256_srs": "16a119d998eb4c4820937f31a3e21bfddad3e886f19f45bdf3ac56c1398fe36c"
     },
     {
       "id": "geoip_ru",
@@ -1413,12 +1529,14 @@
         "ipv6_cidr": 12170
       },
       "files": {
+        "trs": "release/tachyon/geoip_ru.trs",
         "srs": "release/sing-box/geoip_ru.srs",
         "json": "release/json/geoip_ru.json",
         "domains": null,
         "subnets": "release/subnets/geoip_ru.lst"
       },
-      "sha256_srs": "5035838ba83e53d15e98eed27e8bdc8899b0d7740bc079e51d0d2db41c8110f1"
+      "sha256_trs": "004dddff60efc7c55697ecc604ff64896298d6dcf1ba0b73da68c7b1458d72c8",
+      "sha256_srs": "4d5b3b41ca642b774579f1ad45e2685b660d468cd67781283a9334ec36851fb8"
     },
     {
       "id": "geoip_us",
@@ -1437,12 +1555,14 @@
         "ipv6_cidr": 134361
       },
       "files": {
+        "trs": "release/tachyon/geoip_us.trs",
         "srs": "release/sing-box/geoip_us.srs",
         "json": "release/json/geoip_us.json",
         "domains": null,
         "subnets": "release/subnets/geoip_us.lst"
       },
-      "sha256_srs": "02ebc49b18e02bc25be3e3a136138518df0616a9951cdd26015fc501d4a51886"
+      "sha256_trs": "b6f972fa2d5ae8be420f7f493a505e963c3e1bc00f30bca87aa0ad7d1b8abd49",
+      "sha256_srs": "8ddeb64291c290a3317afc2ef08130d2783d68dd7f5ebe2016124d830a0a20c0"
     },
     {
       "id": "geoip_cn",
@@ -1461,12 +1581,14 @@
         "ipv6_cidr": 3496
       },
       "files": {
+        "trs": "release/tachyon/geoip_cn.trs",
         "srs": "release/sing-box/geoip_cn.srs",
         "json": "release/json/geoip_cn.json",
         "domains": null,
         "subnets": "release/subnets/geoip_cn.lst"
       },
-      "sha256_srs": "dee4662451d65d9b7bdd6d308876919902cd897b2fa3cdf7f1d2a12fb3ced37e"
+      "sha256_trs": "dd323ae53939000c7c5c1f2acdbeb7e5867610f7af4f9126ef4fcd775a4cd2e8",
+      "sha256_srs": "3d7bebd485e7d174256e76a3dbfa6397e0cdadafb1914c6518cb59f639134c90"
     }
   ]
 }

@@ -47,9 +47,9 @@ jobs:
         run: |
           TAG="latest"
           if gh release view "$TAG" >/dev/null 2>&1; then
-            gh release upload "$TAG" release/sing-box/*.srs release/catalog.json --clobber
+            gh release upload "$TAG" release/sing-box/*.srs release/tachyon/*.trs release/catalog.json --clobber
           else
-            gh release create "$TAG" release/sing-box/*.srs release/catalog.json \
+            gh release create "$TAG" release/sing-box/*.srs release/tachyon/*.trs release/catalog.json \
               --title "Tachyon Lists (Latest)" \
-              --notes "Auto-updated unified rule-sets and domain/subnet lists for Tachyon."
+              --notes "Auto-updated unified rule-sets (.trs v2 / .srs) and domain/subnet lists for Tachyon."
           fi

@@ -16,6 +16,7 @@ Pulls from upstream sources:
 - ushan0v/sing-box-supercell-ruleset (`supercell.srs`)
 
 Outputs:
+- release/tachyon/<id>.trs        (compiled Tachyon zero-copy mmap rule-set v2)
 - release/sing-box/<id>.srs       (compiled sing-box binary rule-set)
 - release/json/<id>.json          (sing-box source rule-set v3)
 - release/domains/<id>.lst        (flat domain list for steer / zapret / dnsmasq)
@@ -28,6 +29,7 @@ Outputs:
 from __future__ import annotations
 
 import argparse
+import bisect
 import concurrent.futures
 import hashlib
 import ipaddress
@@ -36,6 +38,7 @@ import os
 import platform
 import shutil
 import stat
+import struct
 import subprocess
 import sys
 import tarfile
@@ -57,8 +60,9 @@ BIN_CACHE_DIR = CACHE_DIR / "bin"
 CUSTOM_DIR = ROOT_DIR / "custom"
 RELEASE_DIR = ROOT_DIR / "release"
 
-USER_AGENT = "TachyonListsBuilder/1.0 (+https://github.com/Dushnilin/tachyon-lists)"
-SING_BOX_VERSION = "1.11.15"
+USER_AGENT = "TachyonListsBuilder/2.0 (+https://github.com/Dushnilin/tachyon-lists)"
+TACHYON_CORE_REPO = "Dushnilin/tachyon-core"
+TACHYON_CORE_FALLBACK_TAG = "v0.2.4"
 
 
 @dataclass
@@ -81,13 +85,30 @@ def log(msg: str) -> None:
     print(f"[tachyon-lists] {msg}", flush=True)
 
 
-def ensure_sing_box_binary() -> Path:
-    """Locate sing-box on PATH or download official binary into .cache/bin/."""
-    env_bin = os.environ.get("SING_BOX_BIN")
+def resolve_latest_tachyon_tag() -> str:
+    """Resolve the latest release tag from Dushnilin/tachyon-core via GitHub redirect."""
+    env_tag = os.environ.get("TACHYON_CORE_TAG")
+    if env_tag:
+        return env_tag if env_tag.startswith("v") else f"v{env_tag}"
+    url = f"https://github.com/{TACHYON_CORE_REPO}/releases/latest"
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+        with urllib.request.urlopen(req, timeout=20) as resp:
+            final_url = resp.geturl().rstrip("/")
+            if "/releases/tag/" in final_url:
+                return final_url.split("/releases/tag/")[-1]
+    except Exception as exc:
+        log(f"WARN: Failed to resolve latest tachyon-core tag ({exc}), falling back to {TACHYON_CORE_FALLBACK_TAG}")
+    return TACHYON_CORE_FALLBACK_TAG
+
+
+def ensure_tachyon_core_binary() -> Path:
+    """Locate tachyon-core on PATH or download latest official release binary into .cache/bin/."""
+    env_bin = os.environ.get("TACHYON_CORE_BIN")
     if env_bin and Path(env_bin).is_file():
         return Path(env_bin)
 
-    which_bin = shutil.which("sing-box")
+    which_bin = shutil.which("tachyon-core")
     if which_bin:
         return Path(which_bin)
 
@@ -95,34 +116,36 @@ def ensure_sing_box_binary() -> Path:
     sys_name = platform.system().lower()
     machine = platform.machine().lower()
 
-    if machine in ("x86_64", "amd64"):
-        arch = "amd64"
-    elif machine in ("aarch64", "arm64"):
-        arch = "arm64"
+    if sys_name == "windows":
+        if machine not in ("x86_64", "amd64"):
+            raise RuntimeError(f"Unsupported Windows architecture for tachyon-core: {machine}")
+        target_name = "windows-amd64"
+        archive_ext = "zip"
+        exe_suffix = ".exe"
+    elif sys_name == "darwin":
+        target_name = "darwin-arm64" if machine in ("aarch64", "arm64") else "darwin-amd64"
+        archive_ext = "tar.gz"
+        exe_suffix = ""
     else:
-        raise RuntimeError(f"Unsupported architecture for auto-downloading sing-box: {machine}")
+        if machine in ("x86_64", "amd64"):
+            target_name = "linux-amd64"
+        elif machine in ("aarch64", "arm64"):
+            target_name = "aarch64"
+        else:
+            raise RuntimeError(f"Unsupported Linux architecture for tachyon-core: {machine}")
+        archive_ext = "tar.gz"
+        exe_suffix = ""
 
-    exe_name = "sing-box.exe" if sys_name == "windows" else "sing-box"
-    cached_bin = BIN_CACHE_DIR / exe_name
+    tag = resolve_latest_tachyon_tag()
+    cached_bin = BIN_CACHE_DIR / f"tachyon-core-{tag}{exe_suffix}"
     if cached_bin.is_file():
         return cached_bin
 
-    ver = SING_BOX_VERSION
-    if sys_name == "windows":
-        archive_ext = "zip"
-        os_tag = "windows"
-    elif sys_name == "darwin":
-        archive_ext = "tar.gz"
-        os_tag = "darwin"
-    else:
-        archive_ext = "tar.gz"
-        os_tag = "linux"
+    asset_stem = f"tachyon-core-{target_name}-{tag}"
+    url = f"https://github.com/{TACHYON_CORE_REPO}/releases/download/{tag}/{asset_stem}.{archive_ext}"
+    archive_path = BIN_CACHE_DIR / f"{asset_stem}.{archive_ext}"
 
-    folder_name = f"sing-box-{ver}-{os_tag}-{arch}"
-    url = f"https://github.com/SagerNet/sing-box/releases/download/v{ver}/{folder_name}.{archive_ext}"
-    archive_path = BIN_CACHE_DIR / f"{folder_name}.{archive_ext}"
-
-    log(f"Downloading sing-box v{ver} ({os_tag}-{arch}) for SRS compilation...")
+    log(f"Downloading tachyon-core {tag} ({target_name}) from {TACHYON_CORE_REPO}...")
     req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
     with urllib.request.urlopen(req, timeout=60) as resp:
         archive_path.write_bytes(resp.read())
@@ -130,21 +153,21 @@ def ensure_sing_box_binary() -> Path:
     if archive_ext == "zip":
         with zipfile.ZipFile(archive_path, "r") as zf:
             for member in zf.namelist():
-                if member.endswith(f"/{exe_name}") or member == exe_name:
+                if member.endswith("tachyon-core.exe"):
                     with zf.open(member) as src:
                         cached_bin.write_bytes(src.read())
                     break
     else:
         with tarfile.open(archive_path, "r:gz") as tf:
             for member in tf.getmembers():
-                if member.name.endswith(f"/{exe_name}") or member.name == exe_name:
+                if member.isfile() and "tachyon-core" in Path(member.name).name:
                     extracted = tf.extractfile(member)
                     if extracted:
                         cached_bin.write_bytes(extracted.read())
-                    break
+                        break
 
     if not cached_bin.is_file():
-        raise RuntimeError(f"Failed to extract {exe_name} from {archive_path}")
+        raise RuntimeError(f"Failed to extract tachyon-core from {archive_path}")
 
     if sys_name != "windows":
         cached_bin.chmod(cached_bin.stat().st_mode | stat.S_IEXEC)
@@ -430,6 +453,370 @@ def sha256_file(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def _merge_intervals(intervals: list[tuple[int, int]]) -> list[tuple[int, int]]:
+    if not intervals:
+        return []
+    intervals.sort()
+    merged: list[tuple[int, int]] = []
+    cur_s, cur_e = intervals[0]
+    for s, e in intervals[1:]:
+        if s <= cur_e + 1:
+            if e > cur_e:
+                cur_e = e
+        else:
+            merged.append((cur_s, cur_e))
+            cur_s, cur_e = s, e
+    merged.append((cur_s, cur_e))
+    return merged
+
+
+def compile_tsrs_v2(
+    domains: list[str],
+    suffixes: list[str],
+    keywords: list[str],
+    regexes: list[str],
+    ip_cidrs: list[str],
+    total_rules: int = 1,
+) -> bytes:
+    """
+    Compile rule-set directly into Tachyon Memory-Mapped Rule-Set v2 (TSRS v2) binary format.
+    Byte-for-byte identical to `core_runtime::route::mmap_set::compiler::RuleSetCompiler`.
+    """
+    DOM_FLAG_EXACT = 0x01
+    DOM_FLAG_SUFFIX = 0x02
+    DOMAIN_BLOCK_SIZE = 128
+    HEADER_SIZE = 96
+    HEADER_FLAG_HAS_EXTRA = 0x01
+    HEADER_FLAG_DOM_DICT = 0x02
+    HEADER_FLAG_V6_64BIT = 0x04
+    UNUSED_7BIT_CODES = [
+        2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
+        27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 47, 58, 59, 60, 61,
+        62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84,
+        85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 96, 123, 124, 125, 126, 127,
+    ]
+
+    # 1. Build merged reversed-key map (`rev_key -> flags`)
+    rev_map: dict[bytes, int] = {}
+    for d in domains:
+        d_clean = d.strip().strip(".").lower()
+        if d_clean and len(d_clean) <= 255:
+            rev = d_clean.encode("ascii", errors="ignore")[::-1].replace(b".", b"\x01")
+            if rev:
+                rev_map[rev] = rev_map.get(rev, 0) | DOM_FLAG_EXACT
+    for s in suffixes:
+        s_clean = s.strip().strip(".").lower()
+        if s_clean and len(s_clean) <= 255:
+            rev = s_clean.encode("ascii", errors="ignore")[::-1].replace(b".", b"\x01")
+            if rev:
+                rev_map[rev] = rev_map.get(rev, 0) | DOM_FLAG_SUFFIX
+
+    # Prune redundant subdomain keys covered by an ancestor with DOM_FLAG_SUFFIX
+    kept_keys: list[tuple[bytes, int]] = []
+    active_suffix: bytes | None = None
+    for rev_key, flags in sorted(rev_map.items()):
+        if active_suffix is not None:
+            if (
+                len(rev_key) > len(active_suffix)
+                and rev_key[len(active_suffix)] == 1
+                and rev_key.startswith(active_suffix)
+            ):
+                continue
+            active_suffix = None
+        if flags & DOM_FLAG_SUFFIX:
+            active_suffix = rev_key
+        kept_keys.append((rev_key, flags))
+
+    # Pack `kept_keys` into Front-Coded Blocks of 128 keys with 87-token dictionary
+    dom_blocks_buf = bytearray()
+    dom_data = bytearray()
+    use_dom_dict = False
+
+    if kept_keys:
+        use_dom_dict = True
+        raw_suffixes: list[bytes] = []
+        for i in range(0, len(kept_keys), DOMAIN_BLOCK_SIZE):
+            chunk = kept_keys[i : i + DOMAIN_BLOCK_SIZE]
+            prev_key = b""
+            for idx, (key, _) in enumerate(chunk):
+                if idx == 0:
+                    shared = 0
+                else:
+                    max_common = min(len(prev_key), len(key), 255)
+                    shared = 0
+                    while shared < max_common and prev_key[shared] == key[shared]:
+                        shared += 1
+                raw_suffixes.append(key[shared:])
+                prev_key = key
+
+        dict_tokens: list[tuple[int, bytes]] = []
+        if len(raw_suffixes) >= 32:
+            step = max(1, len(raw_suffixes) // 20000)
+            counts: dict[bytes, int] = {}
+            for s in raw_suffixes[::step]:
+                slen = len(s)
+                for l in (2, 3, 4, 5, 6, 7, 8, 10, 12, 15):
+                    if slen >= l:
+                        for j in range(slen - l + 1):
+                            sub = s[j : j + l]
+                            counts[sub] = counts.get(sub, 0) + 1
+            candidates: list[tuple[int, bytes]] = []
+            for sub, cnt in counts.items():
+                gain = cnt * (len(sub) - 1) * step
+                if gain > 64:
+                    candidates.append((gain, sub))
+            candidates.sort(key=lambda item: (-item[0], item[1]))
+            chosen: list[bytes] = []
+            for _, sub in candidates:
+                if len(chosen) >= len(UNUSED_7BIT_CODES):
+                    break
+                if any((c in sub or sub in c) for c in chosen):
+                    continue
+                chosen.append(sub)
+            dict_tokens = [(UNUSED_7BIT_CODES[idx], sub) for idx, sub in enumerate(chosen)]
+
+        dom_data.append(len(dict_tokens))
+        for code, tok in dict_tokens:
+            dom_data.append(code)
+            dom_data.append(len(tok))
+            dom_data.extend(tok)
+
+        by_first: list[list[tuple[bytes, int]]] = [[] for _ in range(128)]
+        for code, tok in dict_tokens:
+            by_first[tok[0]].append((tok, code))
+        for bucket_list in by_first:
+            bucket_list.sort(key=lambda item: -len(item[0]))
+
+        for i in range(0, len(kept_keys), DOMAIN_BLOCK_SIZE):
+            chunk = kept_keys[i : i + DOMAIN_BLOCK_SIZE]
+            block_offset = len(dom_data)
+            first_key = chunk[0][0]
+            first_prefix_be = int.from_bytes(first_key[:4].ljust(4, b"\x00"), "big")
+            prev_key = b""
+            for idx, (key, flags) in enumerate(chunk):
+                if idx == 0:
+                    shared = 0
+                else:
+                    max_common = min(len(prev_key), len(key), 255)
+                    shared = 0
+                    while shared < max_common and prev_key[shared] == key[shared]:
+                        shared += 1
+                suffix_bytes = key[shared:]
+                if shared < 63:
+                    dom_data.append((flags << 6) | shared)
+                else:
+                    dom_data.append((flags << 6) | 63)
+                    dom_data.append(shared - 63)
+                tok_bytes = bytearray()
+                p = 0
+                slen = len(suffix_bytes)
+                while p < slen:
+                    b0 = suffix_bytes[p]
+                    matched_code = 0
+                    matched_len = 0
+                    if b0 < 128 and by_first[b0]:
+                        rem = suffix_bytes[p:]
+                        for tok, code in by_first[b0]:
+                            if rem.startswith(tok):
+                                matched_code = code
+                                matched_len = len(tok)
+                                break
+                    if matched_len > 0:
+                        tok_bytes.append(matched_code)
+                        p += matched_len
+                    else:
+                        tok_bytes.append(b0)
+                        p += 1
+                tok_bytes[-1] |= 0x80
+                dom_data.extend(tok_bytes)
+                prev_key = key
+            dom_blocks_buf.extend(struct.pack("<II", first_prefix_be, block_offset))
+    dom_blocks_count = (len(kept_keys) + DOMAIN_BLOCK_SIZE - 1) // DOMAIN_BLOCK_SIZE if kept_keys else 0
+
+    # 2. Keywords + 64-bit trigram Bloom filter
+    sorted_keywords = sorted({k.strip().lower() for k in keywords if k.strip()})
+    string_table = bytearray()
+    keywords_buf = bytearray()
+    kw_bloom = 0
+    has_short_kw = False
+    for k in sorted_keywords:
+        kb = k.encode("utf-8")
+        offset = len(string_table)
+        if len(kb) < 3:
+            has_short_kw = True
+        else:
+            h = (((kb[0] * 31) & 0xFFFFFFFF) + kb[1]) & 0xFFFFFFFF
+            h = (((h * 31) & 0xFFFFFFFF) + kb[2]) & 0xFFFFFFFF
+            kw_bloom |= 1 << (h & 63)
+        string_table.extend(kb)
+        keywords_buf.extend(struct.pack("<IHH", offset, len(kb), 0))
+    if has_short_kw:
+        kw_bloom = 0xFFFFFFFFFFFFFFFF
+    keywords_count = len(sorted_keywords)
+
+    # 3. IPv4 & IPv6 merged intervals + 257-entry L1 directories
+    v4_raw: list[tuple[int, int]] = []
+    v6_raw: list[tuple[int, int]] = []
+    for cidr in ip_cidrs:
+        try:
+            net = ipaddress.ip_network(cidr.strip(), strict=False)
+            if isinstance(net, ipaddress.IPv4Network):
+                v4_raw.append((int(net.network_address), int(net.broadcast_address)))
+            else:
+                v6_raw.append((int(net.network_address), int(net.broadcast_address)))
+        except ValueError:
+            continue
+
+    merged_v4 = _merge_intervals(v4_raw)
+    v4_dir_buf = bytearray()
+    v4_intervals_buf = bytearray()
+    if merged_v4:
+        v4_first_octets = [s >> 24 for s, _ in merged_v4]
+        for octet in range(256):
+            idx = bisect.bisect_left(v4_first_octets, octet)
+            v4_dir_buf.extend(struct.pack("<I", idx))
+        v4_dir_buf.extend(struct.pack("<I", len(merged_v4)))
+        for s, e in merged_v4:
+            v4_intervals_buf.extend(struct.pack("<II", s, e))
+    v4_count = len(merged_v4)
+
+    merged_v6 = _merge_intervals(v6_raw)
+    v6_dir_buf = bytearray()
+    v6_intervals_buf = bytearray()
+    v6_is_64bit = bool(merged_v6) and all(
+        (s & 0xFFFFFFFFFFFFFFFF) == 0 and (e & 0xFFFFFFFFFFFFFFFF) == 0xFFFFFFFFFFFFFFFF
+        for s, e in merged_v6
+    )
+    if merged_v6:
+        v6_first_bytes = [s >> 120 for s, _ in merged_v6]
+        for byte0 in range(256):
+            idx = bisect.bisect_left(v6_first_bytes, byte0)
+            v6_dir_buf.extend(struct.pack("<I", idx))
+        v6_dir_buf.extend(struct.pack("<I", len(merged_v6)))
+        if v6_is_64bit:
+            for s, e in merged_v6:
+                v6_intervals_buf.extend(struct.pack("<QQ", s >> 64, e >> 64))
+        else:
+            for s, e in merged_v6:
+                v6_intervals_buf.extend(s.to_bytes(16, "big"))
+                v6_intervals_buf.extend(e.to_bytes(16, "big"))
+    v6_count = len(merged_v6)
+
+    # 4. Extra fallback rules blob (for domain_regex if present)
+    if regexes:
+        extra_bytes = json.dumps(
+            [{"domain_regex": list(regexes)}], separators=(",", ":"), ensure_ascii=False
+        ).encode("utf-8")
+    else:
+        extra_bytes = b""
+
+    def align_8(pos: int) -> int:
+        return (pos + 7) & ~7
+
+    pos = align_8(HEADER_SIZE)
+    dom_blocks_offset = pos
+    pos += len(dom_blocks_buf)
+
+    pos = align_8(pos)
+    dom_data_offset = pos
+    dom_data_len = len(dom_data)
+    pos += dom_data_len
+
+    pos = align_8(pos)
+    keywords_offset = pos
+    pos += len(keywords_buf)
+
+    pos = align_8(pos)
+    if v4_count == 0:
+        v4_dir_offset = 0
+    else:
+        v4_dir_offset = pos
+        pos += len(v4_dir_buf)
+
+    pos = align_8(pos)
+    v4_intervals_offset = pos
+    pos += len(v4_intervals_buf)
+
+    pos = align_8(pos)
+    if v6_count == 0:
+        v6_dir_offset = 0
+    else:
+        v6_dir_offset = pos
+        pos += len(v6_dir_buf)
+
+    pos = align_8(pos)
+    v6_intervals_offset = pos
+    pos += len(v6_intervals_buf)
+
+    pos = align_8(pos)
+    dest_ports_offset = pos
+    dest_ports_count = 0
+
+    pos = align_8(pos)
+    string_table_offset = pos
+    string_table_len = len(string_table)
+    pos += string_table_len
+
+    pos = align_8(pos)
+    extra_offset = pos
+    extra_len = len(extra_bytes)
+    pos += extra_len
+
+    header_flags = HEADER_FLAG_HAS_EXTRA if extra_bytes else 0
+    if use_dom_dict:
+        header_flags |= HEADER_FLAG_DOM_DICT
+    if v6_is_64bit:
+        header_flags |= HEADER_FLAG_V6_64BIT
+    header = struct.pack(
+        "<4sIIIQ18I",
+        b"TSRS",
+        2,
+        header_flags,
+        total_rules,
+        kw_bloom,
+        dom_blocks_offset,
+        dom_blocks_count,
+        dom_data_offset,
+        dom_data_len,
+        keywords_offset,
+        keywords_count,
+        v4_dir_offset,
+        v4_intervals_offset,
+        v4_count,
+        v6_dir_offset,
+        v6_intervals_offset,
+        v6_count,
+        dest_ports_offset,
+        dest_ports_count,
+        string_table_offset,
+        string_table_len,
+        extra_offset,
+        extra_len,
+    )
+
+    out = bytearray(pos)
+    out[0:HEADER_SIZE] = header
+    if dom_blocks_buf:
+        out[dom_blocks_offset : dom_blocks_offset + len(dom_blocks_buf)] = dom_blocks_buf
+    if dom_data:
+        out[dom_data_offset : dom_data_offset + dom_data_len] = dom_data
+    if keywords_buf:
+        out[keywords_offset : keywords_offset + len(keywords_buf)] = keywords_buf
+    if v4_dir_buf:
+        out[v4_dir_offset : v4_dir_offset + len(v4_dir_buf)] = v4_dir_buf
+    if v4_intervals_buf:
+        out[v4_intervals_offset : v4_intervals_offset + len(v4_intervals_buf)] = v4_intervals_buf
+    if v6_dir_buf:
+        out[v6_dir_offset : v6_dir_offset + len(v6_dir_buf)] = v6_dir_buf
+    if v6_intervals_buf:
+        out[v6_intervals_offset : v6_intervals_offset + len(v6_intervals_buf)] = v6_intervals_buf
+    if string_table:
+        out[string_table_offset : string_table_offset + string_table_len] = string_table
+    if extra_bytes:
+        out[extra_offset : extra_offset + extra_len] = extra_bytes
+    return bytes(out)
+
+
 def update_readme_table(catalog_items: list[dict[str, Any]]) -> None:
     readme_path = ROOT_DIR / "README.md"
     if not readme_path.is_file():
@@ -460,7 +847,11 @@ def update_readme_table(catalog_items: list[dict[str, Any]]) -> None:
         act = action_badges.get(item["recommended_action"], item["recommended_action"])
         dom_total = item["counts"]["domain"] + item["counts"]["domain_suffix"]
         cidr_total = item["counts"]["ipv4_cidr"] + item["counts"]["ipv6_cidr"]
-        formats = [f"[`.srs`](release/sing-box/{lid}.srs)", f"[`.json`](release/json/{lid}.json)"]
+        formats = [
+            f"[`.trs`](release/tachyon/{lid}.trs)",
+            f"[`.srs`](release/sing-box/{lid}.srs)",
+            f"[`.json`](release/json/{lid}.json)",
+        ]
         if dom_total > 0:
             formats.append(f"[`.lst`](release/domains/{lid}.lst)")
         if cidr_total > 0:
@@ -483,8 +874,8 @@ def build_all(only_ids: set[str] | None = None) -> int:
     if only_ids:
         lists_cfg = [item for item in lists_cfg if item["id"] in only_ids]
 
-    sing_box_bin = ensure_sing_box_binary()
-    log(f"Using sing-box compiler: {sing_box_bin}")
+    tachyon_bin = ensure_tachyon_core_binary()
+    log(f"Using tachyon-core compiler: {tachyon_bin}")
 
     # Pre-fetch direct HTTP URLs in parallel
     urls_to_prefetch: set[str] = set()
@@ -504,7 +895,7 @@ def build_all(only_ids: set[str] | None = None) -> int:
                 log(f"WARN: Failed prefetching {u}: {exc}")
 
     # Prepare output directories
-    for sub in ("sing-box", "json", "domains", "subnets", "subnets/ipv4", "subnets/ipv6"):
+    for sub in ("tachyon", "sing-box", "json", "domains", "subnets", "subnets/ipv4", "subnets/ipv6"):
         (RELEASE_DIR / sub).mkdir(parents=True, exist_ok=True)
 
     catalog_entries: list[dict[str, Any]] = []
@@ -524,7 +915,7 @@ def build_all(only_ids: set[str] | None = None) -> int:
                     bucket.merge(sub)
                 elif stype == "srs":
                     url = format_url(src["url"], upstreams)
-                    sub = parse_srs_url(url, sing_box_bin)
+                    sub = parse_srs_url(url, tachyon_bin)
                     bucket.merge(sub)
                 elif stype == "singbox_json":
                     url = format_url(src["url"], upstreams)
@@ -588,8 +979,21 @@ def build_all(only_ids: set[str] | None = None) -> int:
 
         json_path = RELEASE_DIR / "json" / f"{lid}.json"
         srs_path = RELEASE_DIR / "sing-box" / f"{lid}.srs"
+        trs_path = RELEASE_DIR / "tachyon" / f"{lid}.trs"
         json_path.write_text(json.dumps(srs_json_doc, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
         compile_jobs.append((lid, json_path, srs_path))
+
+        # Compile native zero-copy TRS v2 directly in Python
+        trs_bytes = compile_tsrs_v2(
+            domains=rule_obj.get("domain", []),
+            suffixes=rule_obj.get("domain_suffix", []),
+            keywords=rule_obj.get("domain_keyword", []),
+            regexes=rule_obj.get("domain_regex", []),
+            ip_cidrs=rule_obj.get("ip_cidr", []),
+            total_rules=1,
+        )
+        trs_path.write_bytes(trs_bytes)
+        trs_sha256 = hashlib.sha256(trs_bytes).hexdigest()
 
         # Write flat domain list for steer / zapret / dnsmasq
         all_flat_domains = sorted(set(domains) | set(suffixes))
@@ -630,21 +1034,23 @@ def build_all(only_ids: set[str] | None = None) -> int:
                     "ipv6_cidr": len(v6_cidrs),
                 },
                 "files": {
+                    "trs": f"release/tachyon/{lid}.trs",
                     "srs": f"release/sing-box/{lid}.srs",
                     "json": f"release/json/{lid}.json",
                     "domains": f"release/domains/{lid}.lst" if all_flat_domains else None,
                     "subnets": f"release/subnets/{lid}.lst" if (v4_cidrs or v6_cidrs) else None,
                 },
+                "sha256_trs": trs_sha256,
             }
         )
 
-    # Compile all .json -> .srs in parallel
-    log(f"Compiling {len(compile_jobs)} binary .srs rule-sets...")
+    # Compile all .json -> .srs in parallel using tachyon-core
+    log(f"Compiling {len(compile_jobs)} binary .srs rule-sets via tachyon-core...")
 
     def compile_one(job: tuple[str, Path, Path]) -> tuple[str, str]:
         lid, jpath, spath = job
         res = subprocess.run(
-            [str(sing_box_bin), "rule-set", "compile", str(jpath), "-o", str(spath)],
+            [str(tachyon_bin), "rule-set", "compile", str(jpath), "-o", str(spath)],
             capture_output=True,
             text=True,
         )
