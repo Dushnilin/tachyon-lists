@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-10-29T11:00:00Z",
+  "generated_at": "2026-10-29T11:06:10Z",
   "repository": "https://github.com/Dushnilin/tachyon-lists",
   "total_lists": 62,
   "lists": [
@@ -89,14 +89,14 @@
         "domain_suffix": 74739,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 0,
+        "ipv4_cidr": 88587,
         "ipv6_cidr": 0
       },
       "files": {
         "srs": "release/sing-box/ru_blocked.srs",
         "json": "release/json/ru_blocked.json",
         "domains": "release/domains/ru_blocked.lst",
-        "subnets": null
+        "subnets": "release/subnets/ru_blocked.lst"
       },
       "sha256_srs": "f03958701a130fcb220cf262ca2a204ea0b8fce034ad4f7efb25c68620a602bf"
     },
@@ -113,14 +113,14 @@
         "domain_suffix": 1374037,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 0,
-        "ipv6_cidr": 0
+        "ipv4_cidr": 918,
+        "ipv6_cidr": 4
       },
       "files": {
         "srs": "release/sing-box/ru_blocked_all.srs",
         "json": "release/json/ru_blocked_all.json",
         "domains": "release/domains/ru_blocked_all.lst",
-        "subnets": null
+        "subnets": "release/subnets/ru_blocked_all.lst"
       },
       "sha256_srs": "1a311ed27f16d2e5d7a9d742a5bf1e3c39023ce93c28acb0fce09cdd4853c11d"
     },
@@ -137,14 +137,14 @@
         "domain_suffix": 420,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 0,
-        "ipv6_cidr": 0
+        "ipv4_cidr": 918,
+        "ipv6_cidr": 4
       },
       "files": {
         "srs": "release/sing-box/antifilter.srs",
         "json": "release/json/antifilter.json",
         "domains": "release/domains/antifilter.lst",
-        "subnets": null
+        "subnets": "release/subnets/antifilter.lst"
       },
       "sha256_srs": "bd168474ed30c6a99b243ca5b3d665dc06684254ba7bdbb4e56f5fe551248ae3"
     },
@@ -161,14 +161,14 @@
         "domain_suffix": 74658,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 0,
+        "ipv4_cidr": 25266,
         "ipv6_cidr": 0
       },
       "files": {
         "srs": "release/sing-box/refilter.srs",
         "json": "release/json/refilter.json",
         "domains": "release/domains/refilter.lst",
-        "subnets": null
+        "subnets": "release/subnets/refilter.lst"
       },
       "sha256_srs": "5a866f32f38261cd4415217bb485623e7beb6040e7b37918d2af19cffa79ed4b"
     },
@@ -233,14 +233,14 @@
         "domain_suffix": 456,
         "domain_keyword": 9,
         "domain_regex": 0,
-        "ipv4_cidr": 0,
+        "ipv4_cidr": 6710,
         "ipv6_cidr": 0
       },
       "files": {
         "srs": "release/sing-box/ru_whitelist.srs",
         "json": "release/json/ru_whitelist.json",
         "domains": "release/domains/ru_whitelist.lst",
-        "subnets": null
+        "subnets": "release/subnets/ru_whitelist.lst"
       },
       "sha256_srs": "2bf650aa08173b32aa8b08484c5521e67c0ef29328ed448383a5ca6d46e732c5"
     },
@@ -257,14 +257,14 @@
         "domain_suffix": 888,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 0,
-        "ipv6_cidr": 0
+        "ipv4_cidr": 36746,
+        "ipv6_cidr": 89
       },
       "files": {
         "srs": "release/sing-box/ru_domains.srs",
         "json": "release/json/ru_domains.json",
         "domains": "release/domains/ru_domains.lst",
-        "subnets": null
+        "subnets": "release/subnets/ru_domains.lst"
       },
       "sha256_srs": "1e281621e23c7aa7cb2fc9302e3666906c430a223f4f6617a4c00af262d3db42"
     },
@@ -545,14 +545,14 @@
         "domain_suffix": 24,
         "domain_keyword": 0,
         "domain_regex": 4,
-        "ipv4_cidr": 0,
-        "ipv6_cidr": 0
+        "ipv4_cidr": 36,
+        "ipv6_cidr": 86
       },
       "files": {
         "srs": "release/sing-box/netflix.srs",
         "json": "release/json/netflix.json",
         "domains": "release/domains/netflix.lst",
-        "subnets": null
+        "subnets": "release/subnets/netflix.lst"
       },
       "sha256_srs": "f4737d8c944af70827e183cb9acdcc69fbe71ec6d00bf07e38086c7ee14f437b"
     },

@@ -5,8 +5,10 @@
     "roscomvpn_geosite_data": "https://raw.githubusercontent.com/hydraponique/roscomvpn-geosite/master/data",
     "roscomvpn_geosite_srs": "https://raw.githubusercontent.com/hydraponique/roscomvpn-geosite/master/release/sing-box",
     "roscomvpn_geoip_srs": "https://raw.githubusercontent.com/hydraponique/roscomvpn-geoip/master/release/sing-box",
+    "roscomvpn_geoip_text": "https://raw.githubusercontent.com/hydraponique/roscomvpn-geoip/master/release/text",
     "runetfreedom_geosite_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite",
     "runetfreedom_geoip_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geoip",
+    "runetfreedom_geoip_text": "https://raw.githubusercontent.com/runetfreedom/russia-blocked-geoip/release/text",
     "itdoginfo_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download",
     "itdoginfo_raw": "https://raw.githubusercontent.com/itdoginfo/allow-domains/refs/heads/main",
     "metacubex_geosite": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite",
@@ -60,7 +62,8 @@
       "description": "Очищенный и дедуплицированный список реально действующих заблокированных в РФ доменов (объединение Антизапрета и выгрузки РКН без мёртвых и мусорных доменов).",
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-ru-blocked.srs",
       "sources": [
-        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-ru-blocked.srs" }
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-ru-blocked.srs" },
+        { "type": "plain_subnets", "url": "{runetfreedom_geoip_text}/ru-blocked.txt" }
       ]
     },
     {
@@ -72,7 +75,8 @@
       "description": "Полная нефильтрованная выгрузка всех доменов, поддоменов и зеркал из реестра блокировок РФ, включая региональные ограничения и блокировки ТСПУ.",
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-ru-blocked-all.srs",
       "sources": [
-        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-ru-blocked-all.srs" }
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-ru-blocked-all.srs" },
+        { "type": "plain_subnets", "url": "{runetfreedom_geoip_text}/ru-blocked-community.txt" }
       ]
     },
     {
@@ -84,7 +88,8 @@
       "description": "Курируемый сообществом Antifilter.download список доменов и сервисов, заблокированных РКН или замедляемых оборудованием ТСПУ в России.",
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-antifilter-download-community.srs",
       "sources": [
-        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-antifilter-download-community.srs" }
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-antifilter-download-community.srs" },
+        { "type": "plain_subnets", "url": "{runetfreedom_geoip_text}/ru-blocked-community.txt" }
       ]
     },
     {
@@ -96,7 +101,8 @@
       "description": "Тщательно модерируемый проект Re:filter: включает проверенные домены заблокированных ресурсов и западных сервисов с геоблоком без избыточных правил.",
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-refilter.srs",
       "sources": [
-        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-refilter.srs" }
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-refilter.srs" },
+        { "type": "plain_subnets", "url": "{runetfreedom_geoip_text}/re-filter.txt" }
       ]
     },
     {
@@ -133,7 +139,8 @@
       "description": "Критически важные российские сервисы, которые нельзя пускать через VPN: Госуслуги, ФНС (nalog.ru), Честный ЗНАК, Мос.ру, Сбербанк, Т-Банк, Альфа-Банк, ВТБ, Ozon, Wildberries, Авито, Яндекс, VK, РЖД, корневые сертификаты и проверочные домены. Направляйте НАПРЯМУЮ (Direct).",
       "fallback_srs": "https://raw.githubusercontent.com/hydraponique/roscomvpn-geosite/master/release/sing-box/whitelist.srs",
       "sources": [
-        { "type": "srs", "url": "{roscomvpn_geosite_srs}/whitelist.srs" }
+        { "type": "srs", "url": "{roscomvpn_geosite_srs}/whitelist.srs" },
+        { "type": "plain_subnets", "url": "{roscomvpn_geoip_text}/whitelist.txt" }
       ]
     },
     {
@@ -147,7 +154,8 @@
       "sources": [
         { "type": "srs", "url": "{roscomvpn_geosite_srs}/category-ru.srs" },
         { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-category-ru.srs" },
-        { "type": "singbox_json", "url": "{metacubex_geosite}/category-ru.json" }
+        { "type": "singbox_json", "url": "{metacubex_geosite}/category-ru.json" },
+        { "type": "plain_subnets", "url": "{roscomvpn_geoip_text}/direct.txt" }
       ]
     },
     {
@@ -306,7 +314,8 @@
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-netflix.srs",
       "sources": [
         { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-netflix.srs" },
-        { "type": "singbox_json", "url": "{metacubex_geosite}/netflix.json" }
+        { "type": "singbox_json", "url": "{metacubex_geosite}/netflix.json" },
+        { "type": "plain_subnets", "url": "{runetfreedom_geoip_text}/netflix.txt" }
       ]
     },
     {
