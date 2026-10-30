@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-10-30T05:41:08Z",
+  "generated_at": "2026-10-30T12:47:55Z",
   "repository": "https://github.com/Dushnilin/tachyon-lists",
   "total_lists": 61,
   "lists": [
@@ -121,7 +121,7 @@
         "domain_suffix": 1374037,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 918,
+        "ipv4_cidr": 917,
         "ipv6_cidr": 4
       },
       "files": {
@@ -147,7 +147,7 @@
         "domain_suffix": 420,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 918,
+        "ipv4_cidr": 917,
         "ipv6_cidr": 4
       },
       "files": {
@@ -251,7 +251,7 @@
         "domain_suffix": 888,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 36746,
+        "ipv4_cidr": 36760,
         "ipv6_cidr": 89
       },
       "files": {
@@ -1418,7 +1418,7 @@
       "fallback_srs": "https://github.com/zxc-rv/ad-filter/releases/latest/download/adlist.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 210918,
+        "domain_suffix": 211547,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -1431,8 +1431,8 @@
         "domains": "release/domains/ads_hagezi_pro.lst",
         "subnets": null
       },
-      "sha256_trs": "151b009dcd394b893b5468b16f7262a93c89fdc730e5f1eaa83a29a72e2ddf55",
-      "sha256_srs": "9b45c9102175ec98dd06af940fb132069e2fcfc5081e93af5b4b313d7b78b227"
+      "sha256_trs": "01b91c94678e0510003005f675355ca438978fecfa62e1a2c5c5fcee6874d853",
+      "sha256_srs": "fe722709a10b505e75ff70891f5328a9fa758bf118656bb4f9d61273d7909581"
     },
     {
       "id": "win_spy",
