@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-10-30T22:15:48Z",
+  "generated_at": "2026-10-31T05:31:24Z",
   "repository": "https://github.com/Dushnilin/tachyon-lists",
   "total_lists": 61,
   "lists": [
@@ -586,7 +586,7 @@
       "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/tiktok.srs",
       "counts": {
         "domain": 5,
-        "domain_suffix": 45,
+        "domain_suffix": 48,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -599,8 +599,8 @@
         "domains": "release/domains/tiktok.lst",
         "subnets": null
       },
-      "sha256_trs": "b42105b5df9ea697a08eaa1647ad0365379f3949e86a474c4d4b79c1a167844a",
-      "sha256_srs": "53ef3f50dc03f93e45f9203971f2e784c53eec37fdc055a7165edcd50a2a0127"
+      "sha256_trs": "6ea1d3b3c52bcdf7c5568e09a7ce780b4e5520dd71fc8991113615470b981c49",
+      "sha256_srs": "7d8a87d79b16aff254b6491e946de627e1575d3bb5591323d8518b91ffa97a26"
     },
     {
       "id": "hdrezka",
@@ -1028,7 +1028,7 @@
       "fallback_srs": "https://raw.githubusercontent.com/hydraponique/roscomvpn-geosite/master/release/sing-box/microsoft.srs",
       "counts": {
         "domain": 16,
-        "domain_suffix": 630,
+        "domain_suffix": 632,
         "domain_keyword": 3,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -1041,8 +1041,8 @@
         "domains": "release/domains/microsoft.lst",
         "subnets": null
       },
-      "sha256_trs": "c45e80f4066cc99c3cead39a8306a601f2ec9b047515b77e5244275edb15a181",
-      "sha256_srs": "7384069e438245c44e53178e6d55b2e0bc96a1d496557fcf244ba3e4adc375df"
+      "sha256_trs": "9f3ba25e01f598272dff29a71fd12957042f80261c4d20fac98374c7d548d147",
+      "sha256_srs": "7babe4b8518945424a7509dc892e51c6c00f6194e0d10a26e6b06a80be605eab"
     },
     {
       "id": "google_play",
