@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg"
      width="1200" height="510" viewBox="0 0 1200 510"
      role="img" aria-labelledby="title desc">
-  <title id="title">Витрина 99 категорий списков маршрутизации по группам</title>
-  <desc id="desc">Сетка из 9 тематических групп каталога Tachyon Lists: Региональные и РКН (9), Прямой маршрут Direct (4), Нейросети и ИИ (13), Видео, музыка и медиа (12), Соцсети, мессенджеры и звонки (9), Игры и лаунчеры (21), Разработка, CDN и облака (17), Финтех, Крипта, P2P и Блок (9), Системные базы (5).</desc>
+  <title id="title">Витрина 100 категорий списков маршрутизации по группам</title>
+  <desc id="desc">Сетка из 9 тематических групп каталога Tachyon Lists: Региональные и РКН (9), Прямой маршрут Direct (4), Нейросети и ИИ (13), Видео, музыка и медиа (12), Соцсети, мессенджеры и звонки (9), Игры и лаунчеры (22), Разработка, CDN и облака (17), Финтех, Крипта, P2P и Блок (9), Системные базы (5).</desc>
 
   <defs>
     <linearGradient id="cat-bg" x1="0" y1="0" x2="1200" y2="510" gradientUnits="userSpaceOnUse">
@@ -79,13 +79,13 @@
   <!-- Group 6: Gaming -->
   <g transform="translate(804, 184)">
     <rect x="0" y="0" width="368" height="142" rx="12" fill="#0F172A" stroke="#F59E0B" stroke-width="1.2" stroke-opacity="0.6"/>
-    <text x="18" y="30" fill="#FDE68A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="700">Игры и лаунчеры (21)</text>
+    <text x="18" y="30" fill="#FDE68A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="700">Игры и лаунчеры (22)</text>
     <rect x="278" y="12" width="74" height="24" rx="6" fill="#26143B"/>
     <text x="315" y="29" text-anchor="middle" fill="#C084FC" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" font-weight="700">Proxy</text>
     <text x="18" y="58" fill="#FBBF24" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">games_all · steam · epicgames · ubisoft</text>
-    <text x="18" y="82" fill="#FBBF24" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">warthunder · blizzard · riot · origin · xbox</text>
-    <text x="18" y="106" fill="#FBBF24" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">playstation · nintendo · gog · wargaming</text>
-    <text x="18" y="130" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16">hoyoverse · minecraft · rockstar · pubg · eft</text>
+    <text x="18" y="82" fill="#FBBF24" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">warthunder · blizzard · callofduty · riot</text>
+    <text x="18" y="106" fill="#FBBF24" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">origin · xbox · playstation · nintendo · gog</text>
+    <text x="18" y="130" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16">wargaming · hoyoverse · minecraft · pubg · eft</text>
   </g>
 
   <!-- ROW 3 -->

@@ -1083,18 +1083,30 @@ def build_all(only_ids: set[str] | None = None) -> int:
         lid = entry["id"]
         entry["sha256_srs"] = srs_hashes.get(lid, "")
 
+    full_entries = catalog_entries
+    catalog_file = RELEASE_DIR / "catalog.json"
+    if only_ids and catalog_file.is_file():
+        try:
+            prev_doc = json.loads(catalog_file.read_text(encoding="utf-8"))
+            by_id = {e["id"]: e for e in prev_doc.get("lists", [])}
+            for e in catalog_entries:
+                by_id[e["id"]] = e
+            full_entries = [by_id[item["id"]] for item in cfg["lists"] if item["id"] in by_id]
+        except Exception:
+            full_entries = catalog_entries
+
     catalog_doc = {
         "version": 1,
         "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "repository": cfg["repository"],
-        "total_lists": len(catalog_entries),
-        "lists": catalog_entries,
+        "total_lists": len(full_entries),
+        "lists": full_entries,
     }
-    (RELEASE_DIR / "catalog.json").write_text(
-        json.dumps(catalog_doc, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+    catalog_file.write_text(
+        json.dumps(catalog_doc, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n"
     )
 
-    update_readme_table(catalog_entries)
+    update_readme_table(full_entries)
 
     elapsed = time.time() - t0
     log(f"Successfully built {len(catalog_entries)} lists in {elapsed:.1f}s -> {RELEASE_DIR}")

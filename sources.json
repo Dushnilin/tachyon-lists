@@ -773,6 +773,19 @@
       ]
     },
     {
+      "id": "callofduty",
+      "group": "gaming",
+      "kind": "mixed",
+      "recommended_action": "proxy",
+      "title": "Call of Duty и Demonware — Warzone, Black Ops 6, Modern Warfare II/III, CoD HQ и CoD Mobile",
+      "description": "[Маршрут: В Прокси / VPN (устраняет ошибки HUENEME-NEGEV / TRAVIS-RILEA)] Выделенный список доменов и IP-подсетей Call of Duty для игроков в Steam, Battle.net, Xbox Game Pass и PlayStation: включает все шлюзы матчмейкинга, авторизации и лобби Demonware (demonware.net + AS60229 185.34.106.0/23), серверы Activision Blizzard (AS57976), античит Ricochet и CoD HQ.",
+      "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/activision-blizzard.srs",
+      "sources": [
+        { "type": "singbox_json", "url": "{metacubex_geosite}/activision-blizzard.json" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-blizzard.srs" }
+      ]
+    },
+    {
       "id": "riot",
       "group": "gaming",
       "kind": "domains",

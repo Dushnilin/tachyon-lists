@@ -5,7 +5,7 @@
 <p align="center">
   <a href="https://github.com/Dushnilin/tachyon-lists/actions/workflows/build.yml"><img src="https://github.com/Dushnilin/tachyon-lists/actions/workflows/build.yml/badge.svg" alt="Build &amp; Publish Tachyon Lists"></a>
   <a href="https://github.com/Dushnilin/tachyon-lists/releases/tag/latest"><img src="https://img.shields.io/badge/release-latest%20(auto%206h)-38bdf8" alt="Latest Release"></a>
-  <a href="./release/catalog.json"><img src="https://img.shields.io/badge/lists-99%20categories-a855f7" alt="99 Categories"></a>
+  <a href="./release/catalog.json"><img src="https://img.shields.io/badge/lists-100%20categories-a855f7" alt="100 Categories"></a>
   <a href="./sources.json"><img src="https://img.shields.io/badge/upstreams-8%20repos%20%2B%20custom-10b981" alt="8 Upstreams + Custom"></a>
 </p>
 
@@ -76,7 +76,7 @@
 **Локальная сборка и кастомизация (`custom/`):**
 
 ```bash
-python3 build_lists.py                                             # Полная сборка всех 99 категорий
+python3 build_lists.py                                             # Полная сборка всех 100 категорий
 python3 build_lists.py --only ru_whitelist geoblock ai_all         # Выборочная пересборка
 ```
 
@@ -119,7 +119,7 @@ python3 build_lists.py --only ru_whitelist geoblock ai_all         # Выбор�
 </p>
 
 <details>
-<summary><b>🗺️ Развернуть точную пофайловую матрицу источников для всех 99 категорий (<code>sources.json</code> → какие файлы склеиваются и <code>fallback_srs</code>)</b></summary>
+<summary><b>🗺️ Развернуть точную пофайловую матрицу источников для всех 100 категорий (<code>sources.json</code> → какие файлы склеиваются и <code>fallback_srs</code>)</b></summary>
 
 <br>
 
@@ -178,6 +178,7 @@ python3 build_lists.py --only ru_whitelist geoblock ai_all         # Выбор�
 | `ubisoft` | `gaming` | `domains` | `runetfreedom_geosite_srs/geosite-ubisoft.srs` + `metacubex_geosite/ubisoft.json` + `custom/domains/ubisoft.lst` | `runetfreedom` → `geosite-ubisoft.srs` |
 | `warthunder` | `gaming` | `domains` | `runetfreedom_geosite_srs/geosite-gaijin.srs` + `metacubex_geosite/gaijin.json` + `custom/domains/warthunder.lst` | `runetfreedom` → `geosite-gaijin.srs` |
 | `blizzard` | `gaming` | `domains` | `runetfreedom_geosite_srs/geosite-blizzard.srs` + `metacubex_geosite/{blizzard,activision-blizzard}.json` + `custom/domains/blizzard.lst` | `runetfreedom` → `geosite-blizzard.srs` |
+| `callofduty` | `gaming` | `mixed` | `metacubex_geosite/activision-blizzard.json` + `runetfreedom_geosite_srs/geosite-blizzard.srs` + `custom/domains/callofduty.lst` + `custom/subnets/callofduty.lst` (`AS60229` Demonware + `AS57976` Blizzard) | `MetaCubeX` → `activision-blizzard.srs` |
 | `riot` | `gaming` | `domains` | `roscomvpn_geosite_srs/riot.srs` + `runetfreedom_geosite_srs/geosite-riot.srs` + `metacubex_geosite/riot.json` | `roscomvpn` → `riot.srs` |
 | `origin` | `gaming` | `domains` | `roscomvpn_geosite_srs/origin.srs` + `runetfreedom_geosite_srs/geosite-{ea,origin}.srs` + `metacubex_geosite/{ea,origin}.json` | `roscomvpn` → `origin.srs` |
 | `xbox` | `gaming` | `domains` | `runetfreedom_geosite_srs/geosite-{xbox,bethesda}.srs` + `metacubex_geosite/{xbox,bethesda}.json` + `custom/domains/xbox.lst` | `runetfreedom` → `geosite-xbox.srs` |
@@ -230,15 +231,15 @@ python3 build_lists.py --only ru_whitelist geoblock ai_all         # Выбор�
 ---
 
 <p align="center">
-  <img src="./assets/readme/section-catalog.svg" width="100%" alt="04 — Каталог списков и маршрутов (94 основных + 5 системных)">
+  <img src="./assets/readme/section-catalog.svg" width="100%" alt="04 — Каталог списков и маршрутов (95 основных + 5 системных)">
 </p>
 
 <p align="center">
-  <img src="./assets/readme/catalog-groups.svg" width="100%" alt="Витрина 99 категорий списков маршрутизации по 9 тематическим группам">
+  <img src="./assets/readme/catalog-groups.svg" width="100%" alt="Витрина 100 категорий списков маршрутизации по 9 тематическим группам">
 </p>
 
 <details>
-<summary><b>📋 Развернуть полную таблицу 94 основных списков (описания, счётчики доменов/подсетей и прямые ссылки — автообновление 6ч)</b></summary>
+<summary><b>📋 Развернуть полную таблицу 95 основных списков (описания, счётчики доменов/подсетей и прямые ссылки — автообновление 6ч)</b></summary>
 
 <br>
 
@@ -298,6 +299,7 @@ python3 build_lists.py --only ru_whitelist geoblock ai_all         # Выбор�
 | `ubisoft` | **Ubisoft Connect (Uplay) — Rainbow Six Siege, Assassin's Creed, Far Cry, The Division и For Honor**<br><sub>[Маршрут: В Прокси / VPN] Домены лаунчера Ubisoft Connect (Uplay), серверов авторизации, облачных сохранений, CDN обновлений и античитов (ubisoft.com, ubi.com, ubisoftconnect.com, uplay.com, rainbowsix.com, ubistatic-a.akamaihd.net, battleye.com).</sub> | 🟣 `Proxy` | `48` | `0` | [`.trs`](release/tachyon/ubisoft.trs) · [`.srs`](release/sing-box/ubisoft.srs) · [`.json`](release/json/ubisoft.json) · [`.lst`](release/domains/ubisoft.lst) |
 | `warthunder` | **War Thunder и Gaijin — War Thunder, Enlisted, Crossout, CRSED, Star Conflict и Gaijin.Net**<br><sub>[Маршрут: В Прокси / VPN или Direct] Домены игр и лаунчера Gaijin Entertainment: War Thunder (warthunder.com, wtmobile.com), Enlisted (enlisted.net), Crossout (crossout.net), CRSED, Star Conflict, Modern Warships, магазин Gaijin.Net и мастер-серверы обновлений.</sub> | 🟣 `Proxy` | `16` | `0` | [`.trs`](release/tachyon/warthunder.trs) · [`.srs`](release/sing-box/warthunder.srs) · [`.json`](release/json/warthunder.json) · [`.lst`](release/domains/warthunder.lst) |
 | `blizzard` | **Battle.net (Activision Blizzard) — World of Warcraft, Overwatch 2, Diablo IV, Call of Duty и Hearthstone**<br><sub>[Маршрут: В Прокси / VPN] Домены лаунчера Battle.net, магазина и серверов Activision Blizzard: battle.net, blizzard.com, activision.com, callofduty.com, worldofwarcraft.com, playoverwatch.com, diablo4.com, playhearthstone.com и CDN загрузок.</sub> | 🟣 `Proxy` | `64` | `0` | [`.trs`](release/tachyon/blizzard.trs) · [`.srs`](release/sing-box/blizzard.srs) · [`.json`](release/json/blizzard.json) · [`.lst`](release/domains/blizzard.lst) |
+| `callofduty` | **Call of Duty и Demonware — Warzone, Black Ops 6, Modern Warfare II/III, CoD HQ и CoD Mobile**<br><sub>[Маршрут: В Прокси / VPN (устраняет ошибки HUENEME-NEGEV / TRAVIS-RILEA)] Выделенный список доменов и IP-подсетей Call of Duty для игроков в Steam, Battle.net, Xbox Game Pass и PlayStation: включает все шлюзы матчмейкинга, авторизации и лобби Demonware (demonware.net + AS60229 185.34.106.0/23), серверы Activision Blizzard (AS57976), античит Ricochet и CoD HQ.</sub> | 🟣 `Proxy` | `56` | `65` | [`.trs`](release/tachyon/callofduty.trs) · [`.srs`](release/sing-box/callofduty.srs) · [`.json`](release/json/callofduty.json) · [`.lst`](release/domains/callofduty.lst) · [`subnets`](release/subnets/callofduty.lst) |
 | `riot` | **Riot Games — Valorant, League of Legends, TFT, Riot Client и Vanguard**<br><sub>[Маршрут: В Прокси / VPN или Direct] Сервисы авторизации, обновлений и матчей Riot Games: riotgames.com, leagueoflegends.com, playvalorant.com, pvp.net и riotcdn.net.</sub> | 🟣 `Proxy` | `54` | `0` | [`.trs`](release/tachyon/riot.trs) · [`.srs`](release/sing-box/riot.srs) · [`.json`](release/json/riot.json) · [`.lst`](release/domains/riot.lst) |
 | `origin` | **EA / Origin — EA App, Apex Legends, Battlefield, EA Sports FC и The Sims**<br><sub>[Маршрут: В Прокси / VPN] Домены Electronic Arts: ea.com, origin.com, tnt-ea.com, apexlegends.com и серверы авторизации, античита и загрузки игр EA App.</sub> | 🟣 `Proxy` | `163` | `0` | [`.trs`](release/tachyon/origin.trs) · [`.srs`](release/sing-box/origin.srs) · [`.json`](release/json/origin.json) · [`.lst`](release/domains/origin.lst) |
 | `xbox` | **Xbox Live и Game Pass — консоли Xbox, PC Game Pass, Cloud Gaming, Forza, Halo и Bethesda**<br><sub>[Маршрут: В Прокси / VPN] Экосистема Xbox и игровых студий Microsoft / Bethesda: xbox.com, xboxlive.com, gamepass.com, xboxservices.com, forzamotorsport.net, halowaypoint.com, seaofthieves.com, flightsimulator.com, bethesda.net, doom.com и elderscrolls.com.</sub> | 🟣 `Proxy` | `61` | `0` | [`.trs`](release/tachyon/xbox.trs) · [`.srs`](release/sing-box/xbox.srs) · [`.json`](release/json/xbox.json) · [`.lst`](release/domains/xbox.lst) |

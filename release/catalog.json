@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generated_at": "2026-11-01T13:15:10Z",
+  "generated_at": "2026-11-01T16:41:06Z",
   "repository": "https://github.com/Dushnilin/tachyon-lists",
-  "total_lists": 99,
+  "total_lists": 100,
   "lists": [
     {
       "id": "russia_inside",
@@ -1381,6 +1381,32 @@
       },
       "sha256_trs": "dbc4a323eb2484e76f054d3787a339833a605ecbf98c97543c2fdd5493d2574c",
       "sha256_srs": "7b1854c647188ff01e892c15e5f4ccc46925ae955157c234b1183c42ded9baa8"
+    },
+    {
+      "id": "callofduty",
+      "group": "gaming",
+      "kind": "mixed",
+      "recommended_action": "proxy",
+      "title": "Call of Duty и Demonware — Warzone, Black Ops 6, Modern Warfare II/III, CoD HQ и CoD Mobile",
+      "description": "[Маршрут: В Прокси / VPN (устраняет ошибки HUENEME-NEGEV / TRAVIS-RILEA)] Выделенный список доменов и IP-подсетей Call of Duty для игроков в Steam, Battle.net, Xbox Game Pass и PlayStation: включает все шлюзы матчмейкинга, авторизации и лобби Demonware (demonware.net + AS60229 185.34.106.0/23), серверы Activision Blizzard (AS57976), античит Ricochet и CoD HQ.",
+      "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/activision-blizzard.srs",
+      "counts": {
+        "domain": 9,
+        "domain_suffix": 47,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 57,
+        "ipv6_cidr": 8
+      },
+      "files": {
+        "trs": "release/tachyon/callofduty.trs",
+        "srs": "release/sing-box/callofduty.srs",
+        "json": "release/json/callofduty.json",
+        "domains": "release/domains/callofduty.lst",
+        "subnets": "release/subnets/callofduty.lst"
+      },
+      "sha256_trs": "682a44ab576099458aef3f537f7c826540c5a815fad7c2272bc7730bacc4807a",
+      "sha256_srs": "bc1788616593cce37d3f3a0c1411e3b15964fe1e2f7c118aa1d7d55d338b7608"
     },
     {
       "id": "riot",
