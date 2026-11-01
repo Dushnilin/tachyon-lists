@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-11-01T07:53:33Z",
+  "generated_at": "2026-11-01T13:15:10Z",
   "repository": "https://github.com/Dushnilin/tachyon-lists",
   "total_lists": 99,
   "lists": [
@@ -14,7 +14,7 @@
       "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/russia_inside.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 72528,
+        "domain_suffix": 73173,
         "domain_keyword": 105,
         "domain_regex": 5,
         "ipv4_cidr": 0,
@@ -27,8 +27,8 @@
         "domains": "release/domains/russia_inside.lst",
         "subnets": null
       },
-      "sha256_trs": "4d96759b3f8d018c37039340e01b02bea7beedb04bef496575c5c6d1d095cf6b",
-      "sha256_srs": "3393f28114dcd94b19fc943940ec5ba92031ad73d3adb4630f015c9a8caa414a"
+      "sha256_trs": "cba376a0fd86c00a8ab1a46937df6d19321e14c081b7a2241633fd9398b8c640",
+      "sha256_srs": "feffc92eeb29a0fb8e13d239ed521293bf0d87cf42a6aa8b59bbbce7a39987f8"
     },
     {
       "id": "geoblock",
@@ -92,7 +92,7 @@
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-ru-blocked.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 72873,
+        "domain_suffix": 73515,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 88587,
@@ -105,8 +105,8 @@
         "domains": "release/domains/ru_blocked.lst",
         "subnets": "release/subnets/ru_blocked.lst"
       },
-      "sha256_trs": "8dc199ff37dda34984f0aa6cca211a31a0ca5b6da8387651116b2c616ad1bdc6",
-      "sha256_srs": "b7961d60a007f141e26852f04f5c26c2e7b28215d79d4d2133003bcb845f9e3b"
+      "sha256_trs": "14a97755b2c4498bc724de1759045b02b4f9efa3b85b0e1ca40bd01850e4bc2c",
+      "sha256_srs": "f7e29f97261305c413c5fbca7fd6f65da4fb7469e0de0a58d8f7919fa7f86243"
     },
     {
       "id": "ru_blocked_all",
@@ -118,10 +118,10 @@
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-ru-blocked-all.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 1579920,
+        "domain_suffix": 1580550,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 920,
+        "ipv4_cidr": 911,
         "ipv6_cidr": 4
       },
       "files": {
@@ -131,8 +131,8 @@
         "domains": "release/domains/ru_blocked_all.lst",
         "subnets": "release/subnets/ru_blocked_all.lst"
       },
-      "sha256_trs": "18a5b9f5ca08037c580ee8d03ea7a6965199c3b121fe1b8f66debc0dc25f89c4",
-      "sha256_srs": "c58fd2d0268291fcd17bc532b60f88102638481eacf635125de97dfb3da8ad98"
+      "sha256_trs": "cc7018c89c268492c977468ef17a3e8282c2677aaaa7a0312c17b56740967d5c",
+      "sha256_srs": "1efc37adfaacae89ea9df7f8b6fe2282f84e879282339cbd089e3e742d09ed5d"
     },
     {
       "id": "antifilter",
@@ -147,7 +147,7 @@
         "domain_suffix": 421,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 920,
+        "ipv4_cidr": 911,
         "ipv6_cidr": 4
       },
       "files": {
@@ -170,10 +170,10 @@
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-refilter.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 72796,
+        "domain_suffix": 73438,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 25266,
+        "ipv4_cidr": 25391,
         "ipv6_cidr": 0
       },
       "files": {
@@ -183,8 +183,8 @@
         "domains": "release/domains/refilter.lst",
         "subnets": "release/subnets/refilter.lst"
       },
-      "sha256_trs": "41b706cd32d7b1e66aa3f4eebcb515c4a78e0a7aa261a9934ee82170cb0cdebf",
-      "sha256_srs": "3bf46779ba7637d5af862a0256a8554d26a058842fa5a5e2e228603e7df38acf"
+      "sha256_trs": "0c491e5e78fe5471dc96975c328e4426ddfd208af3ae8f154e24a21062e4e2dc",
+      "sha256_srs": "c78ac1f48ca92fec638304314f4c9ee1a0ac19e507c89115fddabc61f4f76452"
     },
     {
       "id": "russia_outside",
@@ -277,7 +277,7 @@
         "domain_suffix": 888,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 36823,
+        "ipv4_cidr": 36795,
         "ipv6_cidr": 89
       },
       "files": {
@@ -1236,7 +1236,7 @@
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-category-games-!cn.srs",
       "counts": {
         "domain": 88,
-        "domain_suffix": 816,
+        "domain_suffix": 817,
         "domain_keyword": 0,
         "domain_regex": 3,
         "ipv4_cidr": 0,
@@ -1249,8 +1249,8 @@
         "domains": "release/domains/games_all.lst",
         "subnets": null
       },
-      "sha256_trs": "529259a8369a172537e46c03b6788a48f1209487fc1d426caaaba1e0a35f55a1",
-      "sha256_srs": "dbffc59f25d73231ea6eb15a9d55ad1f01563859013bbba2910b8ce00ee0322c"
+      "sha256_trs": "c197d1f5e7a2a2a54d5c8501f9611f69f6905e8179f750b99bdf7e579ef2b48e",
+      "sha256_srs": "d10d684ef76b5639c20e0f5e5714afd03a4e7ab32c1a12f951b876dc0c7ecb77"
     },
     {
       "id": "steam",
