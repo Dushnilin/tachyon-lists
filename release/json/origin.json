@@ -2,9 +2,14 @@
   "version": 3,
   "rules": [
     {
+      "domain": [
+        "eaasserts-a.akamaihd.net",
+        "originasserts.akamaized.net"
+      ],
       "domain_suffix": [
         "anthemgame.com",
         "anthemthegame.com",
+        "apex.tracker.gg",
         "apexlegends.com",
         "awayoutgame.com",
         "battlefield.com",
@@ -49,11 +54,13 @@
         "dungeonkeeper.com",
         "dungeonkeeper.com.cn",
         "ea-anz-press.com",
+        "ea.app",
         "ea.com",
         "ea.tt.omtrdc.net",
         "eaaccess.com",
         "eaassets-a.akamaihd.net",
         "eablackbox.com",
+        "eac-cdn.com",
         "eacashcard.com",
         "eacodigos.com",
         "eafootballworld.com",
@@ -73,6 +80,8 @@
         "easportsmma.com",
         "easportsworld.com",
         "eastore.com",
+        "easy.ac",
+        "easyanticheat.net",
         "electronicarts.com",
         "electronicarts.fr",
         "fifastreet.com",
@@ -130,6 +139,7 @@
         "projectapex.com",
         "pvzgw2.com",
         "pvzheroes.com",
+        "respawn.com",
         "seaofsolitude.com",
         "simcity-buildit.com",
         "simcity.com",

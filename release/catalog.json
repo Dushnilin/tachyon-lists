@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-11-01T16:48:18Z",
+  "generated_at": "2026-11-01T18:22:59Z",
   "repository": "https://github.com/Dushnilin/tachyon-lists",
   "total_lists": 100,
   "lists": [
@@ -1235,22 +1235,22 @@
       "description": "[Маршрут: В Прокси / VPN или Direct] Единый сводный список всех популярных игровых лаунчеров, магазинов, античитов (BattlEye, EasyAntiCheat) и серверов: Steam, Epic Games, Ubisoft Connect, War Thunder / Gaijin, Battle.net / Blizzard, EA App / Origin, Riot Games, Xbox Live, PlayStation Network, Nintendo, GOG, Wargaming, HoYoverse, Minecraft, Rockstar, Roblox, Supercell, Escape from Tarkov, FACEIT и PUBG.",
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-category-games-!cn.srs",
       "counts": {
-        "domain": 88,
-        "domain_suffix": 817,
+        "domain": 61,
+        "domain_suffix": 1003,
         "domain_keyword": 0,
         "domain_regex": 3,
-        "ipv4_cidr": 0,
-        "ipv6_cidr": 0
+        "ipv4_cidr": 114,
+        "ipv6_cidr": 22
       },
       "files": {
         "trs": "release/tachyon/games_all.trs",
         "srs": "release/sing-box/games_all.srs",
         "json": "release/json/games_all.json",
         "domains": "release/domains/games_all.lst",
-        "subnets": null
+        "subnets": "release/subnets/games_all.lst"
       },
-      "sha256_trs": "c197d1f5e7a2a2a54d5c8501f9611f69f6905e8179f750b99bdf7e579ef2b48e",
-      "sha256_srs": "d10d684ef76b5639c20e0f5e5714afd03a4e7ab32c1a12f951b876dc0c7ecb77"
+      "sha256_trs": "75ed61e13e0c7de502d028d2ea8ea5cd656205835f33bd5af090845c3165beba",
+      "sha256_srs": "38b120aaf79fa5b942e0db8a11b901bfad2bef3a192b668039e77dd904ff0a64"
     },
     {
       "id": "steam",
@@ -1288,10 +1288,10 @@
       "fallback_srs": "https://raw.githubusercontent.com/hydraponique/roscomvpn-geosite/master/release/sing-box/epicgames.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 30,
+        "domain_suffix": 34,
         "domain_keyword": 0,
         "domain_regex": 3,
-        "ipv4_cidr": 0,
+        "ipv4_cidr": 13,
         "ipv6_cidr": 0
       },
       "files": {
@@ -1299,10 +1299,10 @@
         "srs": "release/sing-box/epicgames.srs",
         "json": "release/json/epicgames.json",
         "domains": "release/domains/epicgames.lst",
-        "subnets": null
+        "subnets": "release/subnets/epicgames.lst"
       },
-      "sha256_trs": "522c7a5e44a5588851b45c1a589c7730406b3fc0583407a532bdc202c0970e6e",
-      "sha256_srs": "6c42e5aa40f9e1a984332f1d2354db45f5b96e2d1d090cbd67f40c78e9315427"
+      "sha256_trs": "551b75507d6a108fb6b3b725027e918ad1afe50b5d25867d2b420b0baa9d9183",
+      "sha256_srs": "337eaff1ad3dafd86dd505417b1aea4679f4fee964ceba74b384c5f1c9dc0715"
     },
     {
       "id": "ubisoft",
@@ -1314,7 +1314,7 @@
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-ubisoft.srs",
       "counts": {
         "domain": 1,
-        "domain_suffix": 47,
+        "domain_suffix": 57,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -1327,8 +1327,8 @@
         "domains": "release/domains/ubisoft.lst",
         "subnets": null
       },
-      "sha256_trs": "1100bcb5e34279d0a782bf68d3656442c05479a4cc38638be6025882a6e68217",
-      "sha256_srs": "51eabd607537fb0adabab4ea726840b7867053206495529a09776a1f379ad9a4"
+      "sha256_trs": "0cb0b3c834ba2a1d331612fb25f0f8dbc347c292417791baf98b91d7f987cab3",
+      "sha256_srs": "f8f144d977eacbe3b1c6d185b24706ea248d58a948d21917fb4ed2ba35863bea"
     },
     {
       "id": "warthunder",
@@ -1366,7 +1366,7 @@
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-blizzard.srs",
       "counts": {
         "domain": 2,
-        "domain_suffix": 62,
+        "domain_suffix": 68,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -1379,23 +1379,23 @@
         "domains": "release/domains/blizzard.lst",
         "subnets": null
       },
-      "sha256_trs": "dbc4a323eb2484e76f054d3787a339833a605ecbf98c97543c2fdd5493d2574c",
-      "sha256_srs": "7b1854c647188ff01e892c15e5f4ccc46925ae955157c234b1183c42ded9baa8"
+      "sha256_trs": "dc05fb29c15ed7216ffd32c395b75581e0e58484c603f1618630474ae596f84a",
+      "sha256_srs": "d6bd872ccdb1610d0da5caab9e9a8906faab2363541d5ffae075f1f3baa462d4"
     },
     {
       "id": "callofduty",
       "group": "gaming",
       "kind": "mixed",
       "recommended_action": "proxy",
-      "title": "Call of Duty и Demonware — Warzone, Black Ops 6, Modern Warfare II/III, CoD HQ и CoD Mobile",
-      "description": "[Маршрут: В Прокси / VPN (устраняет ошибки HUENEME-NEGEV / TRAVIS-RILEA)] Выделенный список доменов и IP-подсетей Call of Duty для игроков в Steam, Battle.net, Xbox Game Pass и PlayStation: включает все шлюзы матчмейкинга, авторизации и лобби Demonware (demonware.net + AS60229 185.34.106.0/23), серверы Activision Blizzard (AS57976), античит Ricochet и CoD HQ.",
+      "title": "Call of Duty и Demonware — Warzone, Black Ops 6, Modern Warfare II/III, CoD HQ и микропатчи",
+      "description": "[Маршрут: В Прокси / VPN (устраняет ошибки HUENEME-NEGEV / TRAVIS-RILEA и вечный цикл «Обновление завершено. Требуется перезапуск»)] Полный список доменов и 805 IP-подсетей матчей Call of Duty для Steam, Battle.net, Xbox Game Pass и PlayStation: шлюзы матчмейкинга и лобби Demonware (demonware.net + AS60229), CDN микропатчей и шейдеров Beenox (d2cyf1jgpkmugk.cloudfront.net, fastdl/content.callofduty.com, cod-live-updates.activision.com, blzstatic.com) и игровые серверы Warzone.",
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/activision-blizzard.srs",
       "counts": {
-        "domain": 9,
-        "domain_suffix": 47,
+        "domain": 0,
+        "domain_suffix": 77,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 57,
+        "ipv4_cidr": 797,
         "ipv6_cidr": 8
       },
       "files": {
@@ -1405,8 +1405,8 @@
         "domains": "release/domains/callofduty.lst",
         "subnets": "release/subnets/callofduty.lst"
       },
-      "sha256_trs": "682a44ab576099458aef3f537f7c826540c5a815fad7c2272bc7730bacc4807a",
-      "sha256_srs": "bc1788616593cce37d3f3a0c1411e3b15964fe1e2f7c118aa1d7d55d338b7608"
+      "sha256_trs": "eb3cbb2bc39f8eb1e3e86d272f64b362c2e642cc961e0ebbe7a95631f0572986",
+      "sha256_srs": "e659e7d39c01480f67173ee9dfc40af538932bfdb923c5527293e2e4ce54bb61"
     },
     {
       "id": "riot",
@@ -1443,11 +1443,11 @@
       "description": "[Маршрут: В Прокси / VPN] Домены Electronic Arts: ea.com, origin.com, tnt-ea.com, apexlegends.com и серверы авторизации, античита и загрузки игр EA App.",
       "fallback_srs": "https://raw.githubusercontent.com/hydraponique/roscomvpn-geosite/master/release/sing-box/origin.srs",
       "counts": {
-        "domain": 0,
-        "domain_suffix": 163,
+        "domain": 2,
+        "domain_suffix": 169,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 0,
+        "ipv4_cidr": 13,
         "ipv6_cidr": 0
       },
       "files": {
@@ -1455,10 +1455,10 @@
         "srs": "release/sing-box/origin.srs",
         "json": "release/json/origin.json",
         "domains": "release/domains/origin.lst",
-        "subnets": null
+        "subnets": "release/subnets/origin.lst"
       },
-      "sha256_trs": "967590cefb742c36dcb0b7abd8c45b8ff378553be469884e1f18f2cda7c0d1cf",
-      "sha256_srs": "4330ad161fc0a108b4e77b4a1b6581db87f54be988d314b1469b8b68610da2ec"
+      "sha256_trs": "ae06c371fbe574094833701d921b4d488ffb2fe3f77bd491f237fa6bed04ba2a",
+      "sha256_srs": "3d0bd08e8c81d149f070d1319f91599e6a2e250e748213100751faf29a176ec1"
     },
     {
       "id": "xbox",
@@ -1469,8 +1469,8 @@
       "description": "[Маршрут: В Прокси / VPN] Экосистема Xbox и игровых студий Microsoft / Bethesda: xbox.com, xboxlive.com, gamepass.com, xboxservices.com, forzamotorsport.net, halowaypoint.com, seaofthieves.com, flightsimulator.com, bethesda.net, doom.com и elderscrolls.com.",
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-xbox.srs",
       "counts": {
-        "domain": 1,
-        "domain_suffix": 60,
+        "domain": 6,
+        "domain_suffix": 64,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -1483,8 +1483,8 @@
         "domains": "release/domains/xbox.lst",
         "subnets": null
       },
-      "sha256_trs": "fc250a5b268f8b54f9e67bcf9d79185f8f46be6a10f84f1abd154a106fb8fc31",
-      "sha256_srs": "6b3dccfeaa8266b2dcf7bab9363a4b8364f16081f32812b4c14c9d0c84ff62f6"
+      "sha256_trs": "f45bf49ae00b1266b513b0237c965182dd10e5a3f2b7ac867a615562eb3f352f",
+      "sha256_srs": "c148092a18688b16efaf601f75009cd4c7f2898d55b75e2c88876fe94ceba27e"
     },
     {
       "id": "playstation",
@@ -1678,10 +1678,10 @@
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-pubg.srs",
       "counts": {
         "domain": 2,
-        "domain_suffix": 58,
+        "domain_suffix": 82,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 0,
+        "ipv4_cidr": 20,
         "ipv6_cidr": 0
       },
       "files": {
@@ -1689,10 +1689,10 @@
         "srs": "release/sing-box/pubg.srs",
         "json": "release/json/pubg.json",
         "domains": "release/domains/pubg.lst",
-        "subnets": null
+        "subnets": "release/subnets/pubg.lst"
       },
-      "sha256_trs": "263baac77ce46480304112055b2735bbfa22e286eac5ebbc3079a977c35073ac",
-      "sha256_srs": "d39d6934559cc780f82867e615400705c83bdb69a3c690cec0aa7c3963ce1368"
+      "sha256_trs": "cdec28d83582ad410659a9e80d9acd3e0f4f401f1efc7bc57784036d9118f911",
+      "sha256_srs": "b8b76814bd5039e41b799c4d7ef154e3ec20c552a9b181db882a470c0c40c402"
     },
     {
       "id": "roblox",

@@ -12,7 +12,8 @@
     "itdoginfo_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download",
     "itdoginfo_raw": "https://raw.githubusercontent.com/itdoginfo/allow-domains/refs/heads/main",
     "metacubex_geosite": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite",
-    "metacubex_geoip": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip"
+    "metacubex_geoip": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip",
+    "rock12_warzone": "https://raw.githubusercontent.com/rock12/clash-warzone-rules/main"
   },
   "lists": [
     {
@@ -701,7 +702,8 @@
         { "type": "srs", "url": "{roscomvpn_geosite_srs}/origin.srs" },
         { "type": "srs", "url": "{roscomvpn_geosite_srs}/escapefromtarkov.srs" },
         { "type": "srs", "url": "{roscomvpn_geosite_srs}/faceit.srs" },
-        { "type": "srs", "url": "https://raw.githubusercontent.com/ushan0v/sing-box-supercell-ruleset/main/supercell.srs" }
+        { "type": "srs", "url": "https://raw.githubusercontent.com/ushan0v/sing-box-supercell-ruleset/main/supercell.srs" },
+        { "type": "clash_yaml", "url": "{rock12_warzone}/ru-gaming-all.yaml" }
       ]
     },
     {
@@ -729,7 +731,8 @@
       "sources": [
         { "type": "srs", "url": "{roscomvpn_geosite_srs}/epicgames.srs" },
         { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-epicgames.srs" },
-        { "type": "singbox_json", "url": "{metacubex_geosite}/epicgames.json" }
+        { "type": "singbox_json", "url": "{metacubex_geosite}/epicgames.json" },
+        { "type": "clash_yaml", "url": "{rock12_warzone}/fortnite.yaml" }
       ]
     },
     {
@@ -742,7 +745,8 @@
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-ubisoft.srs",
       "sources": [
         { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-ubisoft.srs" },
-        { "type": "singbox_json", "url": "{metacubex_geosite}/ubisoft.json" }
+        { "type": "singbox_json", "url": "{metacubex_geosite}/ubisoft.json" },
+        { "type": "clash_yaml", "url": "{rock12_warzone}/ubisoft.yaml" }
       ]
     },
     {
@@ -777,10 +781,12 @@
       "group": "gaming",
       "kind": "mixed",
       "recommended_action": "proxy",
-      "title": "Call of Duty и Demonware — Warzone, Black Ops 6, Modern Warfare II/III, CoD HQ и CoD Mobile",
-      "description": "[Маршрут: В Прокси / VPN (устраняет ошибки HUENEME-NEGEV / TRAVIS-RILEA)] Выделенный список доменов и IP-подсетей Call of Duty для игроков в Steam, Battle.net, Xbox Game Pass и PlayStation: включает все шлюзы матчмейкинга, авторизации и лобби Demonware (demonware.net + AS60229 185.34.106.0/23), серверы Activision Blizzard (AS57976), античит Ricochet и CoD HQ.",
+      "title": "Call of Duty и Demonware — Warzone, Black Ops 6, Modern Warfare II/III, CoD HQ и микропатчи",
+      "description": "[Маршрут: В Прокси / VPN (устраняет ошибки HUENEME-NEGEV / TRAVIS-RILEA и вечный цикл «Обновление завершено. Требуется перезапуск»)] Полный список доменов и 805 IP-подсетей матчей Call of Duty для Steam, Battle.net, Xbox Game Pass и PlayStation: шлюзы матчмейкинга и лобби Demonware (demonware.net + AS60229), CDN микропатчей и шейдеров Beenox (d2cyf1jgpkmugk.cloudfront.net, fastdl/content.callofduty.com, cod-live-updates.activision.com, blzstatic.com) и игровые серверы Warzone.",
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/activision-blizzard.srs",
       "sources": [
+        { "type": "clash_yaml", "url": "{rock12_warzone}/warzone-servers.yaml" },
+        { "type": "clash_yaml", "url": "{rock12_warzone}/activision.yaml" },
         { "type": "singbox_json", "url": "{metacubex_geosite}/activision-blizzard.json" },
         { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-blizzard.srs" }
       ]
@@ -812,7 +818,10 @@
         { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-ea.srs" },
         { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-origin.srs" },
         { "type": "singbox_json", "url": "{metacubex_geosite}/ea.json" },
-        { "type": "singbox_json", "url": "{metacubex_geosite}/origin.json" }
+        { "type": "singbox_json", "url": "{metacubex_geosite}/origin.json" },
+        { "type": "clash_yaml", "url": "{rock12_warzone}/ea.yaml" },
+        { "type": "clash_yaml", "url": "{rock12_warzone}/apex-legends.yaml" },
+        { "type": "clash_yaml", "url": "{rock12_warzone}/battlefield.yaml" }
       ]
     },
     {
@@ -827,7 +836,8 @@
         { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-xbox.srs" },
         { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-bethesda.srs" },
         { "type": "singbox_json", "url": "{metacubex_geosite}/xbox.json" },
-        { "type": "singbox_json", "url": "{metacubex_geosite}/bethesda.json" }
+        { "type": "singbox_json", "url": "{metacubex_geosite}/bethesda.json" },
+        { "type": "clash_yaml", "url": "{rock12_warzone}/Xbox.yaml" }
       ]
     },
     {
@@ -955,7 +965,11 @@
         { "type": "singbox_json", "url": "{metacubex_geosite}/embark.json" },
         { "type": "singbox_json", "url": "{metacubex_geosite}/bohemia.json" },
         { "type": "singbox_json", "url": "{metacubex_geosite}/vrchat.json" },
-        { "type": "singbox_json", "url": "{metacubex_geosite}/wbgames.json" }
+        { "type": "singbox_json", "url": "{metacubex_geosite}/wbgames.json" },
+        { "type": "clash_yaml", "url": "{rock12_warzone}/darksouls.yaml" },
+        { "type": "clash_yaml", "url": "{rock12_warzone}/deadbydaylight.yaml" },
+        { "type": "clash_yaml", "url": "{rock12_warzone}/warframe.yaml" },
+        { "type": "clash_yaml", "url": "{rock12_warzone}/wardogs.yaml" }
       ]
     },
     {

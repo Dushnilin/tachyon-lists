@@ -380,6 +380,53 @@ def parse_plain_subnets(text: str) -> RuleBucket:
     return bucket
 
 
+def parse_clash_yaml(text: str) -> RuleBucket:
+    """Parse Clash / Mihomo YAML rule-set payload (classical, domain, or ipcidr)."""
+    bucket = RuleBucket()
+    for raw_line in text.splitlines():
+        line = raw_line.split("#", 1)[0].strip()
+        if not line or line == "payload:":
+            continue
+        if line.startswith("-"):
+            line = line[1:].strip()
+        line = line.strip("'\"")
+        if not line:
+            continue
+        upper = line.upper()
+        if upper.startswith("DOMAIN-SUFFIX,"):
+            dom = clean_domain(line.split(",", 2)[1])
+            if dom:
+                bucket.domain_suffix.add(dom)
+        elif upper.startswith("DOMAIN,"):
+            dom = clean_domain(line.split(",", 2)[1])
+            if dom:
+                bucket.domain.add(dom)
+        elif upper.startswith("DOMAIN-KEYWORD,"):
+            kw = line.split(",", 2)[1].strip().lower()
+            if kw:
+                bucket.domain_keyword.add(kw)
+        elif upper.startswith(("IP-CIDR,", "IP-CIDR6,")):
+            cidr_str = line.split(",", 2)[1].strip()
+            try:
+                net = ipaddress.ip_network(cidr_str, strict=False)
+                bucket.ip_cidr.add(str(net))
+            except ValueError:
+                pass
+        elif line.startswith("+.") or line.startswith("*."):
+            dom = clean_domain(line[2:])
+            if dom:
+                bucket.domain_suffix.add(dom)
+        else:
+            try:
+                net = ipaddress.ip_network(line, strict=False)
+                bucket.ip_cidr.add(str(net))
+            except ValueError:
+                dom = clean_domain(line)
+                if dom and "." in dom:
+                    bucket.domain_suffix.add(dom)
+    return bucket
+
+
 def optimize_bucket(
     bucket: RuleBucket,
     kind: str,
@@ -934,6 +981,10 @@ def build_all(only_ids: set[str] | None = None) -> int:
                 elif stype == "plain_subnets":
                     url = format_url(src["url"], upstreams)
                     sub = parse_plain_subnets(fetch_url_bytes(url).decode("utf-8", errors="replace"))
+                    bucket.merge(sub)
+                elif stype == "clash_yaml":
+                    url = format_url(src["url"], upstreams)
+                    sub = parse_clash_yaml(fetch_url_bytes(url).decode("utf-8", errors="replace"))
                     bucket.merge(sub)
             except Exception as exc:
                 log(f"WARN: [{lid}] source {src} failed: {exc}")
