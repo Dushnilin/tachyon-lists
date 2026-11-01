@@ -3,7 +3,6 @@
   "rules": [
     {
       "domain": [
-        "flightsimulator.azureedge.net",
         "img-prod-cms-rt-microsoft-com.akamaized.net",
         "login.live.com",
         "logincdn.msauth.net",
@@ -13,7 +12,6 @@
       "domain_suffix": [
         "ageofempires.com",
         "arkane-studios.com",
-        "asobostudio.com",
         "beth.games",
         "bethesda.net",
         "bethesdagamestudios.com",

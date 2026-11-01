@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-11-01T18:22:59Z",
+  "generated_at": "2026-11-01T18:25:29Z",
   "repository": "https://github.com/Dushnilin/tachyon-lists",
   "total_lists": 100,
   "lists": [
@@ -1235,7 +1235,7 @@
       "description": "[Маршрут: В Прокси / VPN или Direct] Единый сводный список всех популярных игровых лаунчеров, магазинов, античитов (BattlEye, EasyAntiCheat) и серверов: Steam, Epic Games, Ubisoft Connect, War Thunder / Gaijin, Battle.net / Blizzard, EA App / Origin, Riot Games, Xbox Live, PlayStation Network, Nintendo, GOG, Wargaming, HoYoverse, Minecraft, Rockstar, Roblox, Supercell, Escape from Tarkov, FACEIT и PUBG.",
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-category-games-!cn.srs",
       "counts": {
-        "domain": 61,
+        "domain": 60,
         "domain_suffix": 1003,
         "domain_keyword": 0,
         "domain_regex": 3,
@@ -1249,8 +1249,8 @@
         "domains": "release/domains/games_all.lst",
         "subnets": "release/subnets/games_all.lst"
       },
-      "sha256_trs": "75ed61e13e0c7de502d028d2ea8ea5cd656205835f33bd5af090845c3165beba",
-      "sha256_srs": "38b120aaf79fa5b942e0db8a11b901bfad2bef3a192b668039e77dd904ff0a64"
+      "sha256_trs": "8079248ce5122031f59dfdf5f95f72eb70c9aae26e61e6814ce48fcb3bfb869b",
+      "sha256_srs": "0c7e2afaa146bc4b1bc9f78b5bf9afdb1b723195370fb7ef2984c60267305588"
     },
     {
       "id": "steam",
@@ -1469,8 +1469,8 @@
       "description": "[Маршрут: В Прокси / VPN] Экосистема Xbox и игровых студий Microsoft / Bethesda: xbox.com, xboxlive.com, gamepass.com, xboxservices.com, forzamotorsport.net, halowaypoint.com, seaofthieves.com, flightsimulator.com, bethesda.net, doom.com и elderscrolls.com.",
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-xbox.srs",
       "counts": {
-        "domain": 6,
-        "domain_suffix": 64,
+        "domain": 5,
+        "domain_suffix": 63,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -1483,8 +1483,8 @@
         "domains": "release/domains/xbox.lst",
         "subnets": null
       },
-      "sha256_trs": "f45bf49ae00b1266b513b0237c965182dd10e5a3f2b7ac867a615562eb3f352f",
-      "sha256_srs": "c148092a18688b16efaf601f75009cd4c7f2898d55b75e2c88876fe94ceba27e"
+      "sha256_trs": "b0b3369993585ce0af605ccb578b697d1bef830645143f0216ad2575e45b24b6",
+      "sha256_srs": "15bbaf7c9aeac62785cb1b4ad65b316414eacdaab7e93b8786b4f548c8f24b4f"
     },
     {
       "id": "playstation",
