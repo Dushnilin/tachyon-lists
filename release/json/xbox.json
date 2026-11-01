@@ -3,13 +3,11 @@
   "rules": [
     {
       "domain": [
-        "flightsimulator.azureedge.net",
         "prodforza.blob.core.windows.net"
       ],
       "domain_suffix": [
         "ageofempires.com",
         "arkane-studios.com",
-        "asobostudio.com",
         "beth.games",
         "bethesda.net",
         "bethesdagamestudios.com",
