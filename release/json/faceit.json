@@ -3,8 +3,15 @@
   "rules": [
     {
       "domain_suffix": [
+        "challengermode.com",
+        "csstats.gg",
+        "esportal.com",
         "faceit-cdn.net",
-        "faceit.com"
+        "faceit.com",
+        "fastcup.net",
+        "hltv.org",
+        "leetify.com",
+        "scope.gg"
       ]
     }
   ]

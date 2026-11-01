@@ -1,0 +1,38 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain_suffix": [
+        "briarproject.org",
+        "element.io",
+        "getsession.org",
+        "guilded.gg",
+        "matrix.org",
+        "mumble.info",
+        "myteamspeak.com",
+        "s-bid.rmp.rakuten.com",
+        "signal.art",
+        "signal.group",
+        "signal.link",
+        "signal.me",
+        "signal.org",
+        "signal.tube",
+        "signalusers.org",
+        "simplex.chat",
+        "teamspeak-services.com",
+        "teamspeak.com",
+        "threema.ch",
+        "ts3.cloud",
+        "vbcdn.com",
+        "vbcdn.net",
+        "vector.im",
+        "viber.co",
+        "viber.com",
+        "viber.me",
+        "whispersystems.org",
+        "wire.com",
+        "zello.com"
+      ]
+    }
+  ]
+}

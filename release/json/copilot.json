@@ -1,0 +1,25 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain": [
+        "copilot-telemetry-service.githubusercontent.com",
+        "copilot-telemetry.githubusercontent.com"
+      ],
+      "domain_suffix": [
+        "bingapis.com",
+        "copilot-proxy.githubusercontent.com",
+        "copilot-stg.com",
+        "copilot.cloud.microsoft",
+        "copilot.com",
+        "copilot.microsoft.com",
+        "copilotprodattachments.blob.core.windows.net",
+        "designer.microsoft.com",
+        "edgeservices.bing.com",
+        "githubcopilot.com",
+        "githubnext.com",
+        "sydney.bing.com"
+      ]
+    }
+  ]
+}

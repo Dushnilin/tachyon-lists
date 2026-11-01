@@ -1,0 +1,33 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain": [
+        "e122475.dscg.akamaiedge.net",
+        "licdn.cn.cdn20.com",
+        "linkedin.sc.omtrdc.net"
+      ],
+      "domain_suffix": [
+        "angel.co",
+        "bizographics.com",
+        "glassdoor.co.uk",
+        "glassdoor.com",
+        "hired.com",
+        "indeed.com",
+        "l-0005.dc-msedge.net",
+        "l-0005.l-msedge.net",
+        "levels.fyi",
+        "licdn.cn",
+        "licdn.com",
+        "linkedin.at",
+        "linkedin.cn",
+        "linkedin.com",
+        "lnkd.in",
+        "otta.com",
+        "slideshare.net",
+        "slidesharecdn.com",
+        "wellfound.com"
+      ]
+    }
+  ]
+}

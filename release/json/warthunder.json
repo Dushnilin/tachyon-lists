@@ -1,0 +1,25 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain_suffix": [
+        "acesofthunder.net",
+        "activematter.game",
+        "artstorm.com",
+        "crossout.net",
+        "crsed.net",
+        "cubicodyssey.game",
+        "enlisted.net",
+        "gaijin.net",
+        "gaijin.ru",
+        "gaijindistribution.com",
+        "gaijinent.com",
+        "modernwarships.com",
+        "star-conflict.com",
+        "warthunder.com",
+        "warthunder.ru",
+        "wtmobile.com"
+      ]
+    }
+  ]
+}

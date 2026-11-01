@@ -1,0 +1,63 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain": [
+        "gitlab-assets.oss-cn-hongkong.aliyuncs.com"
+      ],
+      "domain_suffix": [
+        "airtable.com",
+        "asana.com",
+        "atl-paas.net",
+        "atlassian-dev.net",
+        "atlassian.com",
+        "atlassian.io",
+        "atlassian.net",
+        "bitbucket.io",
+        "bitbucket.org",
+        "circleci.com",
+        "clickup.com",
+        "coda.io",
+        "datadoghq.com",
+        "datadoghq.eu",
+        "getpostman.com",
+        "gitlab-static.net",
+        "gitlab.com",
+        "gitlab.io",
+        "gitlab.net",
+        "grafana.com",
+        "hoppscotch.io",
+        "insomnia.rest",
+        "jira.com",
+        "launchdarkly.com",
+        "linear.app",
+        "logseq.com",
+        "makenotion.com",
+        "miro.com",
+        "monday.com",
+        "newrelic.com",
+        "notion-static.com",
+        "notion-status.com",
+        "notion.com",
+        "notion.new",
+        "notion.site",
+        "notion.so",
+        "notionusercontent.com",
+        "obsidian.md",
+        "pagerduty.com",
+        "postman.com",
+        "realtimeboard.com",
+        "sentry.io",
+        "snyk.io",
+        "sonarcloud.io",
+        "sonarqube.org",
+        "ss-inf.net",
+        "statuspage.io",
+        "swagger.io",
+        "travis-ci.com",
+        "trello.com",
+        "trellocdn.com"
+      ]
+    }
+  ]
+}

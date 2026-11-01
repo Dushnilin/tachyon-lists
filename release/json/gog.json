@@ -1,0 +1,25 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain": [
+        "gog.qtlglb.com"
+      ],
+      "domain_suffix": [
+        "cdpred.services",
+        "cdprojekt.com",
+        "cdprojekt.red",
+        "cdprojektred.com",
+        "cyberpunk.net",
+        "gog-cdn-lumen.secure2.footprint.net",
+        "gog-cdn.akamaized.net",
+        "gog-services.com",
+        "gog-statics.com",
+        "gog.com",
+        "gogalaxy.com",
+        "playgwent.com",
+        "thewitcher.com"
+      ]
+    }
+  ]
+}

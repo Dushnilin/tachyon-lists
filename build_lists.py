@@ -103,7 +103,7 @@ def resolve_latest_tachyon_tag() -> str:
 
 
 def ensure_tachyon_core_binary() -> Path:
-    """Locate tachyon-core on PATH or download latest official release binary into .cache/bin/."""
+    """Locate tachyon-core on PATH, sibling repo, or download latest official release binary into .cache/bin/."""
     env_bin = os.environ.get("TACHYON_CORE_BIN")
     if env_bin and Path(env_bin).is_file():
         return Path(env_bin)
@@ -111,6 +111,12 @@ def ensure_tachyon_core_binary() -> Path:
     which_bin = shutil.which("tachyon-core")
     if which_bin:
         return Path(which_bin)
+
+    exe_name = "tachyon-core.exe" if platform.system().lower() == "windows" else "tachyon-core"
+    for profile in ("release", "debug"):
+        sibling_bin = ROOT_DIR.parent / "tachyon-core" / "target" / profile / exe_name
+        if sibling_bin.is_file():
+            return sibling_bin
 
     BIN_CACHE_DIR.mkdir(parents=True, exist_ok=True)
     sys_name = platform.system().lower()
@@ -863,7 +869,7 @@ def update_readme_table(catalog_items: list[dict[str, Any]]) -> None:
 
     before = content.split(start_marker, 1)[0]
     after = content.split(end_marker, 1)[1]
-    readme_path.write_text(before + "\n".join(lines) + after, encoding="utf-8")
+    readme_path.write_text(before + "\n".join(lines) + after, encoding="utf-8", newline="\n")
 
 
 def build_all(only_ids: set[str] | None = None) -> int:
@@ -1049,13 +1055,23 @@ def build_all(only_ids: set[str] | None = None) -> int:
 
     def compile_one(job: tuple[str, Path, Path]) -> tuple[str, str]:
         lid, jpath, spath = job
-        res = subprocess.run(
-            [str(tachyon_bin), "rule-set", "compile", str(jpath), "-o", str(spath)],
-            capture_output=True,
-            text=True,
-        )
-        if res.returncode != 0 or not spath.is_file():
-            raise RuntimeError(f"Failed compiling {lid}.srs: {res.stderr.strip()}")
+        tmp_spath = spath.with_suffix(".srs.tmp")
+        try:
+            res = subprocess.run(
+                [str(tachyon_bin), "rule-set", "compile", str(jpath), "-o", str(tmp_spath)],
+                capture_output=True,
+                text=True,
+                timeout=30,
+            )
+            if res.returncode != 0 or not tmp_spath.is_file():
+                raise RuntimeError(f"Failed compiling {lid}.srs: {res.stderr.strip()}")
+            tmp_spath.replace(spath)
+        except subprocess.TimeoutExpired:
+            tmp_spath.unlink(missing_ok=True)
+            if spath.is_file() and spath.stat().st_size > 0:
+                log(f"WARN: tachyon-core timed out on {lid}.srs (>30s, pre-v0.2.4 binary); keeping existing {spath.name}")
+            else:
+                raise
         return lid, sha256_file(spath)
 
     srs_hashes: dict[str, str] = {}

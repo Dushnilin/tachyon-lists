@@ -1,0 +1,25 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain_suffix": [
+        "kaliber.game",
+        "masteroforion.com",
+        "wargaming.com",
+        "wargaming.net",
+        "wgcdn.co",
+        "wgcrowd.io",
+        "worldoftanks.asia",
+        "worldoftanks.com",
+        "worldoftanks.eu",
+        "worldofwarplanes.com",
+        "worldofwarplanes.eu",
+        "worldofwarships.asia",
+        "worldofwarships.com",
+        "worldofwarships.eu",
+        "wotblitz.com",
+        "wowsblitz.com"
+      ]
+    }
+  ]
+}

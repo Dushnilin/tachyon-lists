@@ -1,0 +1,51 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain_suffix": [
+        "around.co",
+        "ciscospark.com",
+        "daily.co",
+        "gather.town",
+        "hangouts.googleapis.com",
+        "jitsi.org",
+        "livekit.cloud",
+        "livekit.io",
+        "loom.com",
+        "loomcdn.com",
+        "lync.com",
+        "meet.google.com",
+        "meet.jit.si",
+        "meetings.clients6.google.com",
+        "meetings.googleapis.com",
+        "skype.com",
+        "skypeassets.com",
+        "slack-core.com",
+        "slack-edge.com",
+        "slack-files.com",
+        "slack-imgs.com",
+        "slack-msgs.com",
+        "slack-redir.net",
+        "slack.com",
+        "slackb.com",
+        "slackcertified.com",
+        "slackdemo.com",
+        "slackhq.com",
+        "teams.live.com",
+        "teams.microsoft.com",
+        "webex.com",
+        "whereby.com",
+        "zoom.com",
+        "zoom.com.cn",
+        "zoom.us",
+        "zoomcdn.com",
+        "zoomgov.com"
+      ],
+      "ip_cidr": [
+        "74.125.247.128/32",
+        "74.125.250.0/24",
+        "142.250.82.0/24"
+      ]
+    }
+  ]
+}

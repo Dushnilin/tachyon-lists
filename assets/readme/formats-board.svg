@@ -7,15 +7,15 @@
   <rect width="1200" height="210" rx="18" fill="#080C14"/>
   <rect x="1" y="1" width="1198" height="208" rx="17" fill="none" stroke="#1E293B" stroke-width="1.5"/>
 
-  <!-- Card 1: .srs -->
+  <!-- Card 1: .trs / .srs -->
   <g transform="translate(24, 22)">
     <rect x="0" y="0" width="218" height="166" rx="12" fill="#0F172A" stroke="#38BDF8" stroke-width="1.2" stroke-opacity="0.6"/>
-    <rect x="14" y="14" width="70" height="26" rx="6" fill="#0C253A"/>
-    <text x="49" y="32" text-anchor="middle" fill="#38BDF8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" font-weight="700">.srs v3</text>
-    <text x="14" y="66" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="700">Бинарный набор</text>
-    <text x="14" y="92" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">sing-box 1.11–1.14+</text>
-    <text x="14" y="114" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">и tachyon-core</text>
-    <text x="14" y="148" fill="#38BDF8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">release/sing-box/*.srs</text>
+    <rect x="14" y="14" width="110" height="26" rx="6" fill="#0C253A"/>
+    <text x="69" y="32" text-anchor="middle" fill="#38BDF8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" font-weight="700">.trs v2 / .srs</text>
+    <text x="14" y="66" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="700">Бинарные наборы</text>
+    <text x="14" y="92" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">Zero-copy mmap .trs</text>
+    <text x="14" y="114" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">и sing-box .srs v3</text>
+    <text x="14" y="148" fill="#38BDF8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">tachyon/*.trs · *.srs</text>
   </g>
 
   <!-- Card 2: .json -->

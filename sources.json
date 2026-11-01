@@ -121,6 +121,21 @@
       ]
     },
     {
+      "id": "ukraine_inside",
+      "group": "regional",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Украина (внутри) — российские сервисы, соцсети, банки и ресурсы, заблокированные в Украине",
+      "description": "[Маршрут: В Прокси / VPN] Все российские сайты, экосистемы (Яндекс, VK, Одноклассники, Mail.ru, Дзен, Кинопоиск, Rutube), банки (Сбер, Т-Банк, ВТБ, Альфа), маркетплейсы (Ozon, Wildberries, Авито), Госуслуги, СМИ и CDN, доступ к которым заблокирован на территории Украины.",
+      "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/ukraine_inside.srs",
+      "sources": [
+        { "type": "srs", "url": "{itdoginfo_srs}/ukraine_inside.srs" },
+        { "type": "srs", "url": "{itdoginfo_srs}/russia_outside.srs" },
+        { "type": "srs", "url": "{roscomvpn_geosite_srs}/whitelist.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-ru-available-only-inside.srs" }
+      ]
+    },
+    {
       "id": "ru_whitelist",
       "group": "direct",
       "kind": "domains",
@@ -177,13 +192,17 @@
       "group": "ai",
       "kind": "domains",
       "recommended_action": "proxy",
-      "title": "Нейросети и ИИ (все) — OpenAI, Claude, Gemini, Grok, Perplexity, Cursor, Midjourney",
-      "description": "[Маршрут: Только в Прокси / VPN — геоблок по IP] Единый полный список всех зарубежных ИИ-сервисов, закрывших доступ из РФ: OpenAI (ChatGPT, Sora), Anthropic (Claude), Google (Gemini, AI Studio, NotebookLM), xAI (Grok), Perplexity, Microsoft Copilot, GitHub Copilot, Cursor, Windsurf, Codeium, Midjourney, ElevenLabs, Runway, Suno, Udio, Hugging Face, Replicate, Poe, OpenRouter, DeepSeek и Groq.",
+      "title": "Нейросети и ИИ (все) — OpenAI, Claude, Gemini, Grok, OpenRouter, OpenCode, Cursor, Perplexity, DeepSeek",
+      "description": "[Маршрут: Только в Прокси / VPN — геоблок по IP] Единый полный список всех зарубежных ИИ-сервисов и инструментов разработки: OpenAI (ChatGPT, Sora), Anthropic (Claude, Claude Code), Google (Gemini, AI Studio, NotebookLM, Antigravity), xAI (Grok), OpenRouter, OpenCode, Cursor, Windsurf, Codeium, Perplexity, GitHub/MS Copilot, JetBrains AI, DeepSeek, Midjourney, Civitai, ElevenLabs, Suno, Udio, Runway, Kling, Hugging Face, Poe, Groq и Mistral.",
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-category-ai-!cn.srs",
       "sources": [
         { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-category-ai-!cn.srs" },
+        { "type": "srs", "url": "{itdoginfo_srs}/google_ai.srs" },
         { "type": "srs", "url": "{roscomvpn_geosite_srs}/google-deepmind.srs" },
-        { "type": "singbox_json", "url": "{metacubex_geosite}/category-ai-!cn.json" }
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-google-gemini.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-deepseek.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/category-ai-!cn.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/deepseek.json" }
       ]
     },
     {
@@ -205,7 +224,7 @@
       "kind": "domains",
       "recommended_action": "proxy",
       "title": "Anthropic — Claude AI, Claude Code, Console и API",
-      "description": "[Маршрут: Только в Прокси / VPN — геоблок по IP] Домены нейросети Claude и инструментов разработки Anthropic: claude.ai, anthropic.com, console.anthropic.com, api.anthropic.com, claudemcpclient.com и CDN.",
+      "description": "[Маршрут: Только в Прокси / VPN — геоблок по IP] Домены нейросети Claude и инструментов разработки Anthropic: claude.ai, claude.com, anthropic.com, console.anthropic.com, api.anthropic.com, claudeusercontent.com, claudemcpclient.com и CDN.",
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-anthropic.srs",
       "sources": [
         { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-anthropic.srs" },
@@ -217,8 +236,8 @@
       "group": "ai",
       "kind": "domains",
       "recommended_action": "proxy",
-      "title": "Google AI — Gemini, AI Studio, NotebookLM, DeepMind и Vertex AI",
-      "description": "[Маршрут: Только в Прокси / VPN — геоблок по IP] Все домены ИИ-экосистемы Google: gemini.google.com, aistudio.google.com, notebooklm.google.com, makersuite.google.com, deepmind.google, bard.google.com и generativelanguage.googleapis.com.",
+      "title": "Google AI — Gemini, AI Studio, NotebookLM, Antigravity, Jules, DeepMind и Vertex AI",
+      "description": "[Маршрут: Только в Прокси / VPN — геоблок по IP] Все домены ИИ-экосистемы Google: gemini.google.com, aistudio.google.com, notebooklm.google.com, antigravity.google, jules.google, stitch.withgoogle.com, labs.google, deepmind.google и generativelanguage.googleapis.com.",
       "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/google_ai.srs",
       "sources": [
         { "type": "srs", "url": "{itdoginfo_srs}/google_ai.srs" },
@@ -233,11 +252,127 @@
       "kind": "domains",
       "recommended_action": "proxy",
       "title": "xAI — нейросеть Grok (grok.com, x.ai и API)",
-      "description": "[Маршрут: Только в Прокси / VPN — геоблок по IP] Домены искусственного интеллекта xAI Илона Маска: grok.com, x.ai, console.x.ai, api.x.ai и медиа-CDN Grok.",
+      "description": "[Маршрут: Только в Прокси / VPN — геоблок по IP] Домены искусственного интеллекта xAI Илона Маска: grok.com, x.ai, console.x.ai, api.x.ai, grokusercontent.com и медиа-CDN Grok.",
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-xai.srs",
       "sources": [
         { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-xai.srs" },
         { "type": "singbox_json", "url": "{metacubex_geosite}/xai.json" }
+      ]
+    },
+    {
+      "id": "openrouter",
+      "group": "ai",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "OpenRouter, Poe, Groq и Mistral — единые LLM API-шлюзы и быстрый облачный инференс",
+      "description": "[Маршрут: Только в Прокси / VPN — геоблок по IP] Агрегаторы нейросетей и провайдеры облачного инференса: OpenRouter (openrouter.ai), Poe (poe.com), Groq (groq.com), Mistral AI (mistral.ai), Together AI, Fireworks AI, DeepInfra, Cerebras, Replicate, Fal.ai, Chutes, Cohere и LMSYS Arena.",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-poe.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-poe.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-groq.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-cerebras.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/poe.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/groq.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/cerebras.json" }
+      ]
+    },
+    {
+      "id": "cursor",
+      "group": "ai",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Cursor, OpenCode, Windsurf и AI-кодинг — ИИ-редакторы, терминальные агенты и генераторы",
+      "description": "[Маршрут: Только в Прокси / VPN — геоблок по IP] Инструменты ИИ-разработки и кодинг-агенты: Cursor (cursor.com, cursorapi.com), OpenCode (opencode.ai, models.dev), Windsurf / Codeium (windsurf.com, codeium.com), JetBrains AI (grazie.ai, jetbrains.ai), Trae, Cline, Roo Code, Kilo Code, Aider, Lovable, Bolt.new, v0.dev, Devin, Replit, CodeRabbit и Context7.",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-cursor.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-cursor.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-windsurf.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-jetbrains-ai.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-bytedance-ai-!cn.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/cursor.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/windsurf.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/jetbrains-ai.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/bytedance-ai-!cn.json" }
+      ]
+    },
+    {
+      "id": "perplexity",
+      "group": "ai",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Perplexity AI — поисковая нейросеть, Deep Research, You.com и Genspark",
+      "description": "[Маршрут: Только в Прокси / VPN — геоблок по IP] Поисковые и исследовательские ИИ-системы: Perplexity (perplexity.ai, pplx.ai), You.com, Genspark, Consensus, Elicit и Scite.",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-perplexity.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-perplexity.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/perplexity.json" }
+      ]
+    },
+    {
+      "id": "copilot",
+      "group": "ai",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Microsoft & GitHub Copilot — GitHub Copilot, Copilot Chat, Workspace и Designer",
+      "description": "[Маршрут: Только в Прокси / VPN — геоблок по IP] Все домены автодополнения кода GitHub Copilot (githubcopilot.com, copilot-proxy.githubusercontent.com) и ассистента Microsoft Copilot в Windows, Edge и Office 365 (copilot.microsoft.com, sydney.bing.com).",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-github-copilot.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-github-copilot.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/github-copilot.json" }
+      ]
+    },
+    {
+      "id": "deepseek",
+      "group": "ai",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "DeepSeek, Kimi, Qwen и Manus — нейросети DeepSeek-R1/V3, Kimi, Qwen Chat и Manus",
+      "description": "[Маршрут: В Прокси / VPN] Домены DeepSeek (deepseek.com, chat.deepseek.com, api.deepseek.com), Moonshot Kimi (kimi.ai), Alibaba Qwen Chat (chat.qwen.ai), MiniMax, Z.ai, Manus (manus.im) и Dify.",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-deepseek.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-deepseek.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-manus.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/deepseek.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/manus.json" }
+      ]
+    },
+    {
+      "id": "midjourney",
+      "group": "ai",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Midjourney, Flux и Civitai — генерация изображений, LoRA-модели, Leonardo, Krea и 3D",
+      "description": "[Маршрут: Только в Прокси / VPN — геоблок по IP] Платформы генерации графики, дизайна и 3D: Midjourney (midjourney.com), Civitai (civitai.com), Black Forest Labs / Flux (bfl.ai), Leonardo.ai, Ideogram, Krea, Recraft, Magnific, Stability AI, ComfyUI Registry, OpenArt, Tripo3D и Meshy.",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-comfy.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-comfy.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/comfy.json" }
+      ]
+    },
+    {
+      "id": "elevenlabs",
+      "group": "ai",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "ElevenLabs, Suno, Udio и Runway — синтез речи, генерация музыки и ИИ-видео",
+      "description": "[Маршрут: Только в Прокси / VPN — геоблок по IP] Сервисы генерации звука, клонирования голоса, музыки и видео: ElevenLabs (elevenlabs.io), Suno (suno.com), Udio (udio.com), Runway (runwayml.com), Kling AI (klingai.com), Luma Dream Machine, Pika, Hailuo Video, HeyGen, Synthesia, Vidu и PixVerse.",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-elevenlabs.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-elevenlabs.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/elevenlabs.json" }
+      ]
+    },
+    {
+      "id": "huggingface",
+      "group": "ai",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Hugging Face, Ollama и Character.AI — открытые LLM-модели, локальный запуск и ролевые чаты",
+      "description": "[Маршрут: В Прокси / VPN] Репозитории моделей и датасетов Hugging Face (huggingface.co, hf.co), каталоги локальных LLM (ollama.com, lmstudio.ai, openwebui.com), а также платформы ролевых ИИ-персонажей (Character.AI, JanitorAI, Chub, NovelAI) и ML-инфраструктура (Weights & Biases, Kaggle, LangChain).",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-huggingface.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-huggingface.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/huggingface.json" }
       ]
     },
     {
@@ -361,6 +496,59 @@
       ]
     },
     {
+      "id": "soundcloud_music",
+      "group": "media",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "SoundCloud, Deezer, Tidal и Genius — музыкальные стриминги, тексты песен и Hi-Fi аудио",
+      "description": "[Маршрут: В Прокси / VPN] Музыкальные сервисы и энциклопедии, заблокированные РКН или закрытые геоблоком: SoundCloud (soundcloud.com, sndcdn.com), Deezer (deezer.com, dzcdn.net), Tidal (tidal.com), Qobuz, Bandcamp, Genius (genius.com), Last.fm, Mixcloud, TuneIn и Discogs.",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-soundcloud.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-soundcloud.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-deezer.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-tidal.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/soundcloud.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/deezer.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/tidal.json" }
+      ]
+    },
+    {
+      "id": "rutracker_lampa",
+      "group": "media",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "RuTracker, Lampa, KinoPub и Flibusta — трекеры, онлайн-кинотеатры для ТВ и библиотеки",
+      "description": "[Маршрут: В Прокси / VPN или Обход DPI] Народный набор для дома и Android TV: зеркала RuTracker, Rutor, NNM-Club, Kinozal, LostFilm, KinoPub, балансеры и плагины Lampa (Filmix, Cub, BWA, Zetflix), а также книжные и научные библиотеки (Flibusta, Coollib, Z-Library, Anna's Archive, LibGen, Sci-Hub).",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-rutracker.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-rutracker.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-z-library.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-libgen.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/rutracker.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/z-library.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/libgen.json" }
+      ]
+    },
+    {
+      "id": "patreon_creators",
+      "group": "media",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Patreon, Medium, Substack, DeviantArt и Pixiv — платформы авторов, блогов и иллюстраторов",
+      "description": "[Маршрут: В Прокси / VPN] Платформы поддержки авторов, блогов и цифрового арта, заблокированные в РФ или закрытые геоблоком: Patreon (patreon.com), Medium (medium.com), Substack, DeviantArt, ArtStation, Pixiv (pixiv.net, pximg.net), Gumroad, Ko-fi, AO3, Ficbook, Goodreads и Letterboxd.",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-patreon.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-patreon.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-medium.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-pixiv.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-deviantart.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/patreon.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/medium.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/pixiv.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/deviantart.json" }
+      ]
+    },
+    {
       "id": "discord",
       "group": "social",
       "kind": "subnets",
@@ -425,6 +613,98 @@
       ]
     },
     {
+      "id": "whatsapp",
+      "group": "social",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "WhatsApp — мессенджер, аудио/видеозвонки, веб-клиент и медиа-серверы (отдельно от Meta)",
+      "description": "[Маршрут: В Прокси / VPN или Direct] Все домены WhatsApp (whatsapp.com, whatsapp.net, wa.me) отдельно от Instagram и Facebook: позволяет точечно маршрутизировать звонки и сообщения WhatsApp без проксирования тяжёлого видео-трафика Instagram.",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-whatsapp.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-whatsapp.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/whatsapp.json" }
+      ]
+    },
+    {
+      "id": "messengers",
+      "group": "social",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Signal, Viber, TeamSpeak и Matrix — заблокированные мессенджеры и голосовые чаты",
+      "description": "[Маршрут: В Прокси / VPN] Мессенджеры и голосовые серверы, заблокированные РКН или используемые геймерами как замена Discord: Signal (signal.org, whispersystems.org), Viber (viber.com), TeamSpeak 3/5 (teamspeak.com, myteamspeak.com), Guilded, Element / Matrix, Threema, Session, SimpleX и Wire.",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-signal.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-signal.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-viber.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/signal.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/viber.json" }
+      ]
+    },
+    {
+      "id": "reddit",
+      "group": "social",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Reddit — форум, приложение, видеоплеер (v.redd.it) и изображения (i.redd.it)",
+      "description": "[Маршрут: В Прокси / VPN или Обход DPI] Все домены и медиа-CDN платформы Reddit: reddit.com, redd.it, v.redd.it, i.redd.it, redditmedia.com и redditstatic.com (устраняет зависание видео и картинок).",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-reddit.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-reddit.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/reddit.json" }
+      ]
+    },
+    {
+      "id": "zoom_teams",
+      "group": "social",
+      "kind": "mixed",
+      "recommended_action": "proxy",
+      "title": "Zoom, Google Meet, MS Teams, Webex и Slack — рабочие видеоконференции и корпоративные чаты",
+      "description": "[Маршрут: Напрямую (Direct) для минимальной задержки или в Прокси при корпоративном геоблоке] Платформы удалённой работы и видеозвонков: Zoom (zoom.us), Google Meet (meet.google.com + STUN/TURN подсети), Microsoft Teams, Cisco Webex, Slack (slack.com), Loom, Gather, Whereby и Jitsi.",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-zoom.srs",
+      "sources": [
+        { "type": "srs", "url": "{itdoginfo_srs}/google_meet.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-zoom.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-slack.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/zoom.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/slack.json" }
+      ]
+    },
+    {
+      "id": "linkedin",
+      "group": "social",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "LinkedIn, Glassdoor и Indeed — деловая соцсеть и международный поиск работы в IT",
+      "description": "[Маршрут: В Прокси / VPN] Профессиональная соцсеть LinkedIn (linkedin.com, licdn.com, lnkd.in, slideshare.net), заблокированная в РФ, а также международные карьерные порталы Glassdoor, Indeed, Wellfound (AngelList) и Levels.fyi.",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-linkedin.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-linkedin.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/linkedin.json" }
+      ]
+    },
+    {
+      "id": "games_all",
+      "group": "gaming",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Игры и игровые платформы (все) — Steam, Epic, Ubisoft, War Thunder, Battle.net, EA, Riot, Xbox, PSN",
+      "description": "[Маршрут: В Прокси / VPN или Direct] Единый сводный список всех популярных игровых лаунчеров, магазинов, античитов (BattlEye, EasyAntiCheat) и серверов: Steam, Epic Games, Ubisoft Connect, War Thunder / Gaijin, Battle.net / Blizzard, EA App / Origin, Riot Games, Xbox Live, PlayStation Network, Nintendo, GOG, Wargaming, HoYoverse, Minecraft, Rockstar, Roblox, Supercell, Escape from Tarkov, FACEIT и PUBG.",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-category-games-!cn.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-category-games-!cn.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-category-game-platforms-download.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/category-games-!cn.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/category-game-platforms-download.json" },
+        { "type": "srs", "url": "{roscomvpn_geosite_srs}/steam.srs" },
+        { "type": "srs", "url": "{roscomvpn_geosite_srs}/epicgames.srs" },
+        { "type": "srs", "url": "{roscomvpn_geosite_srs}/riot.srs" },
+        { "type": "srs", "url": "{roscomvpn_geosite_srs}/origin.srs" },
+        { "type": "srs", "url": "{roscomvpn_geosite_srs}/escapefromtarkov.srs" },
+        { "type": "srs", "url": "{roscomvpn_geosite_srs}/faceit.srs" },
+        { "type": "srs", "url": "https://raw.githubusercontent.com/ushan0v/sing-box-supercell-ruleset/main/supercell.srs" }
+      ]
+    },
+    {
       "id": "steam",
       "group": "gaming",
       "kind": "domains",
@@ -453,6 +733,46 @@
       ]
     },
     {
+      "id": "ubisoft",
+      "group": "gaming",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Ubisoft Connect (Uplay) — Rainbow Six Siege, Assassin's Creed, Far Cry, The Division и For Honor",
+      "description": "[Маршрут: В Прокси / VPN] Домены лаунчера Ubisoft Connect (Uplay), серверов авторизации, облачных сохранений, CDN обновлений и античитов (ubisoft.com, ubi.com, ubisoftconnect.com, uplay.com, rainbowsix.com, ubistatic-a.akamaihd.net, battleye.com).",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-ubisoft.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-ubisoft.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/ubisoft.json" }
+      ]
+    },
+    {
+      "id": "warthunder",
+      "group": "gaming",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "War Thunder и Gaijin — War Thunder, Enlisted, Crossout, CRSED, Star Conflict и Gaijin.Net",
+      "description": "[Маршрут: В Прокси / VPN или Direct] Домены игр и лаунчера Gaijin Entertainment: War Thunder (warthunder.com, wtmobile.com), Enlisted (enlisted.net), Crossout (crossout.net), CRSED, Star Conflict, Modern Warships, магазин Gaijin.Net и мастер-серверы обновлений.",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-gaijin.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-gaijin.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/gaijin.json" }
+      ]
+    },
+    {
+      "id": "blizzard",
+      "group": "gaming",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Battle.net (Activision Blizzard) — World of Warcraft, Overwatch 2, Diablo IV, Call of Duty и Hearthstone",
+      "description": "[Маршрут: В Прокси / VPN] Домены лаунчера Battle.net, магазина и серверов Activision Blizzard: battle.net, blizzard.com, activision.com, callofduty.com, worldofwarcraft.com, playoverwatch.com, diablo4.com, playhearthstone.com и CDN загрузок.",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-blizzard.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-blizzard.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/blizzard.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/activision-blizzard.json" }
+      ]
+    },
+    {
       "id": "riot",
       "group": "gaming",
       "kind": "domains",
@@ -471,11 +791,158 @@
       "group": "gaming",
       "kind": "domains",
       "recommended_action": "proxy",
-      "title": "EA / Origin — EA App, Apex Legends, Battlefield, EA Sports FC и Sims",
-      "description": "[Маршрут: В Прокси / VPN] Домены Electronic Arts: ea.com, origin.com, tnt-ea.com, apexlegends.com и серверы авторизации и загрузки игр EA App.",
+      "title": "EA / Origin — EA App, Apex Legends, Battlefield, EA Sports FC и The Sims",
+      "description": "[Маршрут: В Прокси / VPN] Домены Electronic Arts: ea.com, origin.com, tnt-ea.com, apexlegends.com и серверы авторизации, античита и загрузки игр EA App.",
       "fallback_srs": "https://raw.githubusercontent.com/hydraponique/roscomvpn-geosite/master/release/sing-box/origin.srs",
       "sources": [
-        { "type": "srs", "url": "{roscomvpn_geosite_srs}/origin.srs" }
+        { "type": "srs", "url": "{roscomvpn_geosite_srs}/origin.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-ea.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-origin.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/ea.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/origin.json" }
+      ]
+    },
+    {
+      "id": "xbox",
+      "group": "gaming",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Xbox Live и Game Pass — консоли Xbox, PC Game Pass, Cloud Gaming, Forza, Halo и Bethesda",
+      "description": "[Маршрут: В Прокси / VPN] Экосистема Xbox и игровых студий Microsoft / Bethesda: xbox.com, xboxlive.com, gamepass.com, xboxservices.com, forzamotorsport.net, halowaypoint.com, seaofthieves.com, flightsimulator.com, bethesda.net, doom.com и elderscrolls.com.",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-xbox.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-xbox.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-bethesda.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/xbox.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/bethesda.json" }
+      ]
+    },
+    {
+      "id": "playstation",
+      "group": "gaming",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "PlayStation Network (PSN) — PS5/PS4, PS Store, PS Plus, тусовки и обновления игр",
+      "description": "[Маршрут: В Прокси / VPN] Сетевые сервисы Sony PlayStation: playstation.com, playstation.net, playstationnetwork.com, sonyentertainmentnetwork.com, CDN загрузок dl.playstation.net, а также Bungie / Helldivers 2.",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-playstation.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-playstation.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/playstation.json" }
+      ]
+    },
+    {
+      "id": "nintendo",
+      "group": "gaming",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Nintendo Switch — Nintendo eShop, Switch Online, аккаунты и обновления игр",
+      "description": "[Маршрут: В Прокси / VPN] Все домены консолей Nintendo Switch, магазина eShop, подписки Nintendo Switch Online и игр Pokémon / Zelda / Mario / Splatoon (nintendo.com, nintendo.net, nintendowifi.net, pokemon.com).",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-nintendo.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-nintendo.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/nintendo.json" }
+      ]
+    },
+    {
+      "id": "gog",
+      "group": "gaming",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "GOG и CD Projekt RED — лаунчер GOG Galaxy, Cyberpunk 2077, Ведьмак 3 и Gwent",
+      "description": "[Маршрут: В Прокси / VPN] Домены магазина без DRM GOG.com, клиента GOG Galaxy и студий CD Projekt RED (gog.com, gogalaxy.com, gog-statics.com, cdprojektred.com, cyberpunk.net, thewitcher.com).",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-gog.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-gog.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/gog.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/cdprojekt.json" }
+      ]
+    },
+    {
+      "id": "wargaming",
+      "group": "gaming",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Wargaming — World of Tanks (EU/Global), World of Warships, WoT Blitz и WGC",
+      "description": "[Маршрут: В Прокси / VPN] Европейские и глобальные серверы Wargaming.net, лаунчер Wargaming Game Center, World of Tanks, World of Warships и WoT Blitz (wargaming.net, worldoftanks.eu, worldofwarships.eu, wotblitz.com, wgcdn.co).",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-wargaming.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-wargaming.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/wargaming.json" }
+      ]
+    },
+    {
+      "id": "hoyoverse",
+      "group": "gaming",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "HoYoverse и Kuro Games — Genshin Impact, Honkai: Star Rail, Zenless Zone Zero, Wuthering Waves",
+      "description": "[Маршрут: В Прокси / VPN или Direct] Домены лаунчера HoYoPlay, HoYoLAB и популярных гача-игр: Genshin Impact, Honkai: Star Rail, Zenless Zone Zero, Honkai Impact 3rd, Wuthering Waves (Kuro Games), Arknights, Azur Lane и NIKKE.",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-hoyoverse.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-hoyoverse.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-mihoyo.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-kurogames.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/hoyoverse.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/mihoyo.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/kurogames.json" }
+      ]
+    },
+    {
+      "id": "minecraft",
+      "group": "gaming",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Minecraft и моддинг — Mojang, CurseForge, Modrinth, NexusMods, PrismLauncher, Fabric и Forge",
+      "description": "[Маршрут: В Прокси / VPN] Официальные серверы авторизации и скинов Minecraft / Mojang (minecraft.net, mojang.com, minecraftservices.com), а также главные платформы модов, плагинов и кастомных лаунчеров: CurseForge (forgecdn.net), Modrinth, NexusMods, PrismLauncher, Lunar/Badlion, Fabric, Forge, NeoForge и PaperMC.",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-mojang.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-mojang.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-curseforge.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-modrinth.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/mojang.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/curseforge.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/modrinth.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/nexusmods.json" }
+      ]
+    },
+    {
+      "id": "rockstar",
+      "group": "gaming",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Rockstar Games и 2K (Take-Two) — GTA V / Online, Red Dead Redemption 2, Social Club, FiveM и 2K",
+      "description": "[Маршрут: В Прокси / VPN] Домены Rockstar Games Launcher, Social Club, GTA Online, Red Dead Online, серверов ролевых проектов FiveM / RedM (cfx.re), а также 2K Games (Civilization, NBA 2K, Borderlands, Mafia).",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-rockstar.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-rockstar.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-take-two.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-2kgames.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/rockstar.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/take-two.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/2kgames.json" }
+      ]
+    },
+    {
+      "id": "pubg",
+      "group": "gaming",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "PUBG, THE FINALS, DayZ, VRChat, PoE, Warframe и античиты (BattlEye / EasyAntiCheat)",
+      "description": "[Маршрут: В Прокси / VPN] Популярные сетевые игры и античит-системы: PUBG / Krafton, THE FINALS и ARC Raiders (Embark), DayZ и Arma (Bohemia), VRChat, Dead by Daylight, Path of Exile, Warframe, Guild Wars 2, Albion Online, Rust, Squad, Warner Bros. Games (Mortal Kombat), osu! и античиты BattlEye / EasyAntiCheat.",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-pubg.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-pubg.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-embark.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-bohemia.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-vrchat.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-wbgames.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-itchio.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-humblebundle.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/pubg.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/embark.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/bohemia.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/vrchat.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/wbgames.json" }
       ]
     },
     {
@@ -514,7 +981,9 @@
       "description": "[Маршрут: В Прокси / VPN или Direct] Домены игры Escape from Tarkov и EFT: Arena (escapefromtarkov.com, tarkov.com, battlestategames.com и CDN обновлений).",
       "fallback_srs": "https://raw.githubusercontent.com/hydraponique/roscomvpn-geosite/master/release/sing-box/escapefromtarkov.srs",
       "sources": [
-        { "type": "srs", "url": "{roscomvpn_geosite_srs}/escapefromtarkov.srs" }
+        { "type": "srs", "url": "{roscomvpn_geosite_srs}/escapefromtarkov.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-escapefromtarkov.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/escapefromtarkov.json" }
       ]
     },
     {
@@ -526,7 +995,9 @@
       "description": "[Маршрут: В Прокси / VPN или Обход DPI] Домены платформы FACEIT (faceit.com, faceit-cdn.net) для открытия лобби, статистики и работы клиента без бесконечной загрузки.",
       "fallback_srs": "https://raw.githubusercontent.com/hydraponique/roscomvpn-geosite/master/release/sing-box/faceit.srs",
       "sources": [
-        { "type": "srs", "url": "{roscomvpn_geosite_srs}/faceit.srs" }
+        { "type": "srs", "url": "{roscomvpn_geosite_srs}/faceit.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-faceit.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/faceit.json" }
       ]
     },
     {
@@ -609,6 +1080,68 @@
       "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/hodca.srs",
       "sources": [
         { "type": "srs", "url": "{itdoginfo_srs}/hodca.srs" }
+      ]
+    },
+    {
+      "id": "jetbrains",
+      "group": "tech",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "JetBrains, Android Studio и Gradle — IDE (IntelliJ, PyCharm, WebStorm, RustRover), плагины и SDK",
+      "description": "[Маршрут: Только в Прокси / VPN — геоблок по IP] Все домены экосистемы JetBrains (jetbrains.com, marketplace.jetbrains.com, download.jetbrains.com, account.jetbrains.com, kotlinlang.org), загрузки Android Studio / SDK (dl.google.com, developer.android.com), Gradle и Maven Central.",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-jetbrains.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-jetbrains.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/jetbrains.json" }
+      ]
+    },
+    {
+      "id": "gitlab_notion",
+      "group": "tech",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "GitLab, Atlassian (Jira, Confluence, Trello), Notion, Miro и Linear — таск-трекеры и DevOps",
+      "description": "[Маршрут: Только в Прокси / VPN — геоблок по IP] Рабочие пространства, репозитории и сервисы мониторинга, закрывшие доступ из РФ: GitLab (gitlab.com), Atlassian (Jira, Confluence, Bitbucket, Trello), Notion (notion.so), Miro, Linear, Asana, ClickUp, Monday, Airtable, Postman, Sentry, Datadog и Grafana Cloud.",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-notion.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-gitlab.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-atlassian.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-notion.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/gitlab.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/atlassian.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/notion.json" }
+      ]
+    },
+    {
+      "id": "figma_adobe",
+      "group": "tech",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Figma, Canva, Adobe Creative Cloud, Framer и Webflow — дизайн, вёрстка, 3D и фотостоки",
+      "description": "[Маршрут: Только в Прокси / VPN — геоблок по IP] Платформы UI/UX-дизайна, графики и стоков: Figma (figma.com), Canva (canva.com), Adobe Creative Cloud & Firefly AI (adobe.com, adobe.io, behance.net), Framer, Webflow, Dribbble, Freepik, Flaticon, Envato, Shutterstock, Unsplash и Autodesk.",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-figma.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-figma.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-adobe.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-canva.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/figma.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/adobe.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/canva.json" }
+      ]
+    },
+    {
+      "id": "pkg_registries",
+      "group": "tech",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Пакетные менеджеры и реестры — HashiCorp (Terraform), npm, PyPI, Crates.io, Go, Brew, OpenWrt",
+      "description": "[Маршрут: В Прокси / VPN] Репозитории пакетов, библиотек и Linux-дистрибутивов: HashiCorp (Terraform, Vagrant, Vault — жёсткий геоблок РФ), npm, Yarn, pnpm, Bun, Deno, jsDelivr, PyPI, Anaconda, PyTorch, Rust Crates.io, Go Proxy, NuGet, Packagist, Homebrew, GHCR, Quay.io, Kubernetes (k8s.io), Arch, Alpine, Debian/Ubuntu и OpenWrt.",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-hashicorp.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-hashicorp.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-python.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/hashicorp.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/python.json" }
       ]
     },
     {
@@ -698,6 +1231,57 @@
       ]
     },
     {
+      "id": "speedtest",
+      "group": "infra",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Speedtest и проверка IP — Ookla Speedtest, Fast.com, 2ip, Whoer, BrowserLeaks и Ping.pe",
+      "description": "[Маршрут: В Прокси / VPN (для теста скорости и IP туннеля) или Direct] Сервисы замера скорости интернета, проверки внешнего IP-адреса, DNS-утечек и маршрутов: Speedtest (speedtest.net, ookla.com), Fast.com, Cloudflare Speed, 2ip.ru / 2ip.io, Whoer.net, BrowserLeaks, IPLeak, IPinfo, Check-Host и Ping.pe.",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-ookla-speedtest.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-ookla-speedtest.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-speedtest.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/ookla-speedtest.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/speedtest.json" }
+      ]
+    },
+    {
+      "id": "crypto",
+      "group": "other",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Криптовалюты и Web3 — Bybit, Binance, OKX, Bitget, BingX, TradingView, CoinMarketCap и TON",
+      "description": "[Маршрут: В Прокси / VPN (на статичный зарубежный IP) или Direct] Все ведущие криптобиржи, DEX, графики, аналитика и кошельки: Binance, Bybit, OKX, Bitget, BingX, KuCoin, Gate.io, HTX, MEXC, Kraken, Coinbase, Uniswap, Jupiter, Polymarket, TradingView, CoinMarketCap, CoinGecko, DeFiLlama, DexScreener, MetaMask, Phantom, Tonkeeper и RPC-ноды (Infura, Alchemy).",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-category-cryptocurrency.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-category-cryptocurrency.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-binance.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-bybit.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-okx.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/category-cryptocurrency.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/binance.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/bybit.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/okx.json" }
+      ]
+    },
+    {
+      "id": "paypal_fintech",
+      "group": "other",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "PayPal, Wise, Revolut и Stripe — международные платёжные системы, необанки и инвестиции",
+      "description": "[Маршрут: Только в Прокси / VPN — геоблок по IP] Зарубежные финансовые сервисы, платёжные шлюзы и брокеры, блокирующие вход с российских IP: PayPal (paypal.com), Wise (wise.com), Revolut (revolut.com), Stripe (stripe.com), Payoneer, Skrill, Neteller, N26, Monzo, Interactive Brokers, Investing.com и Bloomberg.",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-paypal.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-paypal.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-wise.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-stripe.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/paypal.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/wise.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/stripe.json" }
+      ]
+    },
+    {
       "id": "news",
       "group": "other",
       "kind": "domains",
@@ -771,6 +1355,22 @@
       "sources": [
         { "type": "srs", "url": "{roscomvpn_geosite_srs}/win-spy.srs" },
         { "type": "singbox_json", "url": "{metacubex_geosite}/win-spy.json" }
+      ]
+    },
+    {
+      "id": "xiaomi_smarttv_ads",
+      "group": "block",
+      "kind": "domains",
+      "recommended_action": "block",
+      "title": "Реклама Xiaomi HyperOS/MIUI и Smart TV (Block) — баннеры в телефонах Xiaomi и ТВ Samsung / LG",
+      "description": "[Маршрут: Блокировать (Block)] Вырезает встроенную системную рекламу и телеметрию в прошивках Xiaomi / Poco / Redmi (MIUI и HyperOS: api.ad.xiaomi.com, tracking.miui.com, mistat.xiaomi.com), а также рекламные баннеры и ACR-слежку на телевизорах Samsung Smart TV (Tizen) и LG webOS.",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-xiaomi@ads.srs",
+      "sources": [
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-xiaomi@ads.srs" },
+        { "type": "srs", "url": "{runetfreedom_geosite_srs}/geosite-samsung@ads.srs" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/xiaomi@ads.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/samsung@ads.json" },
+        { "type": "singbox_json", "url": "{metacubex_geosite}/apple@ads.json" }
       ]
     },
     {

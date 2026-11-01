@@ -1,0 +1,43 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain_suffix": [
+        "androidx.dev",
+        "central.sonatype.com",
+        "datalore.io",
+        "developer.android.com",
+        "dl.google.com",
+        "gradle.org",
+        "grazie.ai",
+        "intellij.com",
+        "intellij.net",
+        "intellij.org",
+        "jb.gg",
+        "jetbrains.ai",
+        "jetbrains.cloud",
+        "jetbrains.com",
+        "jetbrains.com.cn",
+        "jetbrains.dev",
+        "jetbrains.net",
+        "jetbrains.org",
+        "jetbrains.ru",
+        "jetbrains.space",
+        "jetbrains.team",
+        "kotl.in",
+        "kotlinconf.com",
+        "kotlinlang.org",
+        "ktor.io",
+        "maven.org",
+        "myjetbrains.com",
+        "oss.sonatype.org",
+        "qodana.cloud",
+        "repo.maven.apache.org",
+        "source.android.com",
+        "talkingkotlin.com",
+        "teamcity.com",
+        "youtrack.cloud"
+      ]
+    }
+  ]
+}

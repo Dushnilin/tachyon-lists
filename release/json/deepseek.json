@@ -1,0 +1,21 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain_suffix": [
+        "deepseek.ai",
+        "deepseek.com",
+        "deepseeksvc.com",
+        "dify.ai",
+        "kimi.ai",
+        "manus.im",
+        "manuscdn.com",
+        "minimax.io",
+        "moonshot.ai",
+        "qwen.ai",
+        "qwenlm.ai",
+        "z.ai"
+      ]
+    }
+  ]
+}
