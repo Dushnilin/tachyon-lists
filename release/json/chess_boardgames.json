@@ -1,0 +1,41 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain_suffix": [
+        "alchemyrpg.com",
+        "bgg.cc",
+        "boardgamearena.com",
+        "boardgamegeek.com",
+        "chess.com",
+        "chess24.com",
+        "chessbase.com",
+        "chesscomfiles.com",
+        "chesskid.com",
+        "colonist.io",
+        "dmsguild.com",
+        "dndbeyond.com",
+        "dominion.games",
+        "drivethrurpg.com",
+        "fide.com",
+        "foundryvtt.com",
+        "geoguessr.com",
+        "kahoot.com",
+        "kahoot.it",
+        "lichess.org",
+        "lichess1.org",
+        "owlbear.rodeo",
+        "pokemonshowdown.com",
+        "roll20.io",
+        "roll20.net",
+        "smogon.com",
+        "sporcle.com",
+        "tabletopia.com",
+        "timeguessr.com",
+        "wizards.com",
+        "worldguessr.com",
+        "yucata.de"
+      ]
+    }
+  ]
+}

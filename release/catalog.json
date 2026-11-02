@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generated_at": "2026-11-01T18:22:59Z",
+  "generated_at": "2026-11-02T09:17:33Z",
   "repository": "https://github.com/Dushnilin/tachyon-lists",
-  "total_lists": 100,
+  "total_lists": 143,
   "lists": [
     {
       "id": "russia_inside",
@@ -239,6 +239,32 @@
       "sha256_srs": "db1a4288ef6197056e23c5d54d06eedef211cbdb9c0e3e96d6e2a8f2d84a3a74"
     },
     {
+      "id": "belarus_inside",
+      "group": "regional",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Беларусь (внутри) — сайты, независимые медиа и сервисы, заблокированные в РБ",
+      "description": "[Маршрут: В Прокси / VPN или Обход DPI] Сводный список интернет-ресурсов, новостных порталов, правозащитных сайтов и зарубежных платформ, заблокированных Министерством информации и провайдерами на территории Республики Беларусь (Zerkalo / TUT.BY, Наша Ніва, Хартия'97, Белсат, Радыё Свабода, Euroradio, Dev.by, CityDog, Реформация, Трибуна, а также закрытые по геоблоку в РБ LinkedIn, ChatGPT, Claude, Airbnb, Upwork, Coursera).",
+      "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/belarus_inside.srs",
+      "counts": {
+        "domain": 0,
+        "domain_suffix": 81,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/belarus_inside.trs",
+        "srs": "release/sing-box/belarus_inside.srs",
+        "json": "release/json/belarus_inside.json",
+        "domains": "release/domains/belarus_inside.lst",
+        "subnets": null
+      },
+      "sha256_trs": "ff5093abdf301fea274f9f33c3573e16d5ecadeaf35ecfb77bc9f008545d219f",
+      "sha256_srs": "b59295168769ff957022f3092e31289c9092056df1b1e86d8af7847b256f637a"
+    },
+    {
       "id": "ru_whitelist",
       "group": "direct",
       "kind": "domains",
@@ -343,6 +369,58 @@
       "sha256_srs": "f64368d93b1d4ceb999520b3e030dc42a8f019ffc29d8e13a369a200e12e0f2c"
     },
     {
+      "id": "steam_cdn",
+      "group": "direct",
+      "kind": "domains",
+      "recommended_action": "direct",
+      "title": "Steam CDN и загрузка игр (Direct) — скачивание игр и патчей напрямую мимо VPN",
+      "description": "[Маршрут: Напрямую (Direct) — ставить ВЫШЕ правила Steam!] Контент-серверы скачивания игр и обновлений Steam (steamcontent.com, steampipe.akamaized.net, dl.steam.ksyna.com, steamserver.net) и других игровых лаунчеров. Поставьте этот список в Direct выше основного списка Steam (Proxy): магазин, смена региона, инвентарь и торговая площадка будут работать через VPN, а 100-гигабайтные игры будут качаться напрямую на полной скорости вашего провайдера!",
+      "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-game-platforms-download.srs",
+      "counts": {
+        "domain": 71,
+        "domain_suffix": 29,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/steam_cdn.trs",
+        "srs": "release/sing-box/steam_cdn.srs",
+        "json": "release/json/steam_cdn.json",
+        "domains": "release/domains/steam_cdn.lst",
+        "subnets": null
+      },
+      "sha256_trs": "4d07409cffbfcea911f537e996c5418bf9a06acbb84f47078609fd2a782e566b",
+      "sha256_srs": "d7df22400cfc4244ebe23fdab174ffa3f4356ee65e6ffdd6f70ad3c47e66b1ae"
+    },
+    {
+      "id": "captive_ntp_stun",
+      "group": "direct",
+      "kind": "domains",
+      "recommended_action": "direct",
+      "title": "Captive Portal, NTP и STUN (Direct) — проверка интернета, точное время и NAT-проброс",
+      "description": "[Маршрут: Напрямую (Direct)] Системные домены проверки наличия интернета на iOS, Android, Windows и macOS (captive.apple.com, connectivitycheck.gstatic.com, msftconnecttest.com), серверы синхронизации точного времени NTP (pool.ntp.org, time.cloudflare.com — критично для запуска VLESS/Reality и WireGuard на роутерах без RTC!) и публичные STUN-серверы.",
+      "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ntp.srs",
+      "counts": {
+        "domain": 409,
+        "domain_suffix": 87,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/captive_ntp_stun.trs",
+        "srs": "release/sing-box/captive_ntp_stun.srs",
+        "json": "release/json/captive_ntp_stun.json",
+        "domains": "release/domains/captive_ntp_stun.lst",
+        "subnets": null
+      },
+      "sha256_trs": "e58b210e251cf760a74238e9661edc5ce79d387e3724f325aeb4fa6c41e28ddf",
+      "sha256_srs": "40353c229a26b48b7aecd1d864cd28714549b0548de2948a39f6355bc8f0f7a7"
+    },
+    {
       "id": "ai_all",
       "group": "ai",
       "kind": "domains",
@@ -352,7 +430,7 @@
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-category-ai-!cn.srs",
       "counts": {
         "domain": 20,
-        "domain_suffix": 289,
+        "domain_suffix": 330,
         "domain_keyword": 0,
         "domain_regex": 1,
         "ipv4_cidr": 0,
@@ -365,8 +443,8 @@
         "domains": "release/domains/ai_all.lst",
         "subnets": null
       },
-      "sha256_trs": "5e3d51b7b9242d7fbb20933eb238d00d46d1f7ea04417aa33d4627ce21714f05",
-      "sha256_srs": "e5d2ddd19bf83cd52814bd9475651589eb998d14618b527a282654042c887d8b"
+      "sha256_trs": "0236a974b10a2d8790e75a2f13257214d5157d63fc3be04eba49fae538143a8a",
+      "sha256_srs": "e3e98046bfd7c7a12fee97699a8a1fab8d89d6251ce16e30c0b24f85ed4b3cb5"
     },
     {
       "id": "openai",
@@ -681,6 +759,58 @@
       "sha256_srs": "0c934a5a209faa598c3ba39c2477fb62030c09c0d3fed4a3b789297339bfd673"
     },
     {
+      "id": "ai_video",
+      "group": "ai",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Генерация ИИ-видео и аватаров — Kling AI, Hailuo (MiniMax), Luma, Pika, HeyGen и Vidu",
+      "description": "[Маршрут: Только в Прокси / VPN — геоблок по IP] Ведущие нейросети генерации видео, анимации, говорящих аватаров и VFX: Kling AI (klingai.com), Hailuo AI / MiniMax (hailuoai.video), Luma Dream Machine (lumalabs.ai), Pika Art (pika.art), HeyGen (heygen.com), Synthesia, Vidu, PixVerse, Higgsfield AI, Hedra, Topaz Labs и Magnific AI.",
+      "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/ai_video.srs",
+      "counts": {
+        "domain": 0,
+        "domain_suffix": 37,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/ai_video.trs",
+        "srs": "release/sing-box/ai_video.srs",
+        "json": "release/json/ai_video.json",
+        "domains": "release/domains/ai_video.lst",
+        "subnets": null
+      },
+      "sha256_trs": "8ff40e3a04e581b85ff5ecc0616d1e4aea95f82264d95c75685bb354f21adf03",
+      "sha256_srs": "7756b992db885652053db71875ee8297a610d5c7a8b1f940a4620cc97a4b74fb"
+    },
+    {
+      "id": "ai_cloud_gpu",
+      "group": "ai",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Облачные GPU и ИИ-инференс — RunPod, Vast.ai, Replicate, Fal.ai, Together AI и Modal",
+      "description": "[Маршрут: В Прокси / VPN] Платформы почасовой аренды GPU (A100/H100/RTX 4090) под Stable Diffusion / Flux / LLM и бессерверного API-инференса: RunPod (runpod.io), Vast.ai (vast.ai), Replicate (replicate.com), Fal.ai (fal.ai, fal.run), Together AI, Fireworks AI, Modal, Lambda Labs, Baseten, DeepInfra и Chutes AI.",
+      "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/ai_cloud_gpu.srs",
+      "counts": {
+        "domain": 0,
+        "domain_suffix": 34,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/ai_cloud_gpu.trs",
+        "srs": "release/sing-box/ai_cloud_gpu.srs",
+        "json": "release/json/ai_cloud_gpu.json",
+        "domains": "release/domains/ai_cloud_gpu.lst",
+        "subnets": null
+      },
+      "sha256_trs": "0ddb8640ed9868372fd995cea4ba78b1c63446d52986d32c85e1de2afc1b5b95",
+      "sha256_srs": "505fc9ef9c9b7b680a8bae8f3aeed3fe9738aaf7b61945aa1ac9370f38d0b6d8"
+    },
+    {
       "id": "youtube",
       "group": "media",
       "kind": "domains",
@@ -993,6 +1123,136 @@
       "sha256_srs": "c5154373fb91055b4133b0b5f5bb92ec18fcd7f25094b9c13df1c4f8fa02a41d"
     },
     {
+      "id": "youtube_images",
+      "group": "media",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "YouTube (только превью, аватарки и интерфейс — без видеопотока googlevideo)",
+      "description": "[Маршрут: В Прокси / VPN — для тех, кто чинит само видео через Zapret/ByeDPI] Серверы обложек роликов (i.ytimg.com, i9.ytimg.com), аватарок каналов (yt3.ggpht.com, yt4.ggpht.com) и веб-интерфейса YouTube БЕЗ тяжёлых видеосерверов googlevideo.com. Если видео через обход DPI показывает, но не грузятся картинки и аватарки — направьте этот список в Прокси!",
+      "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/youtube_images.srs",
+      "counts": {
+        "domain": 0,
+        "domain_suffix": 11,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/youtube_images.trs",
+        "srs": "release/sing-box/youtube_images.srs",
+        "json": "release/json/youtube_images.json",
+        "domains": "release/domains/youtube_images.lst",
+        "subnets": null
+      },
+      "sha256_trs": "e4e86383fbbf48c94a48a04332b6e5e50ffbf4b08cefa5b04f8ded960d51c75a",
+      "sha256_srs": "4f77092541c1dd02dbeba280d143480d0298cbbcd48bbc597773cec96a057156"
+    },
+    {
+      "id": "tmdb_metadata",
+      "group": "media",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Постеры и базы фильмов для Lampa, Plex, Kodi и Jellyfin — TMDB, TheTVDB, IMDb и Last.fm",
+      "description": "[Маршрут: В Прокси / VPN или Обход DPI] Базы метаданных, обложек, актёров и описаний фильмов и музыки: The Movie Database (themoviedb.org, image.tmdb.org, api.themoviedb.org — блокируются в РФ, из-за чего в Lampa, Plex, Kodi, Jellyfin и Infuse пропадают постеры!), TheTVDB, IMDb, Trakt.tv, Fanart.tv, OpenSubtitles, Last.fm, MusicBrainz и Discogs.",
+      "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/tmdb.srs",
+      "counts": {
+        "domain": 4,
+        "domain_suffix": 39,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/tmdb_metadata.trs",
+        "srs": "release/sing-box/tmdb_metadata.srs",
+        "json": "release/json/tmdb_metadata.json",
+        "domains": "release/domains/tmdb_metadata.lst",
+        "subnets": null
+      },
+      "sha256_trs": "85451ed98a2fdb95a1cbd7e0a5b12eaa187c9b880cda9a12eccc789cdb8440bf",
+      "sha256_srs": "bef095e681a90a8e38b38fd9e888146697cafa3271b1d94fb51eed392f9d7050"
+    },
+    {
+      "id": "streaming_west",
+      "group": "media",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Зарубежные онлайн-кинотеатры — Disney+, Max (HBO), Amazon Prime Video, Hulu, Paramount+ и Plex",
+      "description": "[Маршрут: Только в Прокси / VPN — геоблок по IP] Западные стриминговые сервисы и медиасерверы: Disney+ (disneyplus.com, bamgrid.com), Max / HBO (max.com, hbomax.com), Amazon Prime Video (primevideo.com, aiv-cdn.net), Hulu, Paramount+, Peacock, MUBI и облако домашнего медиасервера Plex (plex.tv, plex.direct).",
+      "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/disney.srs",
+      "counts": {
+        "domain": 14,
+        "domain_suffix": 321,
+        "domain_keyword": 0,
+        "domain_regex": 1,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/streaming_west.trs",
+        "srs": "release/sing-box/streaming_west.srs",
+        "json": "release/json/streaming_west.json",
+        "domains": "release/domains/streaming_west.lst",
+        "subnets": null
+      },
+      "sha256_trs": "40789dff8fb2067a7831c41f9cb6f249ffc8c54e01b98f6d170d30ba15c951fd",
+      "sha256_srs": "6ad8f03e6d0de9fc68e3691da9f8d1d1d158e72971d39b3ef02f2bb503eca633"
+    },
+    {
+      "id": "books_archives",
+      "group": "media",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Архивы интернета и научные библиотеки — Wayback Machine, Sci-Hub, LibGen, Anna's Archive и Z-Library",
+      "description": "[Маршрут: В Прокси / VPN или Обход DPI] Архив интернета (archive.org / Wayback Machine — заблокирован в РФ), архивы веб-страниц (archive.is, archive.ph, ghostarchive.org), крупнейшие библиотеки книг, фанфиков и научных статей: Anna's Archive, Z-Library (z-lib.gs, singlelogin.re), Library Genesis (libgen.is), Sci-Hub, Project Gutenberg, ResearchGate, Academia.edu и AO3 (archiveofourown.org).",
+      "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/archive.srs",
+      "counts": {
+        "domain": 0,
+        "domain_suffix": 121,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/books_archives.trs",
+        "srs": "release/sing-box/books_archives.srs",
+        "json": "release/json/books_archives.json",
+        "domains": "release/domains/books_archives.lst",
+        "subnets": null
+      },
+      "sha256_trs": "d337fbe1de6994cf8c087c274cfe9500f5b4c80c8a69f516ae029b7a2739d59c",
+      "sha256_srs": "f691ca82594e1ffac449d160d386eb953d9f40bcbbe5dbf9ad0a65b132c241e3"
+    },
+    {
+      "id": "podcasts_radio",
+      "group": "media",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Подкасты, онлайн-радио и аудиокниги — хостинги Apple/Spotify подкастов, TuneIn, DI.FM и Audible",
+      "description": "[Маршрут: В Прокси / VPN] Зарубежные CDN-хостинги подкастов (megaphone.fm, art19.com, simplecast.com, acast.com, omny.fm, buzzsprout.com, libsyn.com, podbean.com — именно из-за их блокировки не скачиваются выпуски в стандартном приложении «Подкасты» на iPhone!), плееры Pocket Casts и Overcast, аудиокниги Audible, Storytel, Bookmate и интернет-радио TuneIn Radio, DI.FM и Radio Garden.",
+      "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/pocketcasts.srs",
+      "counts": {
+        "domain": 0,
+        "domain_suffix": 57,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/podcasts_radio.trs",
+        "srs": "release/sing-box/podcasts_radio.srs",
+        "json": "release/json/podcasts_radio.json",
+        "domains": "release/domains/podcasts_radio.lst",
+        "subnets": null
+      },
+      "sha256_trs": "4c7540279cf1acf7eb300244cefe2680502bc33cddb542969291a28c9355d9c0",
+      "sha256_srs": "80a0003cb4db9a9eb874b5e9d974fb5713c42c058a842de74d705fdcbc450312"
+    },
+    {
       "id": "discord",
       "group": "social",
       "kind": "subnets",
@@ -1227,6 +1487,32 @@
       "sha256_srs": "39e3df195f34604c122a8ec0a1b8e4585bd9e979775391959a21c3121df90031"
     },
     {
+      "id": "discord_voice",
+      "group": "social",
+      "kind": "mixed",
+      "recommended_action": "proxy",
+      "title": "Discord Voice — только голосовые серверы и звонки WebRTC / UDP (отдельно от чата)",
+      "description": "[Маршрут: В низкопинговый игровой Прокси / VPN с поддержкой UDP или Обход DPI] Узкий список голосовых и видео-шлюзов Discord (*.discord.media и UDP-подсети голосовых серверов Discord). Позволяет направить голосовые каналы и стриминг экрана через самый быстрый узел с минимальным пингом отдельно от основного чата и картинок Discord.",
+      "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/discord_voice.srs",
+      "counts": {
+        "domain": 0,
+        "domain_suffix": 1,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 8,
+        "ipv6_cidr": 1
+      },
+      "files": {
+        "trs": "release/tachyon/discord_voice.trs",
+        "srs": "release/sing-box/discord_voice.srs",
+        "json": "release/json/discord_voice.json",
+        "domains": "release/domains/discord_voice.lst",
+        "subnets": "release/subnets/discord_voice.lst"
+      },
+      "sha256_trs": "3c5d48d6ec349db092a20eca7a0f3f1f67cf316994c0583f8cb0150b463cebbb",
+      "sha256_srs": "588fb2c7af0f8388103789e8b741c3bf6c6935072018328f89f6b505d7923134"
+    },
+    {
       "id": "games_all",
       "group": "gaming",
       "kind": "domains",
@@ -1235,8 +1521,8 @@
       "description": "[Маршрут: В Прокси / VPN или Direct] Единый сводный список всех популярных игровых лаунчеров, магазинов, античитов (BattlEye, EasyAntiCheat) и серверов: Steam, Epic Games, Ubisoft Connect, War Thunder / Gaijin, Battle.net / Blizzard, EA App / Origin, Riot Games, Xbox Live, PlayStation Network, Nintendo, GOG, Wargaming, HoYoverse, Minecraft, Rockstar, Roblox, Supercell, Escape from Tarkov, FACEIT и PUBG.",
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-category-games-!cn.srs",
       "counts": {
-        "domain": 61,
-        "domain_suffix": 1003,
+        "domain": 55,
+        "domain_suffix": 1295,
         "domain_keyword": 0,
         "domain_regex": 3,
         "ipv4_cidr": 114,
@@ -1249,8 +1535,8 @@
         "domains": "release/domains/games_all.lst",
         "subnets": "release/subnets/games_all.lst"
       },
-      "sha256_trs": "75ed61e13e0c7de502d028d2ea8ea5cd656205835f33bd5af090845c3165beba",
-      "sha256_srs": "38b120aaf79fa5b942e0db8a11b901bfad2bef3a192b668039e77dd904ff0a64"
+      "sha256_trs": "cf13e659bef5e05a795ba52f224222c1d4a44d55aab01b38582b9a78995d47b0",
+      "sha256_srs": "8335beee162eb4802628632855fff81bc8b348eb63bbdbf08de92e64689a203a"
     },
     {
       "id": "steam",
@@ -1799,6 +2085,292 @@
       "sha256_srs": "c438bfe9f5f52d51e6869eb95d7f57da93ca1abdd9b799a61b9e306bd8ee7dd8"
     },
     {
+      "id": "game_backends",
+      "group": "gaming",
+      "kind": "mixed",
+      "recommended_action": "proxy",
+      "title": "Сетевые движки игр и голосовой чат — Photon Engine, Vivox Voice, Azure PlayFab и EOS",
+      "description": "[Маршрут: В Прокси / VPN (с UDP) или Обход DPI] Сетевая инфраструктура сотен мультиплеерных игр и внутриигрового голосового чата: войс-движок Vivox (vivox.com, unity3d.com — чинит голосовой чат в Valorant, PUBG, LoL, Fortnite, Overwatch 2, Rainbow Six), облако кооп-игр Photon Engine (photonengine.com, exitgames.com + UDP-подсети — чинит Phasmophobia, R.E.P.O., Content Warning, Lethal Company, VRChat, Among Us), Azure PlayFab (playfabapi.com — Helldivers 2, Sea of Thieves, Minecraft) и Epic Online Services (epicgames.dev).",
+      "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/game_backends.srs",
+      "counts": {
+        "domain": 0,
+        "domain_suffix": 22,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 4,
+        "ipv6_cidr": 1
+      },
+      "files": {
+        "trs": "release/tachyon/game_backends.trs",
+        "srs": "release/sing-box/game_backends.srs",
+        "json": "release/json/game_backends.json",
+        "domains": "release/domains/game_backends.lst",
+        "subnets": "release/subnets/game_backends.lst"
+      },
+      "sha256_trs": "1f8d9ef2d648ba908a7168c06691edd5ac9e0d7236f7b1ae3c64ca07d9e55f5c",
+      "sha256_srs": "9aaab0b68db88c93643cf7e8a281ac02910540c0daf185606a6ff26509dcd770"
+    },
+    {
+      "id": "cs2_dota2",
+      "group": "gaming",
+      "kind": "mixed",
+      "recommended_action": "proxy",
+      "title": "Valve Matchmaking — CS2, Dota 2, Deadlock и Team Fortress 2 (серверы матчей и SDR)",
+      "description": "[Маршрут: В игровой Прокси с минимальным пингом или Direct] Только соревновательные серверы матчей Valve, релеи Steam Datagram Relay (steamdatagram.com, valve.net и подсети AS32590 Valve Corporation) и игровой координатор (CS2, Dota 2, Deadlock, TF2) — без тяжёлого магазина и скачивания игр Steam.",
+      "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/cs2_dota2.srs",
+      "counts": {
+        "domain": 0,
+        "domain_suffix": 8,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 20,
+        "ipv6_cidr": 12
+      },
+      "files": {
+        "trs": "release/tachyon/cs2_dota2.trs",
+        "srs": "release/sing-box/cs2_dota2.srs",
+        "json": "release/json/cs2_dota2.json",
+        "domains": "release/domains/cs2_dota2.lst",
+        "subnets": "release/subnets/cs2_dota2.lst"
+      },
+      "sha256_trs": "57d59a45ce7c0766eb24bb5f79252141b0edc170b253b06031cc36e43c5f01cd",
+      "sha256_srs": "1ed6ff4ef6c2cf817a054fad5a354fd5e2a81d9c954ebce5f3d9280ec24ea813"
+    },
+    {
+      "id": "survival_coop",
+      "group": "gaming",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Dead by Daylight, Rust, Hunt: Showdown, Helldivers 2, Palworld и кооп-выживачи",
+      "description": "[Маршрут: В Прокси / VPN или Обход DPI] Серверы входа, инвентаря и матчмейкинга популярных мультиплеерных экшенов и выживачей, страдающих от блокировок подсетей Amazon AWS / GameLift и Hetzner на ТСПУ: Dead by Daylight (bhvrdbd.com), Rust (facepunch.com, playrust.com), Hunt: Showdown 1896 (huntshowdown.com, crytek.com), Helldivers 2, Palworld, ARK, Valheim, Satisfactory, Deep Rock Galactic, Dune: Awakening и Sea of Thieves.",
+      "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/survival_coop.srs",
+      "counts": {
+        "domain": 0,
+        "domain_suffix": 50,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/survival_coop.trs",
+        "srs": "release/sing-box/survival_coop.srs",
+        "json": "release/json/survival_coop.json",
+        "domains": "release/domains/survival_coop.lst",
+        "subnets": null
+      },
+      "sha256_trs": "88c3bb8d06aa5271111d23bd5cfa5afca06b7f64939d03a3f77a6707d21bad3d",
+      "sha256_srs": "2f0dc05463a797afff44dab1f4a06e46137ecfdf0d30937f5f79bd3a87578272"
+    },
+    {
+      "id": "mmorpg",
+      "group": "gaming",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "MMORPG — Path of Exile 1 & 2, Guild Wars 2, Final Fantasy XIV, ESO, Albion Online и Black Desert",
+      "description": "[Маршрут: В Прокси / VPN] Серверы авторизации, патчеры и торговые площадки ведущих MMORPG: Path of Exile 1 и PoE 2 (pathofexile.com, poecdn.com, grindinggear.com), Guild Wars 2 (guildwars2.com, arena.net, ncsoft.com), Final Fantasy XIV (finalfantasyxiv.com, sqex.com), The Elder Scrolls Online (elderscrollsonline.com), Albion Online (albiononline.com), Black Desert, EVE Online, Star Citizen, Lost Ark и RuneScape.",
+      "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/mmorpg.srs",
+      "counts": {
+        "domain": 0,
+        "domain_suffix": 40,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/mmorpg.trs",
+        "srs": "release/sing-box/mmorpg.srs",
+        "json": "release/json/mmorpg.json",
+        "domains": "release/domains/mmorpg.lst",
+        "subnets": null
+      },
+      "sha256_trs": "627cdd3ebecc87bfc6f5e68f9df844be7bfe802e9ebebd2bd7bc712cc76982ca",
+      "sha256_srs": "ffc84e98c0e6403394934bae09e3641eddb7c85ed435d309ce291da81d33c53e"
+    },
+    {
+      "id": "netease_tencent_games",
+      "group": "gaming",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Marvel Rivals, Delta Force, Once Human, Arena Breakout и Naraka (NetEase и Level Infinite)",
+      "description": "[Маршрут: В Прокси / VPN] Игровые бэкенды, лаунчеры, античиты и CDN-серверы глобальных хитов от NetEase Games и Tencent Level Infinite: Marvel Rivals (marvelrivals.com), Delta Force (playdeltaforce.com), Once Human (oncehuman.game), Arena Breakout: Infinite, Naraka: Bladepoint, FragPunk, PUBG Mobile, NIKKE и Strinova (netease.com, easebar.com, loadingbay.com, intlgame.com, proximabeta.com).",
+      "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/netease.srs",
+      "counts": {
+        "domain": 0,
+        "domain_suffix": 146,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/netease_tencent_games.trs",
+        "srs": "release/sing-box/netease_tencent_games.srs",
+        "json": "release/json/netease_tencent_games.json",
+        "domains": "release/domains/netease_tencent_games.lst",
+        "subnets": null
+      },
+      "sha256_trs": "fe420ac4dcf6c78bed28c3351cfc1b4932a6adf35a98b3ead33eb2075c52c72d",
+      "sha256_srs": "734856eba2c52881486e4b8274b21e46a10284cfd812fd6b46640cc4e3334164"
+    },
+    {
+      "id": "japanese_publishers",
+      "group": "gaming",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Capcom, Bandai Namco, FromSoftware, SEGA, Square Enix и Konami — Elden Ring, Monster Hunter, RE",
+      "description": "[Маршрут: В Прокси / VPN] Онлайн-сервисы и серверы коопа/матчмейкинга японских игровых издателей: FromSoftware и Bandai Namco (Elden Ring, Elden Ring Nightreign, Dark Souls, Armored Core VI — fromsoftware-game.jp, bandainamcoent.com), Capcom (Monster Hunter Wilds / World, Resident Evil, Capcom ID — capcom.com), SEGA и Atlus (Sonic, Like a Dragon, Persona — sega.com), Square Enix и Konami (eFootball, Yu-Gi-Oh!, Metal Gear).",
+      "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/konami.srs",
+      "counts": {
+        "domain": 0,
+        "domain_suffix": 50,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/japanese_publishers.trs",
+        "srs": "release/sing-box/japanese_publishers.srs",
+        "json": "release/json/japanese_publishers.json",
+        "domains": "release/domains/japanese_publishers.lst",
+        "subnets": null
+      },
+      "sha256_trs": "10e013dc8f9efb86a8892cffd823fa73e418bd8fac07149c9fdeefe01e9b7de1",
+      "sha256_srs": "939745a3997e633fb07dd168f85341930a984f07b5dd1d105da4bee0595a7d5c"
+    },
+    {
+      "id": "fighting_racing",
+      "group": "gaming",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Файтинги и симрейсинг — Mortal Kombat 1 (WB Games), Tekken 8, Street Fighter 6, iRacing и Assetto Corsa",
+      "description": "[Маршрут: Только в Прокси / VPN — WB Games блокирует РФ по IP] Серверы онлайна и профилей файтингов и гоночных симуляторов: Mortal Kombat 1 / 11 и игры Warner Bros. Games (wbgames.com, wbplay.com, agoragames.com — закрыты для российских IP!), Tekken 8, Street Fighter 6 (buckler.capcom.com), Guilty Gear Strive, а также симрейсинг iRacing (iracing.com), Assetto Corsa / LFM (lowfuelmotorsport.com), Le Mans Ultimate, RaceRoom, Fanatec, Moza Racing и Simagic.",
+      "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/wbgames.srs",
+      "counts": {
+        "domain": 2,
+        "domain_suffix": 37,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/fighting_racing.trs",
+        "srs": "release/sing-box/fighting_racing.srs",
+        "json": "release/json/fighting_racing.json",
+        "domains": "release/domains/fighting_racing.lst",
+        "subnets": null
+      },
+      "sha256_trs": "e4ee0b75f97ff154d457fbb559be028e443f36386139e40d31875c0b21b56ab5",
+      "sha256_srs": "75bd8937ad0a0407b8bc4bcfa84d238d4ad122ce39466dbf13fbda9030dcb9d3"
+    },
+    {
+      "id": "strategy_sim",
+      "group": "gaming",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Стратегии и авиасимуляторы — Paradox (HOI4, Stellaris, Cities: Skylines), Civilization и MS Flight Simulator",
+      "description": "[Маршрут: В Прокси / VPN] Лаунчеры, моды и мультиплеер глобальных стратегий и симуляторов: Paradox Interactive (Hearts of Iron IV, Stellaris, Europa Universalis IV, Crusader Kings III, Cities: Skylines — paradoxinteractive.com, paradoxplaza.com), Sid Meier's Civilization (2K), Age of Empires, Total War, Euro Truck Simulator 2 (TruckersMP), а также серверы фотограмметрии, погоды и навигации Microsoft Flight Simulator 2020/2024, X-Plane, Navigraph и VATSIM.",
+      "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-flight-simulator.srs",
+      "counts": {
+        "domain": 2,
+        "domain_suffix": 108,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/strategy_sim.trs",
+        "srs": "release/sing-box/strategy_sim.srs",
+        "json": "release/json/strategy_sim.json",
+        "domains": "release/domains/strategy_sim.lst",
+        "subnets": null
+      },
+      "sha256_trs": "0cec6a048bea5f7d797cf7b4fef9078b83725e962c2b663f8738c4ed68bfa2d8",
+      "sha256_srs": "2797716a5d3838520e358c450e108b3cd990da95804e1547a0cd2e6f41f52c6b"
+    },
+    {
+      "id": "meta_quest",
+      "group": "gaming",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Meta Quest (Oculus) и Pico VR — активация VR-шлемов, обновление прошивок и магазин игр",
+      "description": "[Маршрут: Только в Прокси / VPN — обязательно для работы Meta Quest в РФ] Выделенный список доменов VR-экосистемы Meta Quest 2 / 3 / 3S / Pro (oculus.com, oculuscdn.com, meta.com, graph.oculus.com, securecdn.oculus.com), Pico VR (picoxr.com) и SideQuest. Позволяет активировать шлем, обновлять прошивку Horizon OS и скачивать игры на полной скорости, не проксируя весь остальной трафик Instagram/Facebook.",
+      "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/oculus.srs",
+      "counts": {
+        "domain": 0,
+        "domain_suffix": 27,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/meta_quest.trs",
+        "srs": "release/sing-box/meta_quest.srs",
+        "json": "release/json/meta_quest.json",
+        "domains": "release/domains/meta_quest.lst",
+        "subnets": null
+      },
+      "sha256_trs": "c73c752c9d4ebfc570182b22926d6a9f1b1286b94ff17803fd17bcd7f4e629a6",
+      "sha256_srs": "f6bc3f52c98ea21e7a059d5523d57d192417acd227760867c45824efeaa9d0d6"
+    },
+    {
+      "id": "chess_boardgames",
+      "group": "gaming",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Шахматы, настолки и викторины — Chess.com, Lichess, GeoGuessr, D&D Beyond, Roll20 и BoardGameArena",
+      "description": "[Маршрут: В Прокси / VPN или Обход DPI] Крупнейший шахматный портал Chess.com (заблокирован РКН в РФ: chess.com, chesscomfiles.com), Lichess (lichess.org), географическая игра GeoGuessr (geoguessr.com), виртуальные столы для настольных и ролевых игр D&D Beyond (dndbeyond.com, wizards.com), Roll20 (roll20.net), Foundry VTT, BoardGameArena и Tabletopia.",
+      "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/chesscom.srs",
+      "counts": {
+        "domain": 0,
+        "domain_suffix": 32,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/chess_boardgames.trs",
+        "srs": "release/sing-box/chess_boardgames.srs",
+        "json": "release/json/chess_boardgames.json",
+        "domains": "release/domains/chess_boardgames.lst",
+        "subnets": null
+      },
+      "sha256_trs": "8258f2b5d0987185c470f2cfb48fc0953edb4b01c134db517cc02d2615cd35b8",
+      "sha256_srs": "bbca8cf5101ef6e4d6a1d8474d829fcba1a82a45ba876f850f04e65643e4585a"
+    },
+    {
+      "id": "gaming_mods_stats",
+      "group": "gaming",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Менеджеры модов, оверлеи и стат-трекеры — Thunderstore, Overwolf, WeMod, Tracker.gg, OP.GG и HLTV",
+      "description": "[Маршрут: В Прокси / VPN] Платформы моддинга, игровых оверлеев, трейнеров и киберспортивной статистики, часто недоступные из РФ из-за блокировок Cloudflare и геоблока: Thunderstore Mod Manager / r2modman (thunderstore.io, gcdn.thunderstore.io), Overwolf (overwolf.com), WeMod, ModDB, GameBanana, SteamDB, Tracker.gg, OP.GG, U.GG, Mobalytics, Dotabuff, OpenDota, Stratz, Leetify, Maxroll, Wowhead, Poe.ninja и HLTV.org.",
+      "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-enhance-gaming.srs",
+      "counts": {
+        "domain": 0,
+        "domain_suffix": 72,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/gaming_mods_stats.trs",
+        "srs": "release/sing-box/gaming_mods_stats.srs",
+        "json": "release/json/gaming_mods_stats.json",
+        "domains": "release/domains/gaming_mods_stats.lst",
+        "subnets": null
+      },
+      "sha256_trs": "460214af48cbc32651664c6540cde9d104c28a937d76e090dc6b0bf867a1ee3a",
+      "sha256_srs": "5ebefbc2b51ee6211136b2902183864d2907f0d31a95177ae10520b75b721871"
+    },
+    {
       "id": "apple",
       "group": "tech",
       "kind": "domains",
@@ -2059,6 +2631,266 @@
       "sha256_srs": "145cb5b6c0f72f19e2828f2a1782ded32463910e5f88e36d946ef9af5c02c7e3"
     },
     {
+      "id": "google_services",
+      "group": "tech",
+      "kind": "domains",
+      "recommended_action": "direct",
+      "title": "Сервисы Google (Почта, Диск, Документы, Карты, Переводчик, Календарь — без YouTube и Gemini)",
+      "description": "[Маршрут: Напрямую (Direct) или В Прокси / VPN по выбору] Основная экосистема поиска и офисных сервисов Google (google.com, gmail.com, drive.google.com, docs.google.com, maps.google.com, translate.google.com, gstatic.com, googleapis.com, googleusercontent.com), из которой исключены домены YouTube (youtube.com, googlevideo.com) и нейросетей Google AI (gemini.google.com, aistudio.google.com).",
+      "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/google.srs",
+      "counts": {
+        "domain": 19,
+        "domain_suffix": 819,
+        "domain_keyword": 0,
+        "domain_regex": 2,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/google_services.trs",
+        "srs": "release/sing-box/google_services.srs",
+        "json": "release/json/google_services.json",
+        "domains": "release/domains/google_services.lst",
+        "subnets": null
+      },
+      "sha256_trs": "4d1db90504abf9111add16f29b69c2e52335f99ebc31ccf3ba7e8cea3860cf9d",
+      "sha256_srs": "9eae957c2b4059f340b251cc38575903e6d90f09e03d3f923aa854450a2b1d7d"
+    },
+    {
+      "id": "captcha_auth",
+      "group": "tech",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Капчи и единый вход (SSO) — Cloudflare Turnstile, Google reCAPTCHA, hCaptcha, Arkose Labs и Auth0",
+      "description": "[Маршрут: В Прокси / VPN или Direct (в зависимости от сайта)] Виджеты проверки на робота и провайдеры единой авторизации (SSO / OAuth / Passkeys): Cloudflare Turnstile (challenges.cloudflare.com), hCaptcha (hcaptcha.com), Google reCAPTCHA (recaptcha.net), Arkose Labs / FunCaptcha (arkoselabs.com, funcaptcha.com — капча в Steam, Roblox, EA, GitHub, OpenAI), GeeTest, DataDome, Auth0, Okta и Clerk.",
+      "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/captcha_auth.srs",
+      "counts": {
+        "domain": 0,
+        "domain_suffix": 25,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/captcha_auth.trs",
+        "srs": "release/sing-box/captcha_auth.srs",
+        "json": "release/json/captcha_auth.json",
+        "domains": "release/domains/captcha_auth.lst",
+        "subnets": null
+      },
+      "sha256_trs": "27bfafc289a22f9c9732b62eef4ef8c5dc7934ddff4912a14d1b6b9678afdf0c",
+      "sha256_srs": "9679b18f5a4e3578c14891551430ddcbaf126060672b909367ec73c2112bca21"
+    },
+    {
+      "id": "cloud_gaming_remote",
+      "group": "tech",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Облачный гейминг и удалённый рабочий стол — GeForce NOW, Boosteroid, Parsec, TeamViewer, AnyDesk и RustDesk",
+      "description": "[Маршрут: В Прокси / VPN] Сервисы облачного гейминга и удалённого управления ПК: NVIDIA GeForce NOW (geforcenow.com, nvidiagrid.net — проверяет зарубежный IP только при входе и старте игры, после чего видеопоток идёт напрямую!), Boosteroid, Parsec (parsec.app), Shadow, а также TeamViewer (заблокировал РФ по IP), AnyDesk (anydesk.com — часто режется ТСПУ), RustDesk, NoMachine, Tailscale и ZeroTier.",
+      "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-remote-control.srs",
+      "counts": {
+        "domain": 4,
+        "domain_suffix": 93,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/cloud_gaming_remote.trs",
+        "srs": "release/sing-box/cloud_gaming_remote.srs",
+        "json": "release/json/cloud_gaming_remote.json",
+        "domains": "release/domains/cloud_gaming_remote.lst",
+        "subnets": null
+      },
+      "sha256_trs": "2bdd41bea08ac25d092b1e4ed61f9800a78c26b735faf319d059c554d3f273ad",
+      "sha256_srs": "ab56da3db03672f837e5cbf1931dd83ee5f5962b8b00e7e8376809e46d6ceedc"
+    },
+    {
+      "id": "cloud_storage",
+      "group": "tech",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Облачные хранилища и файлообменники — MEGA, Dropbox, WeTransfer, Pixeldrain, GoFile, Catbox и MediaFire",
+      "description": "[Маршрут: В Прокси / VPN или Обход DPI] Зарубежные облачные диски и популярные файлообменники, где публикуют прошивки, моды и рабочие архивы (многие заблокированы РКН или закрыли доступ из РФ): MEGA (mega.nz, mega.co.nz, mega.io), Dropbox (dropbox.com), WeTransfer (wetransfer.com, we.tl), Pixeldrain (pixeldrain.com), GoFile (gofile.io), Catbox (catbox.moe), MediaFire, Box.com, pCloud, Sync.com и TeraBox.",
+      "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-netdisk-!cn.srs",
+      "counts": {
+        "domain": 3,
+        "domain_suffix": 96,
+        "domain_keyword": 3,
+        "domain_regex": 0,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/cloud_storage.trs",
+        "srs": "release/sing-box/cloud_storage.srs",
+        "json": "release/json/cloud_storage.json",
+        "domains": "release/domains/cloud_storage.lst",
+        "subnets": null
+      },
+      "sha256_trs": "654be7c8c000b39276702c64cf2095d5906200664d418428577edc0b6ed7436c",
+      "sha256_srs": "9878eb760afb3cc371fb546dd4d39ed82ae7cc2d6eb98e3d12968e78eb0c8ae5"
+    },
+    {
+      "id": "gamedev_3d",
+      "group": "tech",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "3D-графика, CAD и геймдев — Unity Hub, Autodesk, Blender, Chaos (V-Ray/Corona), Maxon, ArtStation и Fab",
+      "description": "[Маршрут: Только в Прокси / VPN — геоблок по IP] Профессиональный софт для 3D-моделирования, рендера, CAD и разработки игр: Unity Engine, Unity Hub и Asset Store (unity.com, unity3d.com — закрыты для RU IP), Autodesk (AutoCAD, 3ds Max, Maya, Revit, Fusion 360 — autodesk.com), Chaos Group (V-Ray, Corona, Enscape), Maxon (Cinema 4D, Redshift, ZBrush), Blender, Godot, SideFX Houdini, Quixel Megascans / Fab.com, Sketchfab, ArtStation, Poly Haven и Printables.",
+      "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/unity.srs",
+      "counts": {
+        "domain": 0,
+        "domain_suffix": 609,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/gamedev_3d.trs",
+        "srs": "release/sing-box/gamedev_3d.srs",
+        "json": "release/json/gamedev_3d.json",
+        "domains": "release/domains/gamedev_3d.lst",
+        "subnets": null
+      },
+      "sha256_trs": "5de52e6d0d1b68758e295eb6295e6a2d5d86d01536e91fd2e9a98451e10a19c7",
+      "sha256_srs": "934849d5767f0d71964d180c171742e6931a3c9f09f02f5cc342cbce538d79f8"
+    },
+    {
+      "id": "security_passwords",
+      "group": "tech",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Менеджеры паролей, защищённая почта и антивирусы — Bitwarden, 1Password, Proton, VirusTotal и Malwarebytes",
+      "description": "[Маршрут: В Прокси / VPN] Менеджеры паролей и ключей: Bitwarden (bitwarden.com, bitwarden.eu), 1Password (1password.com), NordPass, Dashlane, Keeper, Enpass; защищённая экосистема Proton (Proton Mail, Proton Pass, Proton Drive — proton.me, protonmail.com, заблокирована РКН), Tuta (tuta.com); облачный сканер VirusTotal и обновления баз зарубежных антивирусов (Malwarebytes, Avast, AVG, ESET NOD32, Bitdefender, Norton, Avira).",
+      "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-password-management.srs",
+      "counts": {
+        "domain": 3,
+        "domain_suffix": 135,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/security_passwords.trs",
+        "srs": "release/sing-box/security_passwords.srs",
+        "json": "release/json/security_passwords.json",
+        "domains": "release/domains/security_passwords.lst",
+        "subnets": null
+      },
+      "sha256_trs": "1f312a46a99396b7967602fb59405665fb5e3a9803728018cfeefcc998b2f724",
+      "sha256_srs": "4a9bccb004659364c6d77c5a2ed53014aa5a482711603081cdcce4c7cb79e18e"
+    },
+    {
+      "id": "smarthome_iot",
+      "group": "tech",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Умный дом и 3D-печать — Home Assistant, HACS, Bambu Lab, Tuya (Smart Life), Aqara и Roborock",
+      "description": "[Маршрут: В Прокси / VPN] Облачные сервисы и репозитории умного дома и 3D-принтеров: облако 3D-печати Bambu Lab / MakerWorld (bambulab.com, bblmw.com, makerworld.com — отправка печати из Bambu Studio и видео с камеры через AWS часто блокируются ТСПУ!), Creality Cloud, Prusa; экосистема Home Assistant и Nabu Casa (home-assistant.io, nabu.casa, esphome.io, zigbee2mqtt.io); глобальные облака Tuya / Smart Life, eWeLink (Sonoff), Aqara, Roborock, Dreame и Philips Hue.",
+      "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/xiaomi-iot.srs",
+      "counts": {
+        "domain": 0,
+        "domain_suffix": 54,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/smarthome_iot.trs",
+        "srs": "release/sing-box/smarthome_iot.srs",
+        "json": "release/json/smarthome_iot.json",
+        "domains": "release/domains/smarthome_iot.lst",
+        "subnets": null
+      },
+      "sha256_trs": "3f21dcc1061dc0c79151b20e12849d5b47ffa5a6e24619ae962b1a56ce755d58",
+      "sha256_srs": "7792fa1f2a72812d041f7fe9ce89586bb416374847d41196f72db53eb4256922"
+    },
+    {
+      "id": "smarttv_apps",
+      "group": "tech",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Smart TV: Samsung Tizen и LG webOS — разблокировка Smart Hub, смена региона и магазины приложений ТВ",
+      "description": "[Маршрут: Только в Прокси / VPN (на нужный регион при настройке/активации ТВ)] Серверы проверки геолокации, активации Smart Hub и каталогов приложений телевизоров Samsung Smart TV (Tizen OS: samsungcloudsolution.com, samsungotn.net, samsungqbe.com, samsungosp.com) и LG Smart TV (webOS / LG Content Store: lgappstv.com, lgtvsdp.com, lgtvcommon.com). Незаменимо для разблокировки «серых» телевизоров параллельного импорта.",
+      "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/samsung.srs",
+      "counts": {
+        "domain": 1,
+        "domain_suffix": 50,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/smarttv_apps.trs",
+        "srs": "release/sing-box/smarttv_apps.srs",
+        "json": "release/json/smarttv_apps.json",
+        "domains": "release/domains/smarttv_apps.lst",
+        "subnets": null
+      },
+      "sha256_trs": "1a7fa80debf39670fa2f9309a7eecb801c0d45f6fe3c453e1f7231ec452dc5dd",
+      "sha256_srs": "56c429b224940b56ac1b78f900e8a0efd398df30ec139386fe4ac7860bbe62f1"
+    },
+    {
+      "id": "smart_cars",
+      "group": "tech",
+      "kind": "domains",
+      "recommended_action": "direct",
+      "title": "Умные автомобили и электрокары — LiXiang (Li Auto), Zeekr, BYD, Voyah, Geely, Xiaomi Auto, Tesla и BMW",
+      "description": "[Маршрут: Напрямую (Direct) или в китайский/целевой прокси] Серверы телематики, OTA-обновлений, мастер-аккаунтов и штатной навигации современных автомобилей: китайские электрокары и гибриды LiXiang / Li Auto (lixiang.com, chj.com), Zeekr (zeekrlife.com, zeekr.com), BYD, Voyah, Geely, Changan, Xiaomi SU7, NIO, XPeng, а также приложения и облака Tesla (tesla.com), BMW (MyBMW / ConnectedDrive) и Mercedes me. Позволяет на роутере в авто не пускать китайскую телематику в европейский VPN во избежание гео-блокировки экранов!",
+      "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-automobile-cn.srs",
+      "counts": {
+        "domain": 0,
+        "domain_suffix": 813,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/smart_cars.trs",
+        "srs": "release/sing-box/smart_cars.srs",
+        "json": "release/json/smart_cars.json",
+        "domains": "release/domains/smart_cars.lst",
+        "subnets": null
+      },
+      "sha256_trs": "0d52743ef240d22ab59a0977db76597939f0b050196c21b8a4b0d72870ea853c",
+      "sha256_srs": "1185b551864ca8d4dbe53119986ba87b0f972b42eef6879ed31fcefd1a70d471"
+    },
+    {
+      "id": "linux_repos",
+      "group": "tech",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Репозитории и пакеты Linux — Flathub, Snapcraft, Ubuntu PPA (Launchpad), Arch AUR, Proxmox, RedHat и Fedora",
+      "description": "[Маршрут: В Прокси / VPN] Пакетные репозитории, магазины приложений Linux и серверные дистрибутивы, которые ограничивают доступ с российских IP (Red Hat, Fedora, Canonical Launchpad) или тормозят из-за блокировок CDN (Flathub): Flathub / Flatpak (flathub.org), Snapcraft (snapcraft.io), Ubuntu / Launchpad PPA (launchpad.net), Arch Linux & AUR (archlinux.org), Proxmox VE (proxmox.com), Red Hat (redhat.com), Fedora, Debian, Alpine, Kali и NixOS.",
+      "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/ubuntu.srs",
+      "counts": {
+        "domain": 0,
+        "domain_suffix": 50,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/linux_repos.trs",
+        "srs": "release/sing-box/linux_repos.srs",
+        "json": "release/json/linux_repos.json",
+        "domains": "release/domains/linux_repos.lst",
+        "subnets": null
+      },
+      "sha256_trs": "734b08d1f9f0f2328ebde60d77e5fd10d18aaf5b86ef06516719bc4bc8cdeafa",
+      "sha256_srs": "873d07d343861fc1ab2eb72eb2ed34903fc01da9eb3f0e0ca675faba263c5657"
+    },
+    {
       "id": "cloudflare",
       "group": "infra",
       "kind": "subnets",
@@ -2241,6 +3073,58 @@
       "sha256_srs": "fb38c33cff0cba164b6bcd4ce8355f61a7bb84d355ef46154ecc8fea7dcb650d"
     },
     {
+      "id": "doh_dot_dns",
+      "group": "infra",
+      "kind": "mixed",
+      "recommended_action": "proxy",
+      "title": "Публичные шифрованные DNS (DoH / DoT) — Cloudflare 1.1.1.1, Google 8.8.8.8, Quad9, AdGuard и NextDNS",
+      "description": "[Маршрут: В Прокси / VPN (для обхода блокировки DoH) или Блокировать (Block — чтобы запретить устройствам обходить локальный DNS роутера)] Полная база публичных серверов DNS-over-HTTPS (DoH) и DNS-over-TLS (DoT), включая домены и IP-адреса резолверов Cloudflare (1.1.1.1, cloudflare-dns.com), Google (8.8.8.8, dns.google), Quad9 (9.9.9.9, dns.quad9.net), AdGuard DNS, NextDNS, OpenDNS, Control D и Mullvad DNS.",
+      "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-doh.srs",
+      "counts": {
+        "domain": 10,
+        "domain_suffix": 3479,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 28,
+        "ipv6_cidr": 10
+      },
+      "files": {
+        "trs": "release/tachyon/doh_dot_dns.trs",
+        "srs": "release/sing-box/doh_dot_dns.srs",
+        "json": "release/json/doh_dot_dns.json",
+        "domains": "release/domains/doh_dot_dns.lst",
+        "subnets": "release/subnets/doh_dot_dns.lst"
+      },
+      "sha256_trs": "adc5500f92d7f45f777a15c8475fd0b85be781661f1fa8140f988c40276418a5",
+      "sha256_srs": "0d455ee5b3a2258cd01541a00862d98dceacea8ef6c34b871303eb9965fb24a4"
+    },
+    {
+      "id": "vps_clouds",
+      "group": "infra",
+      "kind": "subnets",
+      "recommended_action": "proxy",
+      "title": "Облачные хостинги (VPS) — IP-подсети Oracle Cloud, Vultr, Linode (Akamai), Scaleway и GCore",
+      "description": "[Маршрут: В Прокси / VPN] Сводные IPv4/IPv6-подсети популярных зарубежных облачных провайдеров и VPS-хостингов: Oracle Cloud (AS31898), Vultr / Constant (AS20473), Linode / Akamai Connected Cloud (AS63949), Scaleway / Online.net (AS12876) и GCore Labs (AS199524), диапазоны которых массово блокируются или ограничиваются на ТСПУ в РФ (в дополнение к спискам Hetzner, OVH и DigitalOcean).",
+      "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/vps_clouds.srs",
+      "counts": {
+        "domain": 0,
+        "domain_suffix": 0,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 2430,
+        "ipv6_cidr": 1266
+      },
+      "files": {
+        "trs": "release/tachyon/vps_clouds.trs",
+        "srs": "release/sing-box/vps_clouds.srs",
+        "json": "release/json/vps_clouds.json",
+        "domains": null,
+        "subnets": "release/subnets/vps_clouds.lst"
+      },
+      "sha256_trs": "146c3a2fdda3318594cfd12992024536979e9cc2824edfd8175efd1e47590261",
+      "sha256_srs": "608522c5bb4be02a238de33a8bb6f6d3ca7efbf2b34c88a22fda10b220032dd0"
+    },
+    {
       "id": "crypto",
       "group": "other",
       "kind": "domains",
@@ -2397,6 +3281,136 @@
       "sha256_srs": "9a4a79ddba0acb7a797abbefc3db2e617fcc02c12d89d0964b5ef2f1a6441e06"
     },
     {
+      "id": "travel_booking",
+      "group": "other",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Путешествия, отели и авиабилеты — Booking.com, Airbnb, TripAdvisor, Skyscanner, Agoda и Flightradar24",
+      "description": "[Маршрут: Только в Прокси / VPN — геоблок по IP] Международные системы бронирования отелей, жилья и поиска авиабилетов: Booking.com (booking.com, bstatic.com — не показывает объекты размещения при входе с российских IP!), Airbnb (airbnb.com, muscache.com — блокирует доступ из РФ и РБ), Agoda, Hostelworld, Expedia, Hotels.com, Trip.com, Skyscanner, Kayak, Momondo, TripAdvisor, а также радар полётов Flightradar24 и MarineTraffic.",
+      "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/booking.srs",
+      "counts": {
+        "domain": 0,
+        "domain_suffix": 121,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/travel_booking.trs",
+        "srs": "release/sing-box/travel_booking.srs",
+        "json": "release/json/travel_booking.json",
+        "domains": "release/domains/travel_booking.lst",
+        "subnets": null
+      },
+      "sha256_trs": "29fc12b5d55a39203708fea1bfbf2ab7db66e8190aa6d648d8a437e00c98503f",
+      "sha256_srs": "11c2398c1c4fdc820d5c3b63a6c36b1e08f46afb3ce2bc695a5a5cbf8ddb5591"
+    },
+    {
+      "id": "shopping_global",
+      "group": "other",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Зарубежный шопинг и маркетплейсы — iHerb, Amazon, eBay, Poizon (Dewu), StockX, Farfetch, ASOS и IKEA",
+      "description": "[Маршрут: Только в Прокси / VPN — блокировка РКН и геоблок] Иностранные интернет-магазины, витамины и фэшн-платформы: iHerb (iherb.com — заблокирован РКН), Amazon (amazon.com), eBay (ebay.com), китайский маркетплейс оригинальных кроссовок и брендов Poizon / Dewu (dewu.com, poizon.com), StockX, GOAT, Chrono24, Farfetch, ASOS, Yoox, Net-a-Porter, Nike, Adidas, Uniqlo, Zara и IKEA.",
+      "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/amazon.srs",
+      "counts": {
+        "domain": 0,
+        "domain_suffix": 983,
+        "domain_keyword": 0,
+        "domain_regex": 3,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/shopping_global.trs",
+        "srs": "release/sing-box/shopping_global.srs",
+        "json": "release/json/shopping_global.json",
+        "domains": "release/domains/shopping_global.lst",
+        "subnets": null
+      },
+      "sha256_trs": "3a7c1d8bce306ffc32a0b4c9769c5a4b1431d61e89e6a12fe4b24f2a8b02a0ec",
+      "sha256_srs": "82c5c4e6c0810e4d75124bd151757be572dd378a585f7d3ad09f92ada08e14fe"
+    },
+    {
+      "id": "edtech_learning",
+      "group": "other",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Обучение, курсы и IT-платформы — Coursera, Udemy, Quizlet, Duolingo, LeetCode, Kaggle и edX",
+      "description": "[Маршрут: В Прокси / VPN] Образовательные платформы, языковые сервисы и тренажёры для программистов: Coursera (coursera.org), Udemy (udemy.com), edX, Udacity, Khan Academy, карточки для запоминания слов Quizlet (quizlet.com — заблокирован РКН!), Duolingo (duolingo.com), Babbel, Busuu, AnkiWeb, а также алгоритмические и Data Science платформы LeetCode (leetcode.com), Kaggle (kaggle.com), HackerRank, Codewars и freeCodeCamp.",
+      "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/coursera.srs",
+      "counts": {
+        "domain": 0,
+        "domain_suffix": 59,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/edtech_learning.trs",
+        "srs": "release/sing-box/edtech_learning.srs",
+        "json": "release/json/edtech_learning.json",
+        "domains": "release/domains/edtech_learning.lst",
+        "subnets": null
+      },
+      "sha256_trs": "b7c8832eefa6a8d98b84441a10b5f7890a7dcb1606c32cb5f2c9c0a11019d0b7",
+      "sha256_srs": "786046cb3ebc1b49ebf359f554e95502f6f1f8797d20fd16e88744511df95b1c"
+    },
+    {
+      "id": "freelance_remote",
+      "group": "other",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Фриланс и удалённая работа за рубежом — Upwork, Fiverr, Freelancer, Toptal, Deel и Payoneer",
+      "description": "[Маршрут: Только в Прокси / VPN — строгий геоблок по IP] Международные биржи фриланса, контрактов и глобального найма (требуют постоянный не-российский IP): Upwork (upwork.com), Fiverr (fiverr.com), Freelancer.com, Toptal, PeoplePerHour, Guru, 99designs, Behance, Dribbble, а также платформы оформления контрактов и выплат удалённым сотрудникам Deel (deel.com), Remote.com, Oyster HR и Payoneer.",
+      "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/freelance_remote.srs",
+      "counts": {
+        "domain": 0,
+        "domain_suffix": 35,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/freelance_remote.trs",
+        "srs": "release/sing-box/freelance_remote.srs",
+        "json": "release/json/freelance_remote.json",
+        "domains": "release/domains/freelance_remote.lst",
+        "subnets": null
+      },
+      "sha256_trs": "5feb993d21caf9140ed4e0b2018b7adf50a81ba83f9011337941b3c433b71d6c",
+      "sha256_srs": "4ec0766bec7d6341783ce93b8b1c9a73f50c938c9cdca34f5edf2f4496651933"
+    },
+    {
+      "id": "sports_fitness",
+      "group": "other",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Спорт, велотрекеры и фитнес — Strava, Garmin Connect, Zwift, Komoot, Flashscore, F1 TV и UFC",
+      "description": "[Маршрут: Только в Прокси / VPN] Спортивные трекеры, умные часы, велостанки и результаты матчей: Strava (strava.com — закрыла доступ и синхронизацию тренировок с российских IP!), Garmin Connect (garmin.com, connect.garmin.com), виртуальный велотренажёр Zwift (zwift.com), велонавигатор Komoot, Wahoo, Whoop, MyFitnessPal, результаты матчей Flashscore (flashscore.com — заблокирован РКН), Sofascore, Transfermarkt, F1 TV, UFC Fight Pass, NBA и NHL.",
+      "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/sports_fitness.srs",
+      "counts": {
+        "domain": 0,
+        "domain_suffix": 53,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/sports_fitness.trs",
+        "srs": "release/sing-box/sports_fitness.srs",
+        "json": "release/json/sports_fitness.json",
+        "domains": "release/domains/sports_fitness.lst",
+        "subnets": null
+      },
+      "sha256_trs": "54af59ea1ae14410fb0ce2e26e68ddfb1f12aa678defb3bb0c3614eb5fee6ef6",
+      "sha256_srs": "d1687b688a0f4a1813e910db4544633d7ff846c30d78b0388230bc72104c1c01"
+    },
+    {
       "id": "ads_hagezi_pro",
       "group": "block",
       "kind": "domains",
@@ -2421,6 +3435,32 @@
       },
       "sha256_trs": "c1a0387f0ab93668d4b53e312ae1b6096b509e97ce36898aaa3f1fc10200bf92",
       "sha256_srs": "79f2dde4bc36e1a1dbcd4e420a1aa71eeed47b0ea0dbb1737b3493e7231d4150"
+    },
+    {
+      "id": "android_ads_block",
+      "group": "block",
+      "kind": "domains",
+      "recommended_action": "block",
+      "title": "Реклама в играх и приложениях Android (Block) — AdMob, Unity Ads, AppLovin, IronSource, Яндекс и MyTarget",
+      "description": "[Маршрут: Блокировать (Block)] Вырезает полноэкранную видеорекламу между уровнями в мобильных играх и баннеры внутри бесплатных приложений на Android (AdAway Official + AdGuard Mobile Ads + все главные рекламные SDK: Google AdMob, Unity Ads, AppLovin MAX, IronSource LevelPlay, Vungle/Liftoff, Mintegral, Chartboost, Pangle, InMobi, AdColony, Tapjoy, Bigo Ads, BidMachine, Яндекс Реклама / Mobile Ads SDK и VK MyTarget).",
+      "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/android_ads_block.srs",
+      "counts": {
+        "domain": 75,
+        "domain_suffix": 4983,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/android_ads_block.trs",
+        "srs": "release/sing-box/android_ads_block.srs",
+        "json": "release/json/android_ads_block.json",
+        "domains": "release/domains/android_ads_block.lst",
+        "subnets": null
+      },
+      "sha256_trs": "418447573737eb73c6a64799d79d52a6387dd649bfc86ca6cef48681446efeb5",
+      "sha256_srs": "be4c8d1b506e1ddd0c57ecf03e67d2438ccb56f9b1327cb2285112970816b552"
     },
     {
       "id": "win_spy",
@@ -2473,6 +3513,84 @@
       },
       "sha256_trs": "146d211004049c5be2b696f9e6e2c9ddbc64e99b75e97d6d2d98869e0e0f1bda",
       "sha256_srs": "83ea2ea755446db61951344c78407290955e0323656811eed4c2d7d0487085ba"
+    },
+    {
+      "id": "gambling_block",
+      "group": "block",
+      "kind": "domains",
+      "recommended_action": "block",
+      "title": "Казино, букмекеры и слоты (Block) — блокировка 1xBet, Stake, Melbet, Vulkan, Pin-Up и азартных игр",
+      "description": "[Маршрут: Блокировать (Block)] Полная база онлайн-казино, нелегальных букмекеров, крипто-рулеток, слотов и их тысяч зеркал (Hagezi Gambling Medium + СНГ-казино: 1xBet, Melbet, Mostbet, Pin-Up, Vulkan, Vavada, Joycasino, Azino777, Stake, 1win, DragonMoney, Up-X и др.), агрессивно всплывающих на пиратских киносайтах.",
+      "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/gambling_block.srs",
+      "counts": {
+        "domain": 0,
+        "domain_suffix": 183386,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/gambling_block.trs",
+        "srs": "release/sing-box/gambling_block.srs",
+        "json": "release/json/gambling_block.json",
+        "domains": "release/domains/gambling_block.lst",
+        "subnets": null
+      },
+      "sha256_trs": "2689aa02738aa6f01dab55e9756b6d0f1bae1ea0ea0f9a383e2ffdfb058bf4b7",
+      "sha256_srs": "57929cadf9280c974200b942ff8dd061a21c9c10b87af70dc30973106c04da69"
+    },
+    {
+      "id": "phishing_malware_block",
+      "group": "block",
+      "kind": "domains",
+      "recommended_action": "block",
+      "title": "Фишинг, скам, крипто-дрейнеры и вредоносные сайты (Block) — защита без поломки кэшбэка",
+      "description": "[Маршрут: Блокировать (Block)] Специализированный список блокировки фишинговых копий Steam / Telegram / Госуслуг / банков, телефонных мошенников, крипто-дрейнеров, ботнетов и вредоносных доменов (Hagezi Threat Intelligence Feeds Mini + Fake/Scam). Идеален для тех, кто не хочет включать полный AdBlock, чтобы не ломать реферальные ссылки и кэшбэк-сервисы, но хочет защитить домашнюю сеть от скама и вирусов.",
+      "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/phishing_malware_block.srs",
+      "counts": {
+        "domain": 0,
+        "domain_suffix": 192348,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/phishing_malware_block.trs",
+        "srs": "release/sing-box/phishing_malware_block.srs",
+        "json": "release/json/phishing_malware_block.json",
+        "domains": "release/domains/phishing_malware_block.lst",
+        "subnets": null
+      },
+      "sha256_trs": "228b2789aec068762b2f7c51e7f3ef2faf190c15f11b4015745ce80f70ad32ca",
+      "sha256_srs": "08645b92d45f2923a0c5b3068da75dabd3df661d5f0470e6a24f8a2f81994c58"
+    },
+    {
+      "id": "telemetry_mobile_block",
+      "group": "block",
+      "kind": "domains",
+      "recommended_action": "block",
+      "title": "Телеметрия Apple, Android, Huawei/Realme и мобильных SDK (Block) — AppsFlyer, Adjust, Branch и стучалки ОС",
+      "description": "[Маршрут: Блокировать (Block)] Блокировка встроенной системной телеметрии смартфонов Apple iOS/macOS, Huawei EMUI/HarmonyOS, Realme/OPPO ColorOS, Vivo OriginOS, Amazon FireOS, а также самых навязчивых рекламных и трекинговых мобильных SDK внутри приложений (AppsFlyer, Adjust, Branch.io, Kochava, Singular, AppLovin, Unity Ads, IronSource, Vungle, Mintegral).",
+      "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/telemetry_mobile_block.srs",
+      "counts": {
+        "domain": 61,
+        "domain_suffix": 1541,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/telemetry_mobile_block.trs",
+        "srs": "release/sing-box/telemetry_mobile_block.srs",
+        "json": "release/json/telemetry_mobile_block.json",
+        "domains": "release/domains/telemetry_mobile_block.lst",
+        "subnets": null
+      },
+      "sha256_trs": "5e5e9732a1e4b9c85fd41d2996f5b87bfd8b4c4d04796e880c2e9baf24daef38",
+      "sha256_srs": "7c7c9afe6e792cacf5bf4341fa70163e9fb8c99ea7a616f24c723ef73d804b57"
     },
     {
       "id": "google_meet",

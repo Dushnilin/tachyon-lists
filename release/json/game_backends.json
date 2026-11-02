@@ -1,0 +1,38 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain_suffix": [
+        "accelbyte.io",
+        "battleye.com",
+        "cognito-identity.us-east-1.amazonaws.com",
+        "easy.ac",
+        "easyanticheat.net",
+        "epicgames.dev",
+        "exitgames.com",
+        "exitgamescloud.com",
+        "gamelift.amazonaws.com",
+        "heroiclabs.com",
+        "kws.ol.epicgames.com",
+        "modules-cdn.eac-prod.on.epicgames.com",
+        "multiplay.co.uk",
+        "multiplay.com",
+        "onlineservices.epicgames.com",
+        "photonengine.com",
+        "photonengine.io",
+        "playfab.com",
+        "playfabapi.com",
+        "services.api.unity.com",
+        "unity3d.com",
+        "vivox.com"
+      ],
+      "ip_cidr": [
+        "23.129.64.0/24",
+        "23.190.144.0/24",
+        "91.226.232.0/23",
+        "103.232.206.0/23",
+        "2620:18c::/36"
+      ]
+    }
+  ]
+}

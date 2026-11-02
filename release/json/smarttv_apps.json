@@ -1,0 +1,62 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain": [
+        "lgelectronics.122.2o7.net"
+      ],
+      "domain_suffix": [
+        "galaxyappstore.com",
+        "galaxymobile.jp",
+        "game-platform.net",
+        "hisense.com",
+        "knoxemm.com",
+        "lg.com",
+        "lgappstv.com",
+        "lge.co.kr",
+        "lge.com",
+        "lgecareers.com",
+        "lghvac.com",
+        "lghvacstory.com",
+        "lgrecyclingprogram.com",
+        "lgsalesportal.com",
+        "lgsmartad.com",
+        "lgthinq.com",
+        "lgtvcommon.com",
+        "lgtvsdp.com",
+        "ospserver.net",
+        "samsung",
+        "samsung.com",
+        "samsung.com.cn",
+        "samsungacr.com",
+        "samsungadhub.com",
+        "samsungads.com",
+        "samsungapps.com",
+        "samsungcloud.com",
+        "samsungcloudcn.com",
+        "samsungcloudsolution.com",
+        "samsungcloudsolution.net",
+        "samsungconsent.com",
+        "samsungdm.com",
+        "samsungelectronics.com",
+        "samsungeshop.com.cn",
+        "samsunggalaxyfriends.com",
+        "samsunghealth.com",
+        "samsunghealthcn.com",
+        "samsungiotcloud.com",
+        "samsungiots.com",
+        "samsungknox.com",
+        "samsungosp.com",
+        "samsungotn.net",
+        "samsungqbe.com",
+        "samsungrm.net",
+        "samsungrs.com",
+        "smartthings.com",
+        "tizen.org",
+        "vidaa.com",
+        "webosose.org",
+        "xn--cg4bki"
+      ]
+    }
+  ]
+}

@@ -356,12 +356,17 @@ def parse_plain_domains(text: str) -> RuleBucket:
     bucket = RuleBucket()
     for raw_line in text.splitlines():
         line = raw_line.split("#", 1)[0].strip()
-        if not line:
+        if not line or line.startswith("!"):
             continue
-        if line.startswith("||") and line.endswith("^"):
-            line = line[2:-1]
+        if line.startswith(("127.0.0.1 ", "127.0.0.1\t", "0.0.0.0 ", "0.0.0.0\t")):
+            parts = line.split()
+            line = parts[1] if len(parts) >= 2 else ""
+            if line in ("localhost", "localhost.localdomain", "local", "broadcasthost"):
+                continue
+        if line.startswith("||") and "^" in line:
+            line = line[2:].split("^", 1)[0]
         dom = clean_domain(line)
-        if dom:
+        if dom and "." in dom:
             bucket.domain_suffix.add(dom)
     return bucket
 
@@ -1168,7 +1173,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Build Tachyon unified routing lists and SRS rule-sets.")
     parser.add_argument("--only", nargs="*", help="Build only specific list IDs")
     args = parser.parse_args()
-    only = set(args.only) if args.only else None
+    only = {x.strip() for item in (args.only or []) for x in item.split(",") if x.strip()} or None
     return build_all(only)
 
 
