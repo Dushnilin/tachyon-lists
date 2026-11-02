@@ -1755,8 +1755,8 @@
       "description": "[Маршрут: В Прокси / VPN] Экосистема Xbox и игровых студий Microsoft / Bethesda: xbox.com, xboxlive.com, gamepass.com, xboxservices.com, forzamotorsport.net, halowaypoint.com, seaofthieves.com, flightsimulator.com, bethesda.net, doom.com и elderscrolls.com.",
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-xbox.srs",
       "counts": {
-        "domain": 6,
-        "domain_suffix": 64,
+        "domain": 5,
+        "domain_suffix": 63,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -1769,8 +1769,8 @@
         "domains": "release/domains/xbox.lst",
         "subnets": null
       },
-      "sha256_trs": "f45bf49ae00b1266b513b0237c965182dd10e5a3f2b7ac867a615562eb3f352f",
-      "sha256_srs": "c148092a18688b16efaf601f75009cd4c7f2898d55b75e2c88876fe94ceba27e"
+      "sha256_trs": "b0b3369993585ce0af605ccb578b697d1bef830645143f0216ad2575e45b24b6",
+      "sha256_srs": "15bbaf7c9aeac62785cb1b4ad65b316414eacdaab7e93b8786b4f548c8f24b4f"
     },
     {
       "id": "playstation",
