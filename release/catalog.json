@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-11-02T09:17:33Z",
+  "generated_at": "2026-11-02T09:20:55Z",
   "repository": "https://github.com/Dushnilin/tachyon-lists",
   "total_lists": 143,
   "lists": [
@@ -1521,8 +1521,8 @@
       "description": "[Маршрут: В Прокси / VPN или Direct] Единый сводный список всех популярных игровых лаунчеров, магазинов, античитов (BattlEye, EasyAntiCheat) и серверов: Steam, Epic Games, Ubisoft Connect, War Thunder / Gaijin, Battle.net / Blizzard, EA App / Origin, Riot Games, Xbox Live, PlayStation Network, Nintendo, GOG, Wargaming, HoYoverse, Minecraft, Rockstar, Roblox, Supercell, Escape from Tarkov, FACEIT и PUBG.",
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-category-games-!cn.srs",
       "counts": {
-        "domain": 55,
-        "domain_suffix": 1295,
+        "domain": 54,
+        "domain_suffix": 1296,
         "domain_keyword": 0,
         "domain_regex": 3,
         "ipv4_cidr": 114,
@@ -1535,8 +1535,8 @@
         "domains": "release/domains/games_all.lst",
         "subnets": "release/subnets/games_all.lst"
       },
-      "sha256_trs": "cf13e659bef5e05a795ba52f224222c1d4a44d55aab01b38582b9a78995d47b0",
-      "sha256_srs": "8335beee162eb4802628632855fff81bc8b348eb63bbdbf08de92e64689a203a"
+      "sha256_trs": "8f3a593ffd77a4f6af004cd90684e776c11493edde2c02157f6c2e0a3a30372e",
+      "sha256_srs": "5d0dcd08c9b9a8cdeb3c66e0c103dfc21aafbfd29d847400a44b65d950c71858"
     },
     {
       "id": "steam",
@@ -3420,7 +3420,7 @@
       "fallback_srs": "https://github.com/zxc-rv/ad-filter/releases/latest/download/adlist.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 213263,
+        "domain_suffix": 211615,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -3433,8 +3433,8 @@
         "domains": "release/domains/ads_hagezi_pro.lst",
         "subnets": null
       },
-      "sha256_trs": "c1a0387f0ab93668d4b53e312ae1b6096b509e97ce36898aaa3f1fc10200bf92",
-      "sha256_srs": "79f2dde4bc36e1a1dbcd4e420a1aa71eeed47b0ea0dbb1737b3493e7231d4150"
+      "sha256_trs": "0e04ec7543354581e0bdcadc3dbd276b1f7b73a66c8751613b59b93ac426d23c",
+      "sha256_srs": "77315fa52ab2b74234fad633e5f7072f6edc970b2f992e03c9cce932e9190aaf"
     },
     {
       "id": "android_ads_block",
