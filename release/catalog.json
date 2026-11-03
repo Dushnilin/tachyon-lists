@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-11-02T15:41:23Z",
+  "generated_at": "2026-11-03T00:55:53Z",
   "repository": "https://github.com/Dushnilin/tachyon-lists",
   "total_lists": 143,
   "lists": [
@@ -300,7 +300,7 @@
       "fallback_srs": "https://raw.githubusercontent.com/hydraponique/roscomvpn-geosite/master/release/sing-box/category-ru.srs",
       "counts": {
         "domain": 3,
-        "domain_suffix": 888,
+        "domain_suffix": 889,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 36795,
@@ -313,8 +313,8 @@
         "domains": "release/domains/ru_domains.lst",
         "subnets": "release/subnets/ru_domains.lst"
       },
-      "sha256_trs": "76558dfd804f721588ed691deee73606b91e0f71706ee269dcc660c70c2904de",
-      "sha256_srs": "16a119d998eb4c4820937f31a3e21bfddad3e886f19f45bdf3ac56c1398fe36c"
+      "sha256_trs": "fb2212632e40c39e82133094d3b4526109e48d15088244b54b8b8a85cd71cadf",
+      "sha256_srs": "6cdbd671cbd2f227305e2fbeb9fd8cf1126ab07a6b8b4ef55e5b59dc0ebc9b94"
     },
     {
       "id": "ru_only_inside",
@@ -1318,7 +1318,7 @@
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 80,
-        "ipv6_cidr": 40
+        "ipv6_cidr": 42
       },
       "files": {
         "trs": "release/tachyon/meta.trs",
@@ -1327,8 +1327,8 @@
         "domains": "release/domains/meta.lst",
         "subnets": "release/subnets/meta.lst"
       },
-      "sha256_trs": "3337e612c746e22f8992e3584dd7603926e180f41a586dac12b962b27f653d2e",
-      "sha256_srs": "e70ad51d8bd11905a8b5f3b2187c4ea9eb3efa1f05f0530838c2fb0f0f5b1f67"
+      "sha256_trs": "818176848a4edc9eeec8d74e55cdf0474db5a5c8c9615d0f5ddd4dbe6b374ab3",
+      "sha256_srs": "839f67f3d5c8802ac38f176206007ab7fa8a1c763e70a83f96ae31d3e2ff3e69"
     },
     {
       "id": "twitter",
@@ -2929,7 +2929,7 @@
         "domain_suffix": 1,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 182,
+        "ipv4_cidr": 183,
         "ipv6_cidr": 64
       },
       "files": {
@@ -2939,8 +2939,8 @@
         "domains": "release/domains/cloudfront.lst",
         "subnets": "release/subnets/cloudfront.lst"
       },
-      "sha256_trs": "00615a943a4a87a4130721b7e414736f6753922bb09d3a0388ca2870066521d6",
-      "sha256_srs": "0050eb19491f179937ec7cd2f8bb088a9b172fc69a748d0b6575dfbe02e5e915"
+      "sha256_trs": "3e7b34bc48c507084f2d01d6bc606e9554af926419a296d51becb1b091670f4a",
+      "sha256_srs": "39b45a7afa72f595cd0c52b5bbd6f1d9fc1a4bbf4bbef751127fd4704bbe8688"
     },
     {
       "id": "fastly",
@@ -3007,8 +3007,8 @@
         "domain_suffix": 1,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 648,
-        "ipv6_cidr": 7
+        "ipv4_cidr": 653,
+        "ipv6_cidr": 6
       },
       "files": {
         "trs": "release/tachyon/ovh.trs",
@@ -3017,8 +3017,8 @@
         "domains": "release/domains/ovh.lst",
         "subnets": "release/subnets/ovh.lst"
       },
-      "sha256_trs": "b160aec1fad3fc98146f9066cf5fee058f1c6988f319af8d0a9866015012e917",
-      "sha256_srs": "8b03d3927b16c97ff4424e6eed452272397667adf7e0d5c689ac074d6839738c"
+      "sha256_trs": "a15c3e8c80228d5c51f3194912691e46fb958378dae395d8918eee1549614858",
+      "sha256_srs": "8fec75c261b36bda51a8106e7309f7dcf038eabd843a2bd6bc5845e5ee31faab"
     },
     {
       "id": "digitalocean",
@@ -3241,7 +3241,7 @@
         "domain_suffix": 3,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 659,
+        "ipv4_cidr": 668,
         "ipv6_cidr": 0
       },
       "files": {
