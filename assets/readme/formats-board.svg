@@ -1,64 +1,76 @@
 <svg xmlns="http://www.w3.org/2000/svg"
-     width="1200" height="210" viewBox="0 0 1200 210"
+     width="1200" height="200" viewBox="0 0 1200 200"
      role="img" aria-labelledby="title desc">
-  <title id="title">Пять форматов выходных артефактов Tachyon Lists</title>
-  <desc id="desc">Карточки выходных форматов: бинарные наборы .srs v3, исходные .json v3, плоские списки доменов .lst, агрегированные подсети IPv4/IPv6 .lst и индекс catalog.json с SHA-256 хешами.</desc>
+  <title id="title">Шесть форматов выходных артефактов tachyon-lists</title>
+  <desc id="desc">Ведущий бинарный формат .trs v2 (Zero-Copy mmap), бинарные наборы sing-box .srs v3, исходные .json v3, плоские списки доменов .lst, агрегированные подсети IPv4/IPv6 .lst и индекс catalog.json с SHA-256 хешами.</desc>
 
-  <rect width="1200" height="210" rx="18" fill="#080C14"/>
-  <rect x="1" y="1" width="1198" height="208" rx="17" fill="none" stroke="#1E293B" stroke-width="1.5"/>
+  <rect width="1200" height="200" rx="16" fill="#141415"/>
+  <rect x="0.5" y="0.5" width="1199" height="199" rx="15.5" fill="none" stroke="#2e2e32" stroke-width="1"/>
 
-  <!-- Card 1: .trs / .srs -->
-  <g transform="translate(24, 22)">
-    <rect x="0" y="0" width="218" height="166" rx="12" fill="#0F172A" stroke="#38BDF8" stroke-width="1.2" stroke-opacity="0.6"/>
-    <rect x="14" y="14" width="110" height="26" rx="6" fill="#0C253A"/>
-    <text x="69" y="32" text-anchor="middle" fill="#38BDF8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" font-weight="700">.trs v2 / .srs</text>
-    <text x="14" y="66" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="700">Бинарные наборы</text>
-    <text x="14" y="92" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">Zero-copy mmap .trs</text>
-    <text x="14" y="114" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">и sing-box .srs v3</text>
-    <text x="14" y="148" fill="#38BDF8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">tachyon/*.trs · *.srs</text>
+  <!-- Primary format card: .trs v2 (280px wide) -->
+  <g transform="translate(20, 20)">
+    <rect x="0" y="0" width="280" height="160" rx="12" fill="#19191b" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.5"/>
+    <rect x="16" y="16" width="84" height="24" rx="6" fill="#232325"/>
+    <text x="58" y="32" text-anchor="middle" fill="#38bdf8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="500">.trs v2</text>
+    <text x="264" y="32" text-anchor="end" fill="#85858b" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">zero-copy mmap</text>
+    <text x="16" y="68" fill="#ededed" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="18" font-weight="500">Нативный формат Tachyon</text>
+    <text x="16" y="92" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="14" font-weight="400">Мгновенное отображение в память</text>
+    <text x="16" y="112" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="14" font-weight="400">без аллокаций и парсинга на роутере</text>
+    <text x="16" y="142" fill="#38bdf8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">release/tachyon/*.trs</text>
   </g>
 
-  <!-- Card 2: .json -->
-  <g transform="translate(256, 22)">
-    <rect x="0" y="0" width="218" height="166" rx="12" fill="#0F172A" stroke="#818CF8" stroke-width="1.2" stroke-opacity="0.6"/>
-    <rect x="14" y="14" width="80" height="26" rx="6" fill="#181B38"/>
-    <text x="54" y="32" text-anchor="middle" fill="#818CF8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" font-weight="700">.json v3</text>
-    <text x="14" y="66" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="700">Исходный JSON</text>
-    <text x="14" y="92" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">Прозрачный аудит</text>
-    <text x="14" y="114" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">и отладка правил</text>
-    <text x="14" y="148" fill="#A5B4FC" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">release/json/*.json</text>
+  <!-- Card 2: .srs v3 (164px) -->
+  <g transform="translate(312, 20)">
+    <rect x="0" y="0" width="164" height="160" rx="12" fill="#19191b" stroke="#2e2e32" stroke-width="1"/>
+    <rect x="16" y="16" width="68" height="24" rx="6" fill="#232325"/>
+    <text x="50" y="32" text-anchor="middle" fill="#ededed" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="500">.srs v3</text>
+    <text x="16" y="68" fill="#ededed" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="16" font-weight="500">Бинарный SRS</text>
+    <text x="16" y="92" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">Для sing-box 1.11+</text>
+    <text x="16" y="112" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">и tachyon-core</text>
+    <text x="16" y="142" fill="#85858b" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">sing-box/*.srs</text>
   </g>
 
-  <!-- Card 3: domains/*.lst -->
-  <g transform="translate(488, 22)">
-    <rect x="0" y="0" width="224" height="166" rx="12" fill="#0F172A" stroke="#A855F7" stroke-width="1.2" stroke-opacity="0.6"/>
-    <rect x="14" y="14" width="96" height="26" rx="6" fill="#26143B"/>
-    <text x="62" y="32" text-anchor="middle" fill="#C084FC" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" font-weight="700">domains.lst</text>
-    <text x="14" y="66" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="700">Плоские домены</text>
-    <text x="14" y="92" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">Для steer, zapret2</text>
-    <text x="14" y="114" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">и dnsmasq / ipset</text>
-    <text x="14" y="148" fill="#D8B4FE" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">release/domains/*.lst</text>
+  <!-- Card 3: .json v3 (164px) -->
+  <g transform="translate(488, 20)">
+    <rect x="0" y="0" width="164" height="160" rx="12" fill="#19191b" stroke="#2e2e32" stroke-width="1"/>
+    <rect x="16" y="16" width="72" height="24" rx="6" fill="#232325"/>
+    <text x="52" y="32" text-anchor="middle" fill="#ededed" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="500">.json v3</text>
+    <text x="16" y="68" fill="#ededed" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="16" font-weight="500">Исходный JSON</text>
+    <text x="16" y="92" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">Прозрачный аудит</text>
+    <text x="16" y="112" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">и отладка правил</text>
+    <text x="16" y="142" fill="#85858b" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">release/json/*.json</text>
   </g>
 
-  <!-- Card 4: subnets/*.lst -->
-  <g transform="translate(726, 22)">
-    <rect x="0" y="0" width="224" height="166" rx="12" fill="#0F172A" stroke="#10B981" stroke-width="1.2" stroke-opacity="0.6"/>
-    <rect x="14" y="14" width="96" height="26" rx="6" fill="#0B2922"/>
-    <text x="62" y="32" text-anchor="middle" fill="#34D399" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" font-weight="700">subnets.lst</text>
-    <text x="14" y="66" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="700">CIDR-подсети</text>
-    <text x="14" y="92" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">Сжатые IPv4 и IPv6</text>
-    <text x="14" y="114" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">для nftables и steer</text>
-    <text x="14" y="148" fill="#6EE7B7" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">release/subnets/*.lst</text>
+  <!-- Card 4: domains.lst (164px) -->
+  <g transform="translate(664, 20)">
+    <rect x="0" y="0" width="164" height="160" rx="12" fill="#19191b" stroke="#2e2e32" stroke-width="1"/>
+    <rect x="16" y="16" width="92" height="24" rx="6" fill="#232325"/>
+    <text x="62" y="32" text-anchor="middle" fill="#ededed" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="500">domains.lst</text>
+    <text x="16" y="68" fill="#ededed" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="16" font-weight="500">Плоские домены</text>
+    <text x="16" y="92" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">Для steer, zapret2</text>
+    <text x="16" y="112" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">и dnsmasq / ipset</text>
+    <text x="16" y="142" fill="#85858b" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">domains/*.lst</text>
   </g>
 
-  <!-- Card 5: catalog.json -->
-  <g transform="translate(964, 22)">
-    <rect x="0" y="0" width="212" height="166" rx="12" fill="#0F172A" stroke="#F59E0B" stroke-width="1.2" stroke-opacity="0.6"/>
-    <rect x="14" y="14" width="90" height="26" rx="6" fill="#2A1F0D"/>
-    <text x="59" y="32" text-anchor="middle" fill="#FBBF24" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" font-weight="700">SHA-256</text>
-    <text x="14" y="66" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="700">Индекс каталога</text>
-    <text x="14" y="92" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">Счётчики, маршруты</text>
-    <text x="14" y="114" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">и хеши обновлений</text>
-    <text x="14" y="148" fill="#FDE68A" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">release/catalog.json</text>
+  <!-- Card 5: subnets.lst (164px) -->
+  <g transform="translate(840, 20)">
+    <rect x="0" y="0" width="164" height="160" rx="12" fill="#19191b" stroke="#2e2e32" stroke-width="1"/>
+    <rect x="16" y="16" width="92" height="24" rx="6" fill="#232325"/>
+    <text x="62" y="32" text-anchor="middle" fill="#ededed" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="500">subnets.lst</text>
+    <text x="16" y="68" fill="#ededed" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="16" font-weight="500">CIDR-подсети</text>
+    <text x="16" y="92" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">Сжатые IPv4 и IPv6</text>
+    <text x="16" y="112" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">для nftables и steer</text>
+    <text x="16" y="142" fill="#85858b" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">subnets/*.lst</text>
+  </g>
+
+  <!-- Card 6: catalog.json (164px) -->
+  <g transform="translate(1016, 20)">
+    <rect x="0" y="0" width="164" height="160" rx="12" fill="#19191b" stroke="#2e2e32" stroke-width="1"/>
+    <rect x="16" y="16" width="76" height="24" rx="6" fill="#232325"/>
+    <text x="54" y="32" text-anchor="middle" fill="#ededed" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="500">SHA-256</text>
+    <text x="16" y="68" fill="#ededed" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="16" font-weight="500">Индекс каталога</text>
+    <text x="16" y="92" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">Счётчики, маршруты</text>
+    <text x="16" y="112" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">и хеши обновлений</text>
+    <text x="16" y="142" fill="#85858b" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">catalog.json</text>
   </g>
 </svg>

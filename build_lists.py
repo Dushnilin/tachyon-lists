@@ -886,9 +886,9 @@ def update_readme_table(catalog_items: list[dict[str, Any]]) -> None:
         return
 
     action_badges = {
-        "proxy": "🟣 `Proxy`",
-        "direct": "🟢 `Direct`",
-        "block": "🔴 `Block`",
+        "proxy": "`Proxy`",
+        "direct": "`Direct`",
+        "block": "`Block`",
     }
 
     lines = [

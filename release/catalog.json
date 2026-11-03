@@ -374,7 +374,7 @@
       "kind": "domains",
       "recommended_action": "direct",
       "title": "Steam CDN и загрузка игр (Direct) — скачивание игр и патчей напрямую мимо VPN",
-      "description": "[Маршрут: Напрямую (Direct) — ставить ВЫШЕ правила Steam!] Контент-серверы скачивания игр и обновлений Steam (steamcontent.com, steampipe.akamaized.net, dl.steam.ksyna.com, steamserver.net) и других игровых лаунчеров. Поставьте этот список в Direct выше основного списка Steam (Proxy): магазин, смена региона, инвентарь и торговая площадка будут работать через VPN, а 100-гигабайтные игры будут качаться напрямую на полной скорости вашего провайдера!",
+      "description": "[Маршрут: Напрямую (Direct) — ставить выше правила Steam] Контент-серверы скачивания игр и обновлений Steam (steamcontent.com, steampipe.akamaized.net, dl.steam.ksyna.com, steamserver.net) и других игровых лаунчеров. Поставьте этот список в Direct выше основного списка Steam (Proxy): магазин, смена региона, инвентарь и торговая площадка будут работать через VPN, а 100-гигабайтные игры будут качаться напрямую на полной скорости вашего провайдера.",
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-game-platforms-download.srs",
       "counts": {
         "domain": 71,
@@ -400,7 +400,7 @@
       "kind": "domains",
       "recommended_action": "direct",
       "title": "Captive Portal, NTP и STUN (Direct) — проверка интернета, точное время и NAT-проброс",
-      "description": "[Маршрут: Напрямую (Direct)] Системные домены проверки наличия интернета на iOS, Android, Windows и macOS (captive.apple.com, connectivitycheck.gstatic.com, msftconnecttest.com), серверы синхронизации точного времени NTP (pool.ntp.org, time.cloudflare.com — критично для запуска VLESS/Reality и WireGuard на роутерах без RTC!) и публичные STUN-серверы.",
+      "description": "[Маршрут: Напрямую (Direct)] Системные домены проверки наличия интернета на iOS, Android, Windows и macOS (captive.apple.com, connectivitycheck.gstatic.com, msftconnecttest.com), серверы синхронизации точного времени NTP (pool.ntp.org, time.cloudflare.com — критично для запуска VLESS/Reality и WireGuard на роутерах без RTC) и публичные STUN-серверы.",
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ntp.srs",
       "counts": {
         "domain": 409,
@@ -868,7 +868,7 @@
       "kind": "domains",
       "recommended_action": "proxy",
       "title": "Twitch (без рекламы и 1080p+) — серверы манифестов качества видео и рекламы",
-      "description": "[Маршрут: Только в Прокси / VPN] Узкий список серверов выбора качества потока и рекламных вставок Twitch (usher.ttvnw.net, gql.twitch.tv, edge.ads.twitch.tv). Направьте его в Прокси (оставив остальной Twitch напрямую): видеопоток пойдёт напрямую без нагрузки на VPN, но пропадёт реклама и вернётся качество 1080p60 / 1440p!",
+      "description": "[Маршрут: Только в Прокси / VPN] Узкий список серверов выбора качества потока и рекламных вставок Twitch (usher.ttvnw.net, gql.twitch.tv, edge.ads.twitch.tv). Направьте его в Прокси (оставив остальной Twitch напрямую): видеопоток пойдёт напрямую без нагрузки на VPN, но пропадёт реклама и вернётся качество 1080p60 / 1440p.",
       "fallback_srs": "https://raw.githubusercontent.com/hydraponique/roscomvpn-geosite/master/release/sing-box/twitch-ads.srs",
       "counts": {
         "domain": 0,
@@ -1128,7 +1128,7 @@
       "kind": "domains",
       "recommended_action": "proxy",
       "title": "YouTube (только превью, аватарки и интерфейс — без видеопотока googlevideo)",
-      "description": "[Маршрут: В Прокси / VPN — для тех, кто чинит само видео через Zapret/ByeDPI] Серверы обложек роликов (i.ytimg.com, i9.ytimg.com), аватарок каналов (yt3.ggpht.com, yt4.ggpht.com) и веб-интерфейса YouTube БЕЗ тяжёлых видеосерверов googlevideo.com. Если видео через обход DPI показывает, но не грузятся картинки и аватарки — направьте этот список в Прокси!",
+      "description": "[Маршрут: В Прокси / VPN — для тех, кто чинит само видео через Zapret/ByeDPI] Серверы обложек роликов (i.ytimg.com, i9.ytimg.com), аватарок каналов (yt3.ggpht.com, yt4.ggpht.com) и веб-интерфейса YouTube без тяжёлых видеосерверов googlevideo.com. Если видео через обход DPI показывает, но не грузятся картинки и аватарки — направьте этот список в Прокси.",
       "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/youtube_images.srs",
       "counts": {
         "domain": 0,
@@ -1154,7 +1154,7 @@
       "kind": "domains",
       "recommended_action": "proxy",
       "title": "Постеры и базы фильмов для Lampa, Plex, Kodi и Jellyfin — TMDB, TheTVDB, IMDb и Last.fm",
-      "description": "[Маршрут: В Прокси / VPN или Обход DPI] Базы метаданных, обложек, актёров и описаний фильмов и музыки: The Movie Database (themoviedb.org, image.tmdb.org, api.themoviedb.org — блокируются в РФ, из-за чего в Lampa, Plex, Kodi, Jellyfin и Infuse пропадают постеры!), TheTVDB, IMDb, Trakt.tv, Fanart.tv, OpenSubtitles, Last.fm, MusicBrainz и Discogs.",
+      "description": "[Маршрут: В Прокси / VPN или Обход DPI] Базы метаданных, обложек, актёров и описаний фильмов и музыки: The Movie Database (themoviedb.org, image.tmdb.org, api.themoviedb.org — блокируются в РФ, из-за чего в Lampa, Plex, Kodi, Jellyfin и Infuse пропадают постеры), TheTVDB, IMDb, Trakt.tv, Fanart.tv, OpenSubtitles, Last.fm, MusicBrainz и Discogs.",
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/tmdb.srs",
       "counts": {
         "domain": 4,
@@ -1232,7 +1232,7 @@
       "kind": "domains",
       "recommended_action": "proxy",
       "title": "Подкасты, онлайн-радио и аудиокниги — хостинги Apple/Spotify подкастов, TuneIn, DI.FM и Audible",
-      "description": "[Маршрут: В Прокси / VPN] Зарубежные CDN-хостинги подкастов (megaphone.fm, art19.com, simplecast.com, acast.com, omny.fm, buzzsprout.com, libsyn.com, podbean.com — именно из-за их блокировки не скачиваются выпуски в стандартном приложении «Подкасты» на iPhone!), плееры Pocket Casts и Overcast, аудиокниги Audible, Storytel, Bookmate и интернет-радио TuneIn Radio, DI.FM и Radio Garden.",
+      "description": "[Маршрут: В Прокси / VPN] Зарубежные CDN-хостинги подкастов (megaphone.fm, art19.com, simplecast.com, acast.com, omny.fm, buzzsprout.com, libsyn.com, podbean.com — именно из-за их блокировки не скачиваются выпуски в стандартном приложении «Подкасты» на iPhone), плееры Pocket Casts и Overcast, аудиокниги Audible, Storytel, Bookmate и интернет-радио TuneIn Radio, DI.FM и Radio Garden.",
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/pocketcasts.srs",
       "counts": {
         "domain": 0,
@@ -2246,7 +2246,7 @@
       "kind": "domains",
       "recommended_action": "proxy",
       "title": "Файтинги и симрейсинг — Mortal Kombat 1 (WB Games), Tekken 8, Street Fighter 6, iRacing и Assetto Corsa",
-      "description": "[Маршрут: Только в Прокси / VPN — WB Games блокирует РФ по IP] Серверы онлайна и профилей файтингов и гоночных симуляторов: Mortal Kombat 1 / 11 и игры Warner Bros. Games (wbgames.com, wbplay.com, agoragames.com — закрыты для российских IP!), Tekken 8, Street Fighter 6 (buckler.capcom.com), Guilty Gear Strive, а также симрейсинг iRacing (iracing.com), Assetto Corsa / LFM (lowfuelmotorsport.com), Le Mans Ultimate, RaceRoom, Fanatec, Moza Racing и Simagic.",
+      "description": "[Маршрут: Только в Прокси / VPN — WB Games блокирует РФ по IP] Серверы онлайна и профилей файтингов и гоночных симуляторов: Mortal Kombat 1 / 11 и игры Warner Bros. Games (wbgames.com, wbplay.com, agoragames.com — закрыты для российских IP), Tekken 8, Street Fighter 6 (buckler.capcom.com), Guilty Gear Strive, а также симрейсинг iRacing (iracing.com), Assetto Corsa / LFM (lowfuelmotorsport.com), Le Mans Ultimate, RaceRoom, Fanatec, Moza Racing и Simagic.",
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/wbgames.srs",
       "counts": {
         "domain": 2,
@@ -2688,7 +2688,7 @@
       "kind": "domains",
       "recommended_action": "proxy",
       "title": "Облачный гейминг и удалённый рабочий стол — GeForce NOW, Boosteroid, Parsec, TeamViewer, AnyDesk и RustDesk",
-      "description": "[Маршрут: В Прокси / VPN] Сервисы облачного гейминга и удалённого управления ПК: NVIDIA GeForce NOW (geforcenow.com, nvidiagrid.net — проверяет зарубежный IP только при входе и старте игры, после чего видеопоток идёт напрямую!), Boosteroid, Parsec (parsec.app), Shadow, а также TeamViewer (заблокировал РФ по IP), AnyDesk (anydesk.com — часто режется ТСПУ), RustDesk, NoMachine, Tailscale и ZeroTier.",
+      "description": "[Маршрут: В Прокси / VPN] Сервисы облачного гейминга и удалённого управления ПК: NVIDIA GeForce NOW (geforcenow.com, nvidiagrid.net — проверяет зарубежный IP только при входе и старте игры, после чего видеопоток идёт напрямую), Boosteroid, Parsec (parsec.app), Shadow, а также TeamViewer (заблокировал РФ по IP), AnyDesk (anydesk.com — часто режется ТСПУ), RustDesk, NoMachine, Tailscale и ZeroTier.",
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-remote-control.srs",
       "counts": {
         "domain": 4,
@@ -2792,7 +2792,7 @@
       "kind": "domains",
       "recommended_action": "proxy",
       "title": "Умный дом и 3D-печать — Home Assistant, HACS, Bambu Lab, Tuya (Smart Life), Aqara и Roborock",
-      "description": "[Маршрут: В Прокси / VPN] Облачные сервисы и репозитории умного дома и 3D-принтеров: облако 3D-печати Bambu Lab / MakerWorld (bambulab.com, bblmw.com, makerworld.com — отправка печати из Bambu Studio и видео с камеры через AWS часто блокируются ТСПУ!), Creality Cloud, Prusa; экосистема Home Assistant и Nabu Casa (home-assistant.io, nabu.casa, esphome.io, zigbee2mqtt.io); глобальные облака Tuya / Smart Life, eWeLink (Sonoff), Aqara, Roborock, Dreame и Philips Hue.",
+      "description": "[Маршрут: В Прокси / VPN] Облачные сервисы и репозитории умного дома и 3D-принтеров: облако 3D-печати Bambu Lab / MakerWorld (bambulab.com, bblmw.com, makerworld.com — отправка печати из Bambu Studio и видео с камеры через AWS часто блокируются ТСПУ), Creality Cloud, Prusa; экосистема Home Assistant и Nabu Casa (home-assistant.io, nabu.casa, esphome.io, zigbee2mqtt.io); глобальные облака Tuya / Smart Life, eWeLink (Sonoff), Aqara, Roborock, Dreame и Philips Hue.",
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/xiaomi-iot.srs",
       "counts": {
         "domain": 0,
@@ -2844,7 +2844,7 @@
       "kind": "domains",
       "recommended_action": "direct",
       "title": "Умные автомобили и электрокары — LiXiang (Li Auto), Zeekr, BYD, Voyah, Geely, Xiaomi Auto, Tesla и BMW",
-      "description": "[Маршрут: Напрямую (Direct) или в китайский/целевой прокси] Серверы телематики, OTA-обновлений, мастер-аккаунтов и штатной навигации современных автомобилей: китайские электрокары и гибриды LiXiang / Li Auto (lixiang.com, chj.com), Zeekr (zeekrlife.com, zeekr.com), BYD, Voyah, Geely, Changan, Xiaomi SU7, NIO, XPeng, а также приложения и облака Tesla (tesla.com), BMW (MyBMW / ConnectedDrive) и Mercedes me. Позволяет на роутере в авто не пускать китайскую телематику в европейский VPN во избежание гео-блокировки экранов!",
+      "description": "[Маршрут: Напрямую (Direct) или в китайский/целевой прокси] Серверы телематики, OTA-обновлений, мастер-аккаунтов и штатной навигации современных автомобилей: китайские электрокары и гибриды LiXiang / Li Auto (lixiang.com, chj.com), Zeekr (zeekrlife.com, zeekr.com), BYD, Voyah, Geely, Changan, Xiaomi SU7, NIO, XPeng, а также приложения и облака Tesla (tesla.com), BMW (MyBMW / ConnectedDrive) и Mercedes me. Позволяет на роутере в авто не пускать китайскую телематику в европейский VPN во избежание гео-блокировки экранов.",
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-automobile-cn.srs",
       "counts": {
         "domain": 0,
@@ -3286,7 +3286,7 @@
       "kind": "domains",
       "recommended_action": "proxy",
       "title": "Путешествия, отели и авиабилеты — Booking.com, Airbnb, TripAdvisor, Skyscanner, Agoda и Flightradar24",
-      "description": "[Маршрут: Только в Прокси / VPN — геоблок по IP] Международные системы бронирования отелей, жилья и поиска авиабилетов: Booking.com (booking.com, bstatic.com — не показывает объекты размещения при входе с российских IP!), Airbnb (airbnb.com, muscache.com — блокирует доступ из РФ и РБ), Agoda, Hostelworld, Expedia, Hotels.com, Trip.com, Skyscanner, Kayak, Momondo, TripAdvisor, а также радар полётов Flightradar24 и MarineTraffic.",
+      "description": "[Маршрут: Только в Прокси / VPN — геоблок по IP] Международные системы бронирования отелей, жилья и поиска авиабилетов: Booking.com (booking.com, bstatic.com — не показывает объекты размещения при входе с российских IP), Airbnb (airbnb.com, muscache.com — блокирует доступ из РФ и РБ), Agoda, Hostelworld, Expedia, Hotels.com, Trip.com, Skyscanner, Kayak, Momondo, TripAdvisor, а также радар полётов Flightradar24 и MarineTraffic.",
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/booking.srs",
       "counts": {
         "domain": 0,
@@ -3338,7 +3338,7 @@
       "kind": "domains",
       "recommended_action": "proxy",
       "title": "Обучение, курсы и IT-платформы — Coursera, Udemy, Quizlet, Duolingo, LeetCode, Kaggle и edX",
-      "description": "[Маршрут: В Прокси / VPN] Образовательные платформы, языковые сервисы и тренажёры для программистов: Coursera (coursera.org), Udemy (udemy.com), edX, Udacity, Khan Academy, карточки для запоминания слов Quizlet (quizlet.com — заблокирован РКН!), Duolingo (duolingo.com), Babbel, Busuu, AnkiWeb, а также алгоритмические и Data Science платформы LeetCode (leetcode.com), Kaggle (kaggle.com), HackerRank, Codewars и freeCodeCamp.",
+      "description": "[Маршрут: В Прокси / VPN] Образовательные платформы, языковые сервисы и тренажёры для программистов: Coursera (coursera.org), Udemy (udemy.com), edX, Udacity, Khan Academy, карточки для запоминания слов Quizlet (quizlet.com — заблокирован РКН), Duolingo (duolingo.com), Babbel, Busuu, AnkiWeb, а также алгоритмические и Data Science платформы LeetCode (leetcode.com), Kaggle (kaggle.com), HackerRank, Codewars и freeCodeCamp.",
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/coursera.srs",
       "counts": {
         "domain": 0,
@@ -3390,7 +3390,7 @@
       "kind": "domains",
       "recommended_action": "proxy",
       "title": "Спорт, велотрекеры и фитнес — Strava, Garmin Connect, Zwift, Komoot, Flashscore, F1 TV и UFC",
-      "description": "[Маршрут: Только в Прокси / VPN] Спортивные трекеры, умные часы, велостанки и результаты матчей: Strava (strava.com — закрыла доступ и синхронизацию тренировок с российских IP!), Garmin Connect (garmin.com, connect.garmin.com), виртуальный велотренажёр Zwift (zwift.com), велонавигатор Komoot, Wahoo, Whoop, MyFitnessPal, результаты матчей Flashscore (flashscore.com — заблокирован РКН), Sofascore, Transfermarkt, F1 TV, UFC Fight Pass, NBA и NHL.",
+      "description": "[Маршрут: Только в Прокси / VPN] Спортивные трекеры, умные часы, велостанки и результаты матчей: Strava (strava.com — закрыла доступ и синхронизацию тренировок с российских IP), Garmin Connect (garmin.com, connect.garmin.com), виртуальный велотренажёр Zwift (zwift.com), велонавигатор Komoot, Wahoo, Whoop, MyFitnessPal, результаты матчей Flashscore (flashscore.com — заблокирован РКН), Sofascore, Transfermarkt, F1 TV, UFC Fight Pass, NBA и NHL.",
       "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/sports_fitness.srs",
       "counts": {
         "domain": 0,

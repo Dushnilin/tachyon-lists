@@ -1,147 +1,122 @@
 <svg xmlns="http://www.w3.org/2000/svg"
-     width="1200" height="410" viewBox="0 0 1200 410"
+     width="1200" height="400" viewBox="0 0 1200 400"
      role="img" aria-labelledby="title desc">
-  <title id="title">Tachyon Lists — единый компилятор списков маршрутизации, доменов и подсетей</title>
-  <desc id="desc">Автоматизированная сборка, дедупликация и компиляция списков маршрутизации из 8 апстрим-источников в форматы sing-box SRS v3, JSON, плоские списки доменов и агрегированные IPv4/IPv6 CIDR-подсети для OpenWrt.</desc>
+  <title id="title">tachyon-lists — компилятор и дедупликатор списков маршрутизации</title>
+  <desc id="desc">Автоматическая сборка, дедупликация и компиляция 143 категорий доменов и IPv4/IPv6 подсетей из внешних апстримов в форматы TSRS v2 (.trs), sing-box (.srs, .json) и текстовые списки (.lst) каждые 6 часов.</desc>
 
-  <defs>
-    <linearGradient id="bg-grad" x1="0" y1="0" x2="1200" y2="410" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#070A10"/>
-      <stop offset="55%" stop-color="#0B101B"/>
-      <stop offset="100%" stop-color="#090D16"/>
-    </linearGradient>
-    <linearGradient id="card-grad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#111927"/>
-      <stop offset="100%" stop-color="#0B111C"/>
-    </linearGradient>
-    <linearGradient id="accent-line" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#38BDF8"/>
-      <stop offset="50%" stop-color="#A855F7"/>
-      <stop offset="100%" stop-color="#10B981"/>
-    </linearGradient>
-    <pattern id="tech-grid" width="32" height="32" patternUnits="userSpaceOnUse">
-      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#1E293B" stroke-width="0.6" stroke-opacity="0.45"/>
-    </pattern>
-  </defs>
+  <!-- Canvas -->
+  <rect width="1200" height="400" rx="16" fill="#141415"/>
+  <rect x="0.5" y="0.5" width="1199" height="399" rx="15.5" fill="none" stroke="#2e2e32" stroke-width="1"/>
 
-  <!-- Canvas Background -->
-  <rect width="1200" height="410" rx="22" fill="url(#bg-grad)"/>
-  <rect width="1200" height="410" rx="22" fill="url(#tech-grid)"/>
-  <rect x="1" y="1" width="1198" height="408" rx="21" fill="none" stroke="#1E293B" stroke-width="1.5"/>
+  <!-- Left column: identity, stack, metrics -->
+  <g transform="translate(40, 40)">
+    <!-- Status tag -->
+    <rect x="0" y="0" width="320" height="28" rx="6" fill="#19191b" stroke="#2e2e32" stroke-width="1"/>
+    <circle cx="14" cy="14" r="4" fill="#38bdf8"/>
+    <text x="26" y="18" fill="#a1a1a6" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">tachyon routing lists · auto-build 6h</text>
 
-  <!-- Top Accent Rule -->
-  <rect x="48" y="0" width="360" height="3" rx="1.5" fill="url(#accent-line)"/>
+    <!-- Title & description -->
+    <text x="0" y="76" fill="#ededed" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="48" font-weight="500" letter-spacing="-1">tachyon-lists</text>
+    <text x="0" y="112" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="18" font-weight="400">Единый компилятор и дедупликатор списков доменов</text>
+    <text x="0" y="136" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="18" font-weight="400">и IP-подсетей для роутеров OpenWrt и десктопных клиентов</text>
 
-  <!-- LEFT: Title & Identity Block -->
-  <g id="title-block" transform="translate(48, 38)">
-    <!-- Eyebrow Pill -->
-    <rect x="0" y="0" width="446" height="32" rx="8" fill="#0F172A" stroke="#1E293B" stroke-width="1"/>
-    <circle cx="18" cy="16" r="5" fill="#38BDF8"/>
-    <text x="32" y="21" fill="#38BDF8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" font-weight="600">TACHYON ROUTING ENGINE · AUTO-BUILD 6H</text>
+    <!-- Target engines -->
+    <g transform="translate(0, 164)">
+      <rect x="0" y="0" width="124" height="32" rx="6" fill="#19191b" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.5"/>
+      <text x="62" y="20" text-anchor="middle" fill="#ededed" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="500">tachyon-core</text>
 
-    <!-- Repository Name -->
-    <text x="0" y="88" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="56" font-weight="800" letter-spacing="-1">tachyon-lists</text>
+      <rect x="132" y="0" width="96" height="32" rx="6" fill="#19191b" stroke="#2e2e32" stroke-width="1"/>
+      <text x="180" y="20" text-anchor="middle" fill="#a1a1a6" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="400">sing-box</text>
 
-    <!-- Value Proposition -->
-    <text x="0" y="130" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="21" font-weight="400">Единый мульти-источниковый компилятор и дедупликатор</text>
-    <text x="0" y="158" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="21" font-weight="400">списков доменов и IP-подсетей для роутеров OpenWrt.</text>
+      <rect x="236" y="0" width="76" height="32" rx="6" fill="#19191b" stroke="#2e2e32" stroke-width="1"/>
+      <text x="274" y="20" text-anchor="middle" fill="#a1a1a6" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="400">steer</text>
 
-    <!-- Target Stack Badges -->
-    <g transform="translate(0, 184)">
-      <rect x="0" y="0" width="116" height="34" rx="7" fill="#111C2D" stroke="#38BDF8" stroke-width="1" stroke-opacity="0.45"/>
-      <text x="58" y="22" text-anchor="middle" fill="#E0F2FE" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18" font-weight="600">sing-box</text>
+      <rect x="320" y="0" width="88" height="32" rx="6" fill="#19191b" stroke="#2e2e32" stroke-width="1"/>
+      <text x="364" y="20" text-anchor="middle" fill="#a1a1a6" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="400">zapret2</text>
 
-      <rect x="126" y="0" width="150" height="34" rx="7" fill="#111C2D" stroke="#38BDF8" stroke-width="1" stroke-opacity="0.45"/>
-      <text x="201" y="22" text-anchor="middle" fill="#E0F2FE" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18" font-weight="600">tachyon-core</text>
-
-      <rect x="286" y="0" width="84" height="34" rx="7" fill="#111827" stroke="#334155" stroke-width="1"/>
-      <text x="328" y="22" text-anchor="middle" fill="#CBD5E1" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18" font-weight="600">steer</text>
-
-      <rect x="380" y="0" width="102" height="34" rx="7" fill="#111827" stroke="#334155" stroke-width="1"/>
-      <text x="431" y="22" text-anchor="middle" fill="#CBD5E1" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18" font-weight="600">zapret2</text>
-
-      <rect x="492" y="0" width="110" height="34" rx="7" fill="#111827" stroke="#334155" stroke-width="1"/>
-      <text x="547" y="22" text-anchor="middle" fill="#CBD5E1" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18" font-weight="600">nftables</text>
+      <rect x="416" y="0" width="96" height="32" rx="6" fill="#19191b" stroke="#2e2e32" stroke-width="1"/>
+      <text x="464" y="20" text-anchor="middle" fill="#a1a1a6" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="400">nftables</text>
     </g>
 
-    <!-- Key Metrics Strip -->
-    <g transform="translate(0, 240)">
-      <rect x="0" y="0" width="190" height="62" rx="10" fill="url(#card-grad)" stroke="#1E293B" stroke-width="1.2"/>
-      <text x="16" y="26" fill="#F8FAFC" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="22" font-weight="700">8 апстримов</text>
-      <text x="16" y="48" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">+ слой custom/</text>
+    <!-- Stat cards (same height 68px, 4px grid) -->
+    <g transform="translate(0, 216)">
+      <rect x="0" y="0" width="184" height="68" rx="8" fill="#19191b" stroke="#2e2e32" stroke-width="1"/>
+      <text x="16" y="28" fill="#ededed" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" font-weight="500">143</text>
+      <text x="60" y="28" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="14" font-weight="400">категории</text>
+      <text x="16" y="50" fill="#85858b" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">138 основных + 5 sys</text>
 
-      <rect x="204" y="0" width="190" height="62" rx="10" fill="url(#card-grad)" stroke="#1E293B" stroke-width="1.2"/>
-      <text x="220" y="26" fill="#F8FAFC" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="22" font-weight="700">143 категории</text>
-      <text x="220" y="48" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">138 в каталоге + 5 sys</text>
+      <rect x="196" y="0" width="184" height="68" rx="8" fill="#19191b" stroke="#2e2e32" stroke-width="1"/>
+      <text x="212" y="28" fill="#ededed" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" font-weight="500">8</text>
+      <text x="232" y="28" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="14" font-weight="400">апстримов</text>
+      <text x="212" y="50" fill="#85858b" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">+ локальный custom/</text>
 
-      <rect x="408" y="0" width="194" height="62" rx="10" fill="url(#card-grad)" stroke="#1E293B" stroke-width="1.2"/>
-      <text x="424" y="26" fill="#38BDF8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="22" font-weight="700">RAM Pruned</text>
-      <text x="424" y="48" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">суффиксы и CIDR</text>
+      <rect x="392" y="0" width="192" height="68" rx="8" fill="#19191b" stroke="#2e2e32" stroke-width="1"/>
+      <text x="408" y="28" fill="#38bdf8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" font-weight="500">TSRS v2</text>
+      <text x="408" y="50" fill="#85858b" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">zero-copy mmap + .srs</text>
     </g>
 
-    <!-- Routing Mode Legend -->
-    <g transform="translate(0, 320)">
-      <circle cx="10" cy="10" r="6" fill="#A855F7"/>
-      <text x="24" y="16" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18" font-weight="600">Proxy</text>
-      <text x="78" y="16" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">(обход блокировок)</text>
+    <!-- Routing action legend -->
+    <g transform="translate(0, 304)">
+      <circle cx="6" cy="8" r="4" fill="#38bdf8"/>
+      <text x="18" y="12" fill="#ededed" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="500">Proxy</text>
+      <text x="64" y="12" fill="#85858b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">обход блокировок</text>
 
-      <circle cx="262" cy="10" r="6" fill="#10B981"/>
-      <text x="276" y="16" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18" font-weight="600">Direct</text>
-      <text x="334" y="16" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">(напрямую в РФ)</text>
+      <circle cx="204" cy="8" r="4" fill="#4cc38a"/>
+      <text x="216" y="12" fill="#ededed" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="500">Direct</text>
+      <text x="266" y="12" fill="#85858b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">напрямую в РФ</text>
 
-      <circle cx="496" cy="10" r="6" fill="#F43F5E"/>
-      <text x="510" y="16" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18" font-weight="600">Block</text>
-      <text x="562" y="16" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">(реклама)</text>
+      <circle cx="388" cy="8" r="4" fill="#e5484d"/>
+      <text x="400" y="12" fill="#ededed" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="500">Block</text>
+      <text x="446" y="12" fill="#85858b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">реклама и телеметрия</text>
     </g>
   </g>
 
-  <!-- RIGHT: Real Project Architecture Specimen -->
-  <g id="project-proof" transform="translate(684, 32)">
-    <rect x="0" y="0" width="472" height="346" rx="16" fill="#0B111D" stroke="#1E293B" stroke-width="1.5"/>
+  <!-- Right column: live compilation specimen -->
+  <g transform="translate(664, 32)">
+    <rect x="0" y="0" width="496" height="336" rx="12" fill="#0f0f10" stroke="#2e2e32" stroke-width="1"/>
 
-    <!-- Header bar -->
-    <rect x="0" y="0" width="472" height="40" rx="16" fill="#111A2B"/>
-    <rect x="0" y="24" width="472" height="16" fill="#111A2B"/>
-    <circle cx="22" cy="20" r="5" fill="#F43F5E"/>
-    <circle cx="38" cy="20" r="5" fill="#F59E0B"/>
-    <circle cx="54" cy="20" r="5" fill="#10B981"/>
-    <text x="76" y="25" fill="#94A3B8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" font-weight="600">sources.json → build_lists.py → release/</text>
+    <!-- Specimen header -->
+    <rect x="0" y="0" width="496" height="36" rx="12" fill="#19191b"/>
+    <rect x="0" y="24" width="496" height="12" fill="#19191b"/>
+    <line x1="0" y1="36" x2="496" y2="36" stroke="#2e2e32" stroke-width="1"/>
+    <text x="16" y="23" fill="#a1a1a6" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">sources.json → build_lists.py → release/</text>
+    <text x="480" y="23" text-anchor="end" fill="#85858b" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">6h cron</text>
 
-    <!-- Stage 1: Upstreams -->
-    <g transform="translate(20, 54)">
-      <rect x="0" y="0" width="432" height="72" rx="10" fill="#0F172A" stroke="#1E293B" stroke-width="1"/>
-      <text x="14" y="25" fill="#38BDF8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18" font-weight="700">1. ВХОДНЫЕ АПСТРИМЫ (8 РЕПОЗИТОРИЕВ)</text>
-      <text x="14" y="47" fill="#CBD5E1" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">roscomvpn · runetfreedom · allow-domains</text>
-      <text x="14" y="65" fill="#94A3B8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">MetaCubeX · ad-filter · supercell · custom/</text>
+    <!-- Stage 1 -->
+    <g transform="translate(16, 52)">
+      <rect x="0" y="0" width="464" height="72" rx="8" fill="#141415" stroke="#2e2e32" stroke-width="1"/>
+      <text x="16" y="24" fill="#ededed" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="14" font-weight="500">1. Слияние апстримов и локальных списков</text>
+      <text x="448" y="24" text-anchor="end" fill="#85858b" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">16 потоков</text>
+      <text x="16" y="44" fill="#a1a1a6" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">allow-domains · runetfreedom · roscomvpn · MetaCubeX</text>
+      <text x="16" y="60" fill="#85858b" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">ad-filter · supercell · custom/{domains,subnets,exclude}</text>
     </g>
 
     <!-- Connector 1 -->
-    <path d="M 236 126 L 236 144" stroke="#38BDF8" stroke-width="2"/>
-    <polygon points="231,141 241,141 236,148" fill="#38BDF8"/>
+    <line x1="248" y1="124" x2="248" y2="140" stroke="#2e2e32" stroke-width="1"/>
 
-    <!-- Stage 2: Optimization Core -->
-    <g transform="translate(20, 148)">
-      <rect x="0" y="0" width="432" height="82" rx="10" fill="#111C2D" stroke="#38BDF8" stroke-width="1.2" stroke-opacity="0.6"/>
-      <text x="14" y="25" fill="#F8FAFC" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18" font-weight="700">2. ОПТИМИЗАТОР ДЕРЕВА (optimize_bucket)</text>
-      <text x="14" y="48" fill="#BAE6FD" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">• Срезка поддоменов под domain_suffix</text>
-      <text x="14" y="70" fill="#BAE6FD" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">• Схлопывание CIDR + защита DNS sing-box 1.14+</text>
+    <!-- Stage 2 (highlighted moment) -->
+    <g transform="translate(16, 140)">
+      <rect x="0" y="0" width="464" height="80" rx="8" fill="#19191b" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.5"/>
+      <text x="16" y="24" fill="#ededed" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="14" font-weight="500">2. Оптимизация дерева правил (optimize_bucket)</text>
+      <text x="448" y="24" text-anchor="end" fill="#38bdf8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="500">RAM pruning</text>
+      <text x="16" y="46" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">Отсечение поддоменов, перекрытых родительским суффиксом</text>
+      <text x="16" y="64" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">Схлопывание смежных CIDR и разделение DNS/IP для sing-box 1.14+</text>
     </g>
 
     <!-- Connector 2 -->
-    <path d="M 236 230 L 236 248" stroke="#10B981" stroke-width="2"/>
-    <polygon points="231,245 241,245 236,252" fill="#10B981"/>
+    <line x1="248" y1="220" x2="248" y2="236" stroke="#2e2e32" stroke-width="1"/>
 
-    <!-- Stage 3: Output Artifacts -->
-    <g transform="translate(20, 252)">
-      <rect x="0" y="0" width="210" height="76" rx="10" fill="#0F172A" stroke="#A855F7" stroke-width="1" stroke-opacity="0.6"/>
-      <text x="14" y="25" fill="#E9D5FF" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18" font-weight="700">sing-box / json</text>
-      <text x="14" y="47" fill="#CBD5E1" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">release/sing-box/*.srs</text>
-      <text x="14" y="66" fill="#94A3B8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">release/json/*.json</text>
+    <!-- Stage 3 -->
+    <g transform="translate(16, 236)">
+      <rect x="0" y="0" width="226" height="84" rx="8" fill="#141415" stroke="#2e2e32" stroke-width="1"/>
+      <text x="16" y="24" fill="#38bdf8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="500">Бинарные наборы</text>
+      <text x="16" y="46" fill="#ededed" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">release/tachyon/*.trs</text>
+      <text x="16" y="66" fill="#85858b" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">release/sing-box/*.srs</text>
 
-      <rect x="222" y="0" width="210" height="76" rx="10" fill="#0F172A" stroke="#10B981" stroke-width="1" stroke-opacity="0.6"/>
-      <text x="236" y="25" fill="#A7F3D0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18" font-weight="700">domains / subnets</text>
-      <text x="236" y="47" fill="#CBD5E1" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">release/domains/*.lst</text>
-      <text x="236" y="66" fill="#94A3B8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">subnets/{ipv4,ipv6}/*.lst</text>
+      <rect x="238" y="0" width="226" height="84" rx="8" fill="#141415" stroke="#2e2e32" stroke-width="1"/>
+      <text x="254" y="24" fill="#ededed" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="500">Текстовые списки и JSON</text>
+      <text x="254" y="46" fill="#a1a1a6" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">domains/*.lst · subnets/*.lst</text>
+      <text x="254" y="66" fill="#85858b" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">json/*.json · catalog.json</text>
     </g>
   </g>
 </svg>
