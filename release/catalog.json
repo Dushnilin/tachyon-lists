@@ -9,8 +9,8 @@
       "group": "regional",
       "kind": "domains",
       "recommended_action": "proxy",
-      "title": "Россия (внутри) — сводный реестр заблокированных и ограниченных в РФ ресурсов",
-      "description": "[Маршрут: В Прокси / VPN или Обход DPI] Главный сводный список обхода блокировок внутри России: объединяет домены из реестра РКН, списки Re:filter, Antifilter и популярные зарубежные сервисы, закрывшие доступ для российских IP.",
+      "title": "Россия (внутри) — сводный набор регионально ограниченных в РФ ресурсов",
+      "description": "[Маршрут: В Прокси / VPN или Desync] Главный сводный список селективной маршрутизации внутри России: объединяет региональные базы доменов, списки Re:filter, Antifilter и популярные зарубежные сервисы, ограничившие доступ для российских IP.",
       "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/russia_inside.srs",
       "counts": {
         "domain": 0,
@@ -61,8 +61,8 @@
       "group": "regional",
       "kind": "domains",
       "recommended_action": "proxy",
-      "title": "Реестр РКН (прямые блокировки) — домены из выгрузки Роскомнадзора",
-      "description": "[Маршрут: В Прокси / VPN или Обход DPI] Сайты и сервисы, официально внесённые в единый реестр запрещённых ресурсов Роскомнадзора и блокируемые на ТСПУ провайдеров.",
+      "title": "Базовый региональный список (block) — домены с прямыми сетевыми ограничениями",
+      "description": "[Маршрут: В Прокси / VPN или Desync] Сайты и внешние веб-ресурсы из базовой региональной выгрузки, недоступные при прямом подключении через локальных провайдеров.",
       "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/block.srs",
       "counts": {
         "domain": 0,
@@ -87,8 +87,8 @@
       "group": "regional",
       "kind": "domains",
       "recommended_action": "proxy",
-      "title": "Реестр РКН и Антизапрет (очищенный) — актуальные заблокированные домены",
-      "description": "[Маршрут: В Прокси / VPN или Обход DPI] Очищенный и дедуплицированный список реально действующих заблокированных в РФ доменов (объединение Антизапрета и выгрузки РКН без мёртвых и мусорных доменов).",
+      "title": "Региональный список RU (очищенный) — актуальные домены с ограниченным доступом",
+      "description": "[Маршрут: В Прокси / VPN или Desync] Очищенный и дедуплицированный список реально действующих доменов с региональными ограничениями в РФ (без неактивных и устаревших записей).",
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-ru-blocked.srs",
       "counts": {
         "domain": 0,
@@ -113,8 +113,8 @@
       "group": "regional",
       "kind": "domains",
       "recommended_action": "proxy",
-      "title": "Реестр РКН (полный) — все заблокированные домены, поддомены и зеркала",
-      "description": "[Маршрут: В Прокси / VPN или Обход DPI] Полная нефильтрованная выгрузка всех доменов, поддоменов и зеркал из реестра блокировок РФ, включая региональные ограничения и блокировки ТСПУ.",
+      "title": "Региональный список RU (полный) — все домены, поддомены и зеркала",
+      "description": "[Маршрут: В Прокси / VPN или Desync] Полная нефильтрованная выгрузка всех доменов, поддоменов и зеркал из региональных списков маршрутизации РФ.",
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-ru-blocked-all.srs",
       "counts": {
         "domain": 0,
@@ -139,8 +139,8 @@
       "group": "regional",
       "kind": "domains",
       "recommended_action": "proxy",
-      "title": "Antifilter Community — народный список обхода блокировок и ТСПУ",
-      "description": "[Маршрут: В Прокси / VPN или Обход DPI] Курируемый сообществом Antifilter.download список доменов и сервисов, заблокированных РКН или замедляемых оборудованием ТСПУ в России.",
+      "title": "Antifilter Community — сводный список маршрутизации сообщества",
+      "description": "[Маршрут: В Прокси / VPN или Desync] Курируемый сообществом Antifilter.download список доменов и подсетей зарубежных сервисов для селективной маршрутизации.",
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-antifilter-download-community.srs",
       "counts": {
         "domain": 0,
@@ -165,8 +165,8 @@
       "group": "regional",
       "kind": "domains",
       "recommended_action": "proxy",
-      "title": "Re:filter — выверенный список блокировок и геоблока без лишних доменов",
-      "description": "[Маршрут: В Прокси / VPN] Тщательно модерируемый проект Re:filter: включает проверенные домены заблокированных ресурсов и западных сервисов с геоблоком без избыточных правил.",
+      "title": "Re:filter — выверенный список региональных маршрутов и геоблока без лишних доменов",
+      "description": "[Маршрут: В Прокси / VPN] Тщательно модерируемый проект Re:filter: включает проверенные домены зарубежных ресурсов и сервисов с геоблоком без избыточных правил.",
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-refilter.srs",
       "counts": {
         "domain": 0,
@@ -217,8 +217,8 @@
       "group": "regional",
       "kind": "domains",
       "recommended_action": "proxy",
-      "title": "Украина (внутри) — российские сервисы, соцсети, банки и ресурсы, заблокированные в Украине",
-      "description": "[Маршрут: В Прокси / VPN] Все российские сайты, экосистемы (Яндекс, VK, Одноклассники, Mail.ru, Дзен, Кинопоиск, Rutube), банки (Сбер, Т-Банк, ВТБ, Альфа), маркетплейсы (Ozon, Wildberries, Авито), Госуслуги, СМИ и CDN, доступ к которым заблокирован на территории Украины.",
+      "title": "Украина (внутри) — российские сервисы, соцсети, банки и ресурсы с региональными ограничениями",
+      "description": "[Маршрут: В Прокси / VPN] Российские сайты, экосистемы (Яндекс, VK, Одноклассники, Mail.ru, Дзен, Кинопоиск, Rutube), банки (Сбер, Т-Банк, ВТБ, Альфа), маркетплейсы (Ozon, Wildberries, Авито), Госуслуги, СМИ и CDN с региональными ограничениями маршрутизации.",
       "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/ukraine_inside.srs",
       "counts": {
         "domain": 0,
@@ -243,8 +243,8 @@
       "group": "regional",
       "kind": "domains",
       "recommended_action": "proxy",
-      "title": "Беларусь (внутри) — сайты, независимые медиа и сервисы, заблокированные в РБ",
-      "description": "[Маршрут: В Прокси / VPN или Обход DPI] Сводный список интернет-ресурсов, новостных порталов, правозащитных сайтов и зарубежных платформ, заблокированных Министерством информации и провайдерами на территории Республики Беларусь (Zerkalo / TUT.BY, Наша Ніва, Хартия'97, Белсат, Радыё Свабода, Euroradio, Dev.by, CityDog, Реформация, Трибуна, а также закрытые по геоблоку в РБ LinkedIn, ChatGPT, Claude, Airbnb, Upwork, Coursera).",
+      "title": "Беларусь (внутри) — региональный набор сайтов, медиа и зарубежных платформ",
+      "description": "[Маршрут: В Прокси / VPN или Desync] Сводный список интернет-ресурсов, новостных порталов и зарубежных платформ с региональными ограничениями доступа в РБ (включая закрытые по геоблоку LinkedIn, ChatGPT, Claude, Airbnb, Upwork, Coursera).",
       "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/belarus_inside.srs",
       "counts": {
         "domain": 0,
@@ -816,7 +816,7 @@
       "kind": "domains",
       "recommended_action": "proxy",
       "title": "YouTube — видеосервис, YouTube Music, Studio и кэш-серверы (googlevideo / ytimg)",
-      "description": "[Маршрут: В Обход DPI (Desync / Zapret) или Прокси / VPN] Полный набор доменов YouTube: youtube.com, youtu.be, googlevideo.com (видеопотоки GGC), ytimg.com (превью), ggpht.com (аватарки каналов), youtubei.googleapis.com и YouTube Music.",
+      "description": "[Маршрут: В Desync / Zapret или Прокси / VPN] Полный набор доменов YouTube: youtube.com, youtu.be, googlevideo.com (видеопотоки GGC), ytimg.com (превью), ggpht.com (аватарки каналов), youtubei.googleapis.com и YouTube Music.",
       "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/youtube.srs",
       "counts": {
         "domain": 0,
@@ -842,7 +842,7 @@
       "kind": "domains",
       "recommended_action": "proxy",
       "title": "Twitch — стриминговая платформа, видеопотоки (ttvnw.net) и чат",
-      "description": "[Маршрут: В Прокси / VPN или Обход DPI] Все домены платформы Twitch (twitch.tv, ttvnw.net, jtvnw.net, live-video.net). Для снятия лимита 720p и отключения рекламы без проксирования самого видеопотока используйте список «Twitch (без рекламы и 1080p+)».",
+      "description": "[Маршрут: В Прокси / VPN или Desync] Все домены платформы Twitch (twitch.tv, ttvnw.net, jtvnw.net, live-video.net). Для снятия лимита 720p и отключения рекламы без проксирования самого видеопотока используйте список «Twitch (без рекламы и 1080p+)».",
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/twitch.srs",
       "counts": {
         "domain": 2,
@@ -972,7 +972,7 @@
       "kind": "domains",
       "recommended_action": "proxy",
       "title": "HDRezka — онлайн-кинотеатр, видео-балансеры (Voidboost) и актуальные зеркала",
-      "description": "[Маршрут: В Прокси / VPN или Обход DPI] Домены, зеркала и CDN видеопотоков онлайн-кинотеатра HDRezka (rezka.ag, hdrezka.ag, voidboost.cc, stream.voidboost.cc и связанные балансеры).",
+      "description": "[Маршрут: В Прокси / VPN или Desync] Домены, зеркала и CDN видеопотоков онлайн-кинотеатра HDRezka (rezka.ag, hdrezka.ag, voidboost.cc, stream.voidboost.cc и связанные балансеры).",
       "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/hdrezka.srs",
       "counts": {
         "domain": 0,
@@ -998,7 +998,7 @@
       "kind": "domains",
       "recommended_action": "proxy",
       "title": "Аниме — Shikimori, AnimeGO, Jut.su, Kodik, Anilibria, Crunchyroll",
-      "description": "[Маршрут: В Прокси / VPN или Обход DPI] Популярные аниме-порталы, базы данных и видеоплееры: Shikimori, AnimeGO, Jut.su, YummyAnime, Anilibria, Kodik, Sibnet, Crunchyroll и MyAnimeList.",
+      "description": "[Маршрут: В Прокси / VPN или Desync] Популярные аниме-порталы, базы данных и видеоплееры: Shikimori, AnimeGO, Jut.su, YummyAnime, Anilibria, Kodik, Sibnet, Crunchyroll и MyAnimeList.",
       "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/anime.srs",
       "counts": {
         "domain": 0,
@@ -1024,7 +1024,7 @@
       "kind": "domains",
       "recommended_action": "proxy",
       "title": "Pinterest — фотохостинг, пины и серверы изображений (pinimg.com)",
-      "description": "[Маршрут: В Прокси / VPN или Обход DPI] Домены визуальной соцсети Pinterest: pinterest.com, pin.it и CDN картинок i.pinimg.com / s.pinimg.com (устраняет проблему бесконечной загрузки картинок на ТСПУ).",
+      "description": "[Маршрут: В Прокси / VPN или Desync] Домены визуальной соцсети Pinterest: pinterest.com, pin.it и CDN картинок i.pinimg.com / s.pinimg.com (обеспечивает стабильную загрузку медиаконтента).",
       "fallback_srs": "https://raw.githubusercontent.com/hydraponique/roscomvpn-geosite/master/release/sing-box/pinterest.srs",
       "counts": {
         "domain": 0,
@@ -1050,7 +1050,7 @@
       "kind": "domains",
       "recommended_action": "proxy",
       "title": "SoundCloud, Deezer, Tidal и Genius — музыкальные стриминги, тексты песен и Hi-Fi аудио",
-      "description": "[Маршрут: В Прокси / VPN] Музыкальные сервисы и энциклопедии, заблокированные РКН или закрытые геоблоком: SoundCloud (soundcloud.com, sndcdn.com), Deezer (deezer.com, dzcdn.net), Tidal (tidal.com), Qobuz, Bandcamp, Genius (genius.com), Last.fm, Mixcloud, TuneIn и Discogs.",
+      "description": "[Маршрут: В Прокси / VPN] Музыкальные сервисы и энциклопедии с региональными ограничениями или геоблоком: SoundCloud (soundcloud.com, sndcdn.com), Deezer (deezer.com, dzcdn.net), Tidal (tidal.com), Qobuz, Bandcamp, Genius (genius.com), Last.fm, Mixcloud, TuneIn и Discogs.",
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-soundcloud.srs",
       "counts": {
         "domain": 0,
@@ -1076,7 +1076,7 @@
       "kind": "domains",
       "recommended_action": "proxy",
       "title": "RuTracker, Lampa, KinoPub и Flibusta — трекеры, онлайн-кинотеатры для ТВ и библиотеки",
-      "description": "[Маршрут: В Прокси / VPN или Обход DPI] Народный набор для дома и Android TV: зеркала RuTracker, Rutor, NNM-Club, Kinozal, LostFilm, KinoPub, балансеры и плагины Lampa (Filmix, Cub, BWA, Zetflix), а также книжные и научные библиотеки (Flibusta, Coollib, Z-Library, Anna's Archive, LibGen, Sci-Hub).",
+      "description": "[Маршрут: В Прокси / VPN или Desync] Народный набор для дома и Android TV: зеркала RuTracker, Rutor, NNM-Club, Kinozal, LostFilm, KinoPub, балансеры и плагины Lampa (Filmix, Cub, BWA, Zetflix), а также книжные и научные библиотеки (Flibusta, Coollib, Z-Library, Anna's Archive, LibGen, Sci-Hub).",
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-rutracker.srs",
       "counts": {
         "domain": 0,
@@ -1102,7 +1102,7 @@
       "kind": "domains",
       "recommended_action": "proxy",
       "title": "Patreon, Medium, Substack, DeviantArt и Pixiv — платформы авторов, блогов и иллюстраторов",
-      "description": "[Маршрут: В Прокси / VPN] Платформы поддержки авторов, блогов и цифрового арта, заблокированные в РФ или закрытые геоблоком: Patreon (patreon.com), Medium (medium.com), Substack, DeviantArt, ArtStation, Pixiv (pixiv.net, pximg.net), Gumroad, Ko-fi, AO3, Ficbook, Goodreads и Letterboxd.",
+      "description": "[Маршрут: В Прокси / VPN] Платформы поддержки авторов, блогов и цифрового арта с региональными ограничениями или геоблоком: Patreon (patreon.com), Medium (medium.com), Substack, DeviantArt, ArtStation, Pixiv (pixiv.net, pximg.net), Gumroad, Ko-fi, AO3, Ficbook, Goodreads и Letterboxd.",
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-patreon.srs",
       "counts": {
         "domain": 1,
@@ -1128,7 +1128,7 @@
       "kind": "domains",
       "recommended_action": "proxy",
       "title": "YouTube (только превью, аватарки и интерфейс — без видеопотока googlevideo)",
-      "description": "[Маршрут: В Прокси / VPN — для тех, кто чинит само видео через Zapret/ByeDPI] Серверы обложек роликов (i.ytimg.com, i9.ytimg.com), аватарок каналов (yt3.ggpht.com, yt4.ggpht.com) и веб-интерфейса YouTube без тяжёлых видеосерверов googlevideo.com. Если видео через обход DPI показывает, но не грузятся картинки и аватарки — направьте этот список в Прокси.",
+      "description": "[Маршрут: В Прокси / VPN — при раздельной маршрутизации видеопотока] Серверы обложек роликов (i.ytimg.com, i9.ytimg.com), аватарок каналов (yt3.ggpht.com, yt4.ggpht.com) и веб-интерфейса YouTube без тяжёлых видеосерверов googlevideo.com. Позволяет направить загрузку статики и миниатюр через отдельный прокси-туннель.",
       "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/youtube_images.srs",
       "counts": {
         "domain": 0,
@@ -1154,7 +1154,7 @@
       "kind": "domains",
       "recommended_action": "proxy",
       "title": "Постеры и базы фильмов для Lampa, Plex, Kodi и Jellyfin — TMDB, TheTVDB, IMDb и Last.fm",
-      "description": "[Маршрут: В Прокси / VPN или Обход DPI] Базы метаданных, обложек, актёров и описаний фильмов и музыки: The Movie Database (themoviedb.org, image.tmdb.org, api.themoviedb.org — блокируются в РФ, из-за чего в Lampa, Plex, Kodi, Jellyfin и Infuse пропадают постеры), TheTVDB, IMDb, Trakt.tv, Fanart.tv, OpenSubtitles, Last.fm, MusicBrainz и Discogs.",
+      "description": "[Маршрут: В Прокси / VPN или Desync] Базы метаданных, обложек, актёров и описаний фильмов и музыки: The Movie Database (themoviedb.org, image.tmdb.org, api.themoviedb.org — для загрузки постеров в Lampa, Plex, Kodi, Jellyfin и Infuse), TheTVDB, IMDb, Trakt.tv, Fanart.tv, OpenSubtitles, Last.fm, MusicBrainz и Discogs.",
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/tmdb.srs",
       "counts": {
         "domain": 4,
@@ -1206,7 +1206,7 @@
       "kind": "domains",
       "recommended_action": "proxy",
       "title": "Архивы интернета и научные библиотеки — Wayback Machine, Sci-Hub, LibGen, Anna's Archive и Z-Library",
-      "description": "[Маршрут: В Прокси / VPN или Обход DPI] Архив интернета (archive.org / Wayback Machine — заблокирован в РФ), архивы веб-страниц (archive.is, archive.ph, ghostarchive.org), крупнейшие библиотеки книг, фанфиков и научных статей: Anna's Archive, Z-Library (z-lib.gs, singlelogin.re), Library Genesis (libgen.is), Sci-Hub, Project Gutenberg, ResearchGate, Academia.edu и AO3 (archiveofourown.org).",
+      "description": "[Маршрут: В Прокси / VPN или Desync] Архив интернета (archive.org / Wayback Machine), архивы веб-страниц (archive.is, archive.ph, ghostarchive.org), крупнейшие библиотеки книг и научных статей: Anna's Archive, Z-Library (z-lib.gs, singlelogin.re), Library Genesis (libgen.is), Sci-Hub, Project Gutenberg, ResearchGate, Academia.edu и AO3 (archiveofourown.org).",
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/archive.srs",
       "counts": {
         "domain": 0,
@@ -1232,7 +1232,7 @@
       "kind": "domains",
       "recommended_action": "proxy",
       "title": "Подкасты, онлайн-радио и аудиокниги — хостинги Apple/Spotify подкастов, TuneIn, DI.FM и Audible",
-      "description": "[Маршрут: В Прокси / VPN] Зарубежные CDN-хостинги подкастов (megaphone.fm, art19.com, simplecast.com, acast.com, omny.fm, buzzsprout.com, libsyn.com, podbean.com — именно из-за их блокировки не скачиваются выпуски в стандартном приложении «Подкасты» на iPhone), плееры Pocket Casts и Overcast, аудиокниги Audible, Storytel, Bookmate и интернет-радио TuneIn Radio, DI.FM и Radio Garden.",
+      "description": "[Маршрут: В Прокси / VPN] Зарубежные CDN-хостинги подкастов (megaphone.fm, art19.com, simplecast.com, acast.com, omny.fm, buzzsprout.com, libsyn.com, podbean.com — используются для загрузки выпусков в приложении «Подкасты» на iPhone), плееры Pocket Casts и Overcast, аудиокниги Audible, Storytel, Bookmate и интернет-радио TuneIn Radio, DI.FM и Radio Garden.",
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/pocketcasts.srs",
       "counts": {
         "domain": 0,
@@ -1258,7 +1258,7 @@
       "kind": "subnets",
       "recommended_action": "proxy",
       "title": "Discord — мессенджер, чаты, CDN вложений и голосовые шлюзы",
-      "description": "[Маршрут: В Прокси / VPN или Обход DPI] Все домены и подсети Discord: discord.com, discord.gg, discordapp.com, discordapp.net, discord.media и голосовые серверы.",
+      "description": "[Маршрут: В Прокси / VPN или Desync] Все домены и подсети Discord: discord.com, discord.gg, discordapp.com, discordapp.net, discord.media и голосовые серверы.",
       "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/discord.srs",
       "counts": {
         "domain": 1,
@@ -1336,7 +1336,7 @@
       "kind": "mixed",
       "recommended_action": "proxy",
       "title": "X (Twitter) — соцсеть, короткие ссылки t.co и медиа-CDN (twimg.com)",
-      "description": "[Маршрут: В Прокси / VPN или Обход DPI] Домены и IP-подсети соцсети X / Twitter: x.com, twitter.com, t.co, twimg.com, abs.twimg.com, pbs.twimg.com и video.twimg.com.",
+      "description": "[Маршрут: В Прокси / VPN или Desync] Домены и IP-подсети соцсети X / Twitter: x.com, twitter.com, t.co, twimg.com, abs.twimg.com, pbs.twimg.com и video.twimg.com.",
       "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/twitter.srs",
       "counts": {
         "domain": 0,
@@ -1387,8 +1387,8 @@
       "group": "social",
       "kind": "domains",
       "recommended_action": "proxy",
-      "title": "Signal, Viber, TeamSpeak и Matrix — заблокированные мессенджеры и голосовые чаты",
-      "description": "[Маршрут: В Прокси / VPN] Мессенджеры и голосовые серверы, заблокированные РКН или используемые геймерами как замена Discord: Signal (signal.org, whispersystems.org), Viber (viber.com), TeamSpeak 3/5 (teamspeak.com, myteamspeak.com), Guilded, Element / Matrix, Threema, Session, SimpleX и Wire.",
+      "title": "Signal, Viber, TeamSpeak и Matrix — мессенджеры и голосовые чаты",
+      "description": "[Маршрут: В Прокси / VPN] Альтернативные мессенджеры и голосовые серверы для командной связи: Signal (signal.org, whispersystems.org), Viber (viber.com), TeamSpeak 3/5 (teamspeak.com, myteamspeak.com), Guilded, Element / Matrix, Threema, Session, SimpleX и Wire.",
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-signal.srs",
       "counts": {
         "domain": 0,
@@ -1414,7 +1414,7 @@
       "kind": "domains",
       "recommended_action": "proxy",
       "title": "Reddit — форум, приложение, видеоплеер (v.redd.it) и изображения (i.redd.it)",
-      "description": "[Маршрут: В Прокси / VPN или Обход DPI] Все домены и медиа-CDN платформы Reddit: reddit.com, redd.it, v.redd.it, i.redd.it, redditmedia.com и redditstatic.com (устраняет зависание видео и картинок).",
+      "description": "[Маршрут: В Прокси / VPN или Desync] Все домены и медиа-CDN платформы Reddit: reddit.com, redd.it, v.redd.it, i.redd.it, redditmedia.com и redditstatic.com (устраняет зависание видео и картинок).",
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-reddit.srs",
       "counts": {
         "domain": 0,
@@ -1466,7 +1466,7 @@
       "kind": "domains",
       "recommended_action": "proxy",
       "title": "LinkedIn, Glassdoor и Indeed — деловая соцсеть и международный поиск работы в IT",
-      "description": "[Маршрут: В Прокси / VPN] Профессиональная соцсеть LinkedIn (linkedin.com, licdn.com, lnkd.in, slideshare.net), заблокированная в РФ, а также международные карьерные порталы Glassdoor, Indeed, Wellfound (AngelList) и Levels.fyi.",
+      "description": "[Маршрут: В Прокси / VPN] Профессиональная соцсеть LinkedIn (linkedin.com, licdn.com, lnkd.in, slideshare.net), а также международные карьерные порталы Glassdoor, Indeed, Wellfound (AngelList) и Levels.fyi.",
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-linkedin.srs",
       "counts": {
         "domain": 3,
@@ -1492,7 +1492,7 @@
       "kind": "mixed",
       "recommended_action": "proxy",
       "title": "Discord Voice — только голосовые серверы и звонки WebRTC / UDP (отдельно от чата)",
-      "description": "[Маршрут: В низкопинговый игровой Прокси / VPN с поддержкой UDP или Обход DPI] Узкий список голосовых и видео-шлюзов Discord (*.discord.media и UDP-подсети голосовых серверов Discord). Позволяет направить голосовые каналы и стриминг экрана через самый быстрый узел с минимальным пингом отдельно от основного чата и картинок Discord.",
+      "description": "[Маршрут: В низкопинговый игровой Прокси / VPN с поддержкой UDP или Desync] Узкий список голосовых и видео-шлюзов Discord (*.discord.media и UDP-подсети голосовых серверов Discord). Позволяет направить голосовые каналы и стриминг экрана через самый быстрый узел с минимальным пингом отдельно от основного чата и картинок Discord.",
       "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/discord_voice.srs",
       "counts": {
         "domain": 0,
@@ -1986,7 +1986,7 @@
       "kind": "mixed",
       "recommended_action": "proxy",
       "title": "Roblox — игровая платформа, лаунчер, Roblox Studio и игровые серверы",
-      "description": "[Маршрут: В Прокси / VPN или Обход DPI] Все домены и игровые IP-подсети Roblox: roblox.com, rbxcdn.com, rbx.com, robloxlabs.com и голосовой чат.",
+      "description": "[Маршрут: В Прокси / VPN или Desync] Все домены и игровые IP-подсети Roblox: roblox.com, rbxcdn.com, rbx.com, robloxlabs.com и голосовой чат.",
       "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/roblox.srs",
       "counts": {
         "domain": 7,
@@ -2064,7 +2064,7 @@
       "kind": "domains",
       "recommended_action": "proxy",
       "title": "FACEIT — киберспортивная платформа CS2, античит и матчмейкинг",
-      "description": "[Маршрут: В Прокси / VPN или Обход DPI] Домены платформы FACEIT (faceit.com, faceit-cdn.net) для открытия лобби, статистики и работы клиента без бесконечной загрузки.",
+      "description": "[Маршрут: В Прокси / VPN или Desync] Домены платформы FACEIT (faceit.com, faceit-cdn.net) для открытия лобби, статистики и работы клиента без бесконечной загрузки.",
       "fallback_srs": "https://raw.githubusercontent.com/hydraponique/roscomvpn-geosite/master/release/sing-box/faceit.srs",
       "counts": {
         "domain": 0,
@@ -2090,7 +2090,7 @@
       "kind": "mixed",
       "recommended_action": "proxy",
       "title": "Сетевые движки игр и голосовой чат — Photon Engine, Vivox Voice, Azure PlayFab и EOS",
-      "description": "[Маршрут: В Прокси / VPN (с UDP) или Обход DPI] Сетевая инфраструктура сотен мультиплеерных игр и внутриигрового голосового чата: войс-движок Vivox (vivox.com, unity3d.com — чинит голосовой чат в Valorant, PUBG, LoL, Fortnite, Overwatch 2, Rainbow Six), облако кооп-игр Photon Engine (photonengine.com, exitgames.com + UDP-подсети — чинит Phasmophobia, R.E.P.O., Content Warning, Lethal Company, VRChat, Among Us), Azure PlayFab (playfabapi.com — Helldivers 2, Sea of Thieves, Minecraft) и Epic Online Services (epicgames.dev).",
+      "description": "[Маршрут: В Прокси / VPN (с UDP) или Desync] Сетевая инфраструктура сотен мультиплеерных игр и внутриигрового голосового чата: войс-движок Vivox (vivox.com, unity3d.com — чинит голосовой чат в Valorant, PUBG, LoL, Fortnite, Overwatch 2, Rainbow Six), облако кооп-игр Photon Engine (photonengine.com, exitgames.com + UDP-подсети — чинит Phasmophobia, R.E.P.O., Content Warning, Lethal Company, VRChat, Among Us), Azure PlayFab (playfabapi.com — Helldivers 2, Sea of Thieves, Minecraft) и Epic Online Services (epicgames.dev).",
       "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/game_backends.srs",
       "counts": {
         "domain": 0,
@@ -2142,7 +2142,7 @@
       "kind": "domains",
       "recommended_action": "proxy",
       "title": "Dead by Daylight, Rust, Hunt: Showdown, Helldivers 2, Palworld и кооп-выживачи",
-      "description": "[Маршрут: В Прокси / VPN или Обход DPI] Серверы входа, инвентаря и матчмейкинга популярных мультиплеерных экшенов и выживачей, страдающих от блокировок подсетей Amazon AWS / GameLift и Hetzner на ТСПУ: Dead by Daylight (bhvrdbd.com), Rust (facepunch.com, playrust.com), Hunt: Showdown 1896 (huntshowdown.com, crytek.com), Helldivers 2, Palworld, ARK, Valheim, Satisfactory, Deep Rock Galactic, Dune: Awakening и Sea of Thieves.",
+      "description": "[Маршрут: В Прокси / VPN или Desync] Серверы входа, инвентаря и матчмейкинга популярных мультиплеерных экшенов и кооп-игр, размещённых на инфраструктуре Amazon AWS / GameLift и Hetzner: Dead by Daylight (bhvrdbd.com), Rust (facepunch.com, playrust.com), Hunt: Showdown 1896 (huntshowdown.com, crytek.com), Helldivers 2, Palworld, ARK, Valheim, Satisfactory, Deep Rock Galactic, Dune: Awakening и Sea of Thieves.",
       "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/survival_coop.srs",
       "counts": {
         "domain": 0,
@@ -2324,7 +2324,7 @@
       "kind": "domains",
       "recommended_action": "proxy",
       "title": "Шахматы, настолки и викторины — Chess.com, Lichess, GeoGuessr, D&D Beyond, Roll20 и BoardGameArena",
-      "description": "[Маршрут: В Прокси / VPN или Обход DPI] Крупнейший шахматный портал Chess.com (заблокирован РКН в РФ: chess.com, chesscomfiles.com), Lichess (lichess.org), географическая игра GeoGuessr (geoguessr.com), виртуальные столы для настольных и ролевых игр D&D Beyond (dndbeyond.com, wizards.com), Roll20 (roll20.net), Foundry VTT, BoardGameArena и Tabletopia.",
+      "description": "[Маршрут: В Прокси / VPN или Desync] Крупнейший шахматный портал Chess.com (chess.com, chesscomfiles.com), Lichess (lichess.org), географическая игра GeoGuessr (geoguessr.com), виртуальные столы для настольных и ролевых игр D&D Beyond (dndbeyond.com, wizards.com), Roll20 (roll20.net), Foundry VTT, BoardGameArena и Tabletopia.",
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/chesscom.srs",
       "counts": {
         "domain": 0,
@@ -2350,7 +2350,7 @@
       "kind": "domains",
       "recommended_action": "proxy",
       "title": "Менеджеры модов, оверлеи и стат-трекеры — Thunderstore, Overwolf, WeMod, Tracker.gg, OP.GG и HLTV",
-      "description": "[Маршрут: В Прокси / VPN] Платформы моддинга, игровых оверлеев, трейнеров и киберспортивной статистики, часто недоступные из РФ из-за блокировок Cloudflare и геоблока: Thunderstore Mod Manager / r2modman (thunderstore.io, gcdn.thunderstore.io), Overwolf (overwolf.com), WeMod, ModDB, GameBanana, SteamDB, Tracker.gg, OP.GG, U.GG, Mobalytics, Dotabuff, OpenDota, Stratz, Leetify, Maxroll, Wowhead, Poe.ninja и HLTV.org.",
+      "description": "[Маршрут: В Прокси / VPN] Платформы моддинга, игровых оверлеев, трейнеров и киберспортивной статистики за CDN Cloudflare и с региональными ограничениями: Thunderstore Mod Manager / r2modman (thunderstore.io, gcdn.thunderstore.io), Overwolf (overwolf.com), WeMod, ModDB, GameBanana, SteamDB, Tracker.gg, OP.GG, U.GG, Mobalytics, Dotabuff, OpenDota, Stratz, Leetify, Maxroll, Wowhead, Poe.ninja и HLTV.org.",
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-enhance-gaming.srs",
       "counts": {
         "domain": 0,
@@ -2454,7 +2454,7 @@
       "kind": "domains",
       "recommended_action": "proxy",
       "title": "GitHub — репозитории, GitHub Actions, Packages, Pages, Raw и Gist",
-      "description": "[Маршрут: В Прокси / VPN (для Copilot и при сбоях ТСПУ) или Direct] Все домены GitHub: github.com, githubusercontent.com, githubassets.com, ghcr.io, github.io, gist.github.com и api.github.com.",
+      "description": "[Маршрут: В Прокси / VPN (для Copilot и стабильной загрузки релизов) или Direct] Все домены GitHub: github.com, githubusercontent.com, githubassets.com, ghcr.io, github.io, gist.github.com и api.github.com.",
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/github.srs",
       "counts": {
         "domain": 26,
@@ -2688,7 +2688,7 @@
       "kind": "domains",
       "recommended_action": "proxy",
       "title": "Облачный гейминг и удалённый рабочий стол — GeForce NOW, Boosteroid, Parsec, TeamViewer, AnyDesk и RustDesk",
-      "description": "[Маршрут: В Прокси / VPN] Сервисы облачного гейминга и удалённого управления ПК: NVIDIA GeForce NOW (geforcenow.com, nvidiagrid.net — проверяет зарубежный IP только при входе и старте игры, после чего видеопоток идёт напрямую), Boosteroid, Parsec (parsec.app), Shadow, а также TeamViewer (заблокировал РФ по IP), AnyDesk (anydesk.com — часто режется ТСПУ), RustDesk, NoMachine, Tailscale и ZeroTier.",
+      "description": "[Маршрут: В Прокси / VPN] Сервисы облачного гейминга и удалённого управления ПК: NVIDIA GeForce NOW (geforcenow.com, nvidiagrid.net — проверяет зарубежный IP только при входе и старте игры, после чего видеопоток идёт напрямую), Boosteroid, Parsec (parsec.app), Shadow, а также TeamViewer, AnyDesk (anydesk.com), RustDesk, NoMachine, Tailscale и ZeroTier.",
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-remote-control.srs",
       "counts": {
         "domain": 4,
@@ -2714,7 +2714,7 @@
       "kind": "domains",
       "recommended_action": "proxy",
       "title": "Облачные хранилища и файлообменники — MEGA, Dropbox, WeTransfer, Pixeldrain, GoFile, Catbox и MediaFire",
-      "description": "[Маршрут: В Прокси / VPN или Обход DPI] Зарубежные облачные диски и популярные файлообменники, где публикуют прошивки, моды и рабочие архивы (многие заблокированы РКН или закрыли доступ из РФ): MEGA (mega.nz, mega.co.nz, mega.io), Dropbox (dropbox.com), WeTransfer (wetransfer.com, we.tl), Pixeldrain (pixeldrain.com), GoFile (gofile.io), Catbox (catbox.moe), MediaFire, Box.com, pCloud, Sync.com и TeraBox.",
+      "description": "[Маршрут: В Прокси / VPN или Desync] Зарубежные облачные диски и популярные файлообменники, где публикуют прошивки, моды и рабочие архивы: MEGA (mega.nz, mega.co.nz, mega.io), Dropbox (dropbox.com), WeTransfer (wetransfer.com, we.tl), Pixeldrain (pixeldrain.com), GoFile (gofile.io), Catbox (catbox.moe), MediaFire, Box.com, pCloud, Sync.com и TeraBox.",
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-netdisk-!cn.srs",
       "counts": {
         "domain": 3,
@@ -2766,7 +2766,7 @@
       "kind": "domains",
       "recommended_action": "proxy",
       "title": "Менеджеры паролей, защищённая почта и антивирусы — Bitwarden, 1Password, Proton, VirusTotal и Malwarebytes",
-      "description": "[Маршрут: В Прокси / VPN] Менеджеры паролей и ключей: Bitwarden (bitwarden.com, bitwarden.eu), 1Password (1password.com), NordPass, Dashlane, Keeper, Enpass; защищённая экосистема Proton (Proton Mail, Proton Pass, Proton Drive — proton.me, protonmail.com, заблокирована РКН), Tuta (tuta.com); облачный сканер VirusTotal и обновления баз зарубежных антивирусов (Malwarebytes, Avast, AVG, ESET NOD32, Bitdefender, Norton, Avira).",
+      "description": "[Маршрут: В Прокси / VPN] Менеджеры паролей и ключей: Bitwarden (bitwarden.com, bitwarden.eu), 1Password (1password.com), NordPass, Dashlane, Keeper, Enpass; защищённая экосистема Proton (Proton Mail, Proton Pass, Proton Drive — proton.me, protonmail.com), Tuta (tuta.com); облачный сканер VirusTotal и обновления баз зарубежных антивирусов (Malwarebytes, Avast, AVG, ESET NOD32, Bitdefender, Norton, Avira).",
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-password-management.srs",
       "counts": {
         "domain": 3,
@@ -2792,7 +2792,7 @@
       "kind": "domains",
       "recommended_action": "proxy",
       "title": "Умный дом и 3D-печать — Home Assistant, HACS, Bambu Lab, Tuya (Smart Life), Aqara и Roborock",
-      "description": "[Маршрут: В Прокси / VPN] Облачные сервисы и репозитории умного дома и 3D-принтеров: облако 3D-печати Bambu Lab / MakerWorld (bambulab.com, bblmw.com, makerworld.com — отправка печати из Bambu Studio и видео с камеры через AWS часто блокируются ТСПУ), Creality Cloud, Prusa; экосистема Home Assistant и Nabu Casa (home-assistant.io, nabu.casa, esphome.io, zigbee2mqtt.io); глобальные облака Tuya / Smart Life, eWeLink (Sonoff), Aqara, Roborock, Dreame и Philips Hue.",
+      "description": "[Маршрут: В Прокси / VPN] Облачные сервисы и репозитории умного дома и 3D-принтеров: облако 3D-печати Bambu Lab / MakerWorld (bambulab.com, bblmw.com, makerworld.com — отправка заданий из Bambu Studio и видеопоток камеры через AWS), Creality Cloud, Prusa; экосистема Home Assistant и Nabu Casa (home-assistant.io, nabu.casa, esphome.io, zigbee2mqtt.io); глобальные облака Tuya / Smart Life, eWeLink (Sonoff), Aqara, Roborock, Dreame и Philips Hue.",
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/xiaomi-iot.srs",
       "counts": {
         "domain": 0,
@@ -2870,7 +2870,7 @@
       "kind": "domains",
       "recommended_action": "proxy",
       "title": "Репозитории и пакеты Linux — Flathub, Snapcraft, Ubuntu PPA (Launchpad), Arch AUR, Proxmox, RedHat и Fedora",
-      "description": "[Маршрут: В Прокси / VPN] Пакетные репозитории, магазины приложений Linux и серверные дистрибутивы, которые ограничивают доступ с российских IP (Red Hat, Fedora, Canonical Launchpad) или тормозят из-за блокировок CDN (Flathub): Flathub / Flatpak (flathub.org), Snapcraft (snapcraft.io), Ubuntu / Launchpad PPA (launchpad.net), Arch Linux & AUR (archlinux.org), Proxmox VE (proxmox.com), Red Hat (redhat.com), Fedora, Debian, Alpine, Kali и NixOS.",
+      "description": "[Маршрут: В Прокси / VPN] Пакетные репозитории, магазины приложений Linux и серверные дистрибутивы с региональными ограничениями доступа (Red Hat, Fedora, Canonical Launchpad, Flathub): Flathub / Flatpak (flathub.org), Snapcraft (snapcraft.io), Ubuntu / Launchpad PPA (launchpad.net), Arch Linux & AUR (archlinux.org), Proxmox VE (proxmox.com), Red Hat (redhat.com), Fedora, Debian, Alpine, Kali и NixOS.",
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/ubuntu.srs",
       "counts": {
         "domain": 0,
@@ -2895,8 +2895,8 @@
       "group": "infra",
       "kind": "subnets",
       "recommended_action": "proxy",
-      "title": "Cloudflare — IPv4/IPv6-подсети CDN и защиты от DDoS (обход блокировки ECH)",
-      "description": "[Маршрут: В Прокси / VPN или Обход DPI] Официальные IP-подсети Cloudflare для обхода блокировки TLS ECH (Encrypted Client Hello) и сайтов за Cloudflare на ТСПУ.",
+      "title": "Cloudflare — IPv4/IPv6-подсети глобальной сети CDN и защиты от DDoS",
+      "description": "[Маршрут: В Прокси / VPN или Desync] Официальные IPv4/IPv6-подсети CDN Cloudflare для маршрутизации ресурсов, использующих TLS ECH (Encrypted Client Hello) и проксирование Cloudflare.",
       "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/cloudflare.srs",
       "counts": {
         "domain": 0,
@@ -2922,7 +2922,7 @@
       "kind": "subnets",
       "recommended_action": "proxy",
       "title": "Amazon CloudFront — IP-подсети глобальной CDN-сети AWS",
-      "description": "[Маршрут: В Прокси / VPN] Диапазоны IP-адресов CDN Amazon CloudFront, на которых работают тысячи зарубежных сайтов, игр и API, часто попадающих под веерные блокировки подсетей.",
+      "description": "[Маршрут: В Прокси / VPN] Диапазоны IP-адресов CDN Amazon CloudFront, на которых работают тысячи зарубежных веб-приложений, игровых сервисов и API.",
       "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/cloudfront.srs",
       "counts": {
         "domain": 0,
@@ -2974,7 +2974,7 @@
       "kind": "subnets",
       "recommended_action": "proxy",
       "title": "Hetzner — IP-подсети европейских датацентров Hetzner (Германия и Финляндия)",
-      "description": "[Маршрут: В Прокси / VPN] Подсети популярного европейского хостинга Hetzner Online, часто блокируемые ТСПУ целыми диапазонами.",
+      "description": "[Маршрут: В Прокси / VPN] Подсети европейских датацентров хостинг-провайдера Hetzner Online (Германия и Финляндия).",
       "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/hetzner.srs",
       "counts": {
         "domain": 0,
@@ -3026,7 +3026,7 @@
       "kind": "subnets",
       "recommended_action": "proxy",
       "title": "DigitalOcean — IP-подсети облачного хостинга DigitalOcean",
-      "description": "[Маршрут: В Прокси / VPN] Подсети облачного хостинга DigitalOcean, большая часть которых заблокирована или ограничена на ТСПУ в РФ.",
+      "description": "[Маршрут: В Прокси / VPN] Подсети глобальной облачной инфраструктуры и датацентров DigitalOcean.",
       "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/digitalocean.srs",
       "counts": {
         "domain": 0,
@@ -3078,7 +3078,7 @@
       "kind": "mixed",
       "recommended_action": "proxy",
       "title": "Публичные шифрованные DNS (DoH / DoT) — Cloudflare 1.1.1.1, Google 8.8.8.8, Quad9, AdGuard и NextDNS",
-      "description": "[Маршрут: В Прокси / VPN (для обхода блокировки DoH) или Блокировать (Block — чтобы запретить устройствам обходить локальный DNS роутера)] Полная база публичных серверов DNS-over-HTTPS (DoH) и DNS-over-TLS (DoT), включая домены и IP-адреса резолверов Cloudflare (1.1.1.1, cloudflare-dns.com), Google (8.8.8.8, dns.google), Quad9 (9.9.9.9, dns.quad9.net), AdGuard DNS, NextDNS, OpenDNS, Control D и Mullvad DNS.",
+      "description": "[Маршрут: В Прокси / VPN (для туннелирования DoH) или Блокировать (Block — для принудительного использования локального DNS роутера)] Полная база публичных серверов DNS-over-HTTPS (DoH) и DNS-over-TLS (DoT), включая домены и IP-адреса резолверов Cloudflare (1.1.1.1, cloudflare-dns.com), Google (8.8.8.8, dns.google), Quad9 (9.9.9.9, dns.quad9.net), AdGuard DNS, NextDNS, OpenDNS, Control D и Mullvad DNS.",
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-doh.srs",
       "counts": {
         "domain": 10,
@@ -3104,7 +3104,7 @@
       "kind": "subnets",
       "recommended_action": "proxy",
       "title": "Облачные хостинги (VPS) — IP-подсети Oracle Cloud, Vultr, Linode (Akamai), Scaleway и GCore",
-      "description": "[Маршрут: В Прокси / VPN] Сводные IPv4/IPv6-подсети популярных зарубежных облачных провайдеров и VPS-хостингов: Oracle Cloud (AS31898), Vultr / Constant (AS20473), Linode / Akamai Connected Cloud (AS63949), Scaleway / Online.net (AS12876) и GCore Labs (AS199524), диапазоны которых массово блокируются или ограничиваются на ТСПУ в РФ (в дополнение к спискам Hetzner, OVH и DigitalOcean).",
+      "description": "[Маршрут: В Прокси / VPN] Сводные IPv4/IPv6-подсети популярных зарубежных облачных провайдеров и VPS-хостингов: Oracle Cloud (AS31898), Vultr / Constant (AS20473), Linode / Akamai Connected Cloud (AS63949), Scaleway / Online.net (AS12876) и GCore Labs (AS199524) в дополнение к спискам Hetzner, OVH и DigitalOcean.",
       "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/vps_clouds.srs",
       "counts": {
         "domain": 0,
@@ -3181,8 +3181,8 @@
       "group": "other",
       "kind": "domains",
       "recommended_action": "proxy",
-      "title": "СМИ и новости — заблокированные независимые информационные издания и медиа",
-      "description": "[Маршрут: В Прокси / VPN или Обход DPI] Независимые российские и мировые новостные агентства, издания и аналитические порталы, заблокированные в РФ (Meduza, BBC, DW, Euronews, Радио Свобода и др.).",
+      "title": "СМИ и новости — зарубежные и независимые информационные издания и медиа",
+      "description": "[Маршрут: В Прокси / VPN или Desync] Зарубежные и международные новостные агентства, издания и аналитические порталы.",
       "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/news.srs",
       "counts": {
         "domain": 0,
@@ -3208,7 +3208,7 @@
       "kind": "domains",
       "recommended_action": "proxy",
       "title": "Торренты и трекеры — RuTracker, Rutor, NNM-Club, Kinozal, LostFilm, Nyaa",
-      "description": "[Маршрут: В Обход DPI (Desync / Zapret) или Прокси] Торрент-трекеры, индексаторы и публичные анонсеры: RuTracker, Rutor, NNM-Club, Kinozal, Rustorka, Tapochek, LostFilm, The Pirate Bay, 1337x, YTS и Nyaa.",
+      "description": "[Маршрут: В Desync / Zapret или Прокси] Торрент-трекеры, индексаторы и публичные анонсеры: RuTracker, Rutor, NNM-Club, Kinozal, Rustorka, Tapochek, LostFilm, The Pirate Bay, 1337x, YTS и Nyaa.",
       "fallback_srs": "https://raw.githubusercontent.com/hydraponique/roscomvpn-geosite/master/release/sing-box/torrent.srs",
       "counts": {
         "domain": 0,
@@ -3234,7 +3234,7 @@
       "kind": "domains",
       "recommended_action": "proxy",
       "title": "Tor и анонимайзеры — проект Tor, мосты, I2P, Freenet и Psiphon",
-      "description": "[Маршрут: В Прокси / VPN] Домены и узлы Tor Project (torproject.org), каталогов мостов, I2P, Tails, Whonix и инструментов обхода цензуры.",
+      "description": "[Маршрут: В Прокси / VPN] Домены и узлы Tor Project (torproject.org), каталогов мостов, оверлейных сетей I2P, Tails и Whonix.",
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-tor.srs",
       "counts": {
         "domain": 0,
@@ -3260,7 +3260,7 @@
       "kind": "domains",
       "recommended_action": "proxy",
       "title": "Сайты 18+ (Adult) — Pornhub, XVideos, xHamster, OnlyFans, Fansly, Chaturbate",
-      "description": "[Маршрут: В Прокси / VPN или Обход DPI] Крупнейшие сайты для взрослых, видео-CDN и платформы подписок 18+, заблокированные в РФ или требующие авторизацию через ВК.",
+      "description": "[Маршрут: В Прокси / VPN или Desync] Крупнейшие сайты категории 18+, видео-CDN и платформы подписок с региональными ограничениями доступа.",
       "fallback_srs": "https://github.com/itdoginfo/allow-domains/releases/latest/download/porn.srs",
       "counts": {
         "domain": 3,
@@ -3312,7 +3312,7 @@
       "kind": "domains",
       "recommended_action": "proxy",
       "title": "Зарубежный шопинг и маркетплейсы — iHerb, Amazon, eBay, Poizon (Dewu), StockX, Farfetch, ASOS и IKEA",
-      "description": "[Маршрут: Только в Прокси / VPN — блокировка РКН и геоблок] Иностранные интернет-магазины, витамины и фэшн-платформы: iHerb (iherb.com — заблокирован РКН), Amazon (amazon.com), eBay (ebay.com), китайский маркетплейс оригинальных кроссовок и брендов Poizon / Dewu (dewu.com, poizon.com), StockX, GOAT, Chrono24, Farfetch, ASOS, Yoox, Net-a-Porter, Nike, Adidas, Uniqlo, Zara и IKEA.",
+      "description": "[Маршрут: Только в Прокси / VPN — региональные ограничения и геоблок] Иностранные интернет-магазины и маркетплейсы: iHerb (iherb.com), Amazon (amazon.com), eBay (ebay.com), маркетплейс Poizon / Dewu (dewu.com, poizon.com), StockX, GOAT, Chrono24, Farfetch, ASOS, Yoox, Net-a-Porter, Nike, Adidas, Uniqlo, Zara и IKEA.",
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/amazon.srs",
       "counts": {
         "domain": 0,
@@ -3338,7 +3338,7 @@
       "kind": "domains",
       "recommended_action": "proxy",
       "title": "Обучение, курсы и IT-платформы — Coursera, Udemy, Quizlet, Duolingo, LeetCode, Kaggle и edX",
-      "description": "[Маршрут: В Прокси / VPN] Образовательные платформы, языковые сервисы и тренажёры для программистов: Coursera (coursera.org), Udemy (udemy.com), edX, Udacity, Khan Academy, карточки для запоминания слов Quizlet (quizlet.com — заблокирован РКН), Duolingo (duolingo.com), Babbel, Busuu, AnkiWeb, а также алгоритмические и Data Science платформы LeetCode (leetcode.com), Kaggle (kaggle.com), HackerRank, Codewars и freeCodeCamp.",
+      "description": "[Маршрут: В Прокси / VPN] Образовательные платформы, языковые сервисы и тренажёры для программистов: Coursera (coursera.org), Udemy (udemy.com), edX, Udacity, Khan Academy, карточки для запоминания слов Quizlet (quizlet.com), Duolingo (duolingo.com), Babbel, Busuu, AnkiWeb, а также алгоритмические и Data Science платформы LeetCode (leetcode.com), Kaggle (kaggle.com), HackerRank, Codewars и freeCodeCamp.",
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/coursera.srs",
       "counts": {
         "domain": 0,
@@ -3390,7 +3390,7 @@
       "kind": "domains",
       "recommended_action": "proxy",
       "title": "Спорт, велотрекеры и фитнес — Strava, Garmin Connect, Zwift, Komoot, Flashscore, F1 TV и UFC",
-      "description": "[Маршрут: Только в Прокси / VPN] Спортивные трекеры, умные часы, велостанки и результаты матчей: Strava (strava.com — закрыла доступ и синхронизацию тренировок с российских IP), Garmin Connect (garmin.com, connect.garmin.com), виртуальный велотренажёр Zwift (zwift.com), велонавигатор Komoot, Wahoo, Whoop, MyFitnessPal, результаты матчей Flashscore (flashscore.com — заблокирован РКН), Sofascore, Transfermarkt, F1 TV, UFC Fight Pass, NBA и NHL.",
+      "description": "[Маршрут: Только в Прокси / VPN] Спортивные трекеры, умные часы, велостанки и результаты матчей: Strava (strava.com), Garmin Connect (garmin.com, connect.garmin.com), виртуальный велотренажёр Zwift (zwift.com), велонавигатор Komoot, Wahoo, Whoop, MyFitnessPal, результаты матчей Flashscore (flashscore.com), Sofascore, Transfermarkt, F1 TV, UFC Fight Pass, NBA и NHL.",
       "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/sports_fitness.srs",
       "counts": {
         "domain": 0,

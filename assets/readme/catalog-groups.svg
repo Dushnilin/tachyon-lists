@@ -2,7 +2,7 @@
      width="1200" height="480" viewBox="0 0 1200 480"
      role="img" aria-labelledby="title desc">
   <title id="title">Витрина 143 категорий списков маршрутизации по группам</title>
-  <desc id="desc">Сетка из 9 тематических групп каталога tachyon-lists: Региональные и РКН (10), Прямой маршрут Direct (6), Нейросети и ИИ (15), Видео, музыка и медиа (17), Соцсети и звонки (10), Игры и лаунчеры (33), Разработка, CDN и облака (29), Финтех, шопинг и блокировка (18), Системные гео-базы (5).</desc>
+  <desc id="desc">Сетка из 9 тематических групп каталога tachyon-lists: Региональные маршруты (10), Прямой маршрут Direct (6), Нейросети и ИИ (15), Видео, музыка и медиа (17), Соцсети и звонки (10), Игры и лаунчеры (33), Разработка, CDN и облака (29), Финтех, шопинг и блокировка (18), Системные гео-базы (5).</desc>
 
   <rect width="1200" height="480" rx="16" fill="#141415"/>
   <rect x="0.5" y="0.5" width="1199" height="479" rx="15.5" fill="none" stroke="#2e2e32" stroke-width="1"/>
@@ -11,13 +11,13 @@
   <!-- Group 1: Regional -->
   <g transform="translate(24, 24)">
     <rect x="0" y="0" width="368" height="136" rx="12" fill="#19191b" stroke="#2e2e32" stroke-width="1"/>
-    <text x="20" y="28" fill="#ededed" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="16" font-weight="500">Региональные и РКН · 10</text>
+    <text x="20" y="28" fill="#ededed" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="16" font-weight="500">Региональные маршруты · 10</text>
     <circle cx="304" cy="23" r="3" fill="#38bdf8"/>
     <text x="314" y="27" fill="#a1a1a6" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">Proxy</text>
     <text x="20" y="56" fill="#a1a1a6" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">russia_inside · geoblock · block</text>
     <text x="20" y="76" fill="#a1a1a6" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">ru_blocked · antifilter · refilter</text>
     <text x="20" y="96" fill="#a1a1a6" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">russia_outside · ukraine · belarus</text>
-    <text x="20" y="120" fill="#85858b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">Обход ТСПУ, реестра РКН и геоблока по IP</text>
+    <text x="20" y="120" fill="#85858b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">Региональная маршрутизация и внешние шлюзы</text>
   </g>
 
   <!-- Group 2: Direct -->
