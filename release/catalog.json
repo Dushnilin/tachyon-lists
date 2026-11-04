@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-11-04T06:09:48Z",
+  "generated_at": "2026-11-04T14:26:14Z",
   "repository": "https://github.com/Dushnilin/tachyon-lists",
   "total_lists": 143,
   "lists": [
@@ -118,10 +118,10 @@
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-ru-blocked-all.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 1580549,
+        "domain_suffix": 1587639,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 908,
+        "ipv4_cidr": 916,
         "ipv6_cidr": 4
       },
       "files": {
@@ -131,8 +131,8 @@
         "domains": "release/domains/ru_blocked_all.lst",
         "subnets": "release/subnets/ru_blocked_all.lst"
       },
-      "sha256_trs": "50aa0149fba2f00bfeb9b0364ed69f09917eb43148378e9fff5a9366a9ab5827",
-      "sha256_srs": "55a54c343edda75451d29921d67143a260d39b705934d8f8b52ed4f80320e106"
+      "sha256_trs": "3e614a688a142451bc5cc8d4954ab5eddee1acd08efa368c661adf787ae23fdf",
+      "sha256_srs": "0579e52ec84950bfb687ab0f719b4a301916d01c16e9bb127d1205e8c9a58908"
     },
     {
       "id": "antifilter",
@@ -147,7 +147,7 @@
         "domain_suffix": 421,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 908,
+        "ipv4_cidr": 916,
         "ipv6_cidr": 4
       },
       "files": {
@@ -303,7 +303,7 @@
         "domain_suffix": 890,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 36687,
+        "ipv4_cidr": 36604,
         "ipv6_cidr": 89
       },
       "files": {
@@ -3420,7 +3420,7 @@
       "fallback_srs": "https://github.com/zxc-rv/ad-filter/releases/latest/download/adlist.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 211654,
+        "domain_suffix": 247633,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -3433,8 +3433,8 @@
         "domains": "release/domains/ads_hagezi_pro.lst",
         "subnets": null
       },
-      "sha256_trs": "cce23d20e21782c1cfaf6ad5c52d5b06f6f8bd6781aae44c0b737b3beae201ef",
-      "sha256_srs": "35bca58efdd664500d21d601eb9495d976101e14bc4263df299cbd294c6770a9"
+      "sha256_trs": "fd647e52485e40a710081e78082d8a6373fd10a3a7ac6422feb7dc061a46c5a0",
+      "sha256_srs": "ea3452833d8b325a320b3fb85b154da324773f8bc244a18a6e17ec25c101fe1a"
     },
     {
       "id": "android_ads_block",
