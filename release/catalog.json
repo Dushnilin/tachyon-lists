@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-11-03T23:17:08Z",
+  "generated_at": "2026-11-04T06:09:48Z",
   "repository": "https://github.com/Dushnilin/tachyon-lists",
   "total_lists": 143,
   "lists": [
@@ -3277,8 +3277,8 @@
         "domains": "release/domains/porn.lst",
         "subnets": null
       },
-      "sha256_trs": "fddae10adaf10345e9f228048c9bd3e5ca3308c1671f14d35a5a520db25e93b7",
-      "sha256_srs": "9a4a79ddba0acb7a797abbefc3db2e617fcc02c12d89d0964b5ef2f1a6441e06"
+      "sha256_trs": "419c9190d51a55cfc130eb1353289301991b9f6249714616ed2bf6a012ac64f5",
+      "sha256_srs": "04205ee9817423fa681f54ae97b1e6d23a5e20e26b7bfc53057c80716c5cf7e5"
     },
     {
       "id": "travel_booking",
@@ -3628,7 +3628,7 @@
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ru.srs",
       "counts": {
         "domain": 3,
-        "domain_suffix": 889,
+        "domain_suffix": 890,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -3641,8 +3641,8 @@
         "domains": "release/domains/geosite_ru.lst",
         "subnets": null
       },
-      "sha256_trs": "fb2212632e40c39e82133094d3b4526109e48d15088244b54b8b8a85cd71cadf",
-      "sha256_srs": "6cdbd671cbd2f227305e2fbeb9fd8cf1126ab07a6b8b4ef55e5b59dc0ebc9b94"
+      "sha256_trs": "4339c7db3c80ac004344909ad46cd776b713d70dc6a83e66c68c6304d96603fa",
+      "sha256_srs": "f1a7b398937dab93d1d786f2058def6d7708fba5b43a3bc3d0eaa2ac8bc3b677"
     },
     {
       "id": "geoip_ru",
