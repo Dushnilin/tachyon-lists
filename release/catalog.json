@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-11-04T23:39:12Z",
+  "generated_at": "2026-11-05T06:38:04Z",
   "repository": "https://github.com/Dushnilin/tachyon-lists",
   "total_lists": 143,
   "lists": [
@@ -3657,8 +3657,8 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 12987,
-        "ipv6_cidr": 12170
+        "ipv4_cidr": 13069,
+        "ipv6_cidr": 12175
       },
       "files": {
         "trs": "release/tachyon/geoip_ru.trs",
@@ -3667,8 +3667,8 @@
         "domains": null,
         "subnets": "release/subnets/geoip_ru.lst"
       },
-      "sha256_trs": "004dddff60efc7c55697ecc604ff64896298d6dcf1ba0b73da68c7b1458d72c8",
-      "sha256_srs": "4d5b3b41ca642b774579f1ad45e2685b660d468cd67781283a9334ec36851fb8"
+      "sha256_trs": "52a2d27dc1e23ae36fd55516ced96b8ee0d0a702c86d0b0008bde6bf86d38cb9",
+      "sha256_srs": "13720c4aeaa226fb24350513c9fde2f39476da87065c7c331fe555ed63e940c4"
     },
     {
       "id": "geoip_us",
@@ -3683,8 +3683,8 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 126927,
-        "ipv6_cidr": 134361
+        "ipv4_cidr": 127237,
+        "ipv6_cidr": 132246
       },
       "files": {
         "trs": "release/tachyon/geoip_us.trs",
@@ -3693,8 +3693,8 @@
         "domains": null,
         "subnets": "release/subnets/geoip_us.lst"
       },
-      "sha256_trs": "b6f972fa2d5ae8be420f7f493a505e963c3e1bc00f30bca87aa0ad7d1b8abd49",
-      "sha256_srs": "8ddeb64291c290a3317afc2ef08130d2783d68dd7f5ebe2016124d830a0a20c0"
+      "sha256_trs": "be4555640cdcf4b0daf409adfa7df804207ff35edab5963ea56830138d3982a5",
+      "sha256_srs": "1b5f7f8c6dc248db3504a0aef9fd376c49314d2110d19c2adec418b5f2a8a987"
     },
     {
       "id": "geoip_cn",
@@ -3709,8 +3709,8 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 6183,
-        "ipv6_cidr": 3479
+        "ipv4_cidr": 6190,
+        "ipv6_cidr": 3457
       },
       "files": {
         "trs": "release/tachyon/geoip_cn.trs",
@@ -3719,8 +3719,8 @@
         "domains": null,
         "subnets": "release/subnets/geoip_cn.lst"
       },
-      "sha256_trs": "79e80971755f0b5d960764c475fd0cf2a2d4ae24c40661955f7891bfb1983801",
-      "sha256_srs": "9d33183caf8792ac184290226d54ce4842cea608ec8e5373a3229a3210ac62c5"
+      "sha256_trs": "6a793dcb1f0d1f504dcef85d53becbbd3adacbe1513e1f2e9ad4d5128241c752",
+      "sha256_srs": "1c12bd6390a0224b75ed3d281e78a7299993774102ee9d26ba263af299437add"
     }
   ]
 }
