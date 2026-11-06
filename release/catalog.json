@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generated_at": "2026-11-06T06:33:59Z",
+  "generated_at": "2026-11-06T15:17:15Z",
   "repository": "https://github.com/Dushnilin/tachyon-lists",
-  "total_lists": 143,
+  "total_lists": 146,
   "lists": [
     {
       "id": "russia_inside",
@@ -3591,6 +3591,84 @@
       },
       "sha256_trs": "5e5e9732a1e4b9c85fd41d2996f5b87bfd8b4c4d04796e880c2e9baf24daef38",
       "sha256_srs": "7c7c9afe6e792cacf5bf4341fa70163e9fb8c99ea7a616f24c723ef73d804b57"
+    },
+    {
+      "id": "et_spamhaus_block",
+      "group": "block",
+      "kind": "subnets",
+      "recommended_action": "block",
+      "title": "Emerging Threats, Spamhaus DROP и Feodo C2 (Block) — базовая IP-защита от ботнетов и угона подсетей",
+      "description": "[Маршрут: Блокировать (Block)] Базовый исходящий IP-фильтр сетевых угроз без ложных срабатываний (аналог профилей threat, etcompromised, spamhaus, feodo и dshield в banIP): управляющие C2-серверы ботнетов Abuse.ch Feodo Tracker, скомпрометированные узлы Emerging Threats (ET Block & Compromised), похищенные подсети Spamhaus DROP / eDROP и активные сканеры SANS DShield.",
+      "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/et_spamhaus_block.srs",
+      "counts": {
+        "domain": 0,
+        "domain_suffix": 0,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 2317,
+        "ipv6_cidr": 84
+      },
+      "files": {
+        "trs": "release/tachyon/et_spamhaus_block.trs",
+        "srs": "release/sing-box/et_spamhaus_block.srs",
+        "json": "release/json/et_spamhaus_block.json",
+        "domains": null,
+        "subnets": "release/subnets/et_spamhaus_block.lst"
+      },
+      "sha256_trs": "66e769517f4219323b05a9071042771fbfbcfbccc060153964b9d2adbc76a483",
+      "sha256_srs": "24bc1046e8e2910b720670203543bc82bf355e66d28cfdd384a1078202c4a4eb"
+    },
+    {
+      "id": "hagezi_tif_ip_block",
+      "group": "block",
+      "kind": "subnets",
+      "recommended_action": "block",
+      "title": "HaGeZi Threat Intelligence IP и FireHOL Webclient (Block) — IP-адреса вредоносного ПО, C2 и фишинга",
+      "description": "[Маршрут: Блокировать (Block)] Расширенный исходящий список опасных IP-адресов и подсетей (аналог профилей hagezi и webclient в banIP): серверы распространения вредоносного ПО, крипто-дрейнеров, троянов, командные узлы C2 и вредоносные веб-узлы по данным HaGeZi Threat Intelligence IP Feed и FireHOL Webclient. Блокирует прямое подключение по IP даже при обращениях мимо системного DNS.",
+      "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/hagezi_tif_ip_block.srs",
+      "counts": {
+        "domain": 0,
+        "domain_suffix": 0,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 30860,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/hagezi_tif_ip_block.trs",
+        "srs": "release/sing-box/hagezi_tif_ip_block.srs",
+        "json": "release/json/hagezi_tif_ip_block.json",
+        "domains": null,
+        "subnets": "release/subnets/hagezi_tif_ip_block.lst"
+      },
+      "sha256_trs": "03c1a3e5ed4e6e8892e9bad9ed5c7d9bbfd15538cb9d997016269fa3ac6fcb5a",
+      "sha256_srs": "4aa5b4f08be726c344630abab20546f7fe2f54b20a8337990d6c896ed77ba416"
+    },
+    {
+      "id": "botnet_attackers_ip_block",
+      "group": "block",
+      "kind": "subnets",
+      "recommended_action": "block",
+      "title": "IPsum, CINS Army и Binary Defense (Block) — активные ботнеты, сканеры уязвимостей и брутфорс-узлы",
+      "description": "[Маршрут: Блокировать (Block)] Сводный список IP-адресов с подтверждённой вредоносной активностью по данным десятков независимых сенсоров и ханипотов (аналог профилей ipsum, cinsscore и binarydefense в banIP): IPsum (Level 3+), CINS Army (Sentinel IPS) и Binary Defense ATIF.",
+      "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/botnet_attackers_ip_block.srs",
+      "counts": {
+        "domain": 0,
+        "domain_suffix": 0,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 20152,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/botnet_attackers_ip_block.trs",
+        "srs": "release/sing-box/botnet_attackers_ip_block.srs",
+        "json": "release/json/botnet_attackers_ip_block.json",
+        "domains": null,
+        "subnets": "release/subnets/botnet_attackers_ip_block.lst"
+      },
+      "sha256_trs": "df5e27c5bf10f2fbbeccc5bc16e3a87cf3915c8a3d4bb695b1be6f6b30933bfd",
+      "sha256_srs": "62b01ede34c514c685dc0bb06ec4708c5753948b52631699d3cfc3b7c749b838"
     },
     {
       "id": "google_meet",

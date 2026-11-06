@@ -14,7 +14,9 @@
     "metacubex_geosite": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite",
     "metacubex_geoip": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip",
     "rock12_warzone": "https://raw.githubusercontent.com/rock12/clash-warzone-rules/main",
-    "hagezi_wildcard": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard"
+    "hagezi_wildcard": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard",
+    "hagezi_ips": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/ips",
+    "firehol_ipsets": "https://raw.githubusercontent.com/firehol/blocklist-ipsets/master"
   },
   "lists": [
     {
@@ -3300,6 +3302,87 @@
         {
           "type": "singbox_json",
           "url": "{metacubex_geosite}/category-telemetry.json"
+        }
+      ]
+    },
+    {
+      "id": "et_spamhaus_block",
+      "group": "block",
+      "kind": "subnets",
+      "recommended_action": "block",
+      "title": "Emerging Threats, Spamhaus DROP и Feodo C2 (Block) — базовая IP-защита от ботнетов и угона подсетей",
+      "description": "[Маршрут: Блокировать (Block)] Базовый исходящий IP-фильтр сетевых угроз без ложных срабатываний (аналог профилей threat, etcompromised, spamhaus, feodo и dshield в banIP): управляющие C2-серверы ботнетов Abuse.ch Feodo Tracker, скомпрометированные узлы Emerging Threats (ET Block & Compromised), похищенные подсети Spamhaus DROP / eDROP и активные сканеры SANS DShield.",
+      "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/et_spamhaus_block.srs",
+      "sources": [
+        {
+          "type": "plain_subnets",
+          "url": "https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt"
+        },
+        {
+          "type": "plain_subnets",
+          "url": "https://rules.emergingthreats.net/blockrules/compromised-ips.txt"
+        },
+        {
+          "type": "plain_subnets",
+          "url": "https://feodotracker.abuse.ch/downloads/ipblocklist.txt"
+        },
+        {
+          "type": "plain_subnets",
+          "url": "https://www.spamhaus.org/drop/drop.txt"
+        },
+        {
+          "type": "plain_subnets",
+          "url": "https://www.spamhaus.org/drop/dropv6.txt"
+        },
+        {
+          "type": "plain_subnets",
+          "url": "{firehol_ipsets}/spamhaus_edrop.netset"
+        },
+        {
+          "type": "plain_subnets",
+          "url": "{firehol_ipsets}/dshield.netset"
+        }
+      ]
+    },
+    {
+      "id": "hagezi_tif_ip_block",
+      "group": "block",
+      "kind": "subnets",
+      "recommended_action": "block",
+      "title": "HaGeZi Threat Intelligence IP и FireHOL Webclient (Block) — IP-адреса вредоносного ПО, C2 и фишинга",
+      "description": "[Маршрут: Блокировать (Block)] Расширенный исходящий список опасных IP-адресов и подсетей (аналог профилей hagezi и webclient в banIP): серверы распространения вредоносного ПО, крипто-дрейнеров, троянов, командные узлы C2 и вредоносные веб-узлы по данным HaGeZi Threat Intelligence IP Feed и FireHOL Webclient. Блокирует прямое подключение по IP даже при обращениях мимо системного DNS.",
+      "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/hagezi_tif_ip_block.srs",
+      "sources": [
+        {
+          "type": "plain_subnets",
+          "url": "{hagezi_ips}/tif.txt"
+        },
+        {
+          "type": "plain_subnets",
+          "url": "{firehol_ipsets}/firehol_webclient.netset"
+        }
+      ]
+    },
+    {
+      "id": "botnet_attackers_ip_block",
+      "group": "block",
+      "kind": "subnets",
+      "recommended_action": "block",
+      "title": "IPsum, CINS Army и Binary Defense (Block) — активные ботнеты, сканеры уязвимостей и брутфорс-узлы",
+      "description": "[Маршрут: Блокировать (Block)] Сводный список IP-адресов с подтверждённой вредоносной активностью по данным десятков независимых сенсоров и ханипотов (аналог профилей ipsum, cinsscore и binarydefense в banIP): IPsum (Level 3+), CINS Army (Sentinel IPS) и Binary Defense ATIF.",
+      "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/botnet_attackers_ip_block.srs",
+      "sources": [
+        {
+          "type": "plain_subnets",
+          "url": "https://raw.githubusercontent.com/stamparm/ipsum/master/levels/3.txt"
+        },
+        {
+          "type": "plain_subnets",
+          "url": "https://cinsscore.com/list/ci-badguys.txt"
+        },
+        {
+          "type": "plain_subnets",
+          "url": "https://www.binarydefense.com/banlist.txt"
         }
       ]
     },

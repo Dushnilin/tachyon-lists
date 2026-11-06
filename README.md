@@ -5,7 +5,7 @@
 <p align="center">
   <a href="https://github.com/Dushnilin/tachyon-lists/actions/workflows/build.yml"><img src="https://github.com/Dushnilin/tachyon-lists/actions/workflows/build.yml/badge.svg" alt="Build &amp; Publish Tachyon Lists"></a>
   <a href="https://github.com/Dushnilin/tachyon-lists/releases/tag/latest"><img src="https://img.shields.io/badge/release-latest%20(auto%206h)-38bdf8?labelColor=19191b" alt="Latest Release"></a>
-  <a href="./release/catalog.json"><img src="https://img.shields.io/badge/lists-143%20categories-232325?labelColor=19191b" alt="143 Categories"></a>
+  <a href="./release/catalog.json"><img src="https://img.shields.io/badge/lists-146%20categories-232325?labelColor=19191b" alt="146 Categories"></a>
   <a href="./sources.json"><img src="https://img.shields.io/badge/upstreams-8%20repos%20%2B%20custom-232325?labelColor=19191b" alt="8 Upstreams + Custom"></a>
 </p>
 
@@ -76,13 +76,13 @@
 **Локальная сборка и кастомизация (`custom/`):**
 
 ```bash
-python3 build_lists.py                                             # Полная сборка всех 143 категорий
+python3 build_lists.py                                             # Полная сборка всех 146 категорий
 python3 build_lists.py --only ru_whitelist geoblock ai_all         # Выборочная пересборка
 ```
 
 - `custom/domains/<id>.lst` — добавить свои домены (`domain_suffix`) в категорию `<id>`.
 - `custom/subnets/<id>.lst` — добавить свои IPv4/IPv6 CIDR в категорию `<id>`.
-- `custom/exclude/<id>.lst` — принудительно вырезать домены из категории `<id>` до компиляции.
+- `custom/exclude/<id>.lst` — принудительно вырезать домены или IP/CIDR-подсети из категории `<id>` до компиляции.
 
 </details>
 
@@ -220,6 +220,9 @@ python3 build_lists.py --only ru_whitelist geoblock ai_all         # Выбор�
 | `ads_hagezi_pro` | `block` | `domains` | `zxc-rv/ad-filter/releases/latest/download/adlist.srs` | `zxc-rv/ad-filter` → `adlist.srs` |
 | `win_spy` | `block` | `domains` | `roscomvpn_geosite_srs/win-spy.srs` + `metacubex_geosite/win-spy.json` | `roscomvpn` → `win-spy.srs` |
 | `xiaomi_smarttv_ads` | `block` | `domains` | `runetfreedom_geosite_srs/geosite-{xiaomi@ads,samsung@ads}.srs` + `metacubex_geosite/{xiaomi@ads,samsung@ads,apple@ads}.json` + `custom/domains/xiaomi_smarttv_ads.lst` | `runetfreedom` → `geosite-xiaomi@ads.srs` |
+| `et_spamhaus_block` | `block` | `subnets` | `emergingthreats/{emerging-Block-IPs,compromised-ips}.txt` + `feodotracker/ipblocklist.txt` + `spamhaus/{drop,dropv6}.txt` + `firehol_ipsets/{spamhaus_edrop,dshield}.netset` | `tachyon-lists` → `et_spamhaus_block.srs` |
+| `hagezi_tif_ip_block` | `block` | `subnets` | `hagezi_ips/tif.txt` + `firehol_ipsets/firehol_webclient.netset` | `tachyon-lists` → `hagezi_tif_ip_block.srs` |
+| `botnet_attackers_ip_block` | `block` | `subnets` | `stamparm/ipsum/levels/3.txt` + `cinsscore/ci-badguys.txt` + `binarydefense/banlist.txt` | `tachyon-lists` → `botnet_attackers_ip_block.srs` |
 | `google_meet` | `internal` | `mixed` | `itdoginfo_srs/google_meet.srs` | `itdoginfo` → `google_meet.srs` |
 | `geosite_ru` | `internal` | `domains` | `roscomvpn_geosite_srs/category-ru.srs` + `metacubex_geosite/category-ru.json` | `MetaCubeX` → `category-ru.srs` |
 | `geoip_ru` | `internal` | `subnets` | `metacubex_geoip/ru.json` | `MetaCubeX` → `geoip/ru.srs` |
@@ -231,15 +234,15 @@ python3 build_lists.py --only ru_whitelist geoblock ai_all         # Выбор�
 ---
 
 <p align="center">
-  <img src="./assets/readme/section-catalog.svg" width="100%" alt="04 — Каталог списков и маршрутов (138 основных + 5 системных)">
+  <img src="./assets/readme/section-catalog.svg" width="100%" alt="04 — Каталог списков и маршрутов (141 основная + 5 системных)">
 </p>
 
 <p align="center">
-  <img src="./assets/readme/catalog-groups.svg" width="100%" alt="Витрина 143 категорий списков маршрутизации по 9 тематическим группам">
+  <img src="./assets/readme/catalog-groups.svg" width="100%" alt="Витрина 146 категорий списков маршрутизации по 9 тематическим группам">
 </p>
 
 <details>
-<summary><b>Полная таблица 138 основных списков (описания, счётчики доменов/подсетей и прямые ссылки — автообновление 6ч)</b></summary>
+<summary><b>Полная таблица 141 основного списка (описания, счётчики доменов/подсетей и прямые ссылки — автообновление 6ч)</b></summary>
 
 <br>
 
@@ -384,6 +387,9 @@ python3 build_lists.py --only ru_whitelist geoblock ai_all         # Выбор�
 | `gambling_block` | **Казино, букмекеры и слоты (Block) — блокировка 1xBet, Stake, Melbet, Vulkan, Pin-Up и азартных игр**<br><sub>[Маршрут: Блокировать (Block)] Полная база онлайн-казино, нелегальных букмекеров, крипто-рулеток, слотов и их тысяч зеркал (Hagezi Gambling Medium + СНГ-казино: 1xBet, Melbet, Mostbet, Pin-Up, Vulkan, Vavada, Joycasino, Azino777, Stake, 1win, DragonMoney, Up-X и др.), агрессивно всплывающих на пиратских киносайтах.</sub> | `Block` | `179,463` | `0` | [`.trs`](release/tachyon/gambling_block.trs) · [`.srs`](release/sing-box/gambling_block.srs) · [`.json`](release/json/gambling_block.json) · [`.lst`](release/domains/gambling_block.lst) |
 | `phishing_malware_block` | **Фишинг, скам, крипто-дрейнеры и вредоносные сайты (Block) — защита без поломки кэшбэка**<br><sub>[Маршрут: Блокировать (Block)] Специализированный список блокировки фишинговых копий Steam / Telegram / Госуслуг / банков, телефонных мошенников, крипто-дрейнеров, ботнетов и вредоносных доменов (Hagezi Threat Intelligence Feeds Mini + Fake/Scam). Идеален для тех, кто не хочет включать полный AdBlock, чтобы не ломать реферальные ссылки и кэшбэк-сервисы, но хочет защитить домашнюю сеть от скама и вирусов.</sub> | `Block` | `194,287` | `0` | [`.trs`](release/tachyon/phishing_malware_block.trs) · [`.srs`](release/sing-box/phishing_malware_block.srs) · [`.json`](release/json/phishing_malware_block.json) · [`.lst`](release/domains/phishing_malware_block.lst) |
 | `telemetry_mobile_block` | **Телеметрия Apple, Android, Huawei/Realme и мобильных SDK (Block) — AppsFlyer, Adjust, Branch и стучалки ОС**<br><sub>[Маршрут: Блокировать (Block)] Блокировка встроенной системной телеметрии смартфонов Apple iOS/macOS, Huawei EMUI/HarmonyOS, Realme/OPPO ColorOS, Vivo OriginOS, Amazon FireOS, а также самых навязчивых рекламных и трекинговых мобильных SDK внутри приложений (AppsFlyer, Adjust, Branch.io, Kochava, Singular, AppLovin, Unity Ads, IronSource, Vungle, Mintegral).</sub> | `Block` | `1,602` | `0` | [`.trs`](release/tachyon/telemetry_mobile_block.trs) · [`.srs`](release/sing-box/telemetry_mobile_block.srs) · [`.json`](release/json/telemetry_mobile_block.json) · [`.lst`](release/domains/telemetry_mobile_block.lst) |
+| `et_spamhaus_block` | **Emerging Threats, Spamhaus DROP и Feodo C2 (Block) — базовая IP-защита от ботнетов и угона подсетей**<br><sub>[Маршрут: Блокировать (Block)] Базовый исходящий IP-фильтр сетевых угроз без ложных срабатываний (аналог профилей threat, etcompromised, spamhaus, feodo и dshield в banIP): управляющие C2-серверы ботнетов Abuse.ch Feodo Tracker, скомпрометированные узлы Emerging Threats (ET Block & Compromised), похищенные подсети Spamhaus DROP / eDROP и активные сканеры SANS DShield.</sub> | `Block` | `0` | `2,401` | [`.trs`](release/tachyon/et_spamhaus_block.trs) · [`.srs`](release/sing-box/et_spamhaus_block.srs) · [`.json`](release/json/et_spamhaus_block.json) · [`subnets`](release/subnets/et_spamhaus_block.lst) |
+| `hagezi_tif_ip_block` | **HaGeZi Threat Intelligence IP и FireHOL Webclient (Block) — IP-адреса вредоносного ПО, C2 и фишинга**<br><sub>[Маршрут: Блокировать (Block)] Расширенный исходящий список опасных IP-адресов и подсетей (аналог профилей hagezi и webclient в banIP): серверы распространения вредоносного ПО, крипто-дрейнеров, троянов, командные узлы C2 и вредоносные веб-узлы по данным HaGeZi Threat Intelligence IP Feed и FireHOL Webclient. Блокирует прямое подключение по IP даже при обращениях мимо системного DNS.</sub> | `Block` | `0` | `30,860` | [`.trs`](release/tachyon/hagezi_tif_ip_block.trs) · [`.srs`](release/sing-box/hagezi_tif_ip_block.srs) · [`.json`](release/json/hagezi_tif_ip_block.json) · [`subnets`](release/subnets/hagezi_tif_ip_block.lst) |
+| `botnet_attackers_ip_block` | **IPsum, CINS Army и Binary Defense (Block) — активные ботнеты, сканеры уязвимостей и брутфорс-узлы**<br><sub>[Маршрут: Блокировать (Block)] Сводный список IP-адресов с подтверждённой вредоносной активностью по данным десятков независимых сенсоров и ханипотов (аналог профилей ipsum, cinsscore и binarydefense в banIP): IPsum (Level 3+), CINS Army (Sentinel IPS) и Binary Defense ATIF.</sub> | `Block` | `0` | `20,152` | [`.trs`](release/tachyon/botnet_attackers_ip_block.trs) · [`.srs`](release/sing-box/botnet_attackers_ip_block.srs) · [`.json`](release/json/botnet_attackers_ip_block.json) · [`subnets`](release/subnets/botnet_attackers_ip_block.lst) |
 <!-- CATALOG_TABLE_END -->
 
 </details>

@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg"
      width="1200" height="480" viewBox="0 0 1200 480"
      role="img" aria-labelledby="title desc">
-  <title id="title">Витрина 143 категорий списков маршрутизации по группам</title>
-  <desc id="desc">Сетка из 9 тематических групп каталога tachyon-lists: Региональные маршруты (10), Прямой маршрут Direct (6), Нейросети и ИИ (15), Видео, музыка и медиа (17), Соцсети и звонки (10), Игры и лаунчеры (33), Разработка, CDN и облака (29), Финтех, шопинг и блокировка (18), Системные гео-базы (5).</desc>
+  <title id="title">Витрина 146 категорий списков маршрутизации по группам</title>
+  <desc id="desc">Сетка из 9 тематических групп каталога tachyon-lists: Региональные маршруты (10), Прямой маршрут Direct (6), Нейросети и ИИ (15), Видео, музыка и медиа (17), Соцсети и звонки (10), Игры и лаунчеры (33), Разработка, CDN и облака (29), Финтех, шопинг и блокировка (21), Системные гео-базы (5).</desc>
 
   <rect width="1200" height="480" rx="16" fill="#141415"/>
   <rect x="0.5" y="0.5" width="1199" height="479" rx="15.5" fill="none" stroke="#2e2e32" stroke-width="1"/>
@@ -97,13 +97,13 @@
   <!-- Group 8: Other & Block -->
   <g transform="translate(416, 320)">
     <rect x="0" y="0" width="368" height="136" rx="12" fill="#19191b" stroke="#2e2e32" stroke-width="1"/>
-    <text x="20" y="28" fill="#ededed" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="16" font-weight="500">Финтех, шопинг и блок · 18</text>
+    <text x="20" y="28" fill="#ededed" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="16" font-weight="500">Финтех, шопинг и блок · 21</text>
     <circle cx="262" cy="23" r="3" fill="#e5484d"/>
     <text x="272" y="27" fill="#a1a1a6" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">Proxy/Block</text>
     <text x="20" y="56" fill="#a1a1a6" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">crypto · paypal · travel · shopping · edtech</text>
-    <text x="20" y="76" fill="#a1a1a6" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">android_ads_block · ads_hagezi · gambling</text>
-    <text x="20" y="96" fill="#a1a1a6" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">phishing_malware · telemetry_mobile</text>
-    <text x="20" y="120" fill="#85858b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">win_spy · xiaomi_smarttv_ads · sports · tor</text>
+    <text x="20" y="76" fill="#a1a1a6" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">ads_hagezi · android_ads · gambling · phishing</text>
+    <text x="20" y="96" fill="#a1a1a6" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">et_spamhaus · hagezi_tif_ip · botnet_attackers</text>
+    <text x="20" y="120" fill="#85858b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">win_spy · xiaomi_smarttv · telemetry_mobile</text>
   </g>
 
   <!-- Group 9: Internal System -->

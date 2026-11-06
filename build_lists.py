@@ -371,14 +371,29 @@ def parse_plain_domains(text: str) -> RuleBucket:
     return bucket
 
 
+def _is_bogon_or_private(net: ipaddress.IPv4Network | ipaddress.IPv6Network) -> bool:
+    return (
+        net.prefixlen == 0
+        or net.is_private
+        or net.is_loopback
+        or net.is_link_local
+        or net.is_multicast
+        or net.is_reserved
+        or net.is_unspecified
+    )
+
+
 def parse_plain_subnets(text: str) -> RuleBucket:
     bucket = RuleBucket()
     for raw_line in text.splitlines():
-        line = raw_line.split("#", 1)[0].strip()
+        line = raw_line.split("#", 1)[0].split(";", 1)[0].strip()
         if not line:
             continue
+        token = line.split()[0]
         try:
-            net = ipaddress.ip_network(line, strict=False)
+            net = ipaddress.ip_network(token, strict=False)
+            if _is_bogon_or_private(net):
+                continue
             bucket.ip_cidr.add(str(net))
         except ValueError:
             continue
@@ -432,10 +447,29 @@ def parse_clash_yaml(text: str) -> RuleBucket:
     return bucket
 
 
+def _exclude_networks(
+    nets: list[Any],
+    excludes: list[Any],
+) -> list[str]:
+    current = list(ipaddress.collapse_addresses(nets))
+    for ex in ipaddress.collapse_addresses(excludes):
+        next_nets = []
+        for net in current:
+            if not net.overlaps(ex):
+                next_nets.append(net)
+            elif ex.supernet_of(net):
+                continue
+            else:
+                next_nets.extend(net.address_exclude(ex))
+        current = next_nets
+    return [str(n) for n in ipaddress.collapse_addresses(current)]
+
+
 def optimize_bucket(
     bucket: RuleBucket,
     kind: str,
     exclude_domains: set[str] | None = None,
+    exclude_cidrs: set[str] | None = None,
 ) -> tuple[list[str], list[str], list[str], list[str], list[str], list[str]]:
     """
     Deduplicate, prune redundant subdomains covered by parent domain_suffix,
@@ -443,6 +477,7 @@ def optimize_bucket(
     Returns (domain, domain_suffix, domain_keyword, domain_regex, ipv4_cidrs, ipv6_cidrs).
     """
     ex = exclude_domains or set()
+    ex_cidrs = exclude_cidrs or set()
 
     raw_suffixes = {d for d in bucket.domain_suffix if d and d not in ex}
     raw_domains = {d for d in bucket.domain if d and d not in ex}
@@ -480,6 +515,8 @@ def optimize_bucket(
     for cidr in bucket.ip_cidr:
         try:
             net = ipaddress.ip_network(cidr, strict=False)
+            if _is_bogon_or_private(net):
+                continue
             if isinstance(net, ipaddress.IPv4Network):
                 v4_nets.append(net)
             else:
@@ -487,8 +524,20 @@ def optimize_bucket(
         except ValueError:
             continue
 
-    collapsed_v4 = [str(n) for n in ipaddress.collapse_addresses(v4_nets)]
-    collapsed_v6 = [str(n) for n in ipaddress.collapse_addresses(v6_nets)]
+    ex_v4: list[ipaddress.IPv4Network] = []
+    ex_v6: list[ipaddress.IPv6Network] = []
+    for cidr in ex_cidrs:
+        try:
+            net = ipaddress.ip_network(cidr, strict=False)
+            if isinstance(net, ipaddress.IPv4Network):
+                ex_v4.append(net)
+            else:
+                ex_v6.append(net)
+        except ValueError:
+            continue
+
+    collapsed_v4 = _exclude_networks(v4_nets, ex_v4) if ex_v4 else [str(n) for n in ipaddress.collapse_addresses(v4_nets)]
+    collapsed_v6 = _exclude_networks(v6_nets, ex_v6) if ex_v6 else [str(n) for n in ipaddress.collapse_addresses(v6_nets)]
 
     return (
         sorted(pruned_domains),
@@ -1004,15 +1053,25 @@ def build_all(only_ids: set[str] | None = None) -> int:
             bucket.merge(parse_plain_subnets(custom_sub_file.read_text(encoding="utf-8")))
 
         exclude_domains: set[str] = set()
+        exclude_cidrs: set[str] = set()
         custom_exc_file = CUSTOM_DIR / "exclude" / f"{lid}.lst"
         if custom_exc_file.is_file():
-            for line in custom_exc_file.read_text(encoding="utf-8").splitlines():
-                d = clean_domain(line.split("#", 1)[0])
+            for raw_line in custom_exc_file.read_text(encoding="utf-8").splitlines():
+                entry = raw_line.split("#", 1)[0].split(";", 1)[0].strip()
+                if not entry:
+                    continue
+                try:
+                    net = ipaddress.ip_network(entry, strict=False)
+                    exclude_cidrs.add(str(net))
+                    continue
+                except ValueError:
+                    pass
+                d = clean_domain(entry)
                 if d:
                     exclude_domains.add(d)
 
         domains, suffixes, keywords, regexes, v4_cidrs, v6_cidrs = optimize_bucket(
-            bucket, kind, exclude_domains
+            bucket, kind, exclude_domains, exclude_cidrs
         )
 
         # Build sing-box source rule-set v3
