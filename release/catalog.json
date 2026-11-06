@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-11-05T19:55:07Z",
+  "generated_at": "2026-11-06T06:33:59Z",
   "repository": "https://github.com/Dushnilin/tachyon-lists",
   "total_lists": 143,
   "lists": [
@@ -3524,7 +3524,7 @@
       "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/gambling_block.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 179504,
+        "domain_suffix": 179463,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -3537,8 +3537,8 @@
         "domains": "release/domains/gambling_block.lst",
         "subnets": null
       },
-      "sha256_trs": "a924645491a3fd4a496f4d61e4acb0987e07be26b85bb179e10f09d74a90c5c3",
-      "sha256_srs": "59c5da2c8518ad455faa0031f5e5e45087132a76a1805795a8d1dad5a37e36b1"
+      "sha256_trs": "c03b40f47758f5557f4d5505b7c2fc359fe8710296a7fc6051cad76b5df8a2cf",
+      "sha256_srs": "28004b7d4f84f3ee2428ee904a89093a722edac915325968ef1ac4c45493fd1f"
     },
     {
       "id": "phishing_malware_block",
@@ -3550,7 +3550,7 @@
       "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/phishing_malware_block.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 194870,
+        "domain_suffix": 194287,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -3563,8 +3563,8 @@
         "domains": "release/domains/phishing_malware_block.lst",
         "subnets": null
       },
-      "sha256_trs": "5ee47353684341113ce40f9e2de8eb2109cb03f06f390b6fccd4abf5fa71c62e",
-      "sha256_srs": "5d54d007e0aaddce97dcffbbe7db9d983df29d718667e0167e5081ca79c61b02"
+      "sha256_trs": "2532fa7a68ae1e6feeeb9b71020d3ae7e335e25e5943615195f7ada3c45514da",
+      "sha256_srs": "1ba5d3e32451c5e44814ef3a7c80513bf42b9fc3e9728dd9db5a2c9cfd251f56"
     },
     {
       "id": "telemetry_mobile_block",
