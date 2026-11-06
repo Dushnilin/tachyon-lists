@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-11-06T15:23:38Z",
+  "generated_at": "2026-11-06T19:20:41Z",
   "repository": "https://github.com/Dushnilin/tachyon-lists",
   "total_lists": 146,
   "lists": [
@@ -3082,7 +3082,7 @@
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-doh.srs",
       "counts": {
         "domain": 10,
-        "domain_suffix": 3556,
+        "domain_suffix": 3554,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 28,
@@ -3095,8 +3095,8 @@
         "domains": "release/domains/doh_dot_dns.lst",
         "subnets": "release/subnets/doh_dot_dns.lst"
       },
-      "sha256_trs": "6fddcb8a7f1b90988ddfddc338673de5a26b8ac9f6a13f081f4be7c04a8275d9",
-      "sha256_srs": "40eca29701b8c3efc18477515e17748ebfff35490fd4c67418c68811d7c352f4"
+      "sha256_trs": "7afc1121984e08532bce9db64a3d0cae8c37cdced4677219fcfc034da8a763f4",
+      "sha256_srs": "324b28c024e573cd481f38eee48437035324c3c99756b598bd042ba449f8eab8"
     },
     {
       "id": "vps_clouds",
@@ -3524,7 +3524,7 @@
       "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/gambling_block.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 175154,
+        "domain_suffix": 141938,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -3537,8 +3537,8 @@
         "domains": "release/domains/gambling_block.lst",
         "subnets": null
       },
-      "sha256_trs": "135d1f05b4ab99b7190780c81a7b37b92e234242167b7c157521c953dc86fc8b",
-      "sha256_srs": "93d6feace7ae87dee4cc8ff56f5ed53ce607c238ac559bd6042165bcf249be3c"
+      "sha256_trs": "9078fda6e8d6f616930ba5c654ccb3fbe71394a5c9e8804272a48f2ce5c89902",
+      "sha256_srs": "6583c8e99a1f6f173cdf25fcad7114cd4f7652689f45efc5097809cf51e3cceb"
     },
     {
       "id": "phishing_malware_block",
@@ -3550,7 +3550,7 @@
       "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/phishing_malware_block.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 194804,
+        "domain_suffix": 195387,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -3563,8 +3563,8 @@
         "domains": "release/domains/phishing_malware_block.lst",
         "subnets": null
       },
-      "sha256_trs": "a11424dcfad2b9977fe7c421b713b02198b124741f90d332803a662e21ea7bfd",
-      "sha256_srs": "a1662b5658e0e01f4487530b8a80751161fcdd8be8b80d5df376288577278cf0"
+      "sha256_trs": "0ea3a11aa34a0da14bb94d9d55d1aaf57aae083ff2b8f9b4579323514b238d7d",
+      "sha256_srs": "af959cbee25ca6789f9f9044c19f561d4e314621e04d160d5d1cb31adc8e1cfb"
     },
     {
       "id": "telemetry_mobile_block",
@@ -3605,7 +3605,7 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 2317,
+        "ipv4_cidr": 2318,
         "ipv6_cidr": 84
       },
       "files": {
@@ -3615,8 +3615,8 @@
         "domains": null,
         "subnets": "release/subnets/et_spamhaus_block.lst"
       },
-      "sha256_trs": "66e769517f4219323b05a9071042771fbfbcfbccc060153964b9d2adbc76a483",
-      "sha256_srs": "24bc1046e8e2910b720670203543bc82bf355e66d28cfdd384a1078202c4a4eb"
+      "sha256_trs": "ae1bfc8a78309c0a98a4e82d8b35b193d030e6e041c5c82c84dfc9149fd92249",
+      "sha256_srs": "4b2f857b83749fa5bdf090f5138ad1627ebc73146922eb2a63bb84b499d07690"
     },
     {
       "id": "hagezi_tif_ip_block",
@@ -3631,7 +3631,7 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 30860,
+        "ipv4_cidr": 30861,
         "ipv6_cidr": 0
       },
       "files": {
@@ -3641,8 +3641,8 @@
         "domains": null,
         "subnets": "release/subnets/hagezi_tif_ip_block.lst"
       },
-      "sha256_trs": "03c1a3e5ed4e6e8892e9bad9ed5c7d9bbfd15538cb9d997016269fa3ac6fcb5a",
-      "sha256_srs": "4aa5b4f08be726c344630abab20546f7fe2f54b20a8337990d6c896ed77ba416"
+      "sha256_trs": "729c9b92adf24bf3cdb55f1633c3d4dda8596382f3da31c78608be0acf002495",
+      "sha256_srs": "857f8a5c4801b7c2bf6055eafea62c0d49a703e48bdccaf347dbeeab9d94aaf5"
     },
     {
       "id": "botnet_attackers_ip_block",
@@ -3657,7 +3657,7 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 20152,
+        "ipv4_cidr": 20309,
         "ipv6_cidr": 0
       },
       "files": {
@@ -3667,8 +3667,8 @@
         "domains": null,
         "subnets": "release/subnets/botnet_attackers_ip_block.lst"
       },
-      "sha256_trs": "df5e27c5bf10f2fbbeccc5bc16e3a87cf3915c8a3d4bb695b1be6f6b30933bfd",
-      "sha256_srs": "62b01ede34c514c685dc0bb06ec4708c5753948b52631699d3cfc3b7c749b838"
+      "sha256_trs": "c661a5ff3d53512e46b937b1e15ec40c36ecf270782c45ca9379edd15fb42776",
+      "sha256_srs": "972fee3a31e52d3889910b78dba00dbec11f87758c02cf7624c8facad25a46c4"
     },
     {
       "id": "google_meet",
