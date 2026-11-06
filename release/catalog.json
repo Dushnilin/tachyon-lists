@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-11-06T15:17:15Z",
+  "generated_at": "2026-11-06T15:23:38Z",
   "repository": "https://github.com/Dushnilin/tachyon-lists",
   "total_lists": 146,
   "lists": [
@@ -118,10 +118,10 @@
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-ru-blocked-all.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 1587644,
+        "domain_suffix": 1591831,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 934,
+        "ipv4_cidr": 931,
         "ipv6_cidr": 4
       },
       "files": {
@@ -131,8 +131,8 @@
         "domains": "release/domains/ru_blocked_all.lst",
         "subnets": "release/subnets/ru_blocked_all.lst"
       },
-      "sha256_trs": "bd07f1a5afa60dbbf8d5b9ae89dea5fb0ae65d2e752a4b4e199bba97bc070209",
-      "sha256_srs": "49b713dc87f35127fdd9ff98f0167dfdf2a7d6935d5df92269c8ce4c61bb4f6a"
+      "sha256_trs": "c4b059520a4c94a9cc4336cd71dffb0bbe98196bedf60c826ea5f65ddbaa638f",
+      "sha256_srs": "e13274d1ae376e2b3fd9bf64832d8b79efba7b781f6ca8744ea66b7e13e42f76"
     },
     {
       "id": "antifilter",
@@ -147,7 +147,7 @@
         "domain_suffix": 421,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 934,
+        "ipv4_cidr": 931,
         "ipv6_cidr": 4
       },
       "files": {
@@ -303,7 +303,7 @@
         "domain_suffix": 890,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 36607,
+        "ipv4_cidr": 36641,
         "ipv6_cidr": 89
       },
       "files": {
@@ -3082,7 +3082,7 @@
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-doh.srs",
       "counts": {
         "domain": 10,
-        "domain_suffix": 3559,
+        "domain_suffix": 3556,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 28,
@@ -3095,8 +3095,8 @@
         "domains": "release/domains/doh_dot_dns.lst",
         "subnets": "release/subnets/doh_dot_dns.lst"
       },
-      "sha256_trs": "a766b33f35489a7179705f1d08f3621346d344552a554b0aa63c7e0d64502dd2",
-      "sha256_srs": "73bfececd697c6d598a0de3c3f78eafaaab91e3c920fefbf86257bcd523126f9"
+      "sha256_trs": "6fddcb8a7f1b90988ddfddc338673de5a26b8ac9f6a13f081f4be7c04a8275d9",
+      "sha256_srs": "40eca29701b8c3efc18477515e17748ebfff35490fd4c67418c68811d7c352f4"
     },
     {
       "id": "vps_clouds",
@@ -3420,7 +3420,7 @@
       "fallback_srs": "https://github.com/zxc-rv/ad-filter/releases/latest/download/adlist.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 239457,
+        "domain_suffix": 223470,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -3433,8 +3433,8 @@
         "domains": "release/domains/ads_hagezi_pro.lst",
         "subnets": null
       },
-      "sha256_trs": "40ea4cf11c898c084dbe17057ba4c792495026a61140ed58b714c0f5c59e0961",
-      "sha256_srs": "665882f5e6e507c7ea3d7c20f26fb17ee7c79b8da102e69e4f419d3f669a3dc4"
+      "sha256_trs": "a7372cb217cff097af406cf664f343e4195f373987f81ac88ba528c4676c6271",
+      "sha256_srs": "985b39c08db7c222a4afa86fb81a39d20df912efa61225c856062bff1cd80379"
     },
     {
       "id": "android_ads_block",
@@ -3524,7 +3524,7 @@
       "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/gambling_block.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 179463,
+        "domain_suffix": 175154,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -3537,8 +3537,8 @@
         "domains": "release/domains/gambling_block.lst",
         "subnets": null
       },
-      "sha256_trs": "c03b40f47758f5557f4d5505b7c2fc359fe8710296a7fc6051cad76b5df8a2cf",
-      "sha256_srs": "28004b7d4f84f3ee2428ee904a89093a722edac915325968ef1ac4c45493fd1f"
+      "sha256_trs": "135d1f05b4ab99b7190780c81a7b37b92e234242167b7c157521c953dc86fc8b",
+      "sha256_srs": "93d6feace7ae87dee4cc8ff56f5ed53ce607c238ac559bd6042165bcf249be3c"
     },
     {
       "id": "phishing_malware_block",
@@ -3550,7 +3550,7 @@
       "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/phishing_malware_block.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 194287,
+        "domain_suffix": 194804,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -3563,8 +3563,8 @@
         "domains": "release/domains/phishing_malware_block.lst",
         "subnets": null
       },
-      "sha256_trs": "2532fa7a68ae1e6feeeb9b71020d3ae7e335e25e5943615195f7ada3c45514da",
-      "sha256_srs": "1ba5d3e32451c5e44814ef3a7c80513bf42b9fc3e9728dd9db5a2c9cfd251f56"
+      "sha256_trs": "a11424dcfad2b9977fe7c421b713b02198b124741f90d332803a662e21ea7bfd",
+      "sha256_srs": "a1662b5658e0e01f4487530b8a80751161fcdd8be8b80d5df376288577278cf0"
     },
     {
       "id": "telemetry_mobile_block",
