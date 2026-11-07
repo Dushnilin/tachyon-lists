@@ -11,6 +11,8 @@
         "copilot-workspace.githubnext.com",
         "copilotprodattachments.blob.core.windows.net",
         "geminiweb-pa.clients.google.com",
+        "http-intake.logs.us5.datadoghq.com",
+        "o1158394.ingest.us.sentry.io",
         "o33249.ingest.sentry.io",
         "o33249.ingest.us.sentry.io",
         "openai.qualtrics.com",
