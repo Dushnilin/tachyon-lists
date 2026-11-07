@@ -4,7 +4,8 @@
     {
       "domain": [
         "copilot-telemetry-service.githubusercontent.com",
-        "copilot-telemetry.githubusercontent.com"
+        "copilot-telemetry.githubusercontent.com",
+        "production-copilot-host-westus.webpubsub.azure.com"
       ],
       "domain_suffix": [
         "bingapis.com",
