@@ -14,19 +14,29 @@ aan.amazon.it
 aax-apse-dtb-mobile-events.amazon-adsystem.com
 aax-apse-dtb-mobile.amazon-adsystem.com
 aax-apse-dtb-web.amazon-adsystem.com
+aax-audio.amazon-adsystem.amazon.com
 aax-audio.amazon-adsystem.com
 aax-beta-us-east.axp.amazon-adsystem.com
+aax-cpm.amazon-adsystem.amazon.com
 aax-cpm.amazon-adsystem.com
 aax-dtb-cf.amazon-adsystem.amazon.com
 aax-dtb-cf.amazon-adsystem.com
+aax-dtb-legacy.amazon-adsystem.amazon.com
 aax-dtb-legacy.amazon-adsystem.com
+aax-dtb-mobile-bids-geo.amazon-adsystem.amazon.com
 aax-dtb-mobile-bids-geo.amazon-adsystem.com
+aax-dtb-mobile-events.amazon-adsystem.amazon.com
 aax-dtb-mobile-events.amazon-adsystem.com
 aax-dtb-mobile-geo.amazon-adsystem.amazon.com
 aax-dtb-mobile-geo.amazon-adsystem.com
+aax-dtb-mobile.amazon-adsystem.amazon.com
 aax-dtb-mobile.amazon-adsystem.com
+aax-dtb-web-bids-geo.amazon-adsystem.amazon.com
 aax-dtb-web-bids-geo.amazon-adsystem.com
+aax-dtb-web-geo-aax.amazon-adsystem.amazon.com
+aax-dtb-web-geo.amazon-adsystem.amazon.com
 aax-dtb-web-geo.amazon-adsystem.com
+aax-dtb-web.amazon-adsystem.amazon.com
 aax-dtb-web.amazon-adsystem.com
 aax-eu-dtb-mobile-events.amazon-adsystem.com
 aax-eu-dtb-mobile.amazon-adsystem.com
@@ -43,11 +53,11 @@ aax-fe-sin.amazon-adsystem.com
 aax-fe.amazon-adsystem.com
 aax-gamma-us-east.axp.amazon-adsystem.com
 aax-ott-c2s.amazon-adsystem.com
+aax-ott-sdk.amazon-adsystem.amazon.com
 aax-ott-sdk.amazon-adsystem.com
 aax-ott.amazon-adsystem.amazon.com
 aax-ott.amazon-adsystem.com
 aax-us-east-1-ott.amazon-adsystem.amazon.com
-aax-us-east-dtb-mobile-events.amazon-adsystem.com
 aax-us-east-dtb-mobile.amazon-adsystem.com
 aax-us-east-dtb.amazon-adsystem.com
 aax-us-east-ott.amazon-adsystem.com
@@ -70,6 +80,7 @@ aax-us-west-dtb-mobile.amazon-adsystem.com
 aax-us-west-ott-events.amazon-adsystem.com
 aax-us-west-ott.amazon-adsystem.com
 aax-us-west-rtb.amazon-adsystem.com
+aax-us.amazon-adsystem.amazon.com
 aax-us.amazon-adsystem.com
 aax-vx-api-us-east-1.amazon-adsystem.com
 aax-vx-api-us-west-2.amazon-adsystem.com
@@ -176,9 +187,11 @@ adx-op-fr.heytapmobile.com
 adx-op-in.heytapmobile.com
 adx-op-ru.heytapmobile.com
 adx-op-sg.heytapmobile.com
+adx-u-in-heytapmobile-a-9ae47.in-s01.cngw.heytapmobile.com
 adx-u-in.heytapmobile.com
 adx-u-ru.heytapmobile.com
 adx-u-sg.heytapmobile.com
+adx-union-sg.heytapmobile.com
 adxh3-op-sg.heytapmobile.com
 adxlog-adnet.vivo.com.cn
 adxu-bigo-sg.heytapmobile.com
@@ -199,7 +212,6 @@ alogs.umeng.com
 alogus.umeng.com
 alt1-3ps.amazon-adsystem.com
 amplitude.com
-analytics-events.apple.com
 analytics-stage.wildberries.ru
 analytics.163.com
 analytics.cloud.unity3d.com
@@ -295,7 +307,6 @@ assoc-amazon.jp
 assoc-msdk-cn.amazon-adsystem.com
 assoc-msdk-eu.amazon-adsystem.com
 assoc-msdk-us.amazon-adsystem.com
-at-us-east.amazon-adsystem.com
 atfe.amazon-adsystem.com
 atue.amazon-adsystem.com
 auk.unity3d.com
@@ -304,6 +315,7 @@ aviary.amazon.com
 aviary.amazon.de
 az.appstore.vivo.com.cn
 badjs.weixinbridge.com
+base.api.my7v.com
 bdapi-ads-sg.heytapmobile.com
 beacon.cdn.qq.com
 beacon.qq.com
@@ -464,9 +476,6 @@ cloudi-in.browser.heytapmobile.com
 cloudi-sg.browser.heytapmobile.com
 cloudi-th.browser.heytapmobile.com
 cloudi-vn.browser.heytapmobile.com
-cn-zh-ort-stsdk.vivoglobal.com
-cn-zh-prt-stsdk.vivoglobal.com
-cn-zh-stsdk.vivoglobal.com
 cname-ali-asia-stsdk.vivoglobal.com
 cname-asia-comonrt-stsdk.vivoglobal.com
 cname-asia-st-exappupgrade.vivoglobal.com
@@ -567,9 +576,15 @@ databeacon.apple.com
 datacollection.apple.com
 datacollector-dra.dt.dbankcloud.cn
 datacollector-dre.dt.dbankcloud.cn
+dc-conf-o.api.leiniao.com
+dc-conf-t.api.leiniao.com
 dc-dragate-cn.heytapmobi.com
 dc-dragate-sg.heytapmobile.com
+dc-o.api.leiniao.com
 dc-stat-in.heytapmobile.com
+dc-t.api.leiniao.com
+dc-uo.api.leiniao.com
+dc-ut.api.leiniao.com
 dc.applicationinsights.azure.com
 dc.heytapmobile.com
 dc.services.visualstudio.com
@@ -613,7 +628,6 @@ dt.dbankcloud.ru
 dt.hicloud.com
 dt.hihonorcloud.com
 dualstack-logs.amap.com
-dz1dt3wqswdezgx4j2ryem5iad.apple.com
 e.stat.ykimg.com
 eap-log-in.allawnos.com
 eap-log-sg.allawnos.com
@@ -626,12 +640,12 @@ eu-api-stsdk.vivoglobal.com
 eu-cota.vivoglobal.com
 eu-domaincfg.vivoglobal.com
 eu-errup.vivoglobal.com
+eu-nrt-stsdk.vivoglobal.com
 eu-onrt-stsdk.vivoglobal.com
 eu-ort-stsdk.vivoglobal.com
 eu-p.vivoglobal.com
 eu-pnrt-stsdk.vivoglobal.com
 eu-romsp-unifyconfig.vivoglobal.com
-eu-st-exappupgrade.vivoglobal.com
 eu-st-sl.vivoglobal.com
 eu-stsdk.vivoglobal.com
 eu-timesync.vivoglobal.com
@@ -678,7 +692,6 @@ file-intl-push.heytapdl.com
 finosfin.com
 firebaselogging-pa.googleapis.com
 firebaselogging.googleapis.com
-flirfvysba2opz0zmzqs5iuiad.apple.com
 fls-cn.amazon-adsystem.com
 fls-cn.amazon.cn
 fls-eu.amazon-adsystem.com
@@ -820,7 +833,6 @@ in-ad-mkt-vivofs.vivoglobal.com
 in-adlog.vivoglobal.com
 in-adreq.vivoglobal.com
 in-adsjssdk.vivoglobal.com
-in-analyzer-appstore.vivoglobal.com
 in-api-stsdk.vivoglobal.com
 in-apponrt-stsdk.vivoglobal.com
 in-apport-stsdk.vivoglobal.com
@@ -879,7 +891,6 @@ ironsource.mobi
 ironsrc.com
 kochava.com
 kraken-measurements.s3-external-1.amazonaws.com
-kz-album-api.vivoglobal.com
 kz-cname-sin01-bigdata.vivoglobal.com
 kz-cota.vivoglobal.com
 kz-err-up.vivoglobal.com
@@ -952,12 +963,9 @@ maws-aax-apse-rtb-adx.amazon-adsystem.com
 maws-aax-apse-rtb.amazon-adsystem.com
 maws-aax-eu-rtb-adx.amazon-adsystem.com
 maws-aax-eu-rtb.amazon-adsystem.com
-maws-aax-eu.amazon-adsystem.com
-maws-aax-fe.amazon-adsystem.com
 maws-aax-us-east-rtb-adx.amazon-adsystem.com
 maws-aax-us-east-rtb.amazon-adsystem.com
 maws-aax-us-east-test4.amazon-adsystem.com
-maws-aax-us-east.amazon-adsystem.com
 maws-aax-us-pdx-rtb.amazon-adsystem.com
 mbdlog.iqiyi.com
 mc.yandex.com
@@ -1127,7 +1135,6 @@ mx-vcode-od.vivoglobal.com
 mx-vcode-or.vivoglobal.com
 nebula-collector.huawei.com
 nelreports.net
-news-analytics-events.apple.com
 news-app-events.apple.com
 news-events.apple.com
 news-notification-events.apple.com
@@ -1194,7 +1201,6 @@ openlocation-drcn.platform.dbankcloud.com
 opex-service-eu.allawnos.com
 opex-service-in.allawnos.com
 opex-service-sg.allawnos.com
-origin-s.amazon-adsystem.com
 origin-sq-tungsten-ts.amazon-adsystem.com
 ort-stsdk.vivoglobal.com
 ostorage-ocloud-in.allawnos.com
@@ -1216,7 +1222,6 @@ phonesubmissions.apple.com
 pimlog.baidu.com
 plbslog.umeng.com
 pnrt-stsdk.vivoglobal.com
-podcasts-analytics-events.apple.com
 prd-usw2-requestattribution-iad.apple.com
 predragate.dc.oppomobile.com
 pri1-3ps.amazon-adsystem.com
@@ -1240,6 +1245,8 @@ ps-jp.amazon-adsystem.com
 ps-us.amazon-adsystem.com
 push-dc-us.heytapmobile.com
 push.heytapmobile.com
+qms-report-o.api.leiniao.com
+qms-report-t.api.leiniao.com
 qwapi.com
 radarsubmissions.apple.com
 radarsubmissions.apple.com.akadns.net
@@ -1376,7 +1383,6 @@ sponsored-ads-eu.amazon.ae
 sponsored-ads-eu.amazon.com.be
 sponsored-ads-eu.amazon.com.tr
 sponsored-ads-eu.amazon.de
-sponsored-ads-eu.amazon.eg
 sponsored-ads-eu.amazon.ie
 sponsored-ads-eu.amazon.nl
 sponsored-ads-eu.amazon.pl
@@ -1398,7 +1404,6 @@ sponsored-ads.amazon.eg
 sponsored-ads.amazon.es
 sponsored-ads.amazon.fr
 sponsored-ads.amazon.in
-sponsored-ads.amazon.in.alphionsee.in
 sponsored-ads.amazon.it
 sponsored-ads.amazon.sa
 sponsored-ads.amazon.sg
@@ -1450,6 +1455,7 @@ tr-onrt-stsdk.vivoglobal.com
 tr-ort-stsdk.vivoglobal.com
 tr-p.vivoglobal.com
 tr-pnrt-stsdk.vivoglobal.com
+tr-prt-stsdk.vivoglobal.com
 tr-romsp-unifyconfig.vivoglobal.com
 tr-st-sl.vivoglobal.com
 tr-st-sysupgrade.vivoglobal.com
@@ -1474,7 +1480,6 @@ trackingprd.hwwt8.com
 trackserver.shuxinyc.com
 ts-gamma.amazon-adsystem.com
 ts.amazon-adsystem.com
-tv-analytics-events.apple.com
 u-id.cpc.heytapmobile.com
 uba.huaweicloud.com
 ubacollect-drcn.cloud.dbankcloud.cn
