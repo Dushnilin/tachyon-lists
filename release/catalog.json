@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-11-08T13:17:55Z",
+  "generated_at": "2026-11-08T21:59:34Z",
   "repository": "https://github.com/Dushnilin/tachyon-lists",
   "total_lists": 146,
   "lists": [
@@ -121,7 +121,7 @@
         "domain_suffix": 1595631,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 934,
+        "ipv4_cidr": 935,
         "ipv6_cidr": 4
       },
       "files": {
@@ -147,7 +147,7 @@
         "domain_suffix": 421,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 934,
+        "ipv4_cidr": 935,
         "ipv6_cidr": 4
       },
       "files": {
@@ -1681,7 +1681,7 @@
         "domain_suffix": 77,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 797,
+        "ipv4_cidr": 804,
         "ipv6_cidr": 8
       },
       "files": {
@@ -1691,8 +1691,8 @@
         "domains": "release/domains/callofduty.lst",
         "subnets": "release/subnets/callofduty.lst"
       },
-      "sha256_trs": "eb3cbb2bc39f8eb1e3e86d272f64b362c2e642cc961e0ebbe7a95631f0572986",
-      "sha256_srs": "e659e7d39c01480f67173ee9dfc40af538932bfdb923c5527293e2e4ce54bb61"
+      "sha256_trs": "98568a1015d05b499979738afd3a69f2de0f78c143d96680d712165782f25565",
+      "sha256_srs": "f8c8b999a0be65c65bc0519c6b1c137ec4ed8d94e9475a52bf4c727741117a8a"
     },
     {
       "id": "riot",
@@ -3657,7 +3657,7 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 20505,
+        "ipv4_cidr": 21557,
         "ipv6_cidr": 0
       },
       "files": {
@@ -3667,8 +3667,8 @@
         "domains": null,
         "subnets": "release/subnets/botnet_attackers_ip_block.lst"
       },
-      "sha256_trs": "c925b1dd2903f89018db2d8fa80a1e1cc4a885e286160f2bf5991161d840e2c9",
-      "sha256_srs": "0db74ff69c3c27c08c453cb010fe6c173c9e1871c44731c6c39751d2b412cfb8"
+      "sha256_trs": "25a3f5f2d03cacf01b2bceeba201c798d7146c5c66f93c9b785c0afe56faf3b4",
+      "sha256_srs": "7c4adc562c3286384b044cd2b4a51a966faf2fb57ba63243017ce1e26c7b5880"
     },
     {
       "id": "google_meet",
