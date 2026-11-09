@@ -221,14 +221,11 @@ analytics.wildberries.ru
 api-adservices.apple.com
 api-cn.cdo.heytapmobi.com
 api-gl.cdo.heytapmobi.com
-api-gl.cdo.heytapmobile.com
-api-id.cdo.heytapmobile.com
 api-id.game.heytapmobi.com
 api-id.game.heytapmobile.com
 api-id.play.heytapmobile.com
 api-id.theme.heytapmobi.com
 api-id.theme.heytapmobile.com
-api-in.cdo.heytapmobile.com
 api.eu-west-1.aiv-delivery.net
 api.us-east-1.aiv-delivery.net
 api.us-west-2.aiv-delivery.net
@@ -347,8 +344,6 @@ browser-sdk-ru.heytapmobile.com
 browser.events.data.msn.cn
 browser.events.data.msn.com
 browsercfg-drcn.cloud.dbankcloud.cn
-browserfiles.heytapmobile.com
-bsf.sc.heytapmobile.com
 bsp-di-in.heytapmobile.com
 btrace.qq.com
 bugly.qq.com
@@ -366,6 +361,7 @@ cdn-d.amazon-adsystem.com
 cdn-t.amazon-adsystem.com
 cdn-xp-ingest-ab.v.aaplimg.com
 cdn-xp-ingest.edge.apple
+cdo.heytapmobile.com
 chartboost.com
 cl-vcode-api.vivoglobal.com
 classify-app-eu.allawnos.com
@@ -506,23 +502,17 @@ collector.xhamster.com
 conf-in-dc.heytapdl.com
 conf-in-dc.heytapmobile.com
 conf-sg-dc.heytapdl.com
-conn-service-cn-01.allawntech.com
 conn-service-cn-03.allawntech.com
 conn-service-cn-04.allawntech.com
 conn-service-cn-05.allawntech.com
 conn-service-cn-07.allawntech.com
 conn-service-cn-08.allawntech.com
-conn-service-eu-01.allawnos.com
-conn-service-eu-02.allawnos.com
 conn-service-eu-03.allawnos.com
 conn-service-eu-04.allawnos.com
 conn-service-eu-05.allawnos.com
 conn-service-eu-07.allawnos.com
 conn-service-eu-08.allawnos.com
 conn-service-gl-01.allawntech.com
-conn-service-gl-03.allawntech.com
-conn-service-gl-04.allawntech.com
-conn-service-in-01.allawnos.com
 conn-service-in-03.allawnos.com
 conn-service-in-04.allawnos.com
 conn-service-in-05.allawnos.com
@@ -891,6 +881,7 @@ ir-nl.amazon-adsystem.com
 ir-uk.amazon-adsystem.com
 ironsource.mobi
 ironsrc.com
+jscatch-sg-frontend.heytapmobile.com
 kochava.com
 kraken-measurements.s3-external-1.amazonaws.com
 kz-cname-sin01-bigdata.vivoglobal.com
@@ -1164,6 +1155,8 @@ obus-conf-in.heytapmobile.com
 obus-conf-sg.heytapmobile.com
 obus-conf-us.heytapmobile.com
 obus-config-cn.heytapmobi.com
+obus-config-in.heytapmobile.com
+obus-config-sg.heytapmobile.com
 obus-dc-eu.heytapmobile.com
 obus-dc-ru.heytapmobile.com
 obus-dc-us.heytapmobile.com
@@ -1189,6 +1182,8 @@ obus-dctech-sg.heytapmobile.com
 obus-dcyitai-cn.heytapmobi.com
 obus-dcyitai-in.heytapmobi.com
 obus-dcyitai-sg.heytapmobile.com
+obus-hid-in.heytapmobile.com
+obus-hid-sg.heytapmobile.com
 obus-jssdk-cn.heytapmobi.com
 obus-jssdk-fr.heytapmobile.com
 obus-jssdk-in.heytapmobile.com
@@ -1199,6 +1194,7 @@ omes-sec.heytapmobi.com
 omes-sec.heytapmobile.com
 omtrdc.net
 onrt-stsdk.vivoglobal.com
+opay.heytapmobile.com
 openlocation-drcn-platform-dbankcloud-com-drcn.appacc.dbankedge.cn
 openlocation-drcn.platform.dbankcloud.com
 opex-service-eu.allawnos.com
@@ -1262,11 +1258,6 @@ rcm-jp.amazon.co.jp
 rcm-na.amazon-adsystem.com
 rcm-uk.amazon.co.uk
 rcm.amazon.com
-report-eu.uc.heytapmobile.com
-report-in.opay.heytapmobile.com
-report-in.uc.heytapmobile.com
-report-sg.opay.heytapmobile.com
-report-sg.uc.heytapmobile.com
 report.diagnostic.networking.aws.dev
 report.qqweb.qq.com
 report.tencentmusic.com
@@ -1330,6 +1321,7 @@ sau-server-in.allawnos.com
 sau-server-sg.allawnos.com
 sau-server-us.allawnos.com
 sbeacon.sina.com.cn
+sc.heytapmobile.com
 scorecardresearch.com
 sea-log-rcv.vansound.com
 searchads.apple.com
@@ -1487,6 +1479,7 @@ ts.amazon-adsystem.com
 u-id.cpc.heytapmobile.com
 uba.huaweicloud.com
 ubacollect-drcn.cloud.dbankcloud.cn
+uc.heytapmobile.com
 uk-timesync.vivoglobal.com
 ulogs.umeng.com
 ulogs.umengcloud.com
