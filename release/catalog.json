@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-11-12T15:05:45Z",
+  "generated_at": "2026-11-12T23:34:18Z",
   "repository": "https://github.com/Dushnilin/tachyon-lists",
   "total_lists": 146,
   "lists": [
@@ -118,7 +118,7 @@
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-ru-blocked-all.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 1605115,
+        "domain_suffix": 1609446,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 926,
@@ -131,8 +131,8 @@
         "domains": "release/domains/ru_blocked_all.lst",
         "subnets": "release/subnets/ru_blocked_all.lst"
       },
-      "sha256_trs": "c328eb4665ac1e801c76139a1731ba2a69cc0f64fda46c3d61887dbf9ab5197f",
-      "sha256_srs": "3fc4dccfba92925abcfe5aeff5a54db1fd69def74813e74c3e0a808215b24792"
+      "sha256_trs": "11d810d0cadf1b33b8e26377686d98d8dde49ecdc58256508072f765bf574cc7",
+      "sha256_srs": "a388bf3d3c1a6895a5a4557e0fc4661ff7dc50594a59f354f0b81a0e014197b7"
     },
     {
       "id": "antifilter",
@@ -3605,7 +3605,7 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 2307,
+        "ipv4_cidr": 2380,
         "ipv6_cidr": 84
       },
       "files": {
@@ -3615,8 +3615,8 @@
         "domains": null,
         "subnets": "release/subnets/et_spamhaus_block.lst"
       },
-      "sha256_trs": "eea0e1501e113cd03b98633f775d1baf0c216536f51385df6ea906479ed31994",
-      "sha256_srs": "548767cc183f36f94ee2dabc4c79fded48dbf441ea4deee8e4043c288c188faa"
+      "sha256_trs": "3c3c35c38f73003472fe59985603e37fecde89fd3dde4f5950c858bd8cb97608",
+      "sha256_srs": "34d092cff0db55782be64fff6a76c962a06441ff520ecf9edb6bc12a22521c69"
     },
     {
       "id": "hagezi_tif_ip_block",
@@ -3657,7 +3657,7 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 21119,
+        "ipv4_cidr": 22252,
         "ipv6_cidr": 0
       },
       "files": {
@@ -3667,8 +3667,8 @@
         "domains": null,
         "subnets": "release/subnets/botnet_attackers_ip_block.lst"
       },
-      "sha256_trs": "b28fd47646e310a98e6be8741e7ba629a2800931a8ebc363dc50a76485636f0d",
-      "sha256_srs": "ac8d4027c1b2da0c6951edca22952cf964b1210f9f37db2f284c52042b50e792"
+      "sha256_trs": "888d4a0be3654896babdd0560da745bdc3bcfb78bbcdd0aba677ec1aa779e7f0",
+      "sha256_srs": "202af4323ebc4d487397ec5016fa487b58e17de962b71bca48ad4b21b944f4d1"
     },
     {
       "id": "google_meet",
