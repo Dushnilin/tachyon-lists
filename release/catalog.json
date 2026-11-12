@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-11-12T00:37:02Z",
+  "generated_at": "2026-11-12T15:05:45Z",
   "repository": "https://github.com/Dushnilin/tachyon-lists",
   "total_lists": 146,
   "lists": [
@@ -118,10 +118,10 @@
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-ru-blocked-all.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 1602203,
+        "domain_suffix": 1605115,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 911,
+        "ipv4_cidr": 926,
         "ipv6_cidr": 4
       },
       "files": {
@@ -131,8 +131,8 @@
         "domains": "release/domains/ru_blocked_all.lst",
         "subnets": "release/subnets/ru_blocked_all.lst"
       },
-      "sha256_trs": "1180cb2542699f70f71438a407635b8d5dc1cb86c1ca279ee49815f9f90a0420",
-      "sha256_srs": "300b89fbd5f52e31add8ac1e9d41c3a3f71c62cd30066d47c80991c772aa2b00"
+      "sha256_trs": "c328eb4665ac1e801c76139a1731ba2a69cc0f64fda46c3d61887dbf9ab5197f",
+      "sha256_srs": "3fc4dccfba92925abcfe5aeff5a54db1fd69def74813e74c3e0a808215b24792"
     },
     {
       "id": "antifilter",
@@ -147,7 +147,7 @@
         "domain_suffix": 421,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 911,
+        "ipv4_cidr": 926,
         "ipv6_cidr": 4
       },
       "files": {
@@ -303,7 +303,7 @@
         "domain_suffix": 892,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 37079,
+        "ipv4_cidr": 37098,
         "ipv6_cidr": 89
       },
       "files": {
@@ -2903,7 +2903,7 @@
         "domain_suffix": 4,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 734,
+        "ipv4_cidr": 832,
         "ipv6_cidr": 79
       },
       "files": {
@@ -2913,8 +2913,8 @@
         "domains": "release/domains/cloudflare.lst",
         "subnets": "release/subnets/cloudflare.lst"
       },
-      "sha256_trs": "9b593bd57cd57af2fa406842f86ce417b6d8cfc11c25a1772b86f6d31394636d",
-      "sha256_srs": "e65f7093c60806d9e16292e58fb8542ca1b5cf7e172ad2731c1ccce1b40058fd"
+      "sha256_trs": "557b7843951d6448fe2936b650b92e896a8af16153a71471ded4d7a382776edc",
+      "sha256_srs": "8922ce9c0fde254dace2eb0edcb34d74df2ce3a749de7c98c5cdf699dea79104"
     },
     {
       "id": "cloudfront",
@@ -2955,8 +2955,8 @@
         "domain_suffix": 7,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 55,
-        "ipv6_cidr": 39
+        "ipv4_cidr": 56,
+        "ipv6_cidr": 40
       },
       "files": {
         "trs": "release/tachyon/fastly.trs",
@@ -3082,7 +3082,7 @@
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-doh.srs",
       "counts": {
         "domain": 10,
-        "domain_suffix": 3541,
+        "domain_suffix": 3544,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 28,
@@ -3095,8 +3095,8 @@
         "domains": "release/domains/doh_dot_dns.lst",
         "subnets": "release/subnets/doh_dot_dns.lst"
       },
-      "sha256_trs": "75f4342127f938c76cc392f35cad6849c597ddf5edf55aabbda04a533b40a604",
-      "sha256_srs": "0778aa8343df6c6fd5e993596ae7f4b710721b3d9fb8403fa4dd6cccaa3d34b9"
+      "sha256_trs": "1cda7577ac2483ad5a02a7940cfb8601888d852cdc610b8776980dd317c1640c",
+      "sha256_srs": "8ede9c9a17b97164f16539e0093865929a52964ca9244eb7a1a6dd3d354b416e"
     },
     {
       "id": "vps_clouds",
@@ -3241,7 +3241,7 @@
         "domain_suffix": 3,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 668,
+        "ipv4_cidr": 695,
         "ipv6_cidr": 0
       },
       "files": {
@@ -3420,7 +3420,7 @@
       "fallback_srs": "https://github.com/zxc-rv/ad-filter/releases/latest/download/adlist.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 223921,
+        "domain_suffix": 223833,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -3433,8 +3433,8 @@
         "domains": "release/domains/ads_hagezi_pro.lst",
         "subnets": null
       },
-      "sha256_trs": "bc9c8e518d6e47e95653432816eff918518d81b7b1be634ad47aac2c0b7a09ee",
-      "sha256_srs": "f5d2db28ca7fdf502235f821f91a2b2a43af05c439b12755d86206aa11819234"
+      "sha256_trs": "2fa59d50dbbe0868f305ccbba3830ad462440c651486bd561a582e09f9833b0a",
+      "sha256_srs": "f44e22ad16aad59624bafa04c21dffebe423d6fa5624630c3747fe183ee64e77"
     },
     {
       "id": "android_ads_block",
@@ -3524,7 +3524,7 @@
       "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/gambling_block.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 93236,
+        "domain_suffix": 92252,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -3537,8 +3537,8 @@
         "domains": "release/domains/gambling_block.lst",
         "subnets": null
       },
-      "sha256_trs": "44bd985acd18799b37604a1b4e9390515e72b9b9d78e7fa58202aee8d3bf9fcf",
-      "sha256_srs": "9db1a3c3c39fc6229b7d6bbee5260b67d02f2fb12e378e5ad5b594a598fe3110"
+      "sha256_trs": "cb425eaec70e2e6c832173c0cea7c63ad72353d4328c76e07e9a905c7b02289e",
+      "sha256_srs": "4705818f1ac30c40a02a55b7f1cf2b687cbd0966397639615261ee61b0fb16b8"
     },
     {
       "id": "phishing_malware_block",
@@ -3550,7 +3550,7 @@
       "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/phishing_malware_block.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 185742,
+        "domain_suffix": 186019,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -3563,8 +3563,8 @@
         "domains": "release/domains/phishing_malware_block.lst",
         "subnets": null
       },
-      "sha256_trs": "1c51e491a2607ae7517f482f3014167dae4eecd063c6e5dc30fd75da8bc49014",
-      "sha256_srs": "e1d1a8dcc01fb9220964a7728890864f9c77f44f2e9d9d449e58065325a0a11e"
+      "sha256_trs": "cd2b8ddc2394d03e3357c6a98c22e1607e969d920947fffd562874f2477cd2f4",
+      "sha256_srs": "53dbdbb6afc90c0524e67173ef6a2d84571e1916dbd365af4c179d81137a42b1"
     },
     {
       "id": "telemetry_mobile_block",
@@ -3605,7 +3605,7 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 2300,
+        "ipv4_cidr": 2307,
         "ipv6_cidr": 84
       },
       "files": {
@@ -3615,8 +3615,8 @@
         "domains": null,
         "subnets": "release/subnets/et_spamhaus_block.lst"
       },
-      "sha256_trs": "efe3b953387f2f07016446a235944cbd81e3213c8c62be2a46950c9084ef2061",
-      "sha256_srs": "bcfa82d95b8c9900253c44a056d4948b56398989c21a6cd039371a1f9f4191c6"
+      "sha256_trs": "eea0e1501e113cd03b98633f775d1baf0c216536f51385df6ea906479ed31994",
+      "sha256_srs": "548767cc183f36f94ee2dabc4c79fded48dbf441ea4deee8e4043c288c188faa"
     },
     {
       "id": "hagezi_tif_ip_block",
@@ -3631,7 +3631,7 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 30972,
+        "ipv4_cidr": 30525,
         "ipv6_cidr": 0
       },
       "files": {
@@ -3641,8 +3641,8 @@
         "domains": null,
         "subnets": "release/subnets/hagezi_tif_ip_block.lst"
       },
-      "sha256_trs": "82dd5eaae876c806d6caa21133a3657cd8fda2a68b9dc68cd971967c15249ac5",
-      "sha256_srs": "836af9c7d7e736b868d8e5ec8780f1e22a9d73576e4c0027418b7646bc680b52"
+      "sha256_trs": "901b373f9b858c1c77fd66965078ec4fecd4b0d881a8006a89a8cd33d2c87c25",
+      "sha256_srs": "4c24e682147ac0d3396abef9ffc63333f29aa66747b24c885776880e5b87c97f"
     },
     {
       "id": "botnet_attackers_ip_block",
@@ -3657,7 +3657,7 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 21466,
+        "ipv4_cidr": 21119,
         "ipv6_cidr": 0
       },
       "files": {
@@ -3667,8 +3667,8 @@
         "domains": null,
         "subnets": "release/subnets/botnet_attackers_ip_block.lst"
       },
-      "sha256_trs": "573c86ca79721880aff97c36b15fe1840be333adf5679ddc304e95f01a1d8923",
-      "sha256_srs": "8851a7600f9738ff0bdf3d0b83b2573c0d68f3d00007530b55ceb1a30b9c4d62"
+      "sha256_trs": "b28fd47646e310a98e6be8741e7ba629a2800931a8ebc363dc50a76485636f0d",
+      "sha256_srs": "ac8d4027c1b2da0c6951edca22952cf964b1210f9f37db2f284c52042b50e792"
     },
     {
       "id": "google_meet",
@@ -3735,8 +3735,8 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 13069,
-        "ipv6_cidr": 12175
+        "ipv4_cidr": 13087,
+        "ipv6_cidr": 12178
       },
       "files": {
         "trs": "release/tachyon/geoip_ru.trs",
@@ -3745,8 +3745,8 @@
         "domains": null,
         "subnets": "release/subnets/geoip_ru.lst"
       },
-      "sha256_trs": "52a2d27dc1e23ae36fd55516ced96b8ee0d0a702c86d0b0008bde6bf86d38cb9",
-      "sha256_srs": "13720c4aeaa226fb24350513c9fde2f39476da87065c7c331fe555ed63e940c4"
+      "sha256_trs": "7619a48face8e0e6eaf4725683ad13a24c6ef19a293b136efcc377d89cd08108",
+      "sha256_srs": "74f7ebb0f8dc480b92912bc820aba802a28dcc61855963b6ae90b43995dc5e21"
     },
     {
       "id": "geoip_us",
@@ -3761,8 +3761,8 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 127237,
-        "ipv6_cidr": 132246
+        "ipv4_cidr": 127348,
+        "ipv6_cidr": 132179
       },
       "files": {
         "trs": "release/tachyon/geoip_us.trs",
@@ -3771,8 +3771,8 @@
         "domains": null,
         "subnets": "release/subnets/geoip_us.lst"
       },
-      "sha256_trs": "be4555640cdcf4b0daf409adfa7df804207ff35edab5963ea56830138d3982a5",
-      "sha256_srs": "1b5f7f8c6dc248db3504a0aef9fd376c49314d2110d19c2adec418b5f2a8a987"
+      "sha256_trs": "7f96ec15e62be21823033de004948e33d45590f02945142a294ea8c1e520da2f",
+      "sha256_srs": "ac2c15966f14b29d3dec0cf748c677e72f9e4e55ef7b23ef156364ed7b9aa94c"
     },
     {
       "id": "geoip_cn",
@@ -3787,8 +3787,8 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 6190,
-        "ipv6_cidr": 3457
+        "ipv4_cidr": 6217,
+        "ipv6_cidr": 3423
       },
       "files": {
         "trs": "release/tachyon/geoip_cn.trs",
@@ -3797,8 +3797,8 @@
         "domains": null,
         "subnets": "release/subnets/geoip_cn.lst"
       },
-      "sha256_trs": "6a793dcb1f0d1f504dcef85d53becbbd3adacbe1513e1f2e9ad4d5128241c752",
-      "sha256_srs": "1c12bd6390a0224b75ed3d281e78a7299993774102ee9d26ba263af299437add"
+      "sha256_trs": "0e3d0145730adf070118e84fa165760c0d5c802043739b1e1e9ff89793502918",
+      "sha256_srs": "de6a7325b51f6de9b771a4964e1764197bad4616686c81f54ce12892dde7f94f"
     }
   ]
 }
