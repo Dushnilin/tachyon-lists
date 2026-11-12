@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-11-11T14:11:37Z",
+  "generated_at": "2026-11-12T00:37:02Z",
   "repository": "https://github.com/Dushnilin/tachyon-lists",
   "total_lists": 146,
   "lists": [
@@ -118,7 +118,7 @@
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-ru-blocked-all.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 1602103,
+        "domain_suffix": 1602203,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 911,
@@ -131,8 +131,8 @@
         "domains": "release/domains/ru_blocked_all.lst",
         "subnets": "release/subnets/ru_blocked_all.lst"
       },
-      "sha256_trs": "e4a91332b5e7b8b1054975b54a35112f6bf3a32b88d8cfc943d3c93c6efd5da2",
-      "sha256_srs": "b39baf9222ee58fe51528b81a504c49cf035bd78c4e4e8c52c466b1c5735b589"
+      "sha256_trs": "1180cb2542699f70f71438a407635b8d5dc1cb86c1ca279ee49815f9f90a0420",
+      "sha256_srs": "300b89fbd5f52e31add8ac1e9d41c3a3f71c62cd30066d47c80991c772aa2b00"
     },
     {
       "id": "antifilter",
@@ -3524,7 +3524,7 @@
       "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/gambling_block.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 93233,
+        "domain_suffix": 93236,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -3537,8 +3537,8 @@
         "domains": "release/domains/gambling_block.lst",
         "subnets": null
       },
-      "sha256_trs": "08ca44ff3dba148e25aceda4028d7388a58db501bfc39fd618fcead2a12f626d",
-      "sha256_srs": "b96d4d863419cb91311d9575abb190ab6c9172c6574b6a0cafb44d85c52aa900"
+      "sha256_trs": "44bd985acd18799b37604a1b4e9390515e72b9b9d78e7fa58202aee8d3bf9fcf",
+      "sha256_srs": "9db1a3c3c39fc6229b7d6bbee5260b67d02f2fb12e378e5ad5b594a598fe3110"
     },
     {
       "id": "phishing_malware_block",
@@ -3550,7 +3550,7 @@
       "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/phishing_malware_block.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 185688,
+        "domain_suffix": 185742,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -3563,8 +3563,8 @@
         "domains": "release/domains/phishing_malware_block.lst",
         "subnets": null
       },
-      "sha256_trs": "5d4819790f92e273301db23727df4c6648f93fe95f3c8b7c6dfe21e7549eaafe",
-      "sha256_srs": "270b698c477b53da6aecb0966626aec0a20322bda0234c18ae2aa13c7e21fb06"
+      "sha256_trs": "1c51e491a2607ae7517f482f3014167dae4eecd063c6e5dc30fd75da8bc49014",
+      "sha256_srs": "e1d1a8dcc01fb9220964a7728890864f9c77f44f2e9d9d449e58065325a0a11e"
     },
     {
       "id": "telemetry_mobile_block",
@@ -3605,7 +3605,7 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 2307,
+        "ipv4_cidr": 2300,
         "ipv6_cidr": 84
       },
       "files": {
@@ -3615,8 +3615,8 @@
         "domains": null,
         "subnets": "release/subnets/et_spamhaus_block.lst"
       },
-      "sha256_trs": "eb1181d97a23fcab26f0e0ab571e0048d36a421ccd76baa10236cd0d5d8490fb",
-      "sha256_srs": "74e3f042b4e0554ab1135f36c65570702c489e2d0e097eb4a456311575b8a1e6"
+      "sha256_trs": "efe3b953387f2f07016446a235944cbd81e3213c8c62be2a46950c9084ef2061",
+      "sha256_srs": "bcfa82d95b8c9900253c44a056d4948b56398989c21a6cd039371a1f9f4191c6"
     },
     {
       "id": "hagezi_tif_ip_block",
@@ -3657,7 +3657,7 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 20737,
+        "ipv4_cidr": 21466,
         "ipv6_cidr": 0
       },
       "files": {
@@ -3667,8 +3667,8 @@
         "domains": null,
         "subnets": "release/subnets/botnet_attackers_ip_block.lst"
       },
-      "sha256_trs": "7040159b76da4f2d1a3b712f49acc94e0e8b74916bfe2d6a57c5773988b62865",
-      "sha256_srs": "14eee8ff54a2e21b3dec90cfc66b2a2835b3a560d612f2ef8a646e492f379357"
+      "sha256_trs": "573c86ca79721880aff97c36b15fe1840be333adf5679ddc304e95f01a1d8923",
+      "sha256_srs": "8851a7600f9738ff0bdf3d0b83b2573c0d68f3d00007530b55ceb1a30b9c4d62"
     },
     {
       "id": "google_meet",
