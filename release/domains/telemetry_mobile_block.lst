@@ -332,6 +332,7 @@ branch.io
 braze.com
 browser-api-br.heytapmobile.com
 browser-api-fr.heytapmobile.com
+browser-api-gl-01.heytapmobile.com
 browser-api-gl.heytapmobile.com
 browser-api-id.heytapmobile.com
 browser-api-in.heytapmobile.com
@@ -717,7 +718,6 @@ fls-na.amazon.com
 fls-na.amazon.com.br
 fls-na.amazon.com.mx
 flurry.com
-foreign.coloros.com
 forester.a2z.com
 fourier-videoclip-eu.allawnos.com
 fourier-videoclip-in.allawnos.com
@@ -1210,6 +1210,7 @@ origin-sq-tungsten-ts.amazon-adsystem.com
 ort-stsdk.vivoglobal.com
 ostorage-ocloud-in.allawnos.com
 ostorage-ocloud-sg.allawnos.com
+ota.foreign.coloros.com
 oversea-nebula-in.heytapmobi.com
 oversea-nebula-sg.heytapmobi.com
 p-log.ykimg.com
@@ -1322,6 +1323,7 @@ rus-service-eu.allawnos.com
 rus-service-in.allawnos.com
 rus-service-sg.allawnos.com
 rus-service-us.allawnos.com
+rus.foreign.coloros.com
 s-adashx.ut.youku.com
 s-fe.amazon-adsystem.com
 s.amazon-adsystem.com
