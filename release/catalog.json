@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-11-14T13:28:58Z",
+  "generated_at": "2026-11-14T22:19:47Z",
   "repository": "https://github.com/Dushnilin/tachyon-lists",
   "total_lists": 146,
   "lists": [
@@ -118,7 +118,7 @@
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-ru-blocked-all.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 1614241,
+        "domain_suffix": 1616573,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 926,
@@ -131,8 +131,8 @@
         "domains": "release/domains/ru_blocked_all.lst",
         "subnets": "release/subnets/ru_blocked_all.lst"
       },
-      "sha256_trs": "be13b4f17751eee6c651d3a5c927e4f3fa71531c510e4199f59512534ae6a427",
-      "sha256_srs": "c6002161e68e7dd5f358fc2d106650740bf02b1dab5509adffd73baa3ed630b1"
+      "sha256_trs": "2c60f690851a225da413d37ae76afe53bfda2edf5b3e20e3e9ee669a2ff99c27",
+      "sha256_srs": "6676797ebc7156f5f1f37d949aba0ed71581f609f662c0931b47cb80840cdedb"
     },
     {
       "id": "antifilter",
@@ -3657,7 +3657,7 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 22052,
+        "ipv4_cidr": 22088,
         "ipv6_cidr": 0
       },
       "files": {
@@ -3667,8 +3667,8 @@
         "domains": null,
         "subnets": "release/subnets/botnet_attackers_ip_block.lst"
       },
-      "sha256_trs": "17d286ad39ad82bfffd48c359a570998f4c9bc1ae1e76bf38e934598f0d9e7a9",
-      "sha256_srs": "7f8bf8273ac217490d8bcab877bfae1a7262275b5da0c06019a922eb428566bd"
+      "sha256_trs": "e324f945e1c2bdb81c306b7f62b4eb5adb195510b504fe4a42068efbeb03e22c",
+      "sha256_srs": "693262e20bb59aa1ebe5972dbd628681d499515d6880f0681c289cf1369c41d8"
     },
     {
       "id": "google_meet",
