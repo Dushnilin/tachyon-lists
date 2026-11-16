@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generated_at": "2026-11-16T06:21:07Z",
+  "generated_at": "2026-11-16T10:31:12Z",
   "repository": "https://github.com/Dushnilin/tachyon-lists",
-  "total_lists": 150,
+  "total_lists": 147,
   "lists": [
     {
       "id": "russia_inside",
@@ -15,7 +15,7 @@
       "counts": {
         "domain": 0,
         "domain_suffix": 73966,
-        "domain_keyword": 105,
+        "domain_keyword": 104,
         "domain_regex": 5,
         "ipv4_cidr": 0,
         "ipv6_cidr": 0
@@ -27,34 +27,8 @@
         "domains": "release/domains/russia_inside.lst",
         "subnets": null
       },
-      "sha256_trs": "2a261e3889ea5bf77d04a7a843e2d2b1a192834561b17d865f5c23958279739f",
-      "sha256_srs": "6612f726e690c5317a7bb4fb3f7d3549515ba9b63b5a0dceb3e18ac6b820d488"
-    },
-    {
-      "id": "geoblock",
-      "group": "regional",
-      "kind": "domains",
-      "recommended_action": "proxy",
-      "title": "Геоблок — зарубежные сервисы, закрывшие доступ с российских IP",
-      "description": "[Маршрут: Только в Прокси / VPN — геоблок по IP] Единая база из 150+ иностранных платформ, SaaS, банков и облаков, возвращающих ошибку 403 / Unavailable in your region из РФ: PayPal, Wise, Revolut, Notion, Canva, Trello, Jira, Atlassian, Zoom, Intel, Dell, Broadcom, VMware, Coursera, Udemy, JetBrains, GitLab, Adobe, Autodesk, Grammarly, Medium, Docker, DigiCert и др.",
-      "fallback_srs": "https://raw.githubusercontent.com/legiz-ru/sb-rule-sets/main/no-russia-hosts.srs",
-      "counts": {
-        "domain": 0,
-        "domain_suffix": 1747,
-        "domain_keyword": 105,
-        "domain_regex": 5,
-        "ipv4_cidr": 0,
-        "ipv6_cidr": 0
-      },
-      "files": {
-        "trs": "release/tachyon/geoblock.trs",
-        "srs": "release/sing-box/geoblock.srs",
-        "json": "release/json/geoblock.json",
-        "domains": "release/domains/geoblock.lst",
-        "subnets": null
-      },
-      "sha256_trs": "9d3bc7fd3580aeb75a8511055fb6a3528649f79c44a17c2fe587028e10973658",
-      "sha256_srs": "d39a1b096f2f6d1dc9595b0cd37b37a6015d891e1bf6ecccb6725afe7d771f90"
+      "sha256_trs": "71a91a926c7229fef2ff909f9b5d7abab736f286bcb9be34d66f84a3aa908e99",
+      "sha256_srs": "1b6a3f255d103bac0f232e82844369c8eee7d786e8a8b606f20749763f491daf"
     },
     {
       "id": "block",
@@ -419,32 +393,6 @@
       },
       "sha256_trs": "e58b210e251cf760a74238e9661edc5ce79d387e3724f325aeb4fa6c41e28ddf",
       "sha256_srs": "40353c229a26b48b7aecd1d864cd28714549b0548de2948a39f6355bc8f0f7a7"
-    },
-    {
-      "id": "ai_all",
-      "group": "ai",
-      "kind": "domains",
-      "recommended_action": "proxy",
-      "title": "Нейросети и ИИ (все) — OpenAI, Claude, Gemini, Grok, OpenRouter, OpenCode, Cursor, Perplexity, DeepSeek, Qwen, Kimi",
-      "description": "[Маршрут: Только в Прокси / VPN — геоблок по IP] Единый полный список всех зарубежных ИИ-сервисов и инструментов разработки: OpenAI (ChatGPT, Sora), Anthropic (Claude, Claude Code), Google (Gemini, AI Studio, NotebookLM, Antigravity), xAI (Grok), OpenRouter, OpenCode, Cursor, Windsurf, Codeium, Perplexity, GitHub/MS Copilot, JetBrains AI, DeepSeek, Qwen, Kimi, Midjourney, Civitai, ElevenLabs, Suno, Udio, Runway, Kling, Hugging Face, Poe, Groq и Mistral.",
-      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-category-ai-!cn.srs",
-      "counts": {
-        "domain": 14,
-        "domain_suffix": 424,
-        "domain_keyword": 0,
-        "domain_regex": 1,
-        "ipv4_cidr": 0,
-        "ipv6_cidr": 0
-      },
-      "files": {
-        "trs": "release/tachyon/ai_all.trs",
-        "srs": "release/sing-box/ai_all.srs",
-        "json": "release/json/ai_all.json",
-        "domains": "release/domains/ai_all.lst",
-        "subnets": null
-      },
-      "sha256_trs": "5483fcc7d297fe79454ad2d6796683aa07d6d7f6eae364ea2d08a95e1eadfc73",
-      "sha256_srs": "36eb4bbfe397b4d5d2351678016bb5bce195f582129901d1a592a5d1b249be32"
     },
     {
       "id": "openai",
@@ -1591,32 +1539,6 @@
       "sha256_srs": "8c1eee0c9ca9106a850fd2a8fece09f2b9cf9b4ad7aa581ffcdad7b5a1227b85"
     },
     {
-      "id": "games_all",
-      "group": "gaming",
-      "kind": "domains",
-      "recommended_action": "proxy",
-      "title": "Игры и игровые платформы (все) — Steam, Epic, Ubisoft, War Thunder, Battle.net, EA, Riot, Xbox, PSN",
-      "description": "[Маршрут: В Прокси / VPN или Direct] Единый сводный список всех популярных игровых лаунчеров, магазинов, античитов (BattlEye, EasyAntiCheat) и серверов: Steam, Epic Games, Ubisoft Connect, War Thunder / Gaijin, Battle.net / Blizzard, EA App / Origin, Riot Games, Xbox Live, PlayStation Network, Nintendo, GOG, Wargaming, HoYoverse, Minecraft, Rockstar, Roblox, Supercell, Escape from Tarkov, FACEIT и PUBG.",
-      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-category-games-!cn.srs",
-      "counts": {
-        "domain": 24,
-        "domain_suffix": 1417,
-        "domain_keyword": 0,
-        "domain_regex": 3,
-        "ipv4_cidr": 114,
-        "ipv6_cidr": 22
-      },
-      "files": {
-        "trs": "release/tachyon/games_all.trs",
-        "srs": "release/sing-box/games_all.srs",
-        "json": "release/json/games_all.json",
-        "domains": "release/domains/games_all.lst",
-        "subnets": "release/subnets/games_all.lst"
-      },
-      "sha256_trs": "9e517062a7226d278fcf1dee47a745ebb7341df3ba8dbaca68c8af11560e1e94",
-      "sha256_srs": "aa78de5d7a4c24a20103364b33227e54e7258298b2521a6d27fa4b559f1c56a8"
-    },
-    {
       "id": "steam",
       "group": "gaming",
       "kind": "domains",
@@ -2485,7 +2407,7 @@
       "counts": {
         "domain": 16,
         "domain_suffix": 623,
-        "domain_keyword": 3,
+        "domain_keyword": 2,
         "domain_regex": 0,
         "ipv4_cidr": 0,
         "ipv6_cidr": 0
@@ -2497,8 +2419,8 @@
         "domains": "release/domains/microsoft.lst",
         "subnets": null
       },
-      "sha256_trs": "04779a5d5915e9f48845d0b5406888d48ce195d096768cddb1c49ca585db7be0",
-      "sha256_srs": "6edaaa8d73fae5ad4454e53c2f4d4615a50c5c243d735a611dfee12af28023b9"
+      "sha256_trs": "fd87e0249ca991dca1d9d77cd81b43fa9ed9e04d087beee0d2e8c9efa5b21186",
+      "sha256_srs": "325d8a170bab4d9fbb1e54dd68fcf92b4b5582f8179c8ea1a7f5c4383b32405f"
     },
     {
       "id": "google_play",
@@ -2823,7 +2745,7 @@
       "counts": {
         "domain": 2,
         "domain_suffix": 94,
-        "domain_keyword": 3,
+        "domain_keyword": 2,
         "domain_regex": 0,
         "ipv4_cidr": 0,
         "ipv6_cidr": 0
@@ -2835,8 +2757,8 @@
         "domains": "release/domains/cloud_storage.lst",
         "subnets": null
       },
-      "sha256_trs": "9fc6f6b3652a37d93fc63b1f10331c0542d45c53a7b305a38b3dcca1e52ecd7b",
-      "sha256_srs": "1b8fc9207cb99b367cd045cd67903ed8875a90dbb81ae496fa649165d410752e"
+      "sha256_trs": "961a6bd9b376f4a8ae747caf888ba951e4cff7f5ccd5f1771ae83256e44c5ce0",
+      "sha256_srs": "1fd0ff281e0e53ffd321b50d5d68997224ffbe7eabc06b2112fa6ca88eb26469"
     },
     {
       "id": "gamedev_3d",
@@ -3186,7 +3108,7 @@
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-doh.srs",
       "counts": {
         "domain": 10,
-        "domain_suffix": 3540,
+        "domain_suffix": 3539,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 28,
@@ -3199,8 +3121,8 @@
         "domains": "release/domains/doh_dot_dns.lst",
         "subnets": "release/subnets/doh_dot_dns.lst"
       },
-      "sha256_trs": "f6a37255c5caeae071745da8e3b7aa39d8c81e2d05e203aa64363782cafbc546",
-      "sha256_srs": "e5593a60629caa55f8495b11fa373631ac6b8079c87bac027edf99c0edef604b"
+      "sha256_trs": "3e1e84b372a64d144284fd247e730e3899f98d6b86f42ce8bda382e54f443915",
+      "sha256_srs": "db0fd373b4709ed4e1048171b6f12be52436a87cd8225bb9dfa7e1b498b01bbb"
     },
     {
       "id": "vps_clouds",
@@ -3524,7 +3446,7 @@
       "fallback_srs": "https://github.com/zxc-rv/ad-filter/releases/latest/download/adlist.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 235971,
+        "domain_suffix": 238058,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -3537,8 +3459,8 @@
         "domains": "release/domains/ads_hagezi_pro.lst",
         "subnets": null
       },
-      "sha256_trs": "364332925043801ed8df8dbe22a1be6d1ef4744b0e0c0a0689b35d6f65b368d7",
-      "sha256_srs": "781b3525b3104276e3caebbf91612aa6e1b24d93c4833d989cca5ef42dde1726"
+      "sha256_trs": "ae04b7dd5096aee5e47750512a59a68f7380a2983b764161cf422f85f48d5c9d",
+      "sha256_srs": "f635bbb2df81774f66302c323b9d7dcf5be62ba31c6d151e0e5e164408247294"
     },
     {
       "id": "android_ads_block",
@@ -3628,7 +3550,7 @@
       "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/gambling_block.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 94677,
+        "domain_suffix": 96888,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -3641,8 +3563,8 @@
         "domains": "release/domains/gambling_block.lst",
         "subnets": null
       },
-      "sha256_trs": "fd8167737dd9ebc8f3efbec018f1ad6da081182711b3ae8113a70c08d6436fa9",
-      "sha256_srs": "35ac4866ab44aab8974240af6d2a9772fe3942e6855a08ef39f6a604862ea103"
+      "sha256_trs": "2bdb47135132959426fbca7ca2899f923b85c6dc3172cee816ad70735126ddd4",
+      "sha256_srs": "e59092b58601366567ec4bfed208214b94aec5510e4a99158fe9ac06e197d38d"
     },
     {
       "id": "phishing_malware_block",
@@ -3654,7 +3576,7 @@
       "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/phishing_malware_block.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 183061,
+        "domain_suffix": 182705,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -3667,8 +3589,8 @@
         "domains": "release/domains/phishing_malware_block.lst",
         "subnets": null
       },
-      "sha256_trs": "e108dffffdf709240ce0a82e149f6bca6c04daf9bed95c6cec3786372ddcfae5",
-      "sha256_srs": "a66f8665c29b701bf15984a25997e7b7abedc4c59d1f58b5da4e7d13b653aab4"
+      "sha256_trs": "c8861038f4e475a2f8f39389f63f652cb328d6465e8b7c90881edfc328a4f32f",
+      "sha256_srs": "2d1cb7b1048a8225667979efa336067ae81ef5457ca52c430b75a802e1cbbe81"
     },
     {
       "id": "telemetry_mobile_block",
@@ -3735,7 +3657,7 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 31075,
+        "ipv4_cidr": 30860,
         "ipv6_cidr": 0
       },
       "files": {
@@ -3745,8 +3667,8 @@
         "domains": null,
         "subnets": "release/subnets/hagezi_tif_ip_block.lst"
       },
-      "sha256_trs": "f972c769594142d4a59161bf71c11d7fdda0ce936ff8a4582cb1d8038f625e8a",
-      "sha256_srs": "8360f1f6e5bc4bd14c5b7f28f701232d54895e39b1fcc39f33d76a4489b7267f"
+      "sha256_trs": "e036d9bb83cb282c9cdf611dfc1e4a8e293310233dbeeb8a35821d9df5349f02",
+      "sha256_srs": "835e884492fc32a811d55fd443069701f776c260e784f86df219f3c0dd28cbb4"
     },
     {
       "id": "botnet_attackers_ip_block",
@@ -3761,7 +3683,7 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 21817,
+        "ipv4_cidr": 21825,
         "ipv6_cidr": 0
       },
       "files": {
@@ -3771,8 +3693,8 @@
         "domains": null,
         "subnets": "release/subnets/botnet_attackers_ip_block.lst"
       },
-      "sha256_trs": "72d40375ccc8030d9ba47da4cbf4737756c20c4f04e1c6006dc083d80baeb65d",
-      "sha256_srs": "26b6be789258888d9897c930c0ee779d7571500fd9ecc96fafb5a74e8269578a"
+      "sha256_trs": "d625e31483a26d25fada5b48d55e8b08472a34775cc23056b3e3d1664e727c65",
+      "sha256_srs": "760465d21b9d4bc9b1a8feca74706030761d2f3d6775f9008b9e1e6be0926fff"
     },
     {
       "id": "google_meet",

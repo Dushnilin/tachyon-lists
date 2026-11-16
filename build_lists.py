@@ -462,7 +462,6 @@ _ALLOWED_BRAND_TLDS: dict[str, frozenset[str]] = {
     }),
     "playstation": frozenset({"playstation"}),
     "xbox": frozenset({"xbox"}),
-    "games_all": frozenset({"playstation", "xbox"}),
     "porn": frozenset({"adult", "porn", "sex", "xxx"}),
     "shopping_global": frozenset({
         "amazon", "aws", "imdb", "kindle", "nike",
@@ -1224,7 +1223,15 @@ def optimize_bucket(
         else [str(n) for n in ipaddress.collapse_addresses(v6_nets)]
     )
 
-    keywords = sorted({k.strip().lower() for k in bucket.domain_keyword if k.strip()})
+    raw_keywords = {k.strip().lower() for k in bucket.domain_keyword if k.strip()}
+    keywords = sorted(
+        kw
+        for kw in raw_keywords
+        if not (
+            (kw_clean := clean_domain(kw.strip(".")))
+            and _is_domain_excluded(kw_clean, ex_exact, ex_suffix)
+        )
+    )
     regexes = sorted({r.strip() for r in bucket.domain_regex if r.strip()})
 
     return (

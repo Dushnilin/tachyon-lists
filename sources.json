@@ -60,37 +60,6 @@
       ]
     },
     {
-      "id": "geoblock",
-      "group": "regional",
-      "kind": "domains",
-      "recommended_action": "proxy",
-      "title": "Геоблок — зарубежные сервисы, закрывшие доступ с российских IP",
-      "description": "[Маршрут: Только в Прокси / VPN — геоблок по IP] Единая база из 150+ иностранных платформ, SaaS, банков и облаков, возвращающих ошибку 403 / Unavailable in your region из РФ: PayPal, Wise, Revolut, Notion, Canva, Trello, Jira, Atlassian, Zoom, Intel, Dell, Broadcom, VMware, Coursera, Udemy, JetBrains, GitLab, Adobe, Autodesk, Grammarly, Medium, Docker, DigiCert и др.",
-      "fallback_srs": "https://raw.githubusercontent.com/legiz-ru/sb-rule-sets/main/no-russia-hosts.srs",
-      "sources": [
-        {
-          "type": "plain_domains",
-          "url": "{no_russia_hosts}/hosts.txt"
-        },
-        {
-          "type": "plain_domains",
-          "url": "{refilter_raw}/community.lst"
-        },
-        {
-          "type": "plain_domains",
-          "url": "{antifilter_community}/domains.lst"
-        },
-        {
-          "type": "srs",
-          "url": "{roscomvpn_geosite_srs}/category-geoblock-ru.srs"
-        }
-      ],
-      "exclude_lists": [
-        "ru_whitelist",
-        "ru_only_inside"
-      ]
-    },
-    {
       "id": "block",
       "group": "regional",
       "kind": "domains",
@@ -376,45 +345,6 @@
         {
           "type": "singbox_json",
           "url": "{metacubex_geosite}/category-stun.json"
-        }
-      ]
-    },
-    {
-      "id": "ai_all",
-      "group": "ai",
-      "kind": "domains",
-      "recommended_action": "proxy",
-      "title": "Нейросети и ИИ (все) — OpenAI, Claude, Gemini, Grok, OpenRouter, OpenCode, Cursor, Perplexity, DeepSeek, Qwen, Kimi",
-      "description": "[Маршрут: Только в Прокси / VPN — геоблок по IP] Единый полный список всех зарубежных ИИ-сервисов и инструментов разработки: OpenAI (ChatGPT, Sora), Anthropic (Claude, Claude Code), Google (Gemini, AI Studio, NotebookLM, Antigravity), xAI (Grok), OpenRouter, OpenCode, Cursor, Windsurf, Codeium, Perplexity, GitHub/MS Copilot, JetBrains AI, DeepSeek, Qwen, Kimi, Midjourney, Civitai, ElevenLabs, Suno, Udio, Runway, Kling, Hugging Face, Poe, Groq и Mistral.",
-      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-category-ai-!cn.srs",
-      "sources": [
-        {
-          "type": "srs",
-          "url": "{runetfreedom_geosite_srs}/geosite-category-ai-!cn.srs"
-        },
-        {
-          "type": "srs",
-          "url": "{runetfreedom_geosite_srs}/geosite-google-gemini.srs"
-        },
-        {
-          "type": "srs",
-          "url": "{runetfreedom_geosite_srs}/geosite-deepseek.srs"
-        },
-        {
-          "type": "singbox_json",
-          "url": "{metacubex_geosite}/category-ai-!cn.json"
-        },
-        {
-          "type": "singbox_json",
-          "url": "{metacubex_geosite}/google-deepmind.json"
-        },
-        {
-          "type": "singbox_json",
-          "url": "{metacubex_geosite}/deepseek.json"
-        },
-        {
-          "type": "srs",
-          "url": "{roscomvpn_geosite_srs}/google-deepmind.srs"
         }
       ]
     },
@@ -1454,69 +1384,6 @@
       ],
       "exclude_lists": [
         "cloudflare"
-      ]
-    },
-    {
-      "id": "games_all",
-      "group": "gaming",
-      "kind": "domains",
-      "recommended_action": "proxy",
-      "title": "Игры и игровые платформы (все) — Steam, Epic, Ubisoft, War Thunder, Battle.net, EA, Riot, Xbox, PSN",
-      "description": "[Маршрут: В Прокси / VPN или Direct] Единый сводный список всех популярных игровых лаунчеров, магазинов, античитов (BattlEye, EasyAntiCheat) и серверов: Steam, Epic Games, Ubisoft Connect, War Thunder / Gaijin, Battle.net / Blizzard, EA App / Origin, Riot Games, Xbox Live, PlayStation Network, Nintendo, GOG, Wargaming, HoYoverse, Minecraft, Rockstar, Roblox, Supercell, Escape from Tarkov, FACEIT и PUBG.",
-      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-category-games-!cn.srs",
-      "sources": [
-        {
-          "type": "srs",
-          "url": "{runetfreedom_geosite_srs}/geosite-category-games-!cn.srs"
-        },
-        {
-          "type": "srs",
-          "url": "{runetfreedom_geosite_srs}/geosite-category-game-platforms-download.srs"
-        },
-        {
-          "type": "singbox_json",
-          "url": "{metacubex_geosite}/category-games-!cn.json"
-        },
-        {
-          "type": "singbox_json",
-          "url": "{metacubex_geosite}/category-game-platforms-download.json"
-        },
-        {
-          "type": "srs",
-          "url": "{runetfreedom_geosite_srs}/geosite-supercell.srs"
-        },
-        {
-          "type": "singbox_json",
-          "url": "{metacubex_geosite}/supercell.json"
-        },
-        {
-          "type": "clash_yaml",
-          "url": "{rock12_warzone}/ru-gaming-all.yaml"
-        },
-        {
-          "type": "srs",
-          "url": "{roscomvpn_geosite_srs}/steam.srs"
-        },
-        {
-          "type": "srs",
-          "url": "{roscomvpn_geosite_srs}/epicgames.srs"
-        },
-        {
-          "type": "srs",
-          "url": "{roscomvpn_geosite_srs}/riot.srs"
-        },
-        {
-          "type": "srs",
-          "url": "{roscomvpn_geosite_srs}/origin.srs"
-        },
-        {
-          "type": "srs",
-          "url": "{roscomvpn_geosite_srs}/escapefromtarkov.srs"
-        },
-        {
-          "type": "srs",
-          "url": "{roscomvpn_geosite_srs}/faceit.srs"
-        }
       ]
     },
     {
