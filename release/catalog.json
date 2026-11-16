@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-11-15T23:49:38Z",
+  "generated_at": "2026-11-16T05:23:12Z",
   "repository": "https://github.com/Dushnilin/tachyon-lists",
   "total_lists": 150,
   "lists": [
@@ -3628,7 +3628,7 @@
       "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/gambling_block.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 94671,
+        "domain_suffix": 94677,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -3641,8 +3641,8 @@
         "domains": "release/domains/gambling_block.lst",
         "subnets": null
       },
-      "sha256_trs": "de1a5049edef7757a8247451d90344a6d653fd17ce1cf95476c8e7f574c2e003",
-      "sha256_srs": "2efc454011175f5ea713a6ea48cbfc26f9cd282bcb84c872ceb5b658f3f0fb81"
+      "sha256_trs": "fd8167737dd9ebc8f3efbec018f1ad6da081182711b3ae8113a70c08d6436fa9",
+      "sha256_srs": "35ac4866ab44aab8974240af6d2a9772fe3942e6855a08ef39f6a604862ea103"
     },
     {
       "id": "phishing_malware_block",
@@ -3654,7 +3654,7 @@
       "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/phishing_malware_block.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 182931,
+        "domain_suffix": 183061,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -3667,8 +3667,8 @@
         "domains": "release/domains/phishing_malware_block.lst",
         "subnets": null
       },
-      "sha256_trs": "6d4fc08e466e9d0a5faa3a782c9b41f7769066e57011ebc83d08e32033e5b4cb",
-      "sha256_srs": "207796dea098629f314ca2845d7daf5073940dc2220907021ef473add724be85"
+      "sha256_trs": "e108dffffdf709240ce0a82e149f6bca6c04daf9bed95c6cec3786372ddcfae5",
+      "sha256_srs": "a66f8665c29b701bf15984a25997e7b7abedc4c59d1f58b5da4e7d13b653aab4"
     },
     {
       "id": "telemetry_mobile_block",
@@ -3761,7 +3761,7 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 23068,
+        "ipv4_cidr": 21798,
         "ipv6_cidr": 0
       },
       "files": {
@@ -3771,8 +3771,8 @@
         "domains": null,
         "subnets": "release/subnets/botnet_attackers_ip_block.lst"
       },
-      "sha256_trs": "0405646b48f6213f5ff28a133ebcd0e5ca5146796ad04ef25eaf7d3894a894dc",
-      "sha256_srs": "6af4a9588b44f37fee7fc1fd6b882df3d131b749ff15f36e4ce7b6b40a680936"
+      "sha256_trs": "df31d93aa9b1555fa05a3e657dbca6d0969d6e436928e75232f24fcf49159904",
+      "sha256_srs": "d8b468d5f11ce9e6220e72617395beaa9603e2b724c9466ce61b937b8ee85dee"
     },
     {
       "id": "google_meet",
