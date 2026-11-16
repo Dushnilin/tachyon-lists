@@ -1,0 +1,14 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain_suffix": [
+        "qwen.ai",
+        "qwenlm.ai",
+        "tongyi.aliyun.com",
+        "tongyi.com",
+        "wan.video"
+      ]
+    }
+  ]
+}

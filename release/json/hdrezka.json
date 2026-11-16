@@ -4,10 +4,15 @@
     {
       "domain_suffix": [
         "hd-rezka.tv",
+        "hdrezka-home.tv",
         "hdrezka.ac",
         "hdrezka.ag",
         "hdrezka.app",
+        "hdrezka.cm",
+        "hdrezka.co",
         "hdrezka.me",
+        "hdrezka.org",
+        "hdrezka.site",
         "hdrezka.tech",
         "hdrezka.tv",
         "hdrzk.org",
@@ -15,11 +20,13 @@
         "rezka.ag",
         "rezka.cc",
         "rezka.fi",
-        "rezka.land",
-        "rezka.my",
         "rezka.tv",
         "rezkify.com",
-        "voidboost.cc"
+        "static.voidboost.com",
+        "statichdrezka.ac",
+        "stream.voidboost.one",
+        "voidboost.cc",
+        "voidslam.org"
       ]
     }
   ]

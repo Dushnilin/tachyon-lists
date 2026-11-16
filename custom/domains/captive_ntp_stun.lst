@@ -1,7 +1,3 @@
-0.pool.ntp.org
-1.pool.ntp.org
-2.pool.ntp.org
-3.pool.ntp.org
 captive.apple.com
 clients3.google.com
 clients4.google.com
@@ -12,10 +8,7 @@ connectivitycheck.android.com
 connectivitycheck.gstatic.com
 connectivitycheck.platform.hicloud.com
 detectportal.firefox.com
-europe.pool.ntp.org
 gsp1.apple.com
-ipv6.msftconnecttest.com
-ipv6.msftncsi.com
 msftconnecttest.com
 msftncsi.com
 network-test.debian.org
@@ -26,7 +19,6 @@ ntp1.vniiftri.ru
 ntp2.vniiftri.ru
 ping.archlinux.org
 pool.ntp.org
-ru.pool.ntp.org
 stun.cloudflare.com
 stun.ekiga.net
 stun.ideasip.com

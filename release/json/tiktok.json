@@ -3,11 +3,7 @@
   "rules": [
     {
       "domain": [
-        "p16-tiktokcdn-com.akamaized.net",
-        "roovza-launches.appsflyersdk.com",
-        "roovza.inapps.appsflyersdk.com",
-        "roovza.launches.appsflyersdk.com",
-        "roovza.skadsdk.appsflyersdk.com"
+        "p16-tiktokcdn-com.akamaized.net"
       ],
       "domain_suffix": [
         "bytedapm.com",

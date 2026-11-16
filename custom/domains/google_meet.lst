@@ -1,0 +1,7 @@
+# Google Meet domains (explicitly scoped without broad google.com / apis.google.com)
+meet.google.com
+hangouts.googleapis.com
+meetings.googleapis.com
+meetings.clients6.google.com
+meet.turns.goog
+workspace.turns.goog

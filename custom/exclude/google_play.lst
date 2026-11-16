@@ -1,0 +1,6 @@
+# Exclude captive portal connectivity checks, ads, and telemetry from Google Play
+connectivitycheck.gstatic.com
+firebaseinstallations.googleapis.com
+googleads.g.doubleclick.net
+app-measurement.com
+beacons.gvt2.com

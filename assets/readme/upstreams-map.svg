@@ -1,102 +1,102 @@
 <svg xmlns="http://www.w3.org/2000/svg"
      width="1200" height="480" viewBox="0 0 1200 480"
      role="img" aria-labelledby="title desc">
-  <title id="title">Карта 8 внешних апстрим-источников и локального слоя custom/</title>
-  <desc id="desc">Девять источников tachyon-lists: itdoginfo/allow-domains, runetfreedom/russia-v2ray-rules-dat, runetfreedom/russia-blocked-geoip, hydraponique/roscomvpn-geosite, hydraponique/roscomvpn-geoip, MetaCubeX/meta-rules-dat, zxc-rv/ad-filter, ushan0v/sing-box-supercell-ruleset и локальный каталог custom/.</desc>
+  <title id="title">Карта внешних источников и локального слоя custom/</title>
+  <desc id="desc">Внешние источники и фиды tachyon-lists: MetaCubeX/meta-rules-dat, runetfreedom/russia-v2ray-rules-dat, runetfreedom/russia-blocked-geoip, 1andrevich/Re-filter-lists, dartraiden/no-russia-hosts, community.antifilter.download, hydraponique/roscomvpn, rock12/clash-warzone-rules, официальные IP/ASN-фиды (Cloudflare, AWS, DigitalOcean, RIPE Stat, Telegram), Hagezi, AdGuard, StevenBlack, FireHOL, Spamhaus, Emerging Threats и локальный слой custom/.</desc>
 
   <rect width="1200" height="480" rx="16" fill="#141415"/>
   <rect x="0.5" y="0.5" width="1199" height="479" rx="15.5" fill="none" stroke="#2e2e32" stroke-width="1"/>
 
   <!-- Row 1 (y=24, h=136) -->
-  <!-- 1: itdoginfo/allow-domains -->
+  <!-- MetaCubeX/meta-rules-dat -->
   <g transform="translate(24, 24)">
     <rect x="0" y="0" width="368" height="136" rx="12" fill="#19191b" stroke="#2e2e32" stroke-width="1"/>
-    <text x="20" y="28" fill="#ededed" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="500">1. itdoginfo/allow-domains</text>
-    <text x="20" y="48" fill="#85858b" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">itdoginfo_srs (.srs) · itdoginfo_raw (.lst)</text>
-    <text x="20" y="76" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">russia_inside, geoblock, block, russia_outside</text>
-    <text x="20" y="98" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">Соцсети, YouTube, TikTok, HDRezka, Anime</text>
-    <text x="20" y="120" fill="#85858b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">Подсети Cloudflare, CloudFront, Hetzner, OVH, DO</text>
+    <text x="20" y="28" fill="#ededed" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="500">MetaCubeX/meta-rules-dat</text>
+    <text x="20" y="48" fill="#85858b" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">metacubex_geosite · geoip · asn</text>
+    <text x="20" y="76" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">sing/geo/{geosite,geoip} + meta/asn/AS*.list</text>
+    <text x="20" y="98" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">ИИ, медиа, игры, разработка, OCSP/CRL</text>
+    <text x="20" y="120" fill="#85858b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">GeoIP страны (RU/US/CN), Roblox, Discord</text>
   </g>
 
-  <!-- 2: runetfreedom/russia-v2ray-rules-dat -->
+  <!-- runetfreedom -->
   <g transform="translate(416, 24)">
     <rect x="0" y="0" width="368" height="136" rx="12" fill="#19191b" stroke="#2e2e32" stroke-width="1"/>
-    <text x="20" y="28" fill="#ededed" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="500">2. runetfreedom/v2ray-rules-dat</text>
-    <text x="20" y="48" fill="#85858b" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">runetfreedom_geosite_srs · geoip_srs</text>
-    <text x="20" y="76" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">ru_blocked, ru_blocked_all, antifilter, refilter</text>
-    <text x="20" y="98" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">ru_only_inside, ai_all, OpenAI, Claude, Grok</text>
+    <text x="20" y="28" fill="#ededed" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="500">runetfreedom (rules-dat · geoip)</text>
+    <text x="20" y="48" fill="#85858b" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">runetfreedom_geosite_srs · geoip_{srs,text}</text>
+    <text x="20" y="76" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">ru_blocked, ru_blocked_all, antifilter</text>
+    <text x="20" y="98" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">refilter, ru_only_inside, ai_all, OpenAI</text>
     <text x="20" y="120" fill="#85858b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">GeoIP Telegram, Meta, Twitter, Fastly, Tor</text>
   </g>
 
-  <!-- 3: runetfreedom/russia-blocked-geoip -->
+  <!-- Re-filter · no-russia · antifilter -->
   <g transform="translate(808, 24)">
     <rect x="0" y="0" width="368" height="136" rx="12" fill="#19191b" stroke="#2e2e32" stroke-width="1"/>
-    <text x="20" y="28" fill="#ededed" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="500">3. runetfreedom/blocked-geoip</text>
-    <text x="20" y="48" fill="#85858b" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">runetfreedom_geoip_text (release/text)</text>
-    <text x="20" y="76" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">ru-blocked.txt → подсети ru_blocked</text>
-    <text x="20" y="98" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">ru-blocked-community.txt → antifilter</text>
-    <text x="20" y="120" fill="#85858b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">re-filter.txt → refilter · netflix.txt → netflix</text>
+    <text x="20" y="28" fill="#ededed" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="500">Re-filter · no-russia · antifilter</text>
+    <text x="20" y="48" fill="#85858b" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">refilter_raw · no_russia_hosts · antifilter</text>
+    <text x="20" y="76" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">1andrevich/Re-filter-lists (community, ips)</text>
+    <text x="20" y="98" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">dartraiden/no-russia-hosts + sb-rule-sets</text>
+    <text x="20" y="120" fill="#85858b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">community.antifilter.download/list/domains</text>
   </g>
 
   <!-- Row 2 (y=172, h=136) -->
-  <!-- 4: hydraponique/roscomvpn-geosite -->
+  <!-- hydraponique/roscomvpn -->
   <g transform="translate(24, 172)">
     <rect x="0" y="0" width="368" height="136" rx="12" fill="#19191b" stroke="#2e2e32" stroke-width="1"/>
-    <text x="20" y="28" fill="#ededed" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="500">4. hydraponique/roscomvpn-geosite</text>
-    <text x="20" y="48" fill="#85858b" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">roscomvpn_geosite_srs · geosite_data</text>
-    <text x="20" y="76" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">ru_whitelist (whitelist.srs), ru_domains, push</text>
-    <text x="20" y="98" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">category-geoblock-ru, twitch_ads, win_spy</text>
-    <text x="20" y="120" fill="#85858b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">Игры: Steam, EGS, Riot, Origin, EFT, FACEIT</text>
+    <text x="20" y="28" fill="#ededed" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="500">hydraponique/roscomvpn</text>
+    <text x="20" y="48" fill="#85858b" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">roscomvpn_geosite_srs · roscomvpn_geoip_text</text>
+    <text x="20" y="76" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">ru_whitelist (whitelist.srs), ru_domains</text>
+    <text x="20" y="98" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">push, twitch_ads, win_spy, geoblock-ru</text>
+    <text x="20" y="120" fill="#85858b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">whitelist.txt и direct.txt — подсети Direct</text>
   </g>
 
-  <!-- 5: hydraponique/roscomvpn-geoip -->
+  <!-- Official IP/ASN feeds -->
   <g transform="translate(416, 172)">
     <rect x="0" y="0" width="368" height="136" rx="12" fill="#19191b" stroke="#2e2e32" stroke-width="1"/>
-    <text x="20" y="28" fill="#ededed" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="500">5. hydraponique/roscomvpn-geoip</text>
-    <text x="20" y="48" fill="#85858b" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">roscomvpn_geoip_text · geoip_srs</text>
-    <text x="20" y="76" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">whitelist.txt → 6,710 подсетей ru_whitelist</text>
-    <text x="20" y="98" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">direct.txt → 36,884 подсети ru_domains</text>
-    <text x="20" y="120" fill="#85858b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">Прямые маршруты банков, госсайтов и Рунета</text>
+    <text x="20" y="28" fill="#ededed" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="500">Официальные IP и ASN-фиды</text>
+    <text x="20" y="48" fill="#85858b" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">cloudflare_ips · aws · geofeed · ripe_stat</text>
+    <text x="20" y="76" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">Cloudflare API v4/ips и AWS CloudFront JSON</text>
+    <text x="20" y="98" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">DigitalOcean geofeed CSV и core.telegram.org</text>
+    <text x="20" y="120" fill="#85858b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">RIPE Stat AS* (Hetzner AS24940, OVH AS16276)</text>
   </g>
 
-  <!-- 6: MetaCubeX/meta-rules-dat -->
+  <!-- Gaming feeds -->
   <g transform="translate(808, 172)">
     <rect x="0" y="0" width="368" height="136" rx="12" fill="#19191b" stroke="#2e2e32" stroke-width="1"/>
-    <text x="20" y="28" fill="#ededed" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="500">6. MetaCubeX/meta-rules-dat</text>
-    <text x="20" y="48" fill="#85858b" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">metacubex_geosite · geoip (ветка sing)</text>
-    <text x="20" y="76" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">Исходные JSON v3: ИИ, медиа, игры, разработка</text>
-    <text x="20" y="98" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">category-ru.json → ru_domains и geosite_ru</text>
-    <text x="20" y="120" fill="#85858b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">Страновые базы: geoip_ru, geoip_us, geoip_cn</text>
+    <text x="20" y="28" fill="#ededed" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="500">Игровые источники и Warzone</text>
+    <text x="20" y="48" fill="#85858b" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">rock12_warzone · metacubex · runetfreedom</text>
+    <text x="20" y="76" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">rock12/clash-warzone-rules (YAML-правила)</text>
+    <text x="20" y="98" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">supercell.json + geosite-supercell.srs</text>
+    <text x="20" y="120" fill="#85858b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">Объединение лаунчеров, матчей и игровых CDN</text>
   </g>
 
   <!-- Row 3 (y=320, h=136) -->
-  <!-- 7: zxc-rv/ad-filter -->
+  <!-- Ads & trackers -->
   <g transform="translate(24, 320)">
     <rect x="0" y="0" width="368" height="136" rx="12" fill="#19191b" stroke="#2e2e32" stroke-width="1"/>
-    <text x="20" y="28" fill="#ededed" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="500">7. zxc-rv/ad-filter (Hagezi Pro)</text>
-    <text x="20" y="48" fill="#85858b" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">releases/latest/download/adlist.srs</text>
-    <text x="20" y="76" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">Формирует категорию ads_hagezi_pro</text>
-    <text x="20" y="98" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">213,263 домена рекламы, трекеров и фишинга</text>
-    <text x="20" y="120" fill="#85858b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">Сбалансированный профиль Hagezi Multi PRO</text>
+    <text x="20" y="28" fill="#ededed" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="500">Реклама, трекеры и фильтры</text>
+    <text x="20" y="48" fill="#85858b" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">hagezi · zxc-rv · AdGuard · StevenBlack</text>
+    <text x="20" y="76" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">zxc-rv/ad-filter (adlist.srs — Hagezi Pro)</text>
+    <text x="20" y="98" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">AdguardFilters + StevenBlack/hosts (Android)</text>
+    <text x="20" y="120" fill="#85858b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">hagezi/dns-blocklists (gambling, TIF, fake)</text>
   </g>
 
-  <!-- 8: ushan0v/sing-box-supercell-ruleset -->
+  <!-- Threat IP feeds -->
   <g transform="translate(416, 320)">
     <rect x="0" y="0" width="368" height="136" rx="12" fill="#19191b" stroke="#2e2e32" stroke-width="1"/>
-    <text x="20" y="28" fill="#ededed" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="500">8. ushan0v/supercell-ruleset</text>
-    <text x="20" y="48" fill="#85858b" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">main/supercell.srs + MetaCubeX JSON</text>
-    <text x="20" y="76" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">Формирует игровую категорию supercell</text>
-    <text x="20" y="98" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">Brawl Stars, Clash Royale, Clash of Clans</text>
-    <text x="20" y="120" fill="#85858b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">Шлюзы Supercell ID и игровые CDN</text>
+    <text x="20" y="28" fill="#ededed" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="500">IP-фиды сетевых угроз и C2</text>
+    <text x="20" y="48" fill="#85858b" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">firehol_ipsets · hagezi_ips · spamhaus · et</text>
+    <text x="20" y="76" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">Emerging Threats, Spamhaus DROP / eDROP</text>
+    <text x="20" y="98" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">FireHOL Level 2 / Webclient и Hagezi TIF IP</text>
+    <text x="20" y="120" fill="#85858b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">IPsum Level 3+, CINS Army и Binary Defense</text>
   </g>
 
-  <!-- 9: custom/ local layer (highlighted) -->
+  <!-- custom/ local layer (highlighted) -->
   <g transform="translate(808, 320)">
     <rect x="0" y="0" width="368" height="136" rx="12" fill="#19191b" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.5"/>
-    <text x="20" y="28" fill="#38bdf8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="500">9. Локальный слой custom/</text>
+    <text x="20" y="28" fill="#38bdf8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="500">Локальный слой custom/</text>
     <text x="20" y="48" fill="#85858b" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="400">custom/{domains,subnets,exclude}/*.lst</text>
-    <text x="20" y="76" fill="#ededed" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">custom/domains/&lt;id&gt;.lst — доп. суффиксы</text>
-    <text x="20" y="98" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">custom/subnets/&lt;id&gt;.lst — доп. IPv4/IPv6</text>
-    <text x="20" y="120" fill="#85858b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">custom/exclude/&lt;id&gt;.lst — вырезка доменов</text>
+    <text x="20" y="76" fill="#ededed" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">custom/domains/&lt;id&gt;.lst — суффиксы доменов</text>
+    <text x="20" y="98" fill="#a1a1a6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">custom/subnets/&lt;id&gt;.lst — IPv4/IPv6 CIDR</text>
+    <text x="20" y="120" fill="#85858b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="400">custom/exclude/{domains,&lt;id&gt;}.lst — вырезка</text>
   </g>
 </svg>

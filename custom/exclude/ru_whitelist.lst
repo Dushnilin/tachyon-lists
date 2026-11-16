@@ -1,0 +1,26 @@
+# Исключения коллизий с proxy/block и IP-чекеров из белого списка РФ
+windsurf.com
+rnd.ru
+yandexwebcache.net
+ifconfig.me
+ipify.org
+checkip.amazonaws.com
+ip.sb
+ipapi.is
+iplocate.io
+full:ua
+full:psk
+full:yandex
+2gis.ua
+yandex.ua
+yandex.com.ua
+2gis.com.cy
+adfox.ru
+admetrica.ru
+jivosite.com
+vk-analytics.ru
+webvisor.com
+webvisor.org
+yads.tech
+yandexadexchange.net
+yandexmetrica.com

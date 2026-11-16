@@ -3,11 +3,11 @@
   "rules": [
     {
       "domain": [
+        "supercell.helpshift.com",
         "supercell.zendesk.com"
       ],
       "domain_suffix": [
         "boombeach.com",
-        "boombeachgame.com",
         "brawlstars.com",
         "brawlstarsgame.com",
         "clash.com",
@@ -22,7 +22,6 @@
         "seeurlpcl.com",
         "squadbusters.com",
         "supercell.com",
-        "supercell.helpshift.com",
         "supercell.net",
         "supercellcreators.com",
         "supercellgames.com",

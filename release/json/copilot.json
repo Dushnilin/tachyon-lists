@@ -10,7 +10,6 @@
       "domain_suffix": [
         "bingapis.com",
         "copilot-proxy.githubusercontent.com",
-        "copilot-stg.com",
         "copilot.cloud.microsoft",
         "copilot.com",
         "copilot.microsoft.com",
@@ -18,8 +17,7 @@
         "designer.microsoft.com",
         "edgeservices.bing.com",
         "githubcopilot.com",
-        "githubnext.com",
-        "sydney.bing.com"
+        "githubnext.com"
       ]
     }
   ]

@@ -12,6 +12,16 @@ on:
       - "custom/**"
       - ".github/workflows/build.yml"
   workflow_dispatch:
+    inputs:
+      allow_shrink:
+        description: "Allow >50% rule count reduction relative to previous catalog.json"
+        type: boolean
+        required: false
+        default: false
+
+concurrency:
+  group: build-lists
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -28,28 +38,59 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Cache toolchain binary and upstream HTTP cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            .cache/bin
+            .cache/downloads
+            .cache/decompiled
+          key: tachyon-lists-${{ runner.os }}-${{ hashFiles('build_lists.py') }}-${{ github.run_id }}
+          restore-keys: |
+            tachyon-lists-${{ runner.os }}-${{ hashFiles('build_lists.py') }}-
+            tachyon-lists-${{ runner.os }}-
+
       - name: Build unified lists and SRS rule-sets
-        run: python3 build_lists.py
+        env:
+          TACHYON_ALLOW_SHRINK: ${{ inputs.allow_shrink == true && '1' || '0' }}
+        run: python3 build_lists.py --refresh
+
+      - name: Validate generated release artifacts
+        run: python3 build_lists.py --validate
 
       - name: Commit updated release artifacts to main
+        id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add release/ README.md
+          git add -A release/ README.md
           if ! git diff --cached --quiet; then
-            git commit -m "chore(lists): auto-update unified rulesets ($(date -u +'%Y-%m-%d %H:%M UTC'))"
+            git commit -m "chore(lists): update unified rulesets ($(date -u +'%Y-%m-%d %H:%M UTC'))"
             git push origin HEAD:main
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Publish latest GitHub Release assets
+        if: steps.commit.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           TAG="latest"
           if gh release view "$TAG" >/dev/null 2>&1; then
-            gh release upload "$TAG" release/sing-box/*.srs release/tachyon/*.trs release/catalog.json --clobber
+            gh release upload "$TAG" \
+              release/sing-box/*.srs \
+              release/tachyon/*.trs \
+              release/catalog.json \
+              release/sha256sums.txt \
+              --clobber
           else
-            gh release create "$TAG" release/sing-box/*.srs release/tachyon/*.trs release/catalog.json \
+            gh release create "$TAG" \
+              release/sing-box/*.srs \
+              release/tachyon/*.trs \
+              release/catalog.json \
+              release/sha256sums.txt \
               --title "Tachyon Lists (Latest)" \
-              --notes "Auto-updated unified rule-sets (.trs v2 / .srs) and domain/subnet lists for Tachyon."
+              --notes "Unified rule-sets (.trs v2 / .srs), checksums and catalog index for Tachyon."
           fi

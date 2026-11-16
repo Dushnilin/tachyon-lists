@@ -4,7 +4,6 @@
     {
       "domain": [
         "dropbox.zendesk.com",
-        "o4504926511693824.ingest.sentry.io",
         "paper-attachments.s3.amazonaws.com"
       ],
       "domain_suffix": [
@@ -65,10 +64,8 @@
         "nephobox.com",
         "nitroflare.com",
         "oneclient.sfx.ms",
-        "onedrive",
         "onedrive.com",
         "onedrive.live.com",
-        "onedriveupdater",
         "pcloud.com",
         "pcloud.link",
         "photos.live.com",

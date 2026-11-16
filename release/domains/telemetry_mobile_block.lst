@@ -605,6 +605,7 @@ databeacon.apple.com
 datacollection.apple.com
 datacollector-dra.dt.dbankcloud.cn
 datacollector-dre.dt.dbankcloud.cn
+datadoghq.com
 dc-conf-o.api.leiniao.com
 dc-conf-t.api.leiniao.com
 dc-dragate-cn.heytapmobi.com
@@ -640,7 +641,6 @@ diagassets.apple.com
 diagassets.g.aaplimg.com
 diagnostics.apple.com
 diagnostics.apple.com.akadns.net
-disney.my.sentry.io
 dnkeeper.dbankcloud.com
 dnkeeper.hicloud.com
 dnkeeper.platform.dbankcloud.cn
@@ -1219,9 +1219,6 @@ nsp-logservice-hiview-p43-drcn.obs.cn-north-2.myhuaweicloud.com
 nsp-logservice-hiview-p50-drcn.obs.cn-north-2.myhuaweicloud.com
 nsp-logservice-weardevice-p42-drcn.obs.cn-north-2.myhuaweicloud.com
 nsp-logservice-weardevice-p51-drcn.obs.cn-north-2.myhuaweicloud.com
-o33249.ingest.sentry.io
-o33249.ingest.us.sentry.io
-o4504926511693824.ingest.sentry.io
 obus-cn.dc.heytapmobi.com
 obus-conf-cn.heytapmobi.com
 obus-conf-fr.heytapmobile.com
@@ -1311,6 +1308,7 @@ phonesubmissions.apple.com
 pimlog.baidu.com
 plbslog.umeng.com
 pnrt-stsdk.vivoglobal.com
+posthog.com
 prd-usw2-requestattribution-iad.apple.com
 predragate.dc.oppomobile.com
 pri1-3ps.amazon-adsystem.com
@@ -1447,6 +1445,7 @@ sentry.d.xiaomi.net
 sentry.dev-my.com
 sentry.dev-my.games
 sentry.hetzner.company
+sentry.io
 sentry.iptv.rt.ru
 sentry.kontur.host
 sentry.mindbox.ru

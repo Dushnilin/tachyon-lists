@@ -1,0 +1,24 @@
+# Исключение некорректных TLD, коллизий с direct и публичных DNS из russia_inside
+full:ua
+full:psk
+showip.net
+yandexwebcache.net
+rnd.ru
+windsurf.com
+joyreactor.cc
+2gis.com.cy
+yandex.com.ua
+yandex.ua
+2gis.ua
+ifconfig.me
+ipify.org
+checkip.amazonaws.com
+ip.sb
+ipapi.is
+iplocate.io
+1.1.1.1/32
+1.0.0.1/32
+8.8.8.8/32
+8.8.4.4/32
+8.8.8.0/24
+8.8.4.0/24

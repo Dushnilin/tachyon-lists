@@ -1,12 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg"
      width="1200" height="72" viewBox="0 0 1200 72"
      role="img" aria-labelledby="title desc">
-  <title id="title">01 — Быстрый старт и форматы артефактов</title>
-  <desc id="desc">Раздел быстрого старта и подключения готовых списков маршрутизации в tachyon-core, sing-box, steer, zapret2 и nftables.</desc>
+  <title id="title">Быстрый старт и форматы артефактов</title>
+  <desc id="desc">Раздел быстрого старта и подключения готовых списков маршрутизации в tachyon-core, sing-box, zapret2, dnsmasq и nftables.</desc>
   <rect width="1200" height="72" rx="12" fill="#141415"/>
   <rect x="0.5" y="0.5" width="1199" height="71" rx="11.5" fill="none" stroke="#2e2e32" stroke-width="1"/>
-  <rect x="20" y="20" width="40" height="32" rx="6" fill="#19191b" stroke="#2e2e32" stroke-width="1"/>
-  <text x="40" y="41" text-anchor="middle" fill="#38bdf8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="500">01</text>
-  <text x="76" y="34" fill="#ededed" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="18" font-weight="500">Быстрый старт и выходные форматы (release/)</text>
-  <text x="76" y="54" fill="#85858b" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="400">Готовые артефакты для tachyon-core (.trs), sing-box v3 (.srs, .json), steer, zapret2, dnsmasq (.lst) и nftables (CIDR)</text>
+  <text x="24" y="32" fill="#ededed" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="18" font-weight="500">Быстрый старт и выходные форматы (release/)</text>
+  <text x="24" y="52" fill="#85858b" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="400">Готовые артефакты для tachyon-core (.trs), sing-box v3 (.srs, .json), zapret2, dnsmasq (.lst), nftables (CIDR) и sha256sums.txt</text>
 </svg>

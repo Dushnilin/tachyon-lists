@@ -1,0 +1,21 @@
+# Google Play, Android GMS, Play Protect and OTA endpoints
+android-safebrowsing.google.com
+android.clients.google.com
+digitalassetlinks.googleapis.com
+google-ohttp-relay-safebrowsing.fastly-edge.com
+gvt1.com
+infinitedata-pa.googleapis.com
+lh3.googleusercontent.com
+mtalk.google.com
+ota-cache1.googlezip.net
+ota-cache2.googlezip.net
+ota-cache3.googlezip.net
+ota.googlezip.net
+play-apps-features.googleusercontent.com
+playconsole.static.usercontent.goog
+playgateway-pa.googleapis.com
+playstoregatewayadapter-pa.googleapis.com
+prod-lt-playstoregatewayadapter-pa.googleapis.com
+quake-pa.googleapis.com
+safebrowsing.googleapis.com
+voledevice-pa.googleapis.com

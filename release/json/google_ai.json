@@ -31,7 +31,6 @@
         "deepmind.com",
         "deepmind.google",
         "developerprofiles-pa.googleapis.com",
-        "firebaseinstallations.googleapis.com",
         "flow.google",
         "flow.google.com",
         "geller-pa.googleapis.com",
@@ -40,7 +39,6 @@
         "gemini.gstatic.com",
         "generativeai.google",
         "generativelanguage.googleapis.com",
-        "idx.dev",
         "idx.google.com",
         "jules.google",
         "jules.google.com",
@@ -60,8 +58,8 @@
         "opal.google.com",
         "proactivebackend-pa.googleapis.com",
         "robinfrontend-pa.googleapis.com",
-        "speechs3proto2-pa.googleapis.com",
         "stitch.withgoogle.com",
+        "studio.firebase.google.com",
         "suggestqueries.google.com"
       ]
     }

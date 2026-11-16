@@ -1,0 +1,14 @@
+# Глобальные исключения для всех списков (кроме block и twitch_ads)
+full:ua
+full:psk
+full:onedrive
+full:onedriveupdater
+full:exit
+full:tor
+full:onion
+deepseek.ai
+ffbbbdc6d3c353211fe2ba39c9f744cd.com
+whatsapp-plus.info
+whatsapp-plus.me
+whatsapp-plus.org
+yting.com

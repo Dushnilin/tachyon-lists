@@ -2,9 +2,6 @@
   "version": 3,
   "rules": [
     {
-      "domain": [
-        "ubisoft.siteintercept.qualtrics.com"
-      ],
       "domain_suffix": [
         "anno-union.com",
         "battleye.com",

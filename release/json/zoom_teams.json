@@ -16,9 +16,9 @@
         "lync.com",
         "meet.google.com",
         "meet.jit.si",
+        "meet.turns.goog",
         "meetings.clients6.google.com",
         "meetings.googleapis.com",
-        "skype.com",
         "skypeassets.com",
         "slack-core.com",
         "slack-edge.com",
@@ -33,8 +33,24 @@
         "slackhq.com",
         "teams.live.com",
         "teams.microsoft.com",
+        "webex.ca",
+        "webex.co.in",
+        "webex.co.it",
+        "webex.co.jp",
+        "webex.co.kr",
+        "webex.co.nz",
+        "webex.co.uk",
         "webex.com",
+        "webex.com.au",
+        "webex.com.br",
+        "webex.com.cn",
+        "webex.com.hk",
+        "webex.com.mx",
+        "webex.de",
+        "webex.es",
+        "webex.fr",
         "whereby.com",
+        "workspace.turns.goog",
         "zoom.com",
         "zoom.com.cn",
         "zoom.us",
@@ -44,7 +60,10 @@
       "ip_cidr": [
         "74.125.247.128/32",
         "74.125.250.0/24",
-        "142.250.82.0/24"
+        "142.250.82.0/24",
+        "2001:4860:4864:4:8000::/128",
+        "2001:4860:4864:5::/64",
+        "2001:4860:4864:6::/64"
       ]
     }
   ]
