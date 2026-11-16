@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-11-16T05:23:12Z",
+  "generated_at": "2026-11-16T06:21:07Z",
   "repository": "https://github.com/Dushnilin/tachyon-lists",
   "total_lists": 150,
   "lists": [
@@ -3761,7 +3761,7 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 21798,
+        "ipv4_cidr": 21817,
         "ipv6_cidr": 0
       },
       "files": {
@@ -3771,8 +3771,8 @@
         "domains": null,
         "subnets": "release/subnets/botnet_attackers_ip_block.lst"
       },
-      "sha256_trs": "df31d93aa9b1555fa05a3e657dbca6d0969d6e436928e75232f24fcf49159904",
-      "sha256_srs": "d8b468d5f11ce9e6220e72617395beaa9603e2b724c9466ce61b937b8ee85dee"
+      "sha256_trs": "72d40375ccc8030d9ba47da4cbf4737756c20c4f04e1c6006dc083d80baeb65d",
+      "sha256_srs": "26b6be789258888d9897c930c0ee779d7571500fd9ecc96fafb5a74e8269578a"
     },
     {
       "id": "google_meet",
