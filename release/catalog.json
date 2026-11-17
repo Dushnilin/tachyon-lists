@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-11-16T21:59:43Z",
+  "generated_at": "2026-11-17T07:51:02Z",
   "repository": "https://github.com/Dushnilin/tachyon-lists",
   "total_lists": 150,
   "lists": [
@@ -3111,7 +3111,7 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 710,
+        "ipv4_cidr": 717,
         "ipv6_cidr": 6
       },
       "files": {
@@ -3121,8 +3121,8 @@
         "domains": null,
         "subnets": "release/subnets/ovh.lst"
       },
-      "sha256_trs": "719ffbc80b49a80be37fad983b295d2db18a01df5f6886a044169d1cd826ffbe",
-      "sha256_srs": "0949b37f73d7f520c8baf1708f6a6be6882838f4a411c5d90a4d6d78f32e4976"
+      "sha256_trs": "7e84cb9e724c9f2b011bf6a592451ed0b6f2ab6b8f11d0f4acde85333dd40108",
+      "sha256_srs": "defa01ad16c1aa39c776fa168e7bb4d0c4995dceddaf1b59599a098c0fddfc71"
     },
     {
       "id": "digitalocean",
@@ -3628,7 +3628,7 @@
       "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/gambling_block.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 96888,
+        "domain_suffix": 97669,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -3641,8 +3641,8 @@
         "domains": "release/domains/gambling_block.lst",
         "subnets": null
       },
-      "sha256_trs": "2bdb47135132959426fbca7ca2899f923b85c6dc3172cee816ad70735126ddd4",
-      "sha256_srs": "e59092b58601366567ec4bfed208214b94aec5510e4a99158fe9ac06e197d38d"
+      "sha256_trs": "d09b2ff677248d7cb5a6c2ed990f24340ebc85b6d3e4a29c02eec3e67141b47e",
+      "sha256_srs": "8898660cbd78c0215884bf320fc0d437767bafbb1109858127fa8b0bccb5ad36"
     },
     {
       "id": "phishing_malware_block",
@@ -3654,7 +3654,7 @@
       "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/phishing_malware_block.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 182705,
+        "domain_suffix": 182808,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -3667,8 +3667,8 @@
         "domains": "release/domains/phishing_malware_block.lst",
         "subnets": null
       },
-      "sha256_trs": "c8861038f4e475a2f8f39389f63f652cb328d6465e8b7c90881edfc328a4f32f",
-      "sha256_srs": "2d1cb7b1048a8225667979efa336067ae81ef5457ca52c430b75a802e1cbbe81"
+      "sha256_trs": "145224a22dcc250bc9d70feb1168843b8a14abd3a496f89bb7731b2a5725bb3b",
+      "sha256_srs": "93f28b9293e1c40949ad0c6a58d44c8adae0f7dbdbfc47c9d75f0eb39ea0b80a"
     },
     {
       "id": "telemetry_mobile_block",
@@ -3735,7 +3735,7 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 30866,
+        "ipv4_cidr": 30862,
         "ipv6_cidr": 0
       },
       "files": {
@@ -3745,8 +3745,8 @@
         "domains": null,
         "subnets": "release/subnets/hagezi_tif_ip_block.lst"
       },
-      "sha256_trs": "f39cc70249329f1df7cf32277322ba3dfabadf0e5d5f39a11b4bfd24f8a3aca9",
-      "sha256_srs": "c6dfa58e5fddc2664abe9cdaec4476cee857080804ea3bc24c0c63a53f0a1a1e"
+      "sha256_trs": "bd6d0de87f728708dc30f5d18ce013919e7cda76371c45c74608412d22db3e0b",
+      "sha256_srs": "921feb18ce0e3e8a5480514890bf103aef6051a7bf2e533c4894757d77e7bd17"
     },
     {
       "id": "botnet_attackers_ip_block",
@@ -3761,7 +3761,7 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 21990,
+        "ipv4_cidr": 21807,
         "ipv6_cidr": 0
       },
       "files": {
@@ -3771,8 +3771,8 @@
         "domains": null,
         "subnets": "release/subnets/botnet_attackers_ip_block.lst"
       },
-      "sha256_trs": "99074b2510ddd1ed1fcb77bfdb614b0ebb4d4495e67d060d1a8da323ce18dd2e",
-      "sha256_srs": "cd858268984ae6afe2edf81aaade6ef4e616cf47336e3d2ae7b4787e7382c5fd"
+      "sha256_trs": "324406fb69c299960f371218e90644229e58300d5dc201e56695883352cb5159",
+      "sha256_srs": "e86242b90e8e6a122b512807244dd6b22ff964a763bf94ddcf9903532d619d40"
     },
     {
       "id": "google_meet",
