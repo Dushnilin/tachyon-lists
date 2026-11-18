@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-11-18T09:15:44Z",
+  "generated_at": "2026-11-18T09:17:54Z",
   "repository": "https://github.com/Dushnilin/tachyon-lists",
   "total_lists": 150,
   "lists": [
@@ -3524,7 +3524,7 @@
       "fallback_srs": "https://github.com/zxc-rv/ad-filter/releases/latest/download/adlist.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 242136,
+        "domain_suffix": 252036,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -3537,8 +3537,8 @@
         "domains": "release/domains/ads_hagezi_pro.lst",
         "subnets": null
       },
-      "sha256_trs": "6169d7ad6a05e7de9c5af2c36222266812f7a2f985993de7bdfadc04e2b7254c",
-      "sha256_srs": "5e38b177a85223fc0abe6696e5464b3a59dcaa82244da95f575764ab41d40faa"
+      "sha256_trs": "83fd3e18da9465c3fec9b660eda73fc857a36dc2230f4466398c1aa4fdbe6256",
+      "sha256_srs": "e89fa0207261483b8659df10f263372a52fb6f4d7020414608b3658b5022a076"
     },
     {
       "id": "android_ads_block",
@@ -3761,7 +3761,7 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 22349,
+        "ipv4_cidr": 22423,
         "ipv6_cidr": 0
       },
       "files": {
@@ -3771,8 +3771,8 @@
         "domains": null,
         "subnets": "release/subnets/botnet_attackers_ip_block.lst"
       },
-      "sha256_trs": "668100a80805c3a5173d0a73ee9ba3b6676d8fbe8eb7593dbb5f2a1d49386038",
-      "sha256_srs": "4d100931c17fe0d4779fbd96be82ff4cd378fff02614e38bff449465f1d2556b"
+      "sha256_trs": "a7b6a695ee6c41f105d14cdc8597b74a263ccfbb0b980e001e301952c2b4deaa",
+      "sha256_srs": "6cb1058faf0d9e1cbbb0c8be5f698717b20706e1ad356313d8859a655778e72f"
     },
     {
       "id": "google_meet",
