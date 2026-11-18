@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-11-18T07:20:20Z",
+  "generated_at": "2026-11-18T09:15:44Z",
   "repository": "https://github.com/Dushnilin/tachyon-lists",
   "total_lists": 150,
   "lists": [
@@ -1343,7 +1343,7 @@
         "domain_suffix": 27,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 67,
+        "ipv4_cidr": 68,
         "ipv6_cidr": 25
       },
       "files": {
@@ -1353,8 +1353,8 @@
         "domains": "release/domains/discord.lst",
         "subnets": "release/subnets/discord.lst"
       },
-      "sha256_trs": "c3b536d3d86cf357eed40a5a4cdbe4298836c7f55be3c67d82f59386dca1bc0e",
-      "sha256_srs": "1fa6f2cb4638879570c0bb0f1cef05d61d96731454a41d8bf7b704f1fb12714b"
+      "sha256_trs": "4f4eddd7890dd2f4887bf2435d61906b20a134b3439ae57e0e6792502bb58b4e",
+      "sha256_srs": "156721e679992f75efb6870f8ac7bf6c0bf1a6be5191b92e2745c6f481ef42f1"
     },
     {
       "id": "telegram",
@@ -1577,7 +1577,7 @@
         "domain_suffix": 1,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 159,
+        "ipv4_cidr": 537,
         "ipv6_cidr": 25
       },
       "files": {
@@ -1587,8 +1587,8 @@
         "domains": "release/domains/discord_voice.lst",
         "subnets": "release/subnets/discord_voice.lst"
       },
-      "sha256_trs": "dd2f3c44fbdaa91d3c06ee8f2d9f306b2f4aed9a0b8625129544aa3e719ed008",
-      "sha256_srs": "8c1eee0c9ca9106a850fd2a8fece09f2b9cf9b4ad7aa581ffcdad7b5a1227b85"
+      "sha256_trs": "457911226e002549619d97086b4bd5bdb9a88fd9a7774cc0c3105ecd03c8a6fd",
+      "sha256_srs": "b73db79e6fafec781366085ecb76f63507e9f78634cfb53fc3dac3545ab58530"
     },
     {
       "id": "games_all",
