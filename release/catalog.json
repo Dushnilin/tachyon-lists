@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-11-18T20:28:44Z",
+  "generated_at": "2026-11-18T22:08:02Z",
   "repository": "https://github.com/Dushnilin/tachyon-lists",
   "total_lists": 150,
   "lists": [
@@ -430,7 +430,7 @@
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-category-ai-!cn.srs",
       "counts": {
         "domain": 14,
-        "domain_suffix": 425,
+        "domain_suffix": 432,
         "domain_keyword": 0,
         "domain_regex": 1,
         "ipv4_cidr": 0,
@@ -443,8 +443,8 @@
         "domains": "release/domains/ai_all.lst",
         "subnets": null
       },
-      "sha256_trs": "716994b8602a7772b2d645f89c502c5e824ab12e0bb5b611ae0aa162f1dab23a",
-      "sha256_srs": "c10823729d67be6593d2f881cb338bde1f6114bc5d7c68deca3ae6ee38e8c4bb"
+      "sha256_trs": "77018f020cde499448e70056997fa72304d6a5760134cbea67a1293e3464b35a",
+      "sha256_srs": "b4abf70b489abb6c2db5892906e92ebcd75b0dcebf107e5c7239749da148fdfa"
     },
     {
       "id": "openai",
@@ -716,7 +716,7 @@
       "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/kimi.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 4,
+        "domain_suffix": 11,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -729,8 +729,8 @@
         "domains": "release/domains/kimi.lst",
         "subnets": null
       },
-      "sha256_trs": "4453ad9375ec10adf865fdc76f63602f4a32378facc0b8cb9c640655dc177af8",
-      "sha256_srs": "dde72821328c8792a5256f1ce2a759b5ab4bd7fee0959277c67119b42933e4d3"
+      "sha256_trs": "94e563d232782724755caad33429ba017e1f89caab976223181e945ae741d11c",
+      "sha256_srs": "fa93c5ed4dba0fb1f2eb9ed68a99cacadcbc9366500cd0e1a392aaedf7695a74"
     },
     {
       "id": "midjourney",
@@ -3550,7 +3550,7 @@
       "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/android_ads_block.srs",
       "counts": {
         "domain": 68,
-        "domain_suffix": 41171,
+        "domain_suffix": 41170,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -3563,8 +3563,8 @@
         "domains": "release/domains/android_ads_block.lst",
         "subnets": null
       },
-      "sha256_trs": "eba32122b7181596344de8dc3a50c4e582a38b7b8817d31b5d9615d6b4d52854",
-      "sha256_srs": "a75afda41bb9cea15072373cc519fd9918c856bd26939a640e760b6345c6a777"
+      "sha256_trs": "2431a32231bd1b7ca6e18e5a7cc7c53fefe567aa5d6deb92cb9f91e1ef3e5621",
+      "sha256_srs": "527a848b5b5c6bf59fc4fa103188bbffbfd19ff8d029e9b36f5aa8410893f37c"
     },
     {
       "id": "win_spy",
@@ -3680,7 +3680,7 @@
       "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/telemetry_mobile_block.srs",
       "counts": {
         "domain": 57,
-        "domain_suffix": 1669,
+        "domain_suffix": 1668,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -3693,8 +3693,8 @@
         "domains": "release/domains/telemetry_mobile_block.lst",
         "subnets": null
       },
-      "sha256_trs": "6c4eababb0680e4417a1e717201f8ddde16dae88203a74da3e952e743b77d3f7",
-      "sha256_srs": "5c2ef0b1d13b1832825bc37f215a335681a70a571c0d55061800cbfde7512958"
+      "sha256_trs": "a4d89e1ff8b8cab2b47f9346c7a2aa85b0609a6f838ea968b3ad8c05f5b3b821",
+      "sha256_srs": "c1394ec6ade6fc578a63b879964a71c6b06f83ea2814619ef6216915771aa3fc"
     },
     {
       "id": "et_spamhaus_block",
