@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-11-18T22:08:02Z",
+  "generated_at": "2026-11-18T22:11:26Z",
   "repository": "https://github.com/Dushnilin/tachyon-lists",
   "total_lists": 150,
   "lists": [
@@ -3111,7 +3111,7 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 726,
+        "ipv4_cidr": 727,
         "ipv6_cidr": 7
       },
       "files": {
@@ -3121,8 +3121,8 @@
         "domains": null,
         "subnets": "release/subnets/ovh.lst"
       },
-      "sha256_trs": "59b4cfd5bef26be74bba5bfe3f919f183ccaa4d1c36811a7fa0a2fd4a14678ec",
-      "sha256_srs": "a159cba8435979f72122e83c7fc97f8fb25f6f8cb1a7a8e7a796c6343d261e6c"
+      "sha256_trs": "487f3a2cf62b2e4f12a27b21e4d085953e139a49f59f09ba2e8f7519514c8434",
+      "sha256_srs": "591511cc981b4840d13707ab62320f3c10e610c772ad7a79867e359832726509"
     },
     {
       "id": "digitalocean",
@@ -3709,7 +3709,7 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 19689,
+        "ipv4_cidr": 19677,
         "ipv6_cidr": 74
       },
       "files": {
@@ -3719,8 +3719,8 @@
         "domains": null,
         "subnets": "release/subnets/et_spamhaus_block.lst"
       },
-      "sha256_trs": "b1c4567830c3ac35ad862a989976754148c3d1a6406b5ea26e19de14c86bc12a",
-      "sha256_srs": "d10ddfb9b946b8d3ec4fd4e9847bd149c50a07ccd1938d64ec6afd9ac999e84c"
+      "sha256_trs": "e0158fec963b566f530b7cfffef4fdc10d52dac9375409dd413719f9c04ee927",
+      "sha256_srs": "9f57a40ab8fdc0c815b0d75d60a3e5b78c2810cb9bbd8ca999a306e5439d08e4"
     },
     {
       "id": "hagezi_tif_ip_block",
@@ -3761,7 +3761,7 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 23078,
+        "ipv4_cidr": 23287,
         "ipv6_cidr": 0
       },
       "files": {
@@ -3771,8 +3771,8 @@
         "domains": null,
         "subnets": "release/subnets/botnet_attackers_ip_block.lst"
       },
-      "sha256_trs": "b3c0441a6f5b054ceeefaaae71c6f5282c00a263daac72727a6d1a3c23a5c12c",
-      "sha256_srs": "259742aedc7b31d1f2444f99f95c2c4ddaa7484624ad6999fb0baea60284b2dc"
+      "sha256_trs": "bf4f526430e03c676dfe934fe6c766aa36dbeb8d85f93be098af28edb5803f2d",
+      "sha256_srs": "e37d1d57eb53ef39ebb93c8d6b0100f20dfa3d1eb981b4cba3a8d337a6bcc5e2"
     },
     {
       "id": "google_meet",
