@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-11-19T07:18:31Z",
+  "generated_at": "2026-11-19T12:30:22Z",
   "repository": "https://github.com/Dushnilin/tachyon-lists",
   "total_lists": 150,
   "lists": [
@@ -40,7 +40,7 @@
       "fallback_srs": "https://raw.githubusercontent.com/legiz-ru/sb-rule-sets/main/no-russia-hosts.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 1747,
+        "domain_suffix": 1194,
         "domain_keyword": 105,
         "domain_regex": 5,
         "ipv4_cidr": 0,
@@ -53,8 +53,8 @@
         "domains": "release/domains/geoblock.lst",
         "subnets": null
       },
-      "sha256_trs": "9d3bc7fd3580aeb75a8511055fb6a3528649f79c44a17c2fe587028e10973658",
-      "sha256_srs": "d39a1b096f2f6d1dc9595b0cd37b37a6015d891e1bf6ecccb6725afe7d771f90"
+      "sha256_trs": "793c63cd6de88a1f80ffc9526248bf3e21f326359e7a5092561b2b4fa7cba1e6",
+      "sha256_srs": "633b06937db13454ddd2ac32411d3ee8f227048dd0d5a9b6570957bcbfb495c0"
     },
     {
       "id": "block",
@@ -1353,8 +1353,8 @@
         "domains": "release/domains/discord.lst",
         "subnets": "release/subnets/discord.lst"
       },
-      "sha256_trs": "4f4eddd7890dd2f4887bf2435d61906b20a134b3439ae57e0e6792502bb58b4e",
-      "sha256_srs": "156721e679992f75efb6870f8ac7bf6c0bf1a6be5191b92e2745c6f481ef42f1"
+      "sha256_trs": "73f82fd4c813ecdfb5cd4f71cb770c25084bcf1feb827517df4c3b2b975689f1",
+      "sha256_srs": "7639007fc706d10a33934340a14676e5f4bea3d35d8d2d87d129177b96ed81f3"
     },
     {
       "id": "telegram",
@@ -1587,8 +1587,8 @@
         "domains": "release/domains/discord_voice.lst",
         "subnets": "release/subnets/discord_voice.lst"
       },
-      "sha256_trs": "457911226e002549619d97086b4bd5bdb9a88fd9a7774cc0c3105ecd03c8a6fd",
-      "sha256_srs": "b73db79e6fafec781366085ecb76f63507e9f78634cfb53fc3dac3545ab58530"
+      "sha256_trs": "01da188162e04117ca8f31fa3e93799f0c016c61b3dea9ba70659258992f0a52",
+      "sha256_srs": "00f6e35276c28492b7c5a787a4c4142d1d67f955173dd975e2a34184a3073c66"
     },
     {
       "id": "games_all",
@@ -2743,8 +2743,8 @@
       "description": "[Маршрут: Напрямую (Direct) или В Прокси / VPN по выбору] Основная экосистема поиска и офисных сервисов Google (google.com, gmail.com, drive.google.com, docs.google.com, maps.google.com, translate.google.com, gstatic.com, googleapis.com, googleusercontent.com), из которой исключены домены YouTube (youtube.com, googlevideo.com) и нейросетей Google AI (gemini.google.com, aistudio.google.com).",
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/google.srs",
       "counts": {
-        "domain": 16,
-        "domain_suffix": 602,
+        "domain": 55,
+        "domain_suffix": 777,
         "domain_keyword": 0,
         "domain_regex": 2,
         "ipv4_cidr": 0,
@@ -2757,8 +2757,8 @@
         "domains": "release/domains/google_services.lst",
         "subnets": null
       },
-      "sha256_trs": "c78baeed9b83c1b26cd154f32e3576ecd5c53bfc93e499814726b7f847da1637",
-      "sha256_srs": "5755226fe85170600d9ee2d491e6415d770bad0ca0671dcf70e19fed73c76c40"
+      "sha256_trs": "2f44b73f87b2bb8a4880859aa3eda6175dd51059adf57372fec820feba8abddb",
+      "sha256_srs": "f405bae3678b1771644245276a2ea23b97342d59f9217614a5491a2a094029ad"
     },
     {
       "id": "captcha_auth",
@@ -3316,7 +3316,7 @@
       "fallback_srs": "https://raw.githubusercontent.com/hydraponique/roscomvpn-geosite/master/release/sing-box/torrent.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 418,
+        "domain_suffix": 421,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -3329,8 +3329,8 @@
         "domains": "release/domains/torrent.lst",
         "subnets": null
       },
-      "sha256_trs": "6557caad5cf3b96be8d87ed1e5785a3ece3840a6f325d4aa5c27cc3423ecff65",
-      "sha256_srs": "96c56ab15aa4b5f10d0ef2add95e6bf0ee30344ce25c174b03a6b42682522d12"
+      "sha256_trs": "754b62d1a8bd3ddaa893db3100c946571f1a0d6480f5a812a8b004e14d114189",
+      "sha256_srs": "7774679bf3434bff31c185aeb5cfcd95915f0d7f8a9d1e436d846005ffa358e8"
     },
     {
       "id": "tor",

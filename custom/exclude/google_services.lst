@@ -1,4 +1,14 @@
 # Исключение YouTube, Google AI, Google Play и рекламных/телеметрических доменов из google_services (direct)
+# Не превращать корни в wildcard-суффиксы (иначе ломают исключения поддоменов AI и YouTube)
+no_suffix:google.com
+no_suffix:googleapis.com
+no_suffix:withgoogle.com
+no_suffix:firebase.google.com
+no_suffix:clients.google.com
+no_suffix:google
+no_suffix:goog
+no_suffix:google.dev
+
 # YouTube и видео/медиа-инфраструктура
 full:youtube
 youtube.com
@@ -191,13 +201,48 @@ generativelanguage.googleapis.com
 labs.google.com
 labs.google
 ai.google.dev
+ai.google
+cloudcode-pa.googleapis.com
+daily-cloudcode-pa.googleapis.com
+alkali-pa.googleapis.com
+alkalimakersuite-pa.googleapis.com
+proactivebackend-pa.googleapis.com
+robinfrontend-pa.googleapis.com
+aisandbox-pa.googleapis.com
+antigravity-pa.googleapis.com
+antigravity.googleapis.com
+antigravity.google
+antigravity-unleash.goog
+cloudaicompanion.googleapis.com
+notebooklm-pa.googleapis.com
+notebooklm.googleapis.com
+appsgenaiserver-pa.googleapis.com
+alkalicore-pa.clients6.google.com
+alkalimakersuite-pa.clients6.google.com
+webchannel-alkalimakersuite-pa.clients6.google.com
+geminiweb-pa.clients.google.com
+geminiweb-pa.clients6.google.com
+appsgenaiserver-pa.clients.google.com
+appsgenaiserver-pa.clients6.google.com
+idx.google.com
+opal.google
+opal.google.com
+stitch.withgoogle.com
 
 # Google Play
 googleplay.com
+play.google.com
+play.googleapis.com
+play-fe.googleapis.com
+playatoms-pa.googleapis.com
 gvt1.com
 xn--ngstr-lra8j.com
 
 # Реклама и телеметрия (пересечения с block)
+analytics.google.com
+adservice.google.com
+pagead-googlehosted.l.google.com
+gstaticadssl.l.google.com
 2mdn-cn.net
 2mdn.net
 admeld.com

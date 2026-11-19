@@ -73,14 +73,6 @@
           "url": "{no_russia_hosts}/hosts.txt"
         },
         {
-          "type": "plain_domains",
-          "url": "{refilter_raw}/community.lst"
-        },
-        {
-          "type": "plain_domains",
-          "url": "{antifilter_community}/domains.lst"
-        },
-        {
           "type": "srs",
           "url": "{roscomvpn_geosite_srs}/category-geoblock-ru.srs"
         }

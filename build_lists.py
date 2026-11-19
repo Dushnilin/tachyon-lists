@@ -805,6 +805,12 @@ def parse_plain_domains(text: str) -> RuleBucket:
                 line = dom_part
             else:
                 line = rest
+        elif line.lower().startswith(("full:", "exact:", "domain:")):
+            raw_dom = line.split(":", 1)[1]
+            dom = clean_domain(raw_dom)
+            if dom and "." in dom:
+                bucket.domain.add(dom)
+            continue
         else:
             if line.startswith("*."):
                 line = line[2:]
@@ -1136,6 +1142,7 @@ def optimize_bucket(
     exclude_domains: set[str] | None = None,
     exclude_cidrs: set[str] | None = None,
     exclude_exact_domains: set[str] | None = None,
+    exclude_no_suffix: set[str] | None = None,
     list_id: str = "",
 ) -> tuple[list[str], list[str], list[str], list[str], list[str], list[str]]:
     """
@@ -1145,12 +1152,18 @@ def optimize_bucket(
     """
     ex_suffix = {clean_domain(x) for x in (exclude_domains or set()) if clean_domain(x)}
     ex_exact = {clean_domain(x) for x in (exclude_exact_domains or set()) if clean_domain(x)}
+    ex_no_suffix = {clean_domain(x) for x in (exclude_no_suffix or set()) if clean_domain(x)}
     ex_cidrs = exclude_cidrs or set()
 
     raw_suffixes: set[str] = set()
     for d in bucket.domain_suffix:
         dc = clean_domain(d)
-        if dc and _is_allowed_domain(dc, list_id, is_suffix=True) and not _is_domain_excluded(dc, ex_exact, ex_suffix):
+        if (
+            dc
+            and dc not in ex_no_suffix
+            and _is_allowed_domain(dc, list_id, is_suffix=True)
+            and not _is_domain_excluded(dc, ex_exact, ex_suffix)
+        ):
             raw_suffixes.add(dc)
 
     raw_domains: set[str] = set()
@@ -1975,18 +1988,20 @@ def update_readme_table(catalog_items: list[dict[str, Any]], cfg: dict[str, Any]
         readme_path.write_text(updated, encoding="utf-8", newline="\n")
 
 
-def _parse_exclude_file(path: Path) -> tuple[set[str], set[str], set[str]]:
+def _parse_exclude_file(path: Path) -> tuple[set[str], set[str], set[str], set[str]]:
     """
     Parse an exclude file supporting:
       - IPv4/IPv6 addresses and CIDRs -> cidr_excludes
       - `full:<domain>` / `exact:<domain>` / `domain:<domain>` -> exact_excludes
+      - `no_suffix:<domain>` / `suffix_exact:<domain>` -> no_suffix_excludes
       - `domain_suffix:<domain>` / `suffix:<domain>` / plain `<domain>` -> suffix_excludes
     """
     suffix_excludes: set[str] = set()
     exact_excludes: set[str] = set()
     cidr_excludes: set[str] = set()
+    no_suffix_excludes: set[str] = set()
     if not path.is_file():
-        return suffix_excludes, exact_excludes, cidr_excludes
+        return suffix_excludes, exact_excludes, cidr_excludes, no_suffix_excludes
 
     for raw_line in path.read_text(encoding="utf-8").splitlines():
         entry = raw_line.split("#", 1)[0].split(";", 1)[0].strip()
@@ -1998,6 +2013,12 @@ def _parse_exclude_file(path: Path) -> tuple[set[str], set[str], set[str]]:
             dom = clean_domain(raw_dom)
             if dom:
                 exact_excludes.add(dom)
+            continue
+        if lower.startswith(("no_suffix:", "suffix_exact:")):
+            raw_dom = entry.split(":", 1)[1]
+            dom = clean_domain(raw_dom)
+            if dom:
+                no_suffix_excludes.add(dom)
             continue
         if lower.startswith(("domain_suffix:", "suffix:")):
             raw_dom = entry.split(":", 1)[1]
@@ -2014,7 +2035,7 @@ def _parse_exclude_file(path: Path) -> tuple[set[str], set[str], set[str]]:
         dom = clean_domain(entry)
         if dom:
             suffix_excludes.add(dom)
-    return suffix_excludes, exact_excludes, cidr_excludes
+    return suffix_excludes, exact_excludes, cidr_excludes, no_suffix_excludes
 
 
 def load_builtin_ads_excludes(*, refresh: bool = False) -> tuple[set[str], set[str]]:
@@ -2420,7 +2441,7 @@ def build_all(only_ids: set[str] | None = None, *, refresh: bool = False, allow_
                 log(f"WARN: Failed prefetching {url}: {exc}")
 
     global_exc_file = CUSTOM_DIR / "exclude" / "domains.lst"
-    global_exc_sufs, global_exc_exact, global_exc_cidrs = _parse_exclude_file(global_exc_file)
+    global_exc_sufs, global_exc_exact, global_exc_cidrs, global_exc_no_suffix = _parse_exclude_file(global_exc_file)
     ads_exact, ads_suffixes = load_builtin_ads_excludes(refresh=refresh) if need_ads_list else (set(), set())
 
     resolved_memo: dict[
@@ -2553,7 +2574,7 @@ def build_all(only_ids: set[str] | None = None, *, refresh: bool = False, allow_
         if custom_sub_file.is_file():
             bucket.merge(parse_plain_subnets(custom_sub_file.read_text(encoding="utf-8")))
 
-        exc_suf, exc_exact, exc_cidr = _parse_exclude_file(CUSTOM_DIR / "exclude" / f"{lid}.lst")
+        exc_suf, exc_exact, exc_cidr, exc_no_suffix = _parse_exclude_file(CUSTOM_DIR / "exclude" / f"{lid}.lst")
 
         if group != "block" and lid != "twitch_ads":
             g_suf = global_exc_sufs - PROTECTED_PUSH_DOMAINS if lid == "push" else global_exc_sufs
@@ -2563,6 +2584,7 @@ def build_all(only_ids: set[str] | None = None, *, refresh: bool = False, allow_
             exc_suf |= g_suf | a_suf
             exc_exact |= g_exact | a_exact
             exc_cidr |= global_exc_cidrs
+            exc_no_suffix |= global_exc_no_suffix
 
         for dep in item_cfg.get("exclude_lists", []):
             dep_id = str(dep).strip()
@@ -2580,6 +2602,7 @@ def build_all(only_ids: set[str] | None = None, *, refresh: bool = False, allow_
             exclude_domains=exc_suf,
             exclude_cidrs=exc_cidr,
             exclude_exact_domains=exc_exact,
+            exclude_no_suffix=exc_no_suffix,
             list_id=lid,
         )
         res = (domains, suffixes, keywords, regexes, v4_cidrs, v6_cidrs, failed_sources, total_sources)
