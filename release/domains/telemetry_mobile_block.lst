@@ -349,6 +349,7 @@ br-p.vivoglobal.com
 br.ekatox.com
 branch.io
 braze.com
+browser-api-au.heytapmobile.com
 browser-api-br.heytapmobile.com
 browser-api-fr.heytapmobile.com
 browser-api-gl-01.heytapmobile.com
@@ -621,7 +622,6 @@ dc.services.visualstudio.com
 dcc-awareness-cn.heytapmobi.com
 dcintl.push.heytapmobi.com
 de-gdpr-err-up.vivoglobal.com
-de-gdpr-vcode-api.vivoglobal.com
 demdex.net
 device-metrics-us-2.amazon.com
 device-metrics-us-ud.amazon.com
@@ -672,7 +672,6 @@ eu-cota.vivoglobal.com
 eu-domaincfg.vivoglobal.com
 eu-errup.vivoglobal.com
 eu-monitor-stsdk.vivoglobal.com
-eu-nrt-stsdk.vivoglobal.com
 eu-onrt-stsdk.vivoglobal.com
 eu-ort-stsdk.vivoglobal.com
 eu-p.vivoglobal.com
@@ -728,7 +727,6 @@ firebaselogging.googleapis.com
 fls-cn.amazon-adsystem.com
 fls-cn.amazon.cn
 fls-cn.amazon.com
-fls-eu.amazon-adsystem.com
 fls-eu.amazon.ae
 fls-eu.amazon.co.uk
 fls-eu.amazon.com
@@ -745,12 +743,10 @@ fls-eu.amazon.pl
 fls-eu.amazon.sa
 fls-eu.amazon.se
 fls-fe-opf.amazon.com
-fls-fe.amazon-adsystem.com
 fls-fe.amazon.co.jp
 fls-fe.amazon.com
 fls-fe.amazon.com.au
 fls-fe.amazon.sg
-fls-na.amazon-adsystem.com
 fls-na.amazon.ca
 fls-na.amazon.com
 fls-na.amazon.com.br
@@ -915,6 +911,7 @@ in-ort-stsdk.vivoglobal.com
 in-os-config-appstore.vivoglobal.com
 in-pnrt-stsdk.vivoglobal.com
 in-prt-stsdk.vivoglobal.com
+in-rt-stsdk.vivoglobal.com
 in-third-appstore.vivoglobal.com
 in-timesync.vivoglobal.com
 in-vcode-api.vivoglobal.com
@@ -1273,6 +1270,7 @@ oop-installer-gl.heytapmobile.com
 opay.heytapmobile.com
 openlocation-drcn-platform-dbankcloud-com-drcn.appacc.dbankedge.cn
 openlocation-drcn.platform.dbankcloud.com
+opex-service-eu-allawna-e3dde.fr-w01.cngw.allawnos.com
 opex-service-eu.allawnos.com
 opex-service-in.allawnos.com
 opex-service-sg.allawnos.com
@@ -1321,6 +1319,7 @@ prod-event-relay-notes-api.v.aaplimg.com
 prod-event-relay-sports-api.v.aaplimg.com
 prod-event-relay-stocks-api.v.aaplimg.com
 prod-event-relay-weather-api.v.aaplimg.com
+prod-event-relay-web-api.v.aaplimg.com
 prod-iwork-events.v.aaplimg.com
 prod-news-notification-events.v.aaplimg.com
 proxy-skadnetwork.apple.com
@@ -1489,6 +1488,7 @@ sponsored-ads-eu.amazon.nl
 sponsored-ads-eu.amazon.pl
 sponsored-ads-eu.amazon.sa
 sponsored-ads-eu.amazon.se
+sponsored-ads-euc-1.amazon-adsystem.com
 sponsored-ads-fe.amazon-adsystem.com
 sponsored-ads-na.amazon-adsystem.com
 sponsored-ads.amazon.ae
