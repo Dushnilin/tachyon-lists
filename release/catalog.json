@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-11-22T19:33:03Z",
+  "generated_at": "2026-11-23T07:29:32Z",
   "repository": "https://github.com/Dushnilin/tachyon-lists",
   "total_lists": 150,
   "lists": [
@@ -3111,7 +3111,7 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 725,
+        "ipv4_cidr": 726,
         "ipv6_cidr": 8
       },
       "files": {
@@ -3121,8 +3121,8 @@
         "domains": null,
         "subnets": "release/subnets/ovh.lst"
       },
-      "sha256_trs": "803258df10e52583c3c5e83a4a2c4da323a08910dce7448abe27f8f0c989c7f7",
-      "sha256_srs": "eb51ebaadee641089b401e7f1f6d363b686f276f41264981cbe5bc877ad383fc"
+      "sha256_trs": "3d7da1ecc110dc501138095e36aad49d6440b7af939875e844b37994b9072c52",
+      "sha256_srs": "824156d39377a386174a8d5c6130d725829a144414c1ca77e7a47ada5be5f4f9"
     },
     {
       "id": "digitalocean",
@@ -3185,8 +3185,8 @@
       "description": "[Маршрут: В Прокси / VPN (для туннелирования DoH) или Блокировать (Block — для принудительного использования локального DNS роутера)] Полная база публичных серверов DNS-over-HTTPS (DoH) и DNS-over-TLS (DoT), включая домены и IP-адреса резолверов Cloudflare (1.1.1.1, cloudflare-dns.com), Google (8.8.8.8, dns.google), Quad9 (9.9.9.9, dns.quad9.net), AdGuard DNS, NextDNS, OpenDNS, Control D и Mullvad DNS.",
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-doh.srs",
       "counts": {
-        "domain": 9,
-        "domain_suffix": 3542,
+        "domain": 13,
+        "domain_suffix": 3530,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 28,
@@ -3199,8 +3199,8 @@
         "domains": "release/domains/doh_dot_dns.lst",
         "subnets": "release/subnets/doh_dot_dns.lst"
       },
-      "sha256_trs": "77ca5c966240f7575feeb29194d7887f416f383bad5dfb4ddb2979433b7177e7",
-      "sha256_srs": "a45ff115a638c1c2ee857a369a0884e2237a4b3bc866214d1a285e8184bc642e"
+      "sha256_trs": "ef77dcf519cd97113883b7e05c79bc88b6b2a4cd78256ea384dfd9e7592d3ba0",
+      "sha256_srs": "2b3ed3b39dede0780c809cda09e8cd331a7c865fa3534673e13e268354fdee3e"
     },
     {
       "id": "vps_clouds",
@@ -3628,7 +3628,7 @@
       "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/gambling_block.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 109470,
+        "domain_suffix": 76254,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -3641,8 +3641,8 @@
         "domains": "release/domains/gambling_block.lst",
         "subnets": null
       },
-      "sha256_trs": "d0c4c15a6568627b5790d9bc0814bafc43c2fdb294610d6f5d6ec08d667f4a9c",
-      "sha256_srs": "0d8fb5a4b5dc1742b4ab88efd6f7bde7130e52f817b2f1e5d539f290d224ec96"
+      "sha256_trs": "0071de70e27f391a3079e1c89681951944419b30ab5c1c65d6c221bc555ca7fe",
+      "sha256_srs": "4ce101bce74da12552927dfa6bbb093785169b74ff29d522c9c5ae9970c2fbb8"
     },
     {
       "id": "phishing_malware_block",
@@ -3654,7 +3654,7 @@
       "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/phishing_malware_block.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 199210,
+        "domain_suffix": 192696,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -3667,8 +3667,8 @@
         "domains": "release/domains/phishing_malware_block.lst",
         "subnets": null
       },
-      "sha256_trs": "d12e95b0e09326b7a17e03c218f06a3d445c1b95a38a4326cd9f9908983e7bcf",
-      "sha256_srs": "84bcec822459a102c2d4d9d10038f8efe348b3ef860f52b4ca3a02e6277a73e1"
+      "sha256_trs": "417f72edc3b461a1a9b279058b4df0f65812efe47688fc29b248c34a8bb9d8f5",
+      "sha256_srs": "4b8b29056a6e8ac162a4bbde0a30a509692cdb20659ef66d563184076f12f2d3"
     },
     {
       "id": "telemetry_mobile_block",
@@ -3761,7 +3761,7 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 24271,
+        "ipv4_cidr": 22509,
         "ipv6_cidr": 0
       },
       "files": {
@@ -3771,8 +3771,8 @@
         "domains": null,
         "subnets": "release/subnets/botnet_attackers_ip_block.lst"
       },
-      "sha256_trs": "7d983903b11c151681028dea9024d846eda646e471914a746c0edbb8fa639aa2",
-      "sha256_srs": "d81937b8df3d17af8d41e07b7e39090dc7733cad1934a378e81dc3625b42f9a5"
+      "sha256_trs": "55701987c60e299d0996d2303a3e0b8789a5b907006ee30246a433c0e78bce1e",
+      "sha256_srs": "903ccde092b87fcf320bcb57fde82950845eb1d385f6dc4bcf39111b56ca35a6"
     },
     {
       "id": "google_meet",
