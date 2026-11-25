@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-11-25T11:39:16Z",
+  "generated_at": "2026-11-25T15:20:48Z",
   "repository": "https://github.com/Dushnilin/tachyon-lists",
   "total_lists": 155,
   "lists": [
@@ -14,7 +14,7 @@
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-ru-blocked.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 73966,
+        "domain_suffix": 73965,
         "domain_keyword": 105,
         "domain_regex": 5,
         "ipv4_cidr": 0,
@@ -27,8 +27,8 @@
         "domains": "release/domains/russia_inside.lst",
         "subnets": null
       },
-      "sha256_trs": "2a261e3889ea5bf77d04a7a843e2d2b1a192834561b17d865f5c23958279739f",
-      "sha256_srs": "6612f726e690c5317a7bb4fb3f7d3549515ba9b63b5a0dceb3e18ac6b820d488"
+      "sha256_trs": "b766065acafe3feac46b91a0dbf9bfc1cf56eb64760d4c82d3a92a26d8886453",
+      "sha256_srs": "41d5070c9d78fe78e7c250a4794a51c400a70f3e362aafc25273b0132211eaab"
     },
     {
       "id": "geoblock",
@@ -92,7 +92,7 @@
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-ru-blocked.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 73590,
+        "domain_suffix": 73589,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 60345,
@@ -105,8 +105,8 @@
         "domains": "release/domains/ru_blocked.lst",
         "subnets": "release/subnets/ru_blocked.lst"
       },
-      "sha256_trs": "156fb4debdcbb73adfe3157748dee5121ec53cb1db83551488886aadbda85bf6",
-      "sha256_srs": "13b23e5f2cb50477e547773ea87236bfe75bb6a69dfe991d9335cb55ef269a27"
+      "sha256_trs": "0c38489f2f9328d9df302c10305634da293f9c57a635d1066d2f7a0bd92fd16b",
+      "sha256_srs": "d0471ddb8f3a6cc713abaf82b167617b5911b5977a87b1e0cb6527f083765429"
     },
     {
       "id": "ru_blocked_all",
@@ -118,10 +118,10 @@
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-ru-blocked-all.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 1639302,
+        "domain_suffix": 1643853,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 814,
+        "ipv4_cidr": 783,
         "ipv6_cidr": 4
       },
       "files": {
@@ -131,8 +131,8 @@
         "domains": "release/domains/ru_blocked_all.lst",
         "subnets": "release/subnets/ru_blocked_all.lst"
       },
-      "sha256_trs": "9e61f778ff652799a3503b2c8c1186c05f5738b07bd3cb784855c6d70bae68ab",
-      "sha256_srs": "38e9689fd721fce8add0ada1d35b048fce17f70052cb7179421b18b0073518f7"
+      "sha256_trs": "322f0a82141f0ec36f7100da865571221e8016a32fd8f0f08d550629de2d41a1",
+      "sha256_srs": "70bc8fc9fbcc310eebbd95ee7a12f7980d02e831b8a070ffd64993819d0a745c"
     },
     {
       "id": "antifilter",
@@ -147,7 +147,7 @@
         "domain_suffix": 418,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 814,
+        "ipv4_cidr": 783,
         "ipv6_cidr": 4
       },
       "files": {
@@ -170,7 +170,7 @@
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-refilter.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 73512,
+        "domain_suffix": 73511,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 13691,
@@ -183,8 +183,8 @@
         "domains": "release/domains/refilter.lst",
         "subnets": "release/subnets/refilter.lst"
       },
-      "sha256_trs": "ebe0aa6a4c0414f87e03df6c6504194535dd339ba27be511fcc0c8924f794d8e",
-      "sha256_srs": "01a1a6632cd8cca6940fa9ce6fb014953717470f8b9e263e8b6d09e6eb8389f7"
+      "sha256_trs": "4dc8d42dc3711e72e149953e095762d780d90edddda605ee7d7608b582ffea51",
+      "sha256_srs": "8a44e96a9221da6ff690ed2b17fa37585838dba2a899158c3052e582fb16b2a7"
     },
     {
       "id": "russia_outside",
@@ -196,7 +196,7 @@
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-ru-available-only-inside.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 170,
+        "domain_suffix": 441,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -209,8 +209,8 @@
         "domains": "release/domains/russia_outside.lst",
         "subnets": null
       },
-      "sha256_trs": "c430ba0b388e274c749f9a533ac417737e9efb6d37587e999b5a9e81309a869d",
-      "sha256_srs": "68aa3fd7217c79483456f35017ceb2ca96a0855e069982353f2a1e3015220fbc"
+      "sha256_trs": "a00985d8599bdec0d5c0807b16eb4eaf2a4dfb6bbde3782ada7514a578e1329e",
+      "sha256_srs": "5cfa8fe68d6790414b8c8bbe5df0aad015fd709dccfeb13b3b3ba0e0078106e4"
     },
     {
       "id": "ukraine_inside",
@@ -222,7 +222,7 @@
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ru.srs",
       "counts": {
         "domain": 6,
-        "domain_suffix": 1163,
+        "domain_suffix": 1434,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -235,8 +235,8 @@
         "domains": "release/domains/ukraine_inside.lst",
         "subnets": null
       },
-      "sha256_trs": "f5ad85e649c958cf2a2b253bd580df3e0351606670b30680327ea6024a1fd51a",
-      "sha256_srs": "2133b09fffbce231802f3f8a09f3e18e00cd40acde7c00f819a88f2e3cb8cdd7"
+      "sha256_trs": "4921923a44ef9308071819ad06bab0f3e10a62d675d96e4b2f4b2c09f0504828",
+      "sha256_srs": "5dddfbbfcf8e18ba5b6af361c204b98ecbe5e709b79d0f3699e03af8cf8c77c1"
     },
     {
       "id": "belarus_inside",
@@ -300,11 +300,11 @@
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ru.srs",
       "counts": {
         "domain": 3,
-        "domain_suffix": 856,
+        "domain_suffix": 874,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 36609,
-        "ipv6_cidr": 91
+        "ipv4_cidr": 36922,
+        "ipv6_cidr": 93
       },
       "files": {
         "trs": "release/tachyon/ru_domains.trs",
@@ -313,8 +313,8 @@
         "domains": "release/domains/ru_domains.lst",
         "subnets": "release/subnets/ru_domains.lst"
       },
-      "sha256_trs": "0b0cf39808ccab59f6952027cc554f8b226793a29491a4e0aa81665ab9aa282e",
-      "sha256_srs": "75e7ba799f82f4339f0f4f56b0ace3b629d51e5da28a0afc5d49de9b99632d2d"
+      "sha256_trs": "3fe5e3e275a8f09146d2ee837e919be34c5f23966357e7d0c6e05db4cb4d42c7",
+      "sha256_srs": "0f99cdba034f9582e2844e3e5324605d9a56e1e805a0dc7fc71a33693b72456d"
     },
     {
       "id": "ru_only_inside",
@@ -326,7 +326,7 @@
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-ru-available-only-inside.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 178,
+        "domain_suffix": 442,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -339,8 +339,8 @@
         "domains": "release/domains/ru_only_inside.lst",
         "subnets": null
       },
-      "sha256_trs": "f68c12b4113498e0caac933c9f48ac8b8c74740e543b86cd6d6975ce6bf97774",
-      "sha256_srs": "ed712724b1ac8357e020ebc90cf547fbb8e49f4023c658769d16cdd9d49d9aed"
+      "sha256_trs": "edc32f4404e70b122b37cb88ba209fb137e79bb70dde584380621997215d3956",
+      "sha256_srs": "3cb6f0362b1f571246e0c66a80c3b67a7cdaa38f4499a23d7b4f5d31209459e3"
     },
     {
       "id": "push",
@@ -3267,8 +3267,8 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 174,
-        "ipv6_cidr": 13
+        "ipv4_cidr": 177,
+        "ipv6_cidr": 14
       },
       "files": {
         "trs": "release/tachyon/digitalocean.trs",
@@ -3277,8 +3277,8 @@
         "domains": null,
         "subnets": "release/subnets/digitalocean.lst"
       },
-      "sha256_trs": "d3b051f5659451873423f44b2151f86bc159d498dcec2ffcc396934930ac1a0e",
-      "sha256_srs": "e0723e882e322ebfce387224f084bf186baac2af26dad1df4161ffee7e3d2064"
+      "sha256_trs": "594940d652bdc10de68de6ae5b6cf8d4114850064065c8e92b13d1f21c838498",
+      "sha256_srs": "8415bf747d93e0086c8818db14860f6c52079441bc1ed9599afb44249df00c92"
     },
     {
       "id": "speedtest",
@@ -3345,8 +3345,8 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 2623,
-        "ipv6_cidr": 1159
+        "ipv4_cidr": 2624,
+        "ipv6_cidr": 1177
       },
       "files": {
         "trs": "release/tachyon/vps_clouds.trs",
@@ -3355,8 +3355,8 @@
         "domains": null,
         "subnets": "release/subnets/vps_clouds.lst"
       },
-      "sha256_trs": "edc9e0cc2fc360845d48a972efe57b196fd288b1808a21ebee6b4b0bbcc27d88",
-      "sha256_srs": "e26ebde72b85be31e467c252f7784c0f8107c2f8e0957e11939f0111e628b403"
+      "sha256_trs": "d517774080688fdde00af85360cbe539a457412c62b884d9b1be06d04323d904",
+      "sha256_srs": "3f096a86d2652180eaa59433c14a08679a70885c1078ae89afb6773c0c19fdd4"
     },
     {
       "id": "crypto",
@@ -3891,7 +3891,7 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 22084,
+        "ipv4_cidr": 22301,
         "ipv6_cidr": 0
       },
       "files": {
@@ -3901,8 +3901,8 @@
         "domains": null,
         "subnets": "release/subnets/botnet_attackers_ip_block.lst"
       },
-      "sha256_trs": "58de41c56131fc5573f92cd75fa53a2488bc66d1d7e1c4740fd0e283bdd3d93c",
-      "sha256_srs": "3cabf6b569a46c773eae01755b2525ab57f4d4b243ff37fd4d8c4de031b2d970"
+      "sha256_trs": "6cf5b1c58342c1f0bb73a639c30c2ff491df2ae10d6358e0d48e3df518ff8bff",
+      "sha256_srs": "732e2970dbbb02058dfa7712ae75d54ebaa036e89cfc0403e5228f2a2b25541c"
     },
     {
       "id": "google_meet",
