@@ -4,7 +4,8 @@
     {
       "domain_suffix": [
         "kick-files.s3.amazonaws.com",
-        "kick.com"
+        "kick.com",
+        "kickcdn.com"
       ]
     }
   ]

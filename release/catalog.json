@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generated_at": "2026-11-25T08:25:23Z",
+  "generated_at": "2026-11-25T11:39:16Z",
   "repository": "https://github.com/Dushnilin/tachyon-lists",
-  "total_lists": 150,
+  "total_lists": 155,
   "lists": [
     {
       "id": "russia_inside",
@@ -393,6 +393,32 @@
       },
       "sha256_trs": "4d07409cffbfcea911f537e996c5418bf9a06acbb84f47078609fd2a782e566b",
       "sha256_srs": "d7df22400cfc4244ebe23fdab174ffa3f4356ee65e6ffdd6f70ad3c47e66b1ae"
+    },
+    {
+      "id": "consoles_cdn",
+      "group": "direct",
+      "kind": "domains",
+      "recommended_action": "direct",
+      "title": "CDN загрузок приставок (Direct) — скачивание игр и прошивок Xbox, PSN, Nintendo, Quest и SteamOS напрямую",
+      "description": "[Маршрут: Напрямую (Direct) — ставить выше правил приставок] Выделенные серверы загрузки дистрибутивов игр, патчей и прошивок для консолей: Xbox (assets1/2.xboxlive.com, xvcf1/2.xboxlive.com, dl.delivery.mp.microsoft.com), PlayStation (dl.playstation.net, update.playstation.net, gs2.ww.prod.dl.playstation.net), Nintendo (ctest.cdn.nintendo.net, d4c.nintendo.net), Meta Quest (oculuscdn.com) и Steam Deck (steamos.cloud). Магазин и учётная запись остаются через прокси, а загрузки объёмных игр идут напрямую на скорости провайдера.",
+      "fallback_srs": "",
+      "counts": {
+        "domain": 0,
+        "domain_suffix": 22,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/consoles_cdn.trs",
+        "srs": "release/sing-box/consoles_cdn.srs",
+        "json": "release/json/consoles_cdn.json",
+        "domains": "release/domains/consoles_cdn.lst",
+        "subnets": null
+      },
+      "sha256_trs": "f6802624c4babc785c8817f760ddccd49380345cbc9cdaf4a970c0503f9ec127",
+      "sha256_srs": "e2a07e0bf9381927653795cb4dfcb98638cfd1f85861cfbfb704dfd027e94409"
     },
     {
       "id": "captive_ntp_stun",
@@ -950,7 +976,7 @@
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/kick.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 2,
+        "domain_suffix": 3,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -963,8 +989,8 @@
         "domains": "release/domains/kick.lst",
         "subnets": null
       },
-      "sha256_trs": "e429a66d353804ddf48186cfc937156e1ef2a1102d7019aa1b23d092ea54c116",
-      "sha256_srs": "9e1c7c58f5413e472bb55cb10ca2cd89a472d9b5a375a977e16db9bf471f66d7"
+      "sha256_trs": "5473d1040e0b965ad51ef6a7db43937c3d75fe00432e624b4bf5520e07f9f4d7",
+      "sha256_srs": "a7698c6a430662e442d9dee26573ee802ad6e49299a009f497f9b6b2de38b9a4"
     },
     {
       "id": "spotify",
@@ -1343,7 +1369,7 @@
         "domain_suffix": 27,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 68,
+        "ipv4_cidr": 432,
         "ipv6_cidr": 25
       },
       "files": {
@@ -1353,8 +1379,8 @@
         "domains": "release/domains/discord.lst",
         "subnets": "release/subnets/discord.lst"
       },
-      "sha256_trs": "73f82fd4c813ecdfb5cd4f71cb770c25084bcf1feb827517df4c3b2b975689f1",
-      "sha256_srs": "7639007fc706d10a33934340a14676e5f4bea3d35d8d2d87d129177b96ed81f3"
+      "sha256_trs": "89f109af0976fe8f132fb51392e01032cb70b9370508d3f312caa959d4d47160",
+      "sha256_srs": "b95dabc9b077ad53d22f261c9166a480738e8a5880bd7739e283ac3d93e3f21e"
     },
     {
       "id": "telegram",
@@ -1525,7 +1551,7 @@
         "domain_suffix": 53,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 3,
+        "ipv4_cidr": 53,
         "ipv6_cidr": 3
       },
       "files": {
@@ -1535,8 +1561,8 @@
         "domains": "release/domains/zoom_teams.lst",
         "subnets": "release/subnets/zoom_teams.lst"
       },
-      "sha256_trs": "f561ed11e65e0b703279b5c2251cd676e1afc4faba1704360baa91d898f726e1",
-      "sha256_srs": "616830712b2627aa819b0934963196b5b0f003372684b904569bd71e5d4e23ad"
+      "sha256_trs": "b5017e45874242a87a2827f78ec497a3d5c5b74ae9e37f69b33dc67c606494a2",
+      "sha256_srs": "d935534a07d1e7f1a948775b33427c28ccf2f925b8613ac27c0ac350cd020d46"
     },
     {
       "id": "linkedin",
@@ -1577,7 +1603,7 @@
         "domain_suffix": 1,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 537,
+        "ipv4_cidr": 432,
         "ipv6_cidr": 25
       },
       "files": {
@@ -1587,8 +1613,8 @@
         "domains": "release/domains/discord_voice.lst",
         "subnets": "release/subnets/discord_voice.lst"
       },
-      "sha256_trs": "01da188162e04117ca8f31fa3e93799f0c016c61b3dea9ba70659258992f0a52",
-      "sha256_srs": "00f6e35276c28492b7c5a787a4c4142d1d67f955173dd975e2a34184a3073c66"
+      "sha256_trs": "0b8ce982877bd8d80d82953f36191362136d9273f9da81171dde251445dba2d1",
+      "sha256_srs": "2b02695f9df0aeb296831da49b0ecff0738f60109e7fc03e14c59dcbc6e0d900"
     },
     {
       "id": "games_all",
@@ -1760,7 +1786,7 @@
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 729,
-        "ipv6_cidr": 8
+        "ipv6_cidr": 9
       },
       "files": {
         "trs": "release/tachyon/callofduty.trs",
@@ -1769,8 +1795,8 @@
         "domains": "release/domains/callofduty.lst",
         "subnets": "release/subnets/callofduty.lst"
       },
-      "sha256_trs": "5c1eea18372aa83c84f8550a120d24191e25d381faba23bf2b4922558290157c",
-      "sha256_srs": "381322b930a989695d2ab0fd142de48fd6a6b5538ec7472610c63c7fdf552583"
+      "sha256_trs": "5fcad38d438b4a8e1402f8601789a476ee0e711cdeb2411a27ce6149ebcc8bbf",
+      "sha256_srs": "909254f45d675f2c23ee948cef8415bc5ea0b23ad15c84fb2e4898d3dc0c03ca"
     },
     {
       "id": "riot",
@@ -1825,16 +1851,42 @@
       "sha256_srs": "3d0bd08e8c81d149f070d1319f91599e6a2e250e748213100751faf29a176ec1"
     },
     {
+      "id": "consoles_all",
+      "group": "gaming",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Игровые приставки (все) — Xbox, PlayStation, Nintendo Switch / Switch 2 и VR-гарнитуры",
+      "description": "[Маршрут: В Прокси / VPN] Единый сводный список доменов всех основных игровых консолей и VR-шлемов без ПК-лаунчеров: Xbox Live и Game Pass (включая вход Microsoft), PlayStation Network (PSN / Sony Account / Remote Play), Nintendo Switch и Switch 2 (eShop, Switch Online, NPLN) и VR-экосистемы (Meta Quest, Pico VR, HTC Vive, Pimax).",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-xbox.srs",
+      "counts": {
+        "domain": 3,
+        "domain_suffix": 236,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/consoles_all.trs",
+        "srs": "release/sing-box/consoles_all.srs",
+        "json": "release/json/consoles_all.json",
+        "domains": "release/domains/consoles_all.lst",
+        "subnets": null
+      },
+      "sha256_trs": "ef822630a8c75a64ad6ae380bdb53b0e9095b52a34c4e57b3f03d2becf1dc5b3",
+      "sha256_srs": "c0d892fce4a85619865222234fa84d748b3e615bd46ec1a9e5ccfc7405f116f8"
+    },
+    {
       "id": "xbox",
       "group": "gaming",
       "kind": "domains",
       "recommended_action": "proxy",
-      "title": "Xbox Live и Game Pass — консоли Xbox, PC Game Pass, Cloud Gaming, Forza, Halo и Bethesda",
-      "description": "[Маршрут: В Прокси / VPN] Экосистема Xbox и игровых студий Microsoft / Bethesda: xbox.com, xboxlive.com, gamepass.com, xboxservices.com, forzamotorsport.net, halowaypoint.com, seaofthieves.com, flightsimulator.com, bethesda.net, doom.com и elderscrolls.com.",
+      "title": "Xbox Live и Game Pass — консоли Xbox, PC Game Pass, Cloud Gaming, вход Microsoft и Bethesda",
+      "description": "[Маршрут: В Прокси / VPN] Экосистема Xbox и игровых студий Microsoft / Bethesda: xbox.com, xboxlive.com, xboxlive.net, gamepass.com, xboxservices.com, xboxcloudgaming.com, домены входа Microsoft для консоли (login.live.com, account.live.com, account.microsoft.com, login.microsoftonline.com, msauth.net), Forza, Halo, Sea of Thieves, Flight Simulator и Bethesda.",
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-xbox.srs",
       "counts": {
-        "domain": 5,
-        "domain_suffix": 63,
+        "domain": 3,
+        "domain_suffix": 75,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -1847,46 +1899,46 @@
         "domains": "release/domains/xbox.lst",
         "subnets": null
       },
-      "sha256_trs": "b0b3369993585ce0af605ccb578b697d1bef830645143f0216ad2575e45b24b6",
-      "sha256_srs": "15bbaf7c9aeac62785cb1b4ad65b316414eacdaab7e93b8786b4f548c8f24b4f"
+      "sha256_trs": "125c2dfe70b9db80544949a2a32a42c0e63af2ee84ad9f09457a25fbe20c1364",
+      "sha256_srs": "79a82473b9e2b474cabbbc956942ee0818909a82a9312f12d85dcb52751276dc"
     },
     {
       "id": "playstation",
       "group": "gaming",
-      "kind": "domains",
+      "kind": "mixed",
       "recommended_action": "proxy",
-      "title": "PlayStation Network (PSN) — PS5/PS4, PS Store, PS Plus, тусовки и обновления игр",
-      "description": "[Маршрут: В Прокси / VPN] Сетевые сервисы Sony PlayStation: playstation.com, playstation.net, playstationnetwork.com, sonyentertainmentnetwork.com, CDN загрузок dl.playstation.net, а также Bungie / Helldivers 2.",
+      "title": "PlayStation Network (PSN) — PS5/PS4/PS Portal, Store, аккаунты Sony и подсети AS33353",
+      "description": "[Маршрут: В Прокси / VPN] Сетевые сервисы и подсети Sony Interactive Entertainment (AS33353): playstation.com, playstation.net, playstationnetwork.com, sonyentertainmentnetwork.com, авторизация ca.account.sony.com / my.account.sony.com, Remote Play и Cloud Streaming (gaikai.com, playstation-cloud.com), CDN dl.playstation.net и студии PSN.",
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-playstation.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 16,
+        "domain_suffix": 33,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 0,
-        "ipv6_cidr": 0
+        "ipv4_cidr": 32,
+        "ipv6_cidr": 46
       },
       "files": {
         "trs": "release/tachyon/playstation.trs",
         "srs": "release/sing-box/playstation.srs",
         "json": "release/json/playstation.json",
         "domains": "release/domains/playstation.lst",
-        "subnets": null
+        "subnets": "release/subnets/playstation.lst"
       },
-      "sha256_trs": "bd4947e1c6c62d2ddf63f3ad03b9e8af2ec3c703ed10a71679034a395feeaea6",
-      "sha256_srs": "307f06f8ff46b4c5a390a8ad3b539e3ea9b91ef70006fe93312120b0836cae25"
+      "sha256_trs": "d278dd17bf5368e9456e13b4a356cbc7daa4b55f918f75a09692e9954a5ee440",
+      "sha256_srs": "bedd972f9a2723a7a30e40194e56c5f62b226c1dd08474ca93da2e1d23cdecfc"
     },
     {
       "id": "nintendo",
       "group": "gaming",
       "kind": "domains",
       "recommended_action": "proxy",
-      "title": "Nintendo Switch — Nintendo eShop, Switch Online, аккаунты и обновления игр",
-      "description": "[Маршрут: В Прокси / VPN] Все домены консолей Nintendo Switch, магазина eShop, подписки Nintendo Switch Online и игр Pokémon / Zelda / Mario / Splatoon (nintendo.com, nintendo.net, nintendowifi.net, pokemon.com).",
+      "title": "Nintendo Switch / Switch 2 — Nintendo eShop, Switch Online, NPLN и аккаунты Nintendo",
+      "description": "[Маршрут: В Прокси / VPN] Все домены консолей Nintendo Switch, Switch 2, Wii U и 3DS: магазин eShop, подписка Nintendo Switch Online, серверы мультиплеера NPLN/NEX (nintendo.net, nintendowifi.net, nintendonetwork.net), аккаунты accounts.nintendo.com и серии Pokémon, Zelda, Mario, Splatoon, Metroid, Xenoblade.",
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-nintendo.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 131,
+        "domain_suffix": 141,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -1899,8 +1951,60 @@
         "domains": "release/domains/nintendo.lst",
         "subnets": null
       },
-      "sha256_trs": "333b67bed577137b42c332ac86ea233a3db5981a6656cc65d57b8228830efe5d",
-      "sha256_srs": "5b5e6c6078d291763b016116bbd122b6285fe20c37d5478bc68fd65235e7fa05"
+      "sha256_trs": "d85a266081abae865c139dc3b27c3668511d6d75eea62c936948f3bb422ab7f3",
+      "sha256_srs": "521bb9fe101cdc777c199edc7696ae373eb1e2821629818a7cd8150df2b9aaa7"
+    },
+    {
+      "id": "handheld_consoles",
+      "group": "gaming",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Портативные приставки и эмуляторы — Steam Deck, ROG Ally, Legion Go, RetroArch и EmuDeck",
+      "description": "[Маршрут: В Прокси / VPN] Портативные консоли и эмуляция: образы и репозитории Steam Deck / SteamOS (steamos.cloud, flathub.org, decky.xyz, protondb.com), ASUS ROG Ally, Lenovo Legion Go, Ayaneo, GPD, Anbernic, Retroid, AYN, ОС Bazzite / Batocera / ROCKNIX / muOS / OnionOS и эмуляторы (RetroArch, EmuDeck, RPCS3, Ryujinx, Dolphin, PCSX2, Cemu, PPSSPP, RetroAchievements).",
+      "fallback_srs": "",
+      "counts": {
+        "domain": 0,
+        "domain_suffix": 58,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/handheld_consoles.trs",
+        "srs": "release/sing-box/handheld_consoles.srs",
+        "json": "release/json/handheld_consoles.json",
+        "domains": "release/domains/handheld_consoles.lst",
+        "subnets": null
+      },
+      "sha256_trs": "8ef25240b24a048c236c21ca8c8e4f6c6d7ea3af9dbe839a79f95f961e5fb8b7",
+      "sha256_srs": "cb3c62a85d6468f489696c9861085fcc9d864b2742baf285a2771069924d58be"
+    },
+    {
+      "id": "console_homebrew",
+      "group": "gaming",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Ретро-сети и Homebrew приставок — Pretendo, Wiimmfi, Insignia, Switch CFW, PS HEN и HShop",
+      "description": "[Маршрут: В Прокси / VPN] Альтернативные онлайн-серверы и сообщества энтузиастов для классических и модифицированных приставок: Pretendo Network (Wii U / 3DS), Wiimmfi и RiiConnect24 (Wii / DS), Insignia (Xbox Live), PSone / PSRewired, руководства hacks.guide, Switch/WiiU/3DS homebrew (switchbrew.org, hshop.erista.me, tinfoil.io, fortheusers.org) и PlayStation HEN/патчи (ps3xploit.me, nopaystation.com, orbispatches.com).",
+      "fallback_srs": "",
+      "counts": {
+        "domain": 0,
+        "domain_suffix": 35,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/console_homebrew.trs",
+        "srs": "release/sing-box/console_homebrew.srs",
+        "json": "release/json/console_homebrew.json",
+        "domains": "release/domains/console_homebrew.lst",
+        "subnets": null
+      },
+      "sha256_trs": "9e54dcf5ce778daec8c58ed2e84fa3cebb0db833017299b9cac7a73c05eff54b",
+      "sha256_srs": "7976658748ef6051f9acd4f38e0a608f90cc54821d48f5e46a0454bf15e9a74b"
     },
     {
       "id": "gog",
@@ -2165,28 +2269,28 @@
     {
       "id": "game_backends",
       "group": "gaming",
-      "kind": "mixed",
+      "kind": "domains",
       "recommended_action": "proxy",
       "title": "Сетевые движки игр и голосовой чат — Photon Engine, Vivox Voice, Azure PlayFab и EOS",
-      "description": "[Маршрут: В Прокси / VPN (с UDP) или Desync] Сетевая инфраструктура сотен мультиплеерных игр и внутриигрового голосового чата: войс-движок Vivox (vivox.com, unity3d.com — чинит голосовой чат в Valorant, PUBG, LoL, Fortnite, Overwatch 2, Rainbow Six), облако кооп-игр Photon Engine (photonengine.com, exitgames.com + UDP-подсети — чинит Phasmophobia, R.E.P.O., Content Warning, Lethal Company, VRChat, Among Us), Azure PlayFab (playfabapi.com — Helldivers 2, Sea of Thieves, Minecraft) и Epic Online Services (epicgames.dev).",
+      "description": "[Маршрут: В Прокси / VPN (с UDP) или Desync] Сетевая инфраструктура сотен мультиплеерных игр и внутриигрового голосового чата: войс-движок Vivox (vivox.com, unity3d.com — чинит голосовой чат в Valorant, PUBG, LoL, Fortnite, Overwatch 2, Rainbow Six), облако кооп-игр Photon Engine (photonengine.com, exitgames.com — чинит Phasmophobia, R.E.P.O., Content Warning, Lethal Company, VRChat, Among Us), Azure PlayFab (playfabapi.com — Helldivers 2, Sea of Thieves, Minecraft) и Epic Online Services (epicgames.dev).",
       "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/game_backends.srs",
       "counts": {
         "domain": 0,
         "domain_suffix": 22,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 4,
-        "ipv6_cidr": 1
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
       },
       "files": {
         "trs": "release/tachyon/game_backends.trs",
         "srs": "release/sing-box/game_backends.srs",
         "json": "release/json/game_backends.json",
         "domains": "release/domains/game_backends.lst",
-        "subnets": "release/subnets/game_backends.lst"
+        "subnets": null
       },
-      "sha256_trs": "1f8d9ef2d648ba908a7168c06691edd5ac9e0d7236f7b1ae3c64ca07d9e55f5c",
-      "sha256_srs": "9aaab0b68db88c93643cf7e8a281ac02910540c0daf185606a6ff26509dcd770"
+      "sha256_trs": "8b977b08c996e4acec1afdadb5a9e44ff2288decfb312e3fbd0746ce17ed4908",
+      "sha256_srs": "913853b22ca1e8c8b6548b498c99ee2a38326f39151012caeec24349a977c8ff"
     },
     {
       "id": "cs2_dota2",
@@ -2201,7 +2305,7 @@
         "domain_suffix": 9,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 20,
+        "ipv4_cidr": 28,
         "ipv6_cidr": 12
       },
       "files": {
@@ -2211,8 +2315,8 @@
         "domains": "release/domains/cs2_dota2.lst",
         "subnets": "release/subnets/cs2_dota2.lst"
       },
-      "sha256_trs": "0245f4019638e4b4724e9fc975df336a97d63176181337deab28ef15f30ce5c5",
-      "sha256_srs": "a97e4c4461ec7869d402c7106aeccc15e6cb64f7dc2859f41fed2ea91965b598"
+      "sha256_trs": "23cc5833420c884d39276378aaeba44d017bba44ed1d9daf78cfee4b8e78b1b9",
+      "sha256_srs": "89b7cff975c10886d9de34a036a04cb9e97b253cd1455017b6c38bf7c8c8d10e"
     },
     {
       "id": "survival_coop",
@@ -2375,12 +2479,12 @@
       "group": "gaming",
       "kind": "domains",
       "recommended_action": "proxy",
-      "title": "Meta Quest (Oculus) и Pico VR — активация VR-шлемов, обновление прошивок и магазин игр",
-      "description": "[Маршрут: Только в Прокси / VPN — обязательно для работы Meta Quest в РФ] Выделенный список доменов VR-экосистемы Meta Quest 2 / 3 / 3S / Pro (oculus.com, oculuscdn.com, meta.com, graph.oculus.com, securecdn.oculus.com), Pico VR (picoxr.com) и SideQuest. Позволяет активировать шлем, обновлять прошивку Horizon OS и скачивать игры на полной скорости, не проксируя весь остальной трафик Instagram/Facebook.",
+      "title": "VR-гарнитуры — Meta Quest, Pico VR, HTC Vive, Pimax и Virtual Desktop",
+      "description": "[Маршрут: В Прокси / VPN — требуется для активации и магазина VR] Домены VR-шлемов и сопутствующего ПО: Meta Quest 2 / 3 / 3S / Pro (oculus.com, oculuscdn.com, meta.com), Pico VR (picoxr.com, pico-interactive.com), HTC Vive и Viveport (vive.com, viveport.com), Pimax, DPVR, Varjo, SideQuest, Bigscreen, Virtual Desktop, ALVR и трекеры SlimeVR.",
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/oculus.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 27,
+        "domain_suffix": 37,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -2393,8 +2497,8 @@
         "domains": "release/domains/meta_quest.lst",
         "subnets": null
       },
-      "sha256_trs": "c73c752c9d4ebfc570182b22926d6a9f1b1286b94ff17803fd17bcd7f4e629a6",
-      "sha256_srs": "f6bc3f52c98ea21e7a059d5523d57d192417acd227760867c45824efeaa9d0d6"
+      "sha256_trs": "3b231b561468bc7f6d15999e372eeb8039d77a3b51776d1f2b8d325207f09e81",
+      "sha256_srs": "ab6626451acfdd4cecc85e399946f28ae3240cc4a6b8abce8ad5a01932aa5c23"
     },
     {
       "id": "chess_boardgames",
@@ -2510,7 +2614,7 @@
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/google-play.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 27,
+        "domain_suffix": 25,
         "domain_keyword": 0,
         "domain_regex": 2,
         "ipv4_cidr": 0,
@@ -2523,8 +2627,8 @@
         "domains": "release/domains/google_play.lst",
         "subnets": null
       },
-      "sha256_trs": "13b9832c5248712f84422387f38a99480836d50f37a3f810fc7fe48dd009f564",
-      "sha256_srs": "e1b2ab6306420f7e2532b4021ff1361bbd4f4aade14d0f9ee34fc30388f99728"
+      "sha256_trs": "1a30f01719457f69083cb6f2044b4abbe47d0f29b428eadea36015b8779e69ba",
+      "sha256_srs": "02f636756e121a566e02c6bcb4793223901820a3d6271ff4369a72d1c1fe7996"
     },
     {
       "id": "github",
@@ -2562,7 +2666,7 @@
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-docker.srs",
       "counts": {
         "domain": 2,
-        "domain_suffix": 4,
+        "domain_suffix": 6,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -2575,8 +2679,8 @@
         "domains": "release/domains/docker.lst",
         "subnets": null
       },
-      "sha256_trs": "bb5d366969befe60745c1f80cf9612185548e6a2162790bcf8d93634ad17540a",
-      "sha256_srs": "cd44914b6ad111094433ace9b2a42acd8754d70570c6597d4fa23c11ae8a5e03"
+      "sha256_trs": "c1f40afed56b137e1c3bc74192155c53763a87566b3a54e75d8954a240e92b34",
+      "sha256_srs": "93409b6fe0397ee19cd162b00cc8cdf58cd4ba73c8981c0a2429268baafc7030"
     },
     {
       "id": "hodca",
@@ -2744,7 +2848,7 @@
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/google.srs",
       "counts": {
         "domain": 55,
-        "domain_suffix": 778,
+        "domain_suffix": 771,
         "domain_keyword": 0,
         "domain_regex": 2,
         "ipv4_cidr": 0,
@@ -2757,8 +2861,8 @@
         "domains": "release/domains/google_services.lst",
         "subnets": null
       },
-      "sha256_trs": "3a8a04ebe4f6da2ad1aab72ef0fe3a46ff1c73363aae034dec43da506c740824",
-      "sha256_srs": "2c4c9a70dd178ba909f42bebd0b5e7cf64415524f1e0d27ea41a38a4303cfd0c"
+      "sha256_trs": "9cae5efb305389d1e2ff319ef869f01decd47fed3bf12c355cba8864e5137189",
+      "sha256_srs": "3d9581a5d46a388ab3fc18a9c8ffa5beae15bc3eaaf4efd7e58d47d72e69d70b"
     },
     {
       "id": "captcha_auth",
@@ -2913,8 +3017,8 @@
         "domains": "release/domains/smarthome_iot.lst",
         "subnets": null
       },
-      "sha256_trs": "3f21dcc1061dc0c79151b20e12849d5b47ffa5a6e24619ae962b1a56ce755d58",
-      "sha256_srs": "7792fa1f2a72812d041f7fe9ce89586bb416374847d41196f72db53eb4256922"
+      "sha256_trs": "35bc4ca18dc1b51d6bbb8b2a677dc039411fad8fc6cbe03f242a1e6c55875021",
+      "sha256_srs": "f4d79aa30a8b8ea6e73852670ebfc8f298650824daa50c7ea8fa85245556c427"
     },
     {
       "id": "smarttv_apps",
@@ -2941,6 +3045,32 @@
       },
       "sha256_trs": "ff396aa1d53afb9fef85435c4125acdcc29792625d6e2881f6e7f15327e20867",
       "sha256_srs": "1b2acc8675dabf348653a811473333e5c3cb771c30e46e520a9d8be462f8e03f"
+    },
+    {
+      "id": "tv_boxes",
+      "group": "tech",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "ТВ-приставки и медиаплееры — Apple TV, Android TV, NVIDIA Shield, Fire TV и Roku",
+      "description": "[Маршрут: В Прокси / VPN или Direct] Серверы лаунчеров, прошивок и системных приложений ТВ-приставок и медиаплееров: Apple TV / tvOS (tv.apple.com, firecore.com Infuse), Android TV / Google TV / Chromecast (androidtvlauncherx-pa.googleapis.com, chromecast.com), NVIDIA Shield TV (shield.nvidia.com, ota.nvidia.com), Amazon Fire TV, Roku (roku.com, rokutime.com), а также медиаплееры Plex, Kodi, Dune HD, Zidoo, Ugoos, Homatics, Formuler и TiviMate.",
+      "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/roku.srs",
+      "counts": {
+        "domain": 7,
+        "domain_suffix": 36,
+        "domain_keyword": 0,
+        "domain_regex": 0,
+        "ipv4_cidr": 0,
+        "ipv6_cidr": 0
+      },
+      "files": {
+        "trs": "release/tachyon/tv_boxes.trs",
+        "srs": "release/sing-box/tv_boxes.srs",
+        "json": "release/json/tv_boxes.json",
+        "domains": "release/domains/tv_boxes.lst",
+        "subnets": null
+      },
+      "sha256_trs": "cc31f471f2482a157d976fd27869ffd925975374bc217bc45dce8da199ec8de6",
+      "sha256_srs": "5d68b4738646ce95104bc460d1b02d524252cfe7a0156dce20a406fe4e54fbc8"
     },
     {
       "id": "smart_cars",
@@ -3137,8 +3267,8 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 177,
-        "ipv6_cidr": 14
+        "ipv4_cidr": 174,
+        "ipv6_cidr": 13
       },
       "files": {
         "trs": "release/tachyon/digitalocean.trs",
@@ -3147,8 +3277,8 @@
         "domains": null,
         "subnets": "release/subnets/digitalocean.lst"
       },
-      "sha256_trs": "594940d652bdc10de68de6ae5b6cf8d4114850064065c8e92b13d1f21c838498",
-      "sha256_srs": "8415bf747d93e0086c8818db14860f6c52079441bc1ed9599afb44249df00c92"
+      "sha256_trs": "d3b051f5659451873423f44b2151f86bc159d498dcec2ffcc396934930ac1a0e",
+      "sha256_srs": "e0723e882e322ebfce387224f084bf186baac2af26dad1df4161ffee7e3d2064"
     },
     {
       "id": "speedtest",
@@ -3215,8 +3345,8 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 2425,
-        "ipv6_cidr": 1262
+        "ipv4_cidr": 2623,
+        "ipv6_cidr": 1159
       },
       "files": {
         "trs": "release/tachyon/vps_clouds.trs",
@@ -3225,8 +3355,8 @@
         "domains": null,
         "subnets": "release/subnets/vps_clouds.lst"
       },
-      "sha256_trs": "a5d8fa878f373d1932f45d339ae6d2eb06429c5cbbbbc920e68782da41b04c60",
-      "sha256_srs": "c87ad4c4f6af4e4d3ba4acbdd110615de8a801d62ea45eedb29162deb9d46d72"
+      "sha256_trs": "edc9e0cc2fc360845d48a972efe57b196fd288b1808a21ebee6b4b0bbcc27d88",
+      "sha256_srs": "e26ebde72b85be31e467c252f7784c0f8107c2f8e0957e11939f0111e628b403"
     },
     {
       "id": "crypto",
@@ -3524,7 +3654,7 @@
       "fallback_srs": "https://github.com/zxc-rv/ad-filter/releases/latest/download/adlist.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 245998,
+        "domain_suffix": 246299,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -3537,8 +3667,8 @@
         "domains": "release/domains/ads_hagezi_pro.lst",
         "subnets": null
       },
-      "sha256_trs": "1b7039aa17c0a7469beaaca53ba8db4b50a1537182f4374e33dea39c2ff3b39e",
-      "sha256_srs": "eb9f339147114d4b82f84e13b8d3a4be2d2ba79d0dfb7e546bde8e7378f40a65"
+      "sha256_trs": "73c15cb0faba33e7759457870387035182df1fa2da19b52a2e1448565a52d85c",
+      "sha256_srs": "f26e06f3cae42e635f3cb0185856861a5c3d546dd2b9505b3e5c5b8c41456388"
     },
     {
       "id": "android_ads_block",
@@ -3550,7 +3680,7 @@
       "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/android_ads_block.srs",
       "counts": {
         "domain": 68,
-        "domain_suffix": 43656,
+        "domain_suffix": 43654,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -3563,8 +3693,8 @@
         "domains": "release/domains/android_ads_block.lst",
         "subnets": null
       },
-      "sha256_trs": "62812a4370c6e3837ba83d58d4fd54f51b08abb1975af6473b669d94fed38f65",
-      "sha256_srs": "8a1b9ae8b056fe1eaa6d9ee716a324c509116fbd7a70e14454d2e3f578c542e2"
+      "sha256_trs": "9b38a7b2456c98723b5529ead1dbe50475593c4b0e390aa8af267f6a498b4ddd",
+      "sha256_srs": "77b919c9b56d45e58964f498362de79865e20cbccc53e3f20e41cb32b44231b4"
     },
     {
       "id": "win_spy",
@@ -3576,7 +3706,7 @@
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/win-spy.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 328,
+        "domain_suffix": 327,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -3589,8 +3719,8 @@
         "domains": "release/domains/win_spy.lst",
         "subnets": null
       },
-      "sha256_trs": "2d8bc981a259b994a7cf8ad957114f5b9587bbb7731a4d3cdfc5daa86f8c1cd3",
-      "sha256_srs": "0954dd86d5bd5fc3817bb7fbfb6a518d23ceeb3eff959cc4ff38d59446ee3a93"
+      "sha256_trs": "c5958eb79ae824944bc20caee242765db988084c6185d41545784ec15df8ae56",
+      "sha256_srs": "adf246d7c0a8ade7fb79c2f2813290aeb968cd6ec7f2e6d7de9f97c793053c5b"
     },
     {
       "id": "xiaomi_smarttv_ads",
@@ -3628,7 +3758,7 @@
       "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/gambling_block.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 74947,
+        "domain_suffix": 74193,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -3641,8 +3771,8 @@
         "domains": "release/domains/gambling_block.lst",
         "subnets": null
       },
-      "sha256_trs": "1d7287372b30dd6d29d329f9cd6eab9fb24d17fcc72a3e6e5aa516bdcfb6bb3d",
-      "sha256_srs": "a02a66c4d4e0f4cb3942edba52861ab465f7524c728a360bd77b33bfcf2ca37c"
+      "sha256_trs": "50f71bf6760aa439a97e9304dfe5f0f9e6413a2e527c6da660a0adb1041e093d",
+      "sha256_srs": "68637c44abb49745275ec4783cca35eaa97fc32f8b302981a40fe1876c0d4ba2"
     },
     {
       "id": "phishing_malware_block",
@@ -3654,7 +3784,7 @@
       "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/phishing_malware_block.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 134750,
+        "domain_suffix": 134471,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -3667,8 +3797,8 @@
         "domains": "release/domains/phishing_malware_block.lst",
         "subnets": null
       },
-      "sha256_trs": "590301115f5fe13e33cf2d88545f8ba372dce2036a90148810913a8020e640b6",
-      "sha256_srs": "5cb107c758c68a176818aa68bfbe4964e0a82871b3c4f2a836bbda14c0b1b433"
+      "sha256_trs": "75f8b35a7ac77d53c1c548cc6a0dfe6f9292364dbaabc8815d9c0f154fbd59c0",
+      "sha256_srs": "327b51554c3220019bf316e5dbb8ade56663605a77b670562fc42cbbe61538cf"
     },
     {
       "id": "telemetry_mobile_block",
@@ -3709,7 +3839,7 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 16969,
+        "ipv4_cidr": 17799,
         "ipv6_cidr": 74
       },
       "files": {
@@ -3719,8 +3849,8 @@
         "domains": null,
         "subnets": "release/subnets/et_spamhaus_block.lst"
       },
-      "sha256_trs": "8f484317fa96f0fadd3adacc8d47996f1a8252238bef550279dca34a3f545977",
-      "sha256_srs": "5aa4e4c9e99c9ac5a96d456755e28b1091d6f3716455ddb4de634a9ac25864b9"
+      "sha256_trs": "74dce484242839a014d171830ce0481dd93f045f00b86d05255e0315f64058ee",
+      "sha256_srs": "a21a46dd7e4c842c15b34c9c60058913ce16a2df664e3f89029c29165ce5ff5f"
     },
     {
       "id": "hagezi_tif_ip_block",
@@ -3735,7 +3865,7 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 30081,
+        "ipv4_cidr": 30998,
         "ipv6_cidr": 0
       },
       "files": {
@@ -3745,8 +3875,8 @@
         "domains": null,
         "subnets": "release/subnets/hagezi_tif_ip_block.lst"
       },
-      "sha256_trs": "c09a51be38f55f0e6172883e5499aa5b94d475a251ee05cf64ec87fbffd7ee02",
-      "sha256_srs": "00f1f69b82a153d4a0ceb7a06da409243e680ba900dd62136b445abafe43ade3"
+      "sha256_trs": "be47bad618996cb632dfb3578fb5e4184ccffc460e90931601c749522d966544",
+      "sha256_srs": "b3805755e45f56eef84099acc3d1872ac81076b4711956342117a514e8f3a006"
     },
     {
       "id": "botnet_attackers_ip_block",
@@ -3761,7 +3891,7 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 22505,
+        "ipv4_cidr": 22084,
         "ipv6_cidr": 0
       },
       "files": {
@@ -3771,8 +3901,8 @@
         "domains": null,
         "subnets": "release/subnets/botnet_attackers_ip_block.lst"
       },
-      "sha256_trs": "a740b83a0f7f3d282f75f6dd97f5527177e16786cd39c2b61f912f971bd66307",
-      "sha256_srs": "f256204e3d4974bb083e80f65898bd5542c132a792d795d7c6cd12a9841ba97e"
+      "sha256_trs": "58de41c56131fc5573f92cd75fa53a2488bc66d1d7e1c4740fd0e283bdd3d93c",
+      "sha256_srs": "3cabf6b569a46c773eae01755b2525ab57f4d4b243ff37fd4d8c4de031b2d970"
     },
     {
       "id": "google_meet",

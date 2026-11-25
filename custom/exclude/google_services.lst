@@ -296,3 +296,12 @@ gvt2.com
 gvt3.com
 mdialog.com
 urchin.com
+
+# Исключение сервисов с отдельными категориями (Meet, Google AI, Push, News, Auth)
+meet.google.com
+apis.google.com
+suggestqueries.google.com
+mtalk.google.com
+news.google.com
+one.google.com
+oauth2.googleapis.com

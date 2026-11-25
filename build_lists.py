@@ -857,11 +857,19 @@ def _is_bogon_or_private(net: ipaddress.IPv4Network | ipaddress.IPv6Network) -> 
     return any(net.overlaps(bogon) for bogon in _IPV6_EXTRA_BOGONS)
 
 
-def _is_too_broad_network(net: ipaddress.IPv4Network | ipaddress.IPv6Network, list_id: str = "") -> bool:
+def _is_too_broad_network(
+    net: ipaddress.IPv4Network | ipaddress.IPv6Network,
+    list_id: str = "",
+    group: str = "",
+) -> bool:
     if list_id.startswith("geoip_"):
         if isinstance(net, ipaddress.IPv4Network):
             return net.prefixlen < 7
         return net.prefixlen < 16
+    if group == "block" or list_id in ("et_spamhaus_block", "hagezi_tif_ip_block", "botnet_attackers_ip_block"):
+        if isinstance(net, ipaddress.IPv4Network):
+            return net.prefixlen < 15
+        return net.prefixlen < 29
     if isinstance(net, ipaddress.IPv4Network):
         return net.prefixlen < 10
     return net.prefixlen < 20
@@ -1012,6 +1020,28 @@ def parse_cloudflare_ips(raw_bytes: bytes, include_jdcloud: bool = False) -> Rul
     return parse_plain_subnets(text)
 
 
+def parse_valve_sdr(raw_bytes: bytes) -> RuleBucket:
+    """Parse Steam Datagram Relay GetSDRConfig JSON into relay IPv4 CIDRs."""
+    bucket = RuleBucket()
+    obj = json.loads(raw_bytes.decode("utf-8", errors="replace"))
+    pops = obj.get("pops", {})
+    if not isinstance(pops, dict):
+        return bucket
+    for pop in pops.values():
+        if not isinstance(pop, dict):
+            continue
+        relays = pop.get("relays", [])
+        if not isinstance(relays, list):
+            continue
+        for rel in relays:
+            if not isinstance(rel, dict):
+                continue
+            ipv4 = str(rel.get("ipv4", "") or "").strip()
+            if ipv4:
+                _add_network_to_bucket(bucket, f"{ipv4}/32")
+    return bucket
+
+
 def parse_clash_yaml(text: str) -> RuleBucket:
     """Parse Clash / Mihomo YAML rule-set payload (classical, domain, or ipcidr)."""
     bucket = RuleBucket()
@@ -1144,6 +1174,7 @@ def optimize_bucket(
     exclude_exact_domains: set[str] | None = None,
     exclude_no_suffix: set[str] | None = None,
     list_id: str = "",
+    group: str = "",
 ) -> tuple[list[str], list[str], list[str], list[str], list[str], list[str]]:
     """
     Deduplicate, prune redundant subdomains covered by parent domain_suffix,
@@ -1205,7 +1236,7 @@ def optimize_bucket(
     for cidr in bucket.ip_cidr:
         try:
             net = ipaddress.ip_network(cidr, strict=False)
-            if _is_bogon_or_private(net) or _is_too_broad_network(net, list_id):
+            if _is_bogon_or_private(net) or _is_too_broad_network(net, list_id, group):
                 continue
             if isinstance(net, ipaddress.IPv4Network):
                 v4_nets.append(net)
@@ -2088,6 +2119,7 @@ def _source_urls_with_formats(src: dict[str, Any], upstreams: dict[str, str]) ->
         "aws_ip_ranges": "json",
         "google_ip_ranges": "json",
         "ripe_stat_asn": "json",
+        "valve_sdr": "json",
     }
     fmt = fmt_map.get(stype)
     out: list[tuple[str, str | None]] = []
@@ -2287,7 +2319,8 @@ def validate_release() -> int:
                     for cidr in r0.get("ip_cidr", []):
                         try:
                             net = ipaddress.ip_network(cidr, strict=True)
-                            if _is_bogon_or_private(net) or _is_too_broad_network(net, lid):
+                            grp = str(cfg_by_id.get(lid, {}).get("group", ""))
+                            if _is_bogon_or_private(net) or _is_too_broad_network(net, lid, grp):
                                 errors.append(f"[{lid}] disallowed ip_cidr in json: {cidr}")
                         except ValueError:
                             errors.append(f"[{lid}] invalid ip_cidr in json: {cidr!r}")
@@ -2550,6 +2583,10 @@ def build_all(only_ids: set[str] | None = None, *, refresh: bool = False, allow_
                     bucket.merge(
                         parse_cloudflare_ips(raw, include_jdcloud=bool(src.get("include_jdcloud", False)))
                     )
+                elif stype == "valve_sdr":
+                    url = format_url(str(src["url"]), upstreams)
+                    raw = fetch_url_bytes(url, refresh=refresh, expected_format="json")
+                    bucket.merge(parse_valve_sdr(raw))
                 else:
                     raise ValueError(f"Unsupported source type {stype!r} in [{lid}]")
             except ValueError as val_exc:
@@ -2604,6 +2641,7 @@ def build_all(only_ids: set[str] | None = None, *, refresh: bool = False, allow_
             exclude_exact_domains=exc_exact,
             exclude_no_suffix=exc_no_suffix,
             list_id=lid,
+            group=group,
         )
         res = (domains, suffixes, keywords, regexes, v4_cidrs, v6_cidrs, failed_sources, total_sources)
         resolved_memo[lid] = res

@@ -1,0 +1,12 @@
+# Avoid false positives on RU hosting/CDN, Google Services, and non-ad domains
+vkcdnservice.com
+beget.tech
+ukit.me
+ggpht.cn
+yccdn.com
+lgelectronics.122.2o7.net
+blogspot.ba
+blogspot.bg
+blogspot.lu
+blogspot.sk
+blogspot.tw

@@ -1,2 +1,5 @@
 # Do not block ByteDance endpoints needed by Kimi Desktop / Kimi Work
 byteoversea.com
+# Do not block STUN or VK CDN endpoints
+stun.services.mozilla.com
+vkcache.com

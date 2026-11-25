@@ -353,6 +353,15 @@
       ]
     },
     {
+      "id": "consoles_cdn",
+      "group": "direct",
+      "kind": "domains",
+      "recommended_action": "direct",
+      "title": "CDN загрузок приставок (Direct) — скачивание игр и прошивок Xbox, PSN, Nintendo, Quest и SteamOS напрямую",
+      "description": "[Маршрут: Напрямую (Direct) — ставить выше правил приставок] Выделенные серверы загрузки дистрибутивов игр, патчей и прошивок для консолей: Xbox (assets1/2.xboxlive.com, xvcf1/2.xboxlive.com, dl.delivery.mp.microsoft.com), PlayStation (dl.playstation.net, update.playstation.net, gs2.ww.prod.dl.playstation.net), Nintendo (ctest.cdn.nintendo.net, d4c.nintendo.net), Meta Quest (oculuscdn.com) и Steam Deck (steamos.cloud). Магазин и учётная запись остаются через прокси, а загрузки объёмных игр идут напрямую на скорости провайдера.",
+      "sources": []
+    },
+    {
       "id": "captive_ntp_stun",
       "group": "direct",
       "kind": "domains",
@@ -1203,7 +1212,14 @@
         {
           "type": "plain_subnets",
           "url": "{metacubex_asn}/AS49544.list"
+        },
+        {
+          "type": "plain_subnets",
+          "url": "{refilter_raw}/discord_ips.lst"
         }
+      ],
+      "exclude_lists": [
+        "cloudflare"
       ]
     },
     {
@@ -1404,6 +1420,10 @@
         {
           "type": "singbox_json",
           "url": "{metacubex_geosite}/webex.json"
+        },
+        {
+          "type": "plain_subnets",
+          "url": "https://assets.zoom.us/docs/ipranges/Zoom.txt"
         }
       ]
     },
@@ -1654,6 +1674,10 @@
         {
           "type": "srs",
           "url": "{runetfreedom_geosite_srs}/geosite-blizzard.srs"
+        },
+        {
+          "type": "ripe_stat_asn",
+          "asn": "AS60229"
         }
       ],
       "exclude_lists": [
@@ -1732,12 +1756,55 @@
       ]
     },
     {
+      "id": "consoles_all",
+      "group": "gaming",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Игровые приставки (все) — Xbox, PlayStation, Nintendo Switch / Switch 2 и VR-гарнитуры",
+      "description": "[Маршрут: В Прокси / VPN] Единый сводный список доменов всех основных игровых консолей и VR-шлемов без ПК-лаунчеров: Xbox Live и Game Pass (включая вход Microsoft), PlayStation Network (PSN / Sony Account / Remote Play), Nintendo Switch и Switch 2 (eShop, Switch Online, NPLN) и VR-экосистемы (Meta Quest, Pico VR, HTC Vive, Pimax).",
+      "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-xbox.srs",
+      "sources": [
+        {
+          "type": "srs",
+          "url": "{runetfreedom_geosite_srs}/geosite-xbox.srs"
+        },
+        {
+          "type": "singbox_json",
+          "url": "{metacubex_geosite}/xbox.json"
+        },
+        {
+          "type": "clash_yaml",
+          "url": "{rock12_warzone}/Xbox.yaml"
+        },
+        {
+          "type": "srs",
+          "url": "{runetfreedom_geosite_srs}/geosite-playstation.srs"
+        },
+        {
+          "type": "singbox_json",
+          "url": "{metacubex_geosite}/playstation.json"
+        },
+        {
+          "type": "srs",
+          "url": "{runetfreedom_geosite_srs}/geosite-nintendo.srs"
+        },
+        {
+          "type": "singbox_json",
+          "url": "{metacubex_geosite}/nintendo.json"
+        },
+        {
+          "type": "singbox_json",
+          "url": "{metacubex_geosite}/oculus.json"
+        }
+      ]
+    },
+    {
       "id": "xbox",
       "group": "gaming",
       "kind": "domains",
       "recommended_action": "proxy",
-      "title": "Xbox Live и Game Pass — консоли Xbox, PC Game Pass, Cloud Gaming, Forza, Halo и Bethesda",
-      "description": "[Маршрут: В Прокси / VPN] Экосистема Xbox и игровых студий Microsoft / Bethesda: xbox.com, xboxlive.com, gamepass.com, xboxservices.com, forzamotorsport.net, halowaypoint.com, seaofthieves.com, flightsimulator.com, bethesda.net, doom.com и elderscrolls.com.",
+      "title": "Xbox Live и Game Pass — консоли Xbox, PC Game Pass, Cloud Gaming, вход Microsoft и Bethesda",
+      "description": "[Маршрут: В Прокси / VPN] Экосистема Xbox и игровых студий Microsoft / Bethesda: xbox.com, xboxlive.com, xboxlive.net, gamepass.com, xboxservices.com, xboxcloudgaming.com, домены входа Microsoft для консоли (login.live.com, account.live.com, account.microsoft.com, login.microsoftonline.com, msauth.net), Forza, Halo, Sea of Thieves, Flight Simulator и Bethesda.",
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-xbox.srs",
       "sources": [
         {
@@ -1765,10 +1832,10 @@
     {
       "id": "playstation",
       "group": "gaming",
-      "kind": "domains",
+      "kind": "mixed",
       "recommended_action": "proxy",
-      "title": "PlayStation Network (PSN) — PS5/PS4, PS Store, PS Plus, тусовки и обновления игр",
-      "description": "[Маршрут: В Прокси / VPN] Сетевые сервисы Sony PlayStation: playstation.com, playstation.net, playstationnetwork.com, sonyentertainmentnetwork.com, CDN загрузок dl.playstation.net, а также Bungie / Helldivers 2.",
+      "title": "PlayStation Network (PSN) — PS5/PS4/PS Portal, Store, аккаунты Sony и подсети AS33353",
+      "description": "[Маршрут: В Прокси / VPN] Сетевые сервисы и подсети Sony Interactive Entertainment (AS33353): playstation.com, playstation.net, playstationnetwork.com, sonyentertainmentnetwork.com, авторизация ca.account.sony.com / my.account.sony.com, Remote Play и Cloud Streaming (gaikai.com, playstation-cloud.com), CDN dl.playstation.net и студии PSN.",
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-playstation.srs",
       "sources": [
         {
@@ -1778,6 +1845,10 @@
         {
           "type": "singbox_json",
           "url": "{metacubex_geosite}/playstation.json"
+        },
+        {
+          "type": "ripe_stat_asn",
+          "asn": "AS33353"
         }
       ]
     },
@@ -1786,8 +1857,8 @@
       "group": "gaming",
       "kind": "domains",
       "recommended_action": "proxy",
-      "title": "Nintendo Switch — Nintendo eShop, Switch Online, аккаунты и обновления игр",
-      "description": "[Маршрут: В Прокси / VPN] Все домены консолей Nintendo Switch, магазина eShop, подписки Nintendo Switch Online и игр Pokémon / Zelda / Mario / Splatoon (nintendo.com, nintendo.net, nintendowifi.net, pokemon.com).",
+      "title": "Nintendo Switch / Switch 2 — Nintendo eShop, Switch Online, NPLN и аккаунты Nintendo",
+      "description": "[Маршрут: В Прокси / VPN] Все домены консолей Nintendo Switch, Switch 2, Wii U и 3DS: магазин eShop, подписка Nintendo Switch Online, серверы мультиплеера NPLN/NEX (nintendo.net, nintendowifi.net, nintendonetwork.net), аккаунты accounts.nintendo.com и серии Pokémon, Zelda, Mario, Splatoon, Metroid, Xenoblade.",
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-nintendo.srs",
       "sources": [
         {
@@ -1799,6 +1870,24 @@
           "url": "{metacubex_geosite}/nintendo.json"
         }
       ]
+    },
+    {
+      "id": "handheld_consoles",
+      "group": "gaming",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Портативные приставки и эмуляторы — Steam Deck, ROG Ally, Legion Go, RetroArch и EmuDeck",
+      "description": "[Маршрут: В Прокси / VPN] Портативные консоли и эмуляция: образы и репозитории Steam Deck / SteamOS (steamos.cloud, flathub.org, decky.xyz, protondb.com), ASUS ROG Ally, Lenovo Legion Go, Ayaneo, GPD, Anbernic, Retroid, AYN, ОС Bazzite / Batocera / ROCKNIX / muOS / OnionOS и эмуляторы (RetroArch, EmuDeck, RPCS3, Ryujinx, Dolphin, PCSX2, Cemu, PPSSPP, RetroAchievements).",
+      "sources": []
+    },
+    {
+      "id": "console_homebrew",
+      "group": "gaming",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "Ретро-сети и Homebrew приставок — Pretendo, Wiimmfi, Insignia, Switch CFW, PS HEN и HShop",
+      "description": "[Маршрут: В Прокси / VPN] Альтернативные онлайн-серверы и сообщества энтузиастов для классических и модифицированных приставок: Pretendo Network (Wii U / 3DS), Wiimmfi и RiiConnect24 (Wii / DS), Insignia (Xbox Live), PSone / PSRewired, руководства hacks.guide, Switch/WiiU/3DS homebrew (switchbrew.org, hshop.erista.me, tinfoil.io, fortheusers.org) и PlayStation HEN/патчи (ps3xploit.me, nopaystation.com, orbispatches.com).",
+      "sources": []
     },
     {
       "id": "gog",
@@ -2121,10 +2210,10 @@
     {
       "id": "game_backends",
       "group": "gaming",
-      "kind": "mixed",
+      "kind": "domains",
       "recommended_action": "proxy",
       "title": "Сетевые движки игр и голосовой чат — Photon Engine, Vivox Voice, Azure PlayFab и EOS",
-      "description": "[Маршрут: В Прокси / VPN (с UDP) или Desync] Сетевая инфраструктура сотен мультиплеерных игр и внутриигрового голосового чата: войс-движок Vivox (vivox.com, unity3d.com — чинит голосовой чат в Valorant, PUBG, LoL, Fortnite, Overwatch 2, Rainbow Six), облако кооп-игр Photon Engine (photonengine.com, exitgames.com + UDP-подсети — чинит Phasmophobia, R.E.P.O., Content Warning, Lethal Company, VRChat, Among Us), Azure PlayFab (playfabapi.com — Helldivers 2, Sea of Thieves, Minecraft) и Epic Online Services (epicgames.dev).",
+      "description": "[Маршрут: В Прокси / VPN (с UDP) или Desync] Сетевая инфраструктура сотен мультиплеерных игр и внутриигрового голосового чата: войс-движок Vivox (vivox.com, unity3d.com — чинит голосовой чат в Valorant, PUBG, LoL, Fortnite, Overwatch 2, Rainbow Six), облако кооп-игр Photon Engine (photonengine.com, exitgames.com — чинит Phasmophobia, R.E.P.O., Content Warning, Lethal Company, VRChat, Among Us), Azure PlayFab (playfabapi.com — Helldivers 2, Sea of Thieves, Minecraft) и Epic Online Services (epicgames.dev).",
       "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/game_backends.srs",
       "sources": []
     },
@@ -2136,7 +2225,23 @@
       "title": "Valve Matchmaking — CS2, Dota 2, Deadlock и Team Fortress 2 (серверы матчей и SDR)",
       "description": "[Маршрут: В игровой Прокси с минимальным пингом или Direct] Только соревновательные серверы матчей Valve, релеи Steam Datagram Relay (steamdatagram.com, valve.net и подсети AS32590 Valve Corporation) и игровой координатор (CS2, Dota 2, Deadlock, TF2) — без тяжёлого магазина и скачивания игр Steam.",
       "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/cs2_dota2.srs",
-      "sources": []
+      "sources": [
+        {
+          "type": "plain_subnets",
+          "url": "{metacubex_asn}/AS32590.list"
+        },
+        {
+          "type": "ripe_stat_asn",
+          "asn": "AS32590"
+        },
+        {
+          "type": "valve_sdr",
+          "url": "https://api.steampowered.com/ISteamApps/GetSDRConfig/v1?appid=730"
+        }
+      ],
+      "exclude_lists": [
+        "geoip_cn"
+      ]
     },
     {
       "id": "survival_coop",
@@ -2231,8 +2336,8 @@
       "group": "gaming",
       "kind": "domains",
       "recommended_action": "proxy",
-      "title": "Meta Quest (Oculus) и Pico VR — активация VR-шлемов, обновление прошивок и магазин игр",
-      "description": "[Маршрут: Только в Прокси / VPN — обязательно для работы Meta Quest в РФ] Выделенный список доменов VR-экосистемы Meta Quest 2 / 3 / 3S / Pro (oculus.com, oculuscdn.com, meta.com, graph.oculus.com, securecdn.oculus.com), Pico VR (picoxr.com) и SideQuest. Позволяет активировать шлем, обновлять прошивку Horizon OS и скачивать игры на полной скорости, не проксируя весь остальной трафик Instagram/Facebook.",
+      "title": "VR-гарнитуры — Meta Quest, Pico VR, HTC Vive, Pimax и Virtual Desktop",
+      "description": "[Маршрут: В Прокси / VPN — требуется для активации и магазина VR] Домены VR-шлемов и сопутствующего ПО: Meta Quest 2 / 3 / 3S / Pro (oculus.com, oculuscdn.com, meta.com), Pico VR (picoxr.com, pico-interactive.com), HTC Vive и Viveport (vive.com, viveport.com), Pimax, DPVR, Varjo, SideQuest, Bigscreen, Virtual Desktop, ALVR и трекеры SlimeVR.",
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/oculus.srs",
       "sources": [
         {
@@ -2338,6 +2443,9 @@
           "type": "srs",
           "url": "{roscomvpn_geosite_srs}/google-play.srs"
         }
+      ],
+      "exclude_lists": [
+        "push"
       ]
     },
     {
@@ -2768,6 +2876,25 @@
       ]
     },
     {
+      "id": "tv_boxes",
+      "group": "tech",
+      "kind": "domains",
+      "recommended_action": "proxy",
+      "title": "ТВ-приставки и медиаплееры — Apple TV, Android TV, NVIDIA Shield, Fire TV и Roku",
+      "description": "[Маршрут: В Прокси / VPN или Direct] Серверы лаунчеров, прошивок и системных приложений ТВ-приставок и медиаплееров: Apple TV / tvOS (tv.apple.com, firecore.com Infuse), Android TV / Google TV / Chromecast (androidtvlauncherx-pa.googleapis.com, chromecast.com), NVIDIA Shield TV (shield.nvidia.com, ota.nvidia.com), Amazon Fire TV, Roku (roku.com, rokutime.com), а также медиаплееры Plex, Kodi, Dune HD, Zidoo, Ugoos, Homatics, Formuler и TiviMate.",
+      "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/roku.srs",
+      "sources": [
+        {
+          "type": "singbox_json",
+          "url": "{metacubex_geosite}/apple-tvplus.json"
+        },
+        {
+          "type": "singbox_json",
+          "url": "{metacubex_geosite}/roku.json"
+        }
+      ]
+    },
+    {
       "id": "smart_cars",
       "group": "tech",
       "kind": "domains",
@@ -2957,6 +3084,10 @@
         {
           "type": "plain_subnets",
           "url": "{metacubex_asn}/AS14061.list"
+        },
+        {
+          "type": "ripe_stat_asn",
+          "asn": "AS14061"
         }
       ]
     },
@@ -3014,7 +3145,41 @@
       "title": "Облачные хостинги (VPS) — IP-подсети Oracle Cloud, Vultr, Linode (Akamai), Scaleway и GCore",
       "description": "[Маршрут: В Прокси / VPN] Сводные IPv4/IPv6-подсети популярных зарубежных облачных провайдеров и VPS-хостингов: Oracle Cloud (AS31898), Vultr / Constant (AS20473), Linode / Akamai Connected Cloud (AS63949), Scaleway / Online.net (AS12876) и GCore Labs (AS199524) в дополнение к спискам Hetzner, OVH и DigitalOcean.",
       "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/vps_clouds.srs",
-      "sources": []
+      "sources": [
+        {
+          "type": "plain_subnets",
+          "url": "{metacubex_asn}/AS31898.list"
+        },
+        {
+          "type": "plain_subnets",
+          "url": "{metacubex_asn}/AS20473.list"
+        },
+        {
+          "type": "plain_subnets",
+          "url": "{metacubex_asn}/AS63949.list"
+        },
+        {
+          "type": "plain_subnets",
+          "url": "{metacubex_asn}/AS12876.list"
+        },
+        {
+          "type": "plain_subnets",
+          "url": "{metacubex_asn}/AS199524.list"
+        },
+        {
+          "type": "ripe_stat_asn",
+          "asns": [
+            "AS31898",
+            "AS20473",
+            "AS63949",
+            "AS12876",
+            "AS199524"
+          ]
+        }
+      ],
+      "exclude_lists": [
+        "geoip_ru"
+      ]
     },
     {
       "id": "crypto",
@@ -3545,6 +3710,12 @@
           "type": "plain_subnets",
           "url": "{firehol_ipsets}/dshield.netset"
         }
+      ],
+      "exclude_lists": [
+        "cloudflare",
+        "telegram",
+        "geoip_ru",
+        "ru_whitelist"
       ]
     },
     {
@@ -3564,6 +3735,12 @@
           "type": "plain_subnets",
           "url": "{firehol_ipsets}/firehol_webclient.netset"
         }
+      ],
+      "exclude_lists": [
+        "cloudflare",
+        "telegram",
+        "geoip_ru",
+        "ru_whitelist"
       ]
     },
     {
@@ -3587,6 +3764,12 @@
           "type": "plain_subnets",
           "url": "https://www.binarydefense.com/banlist.txt"
         }
+      ],
+      "exclude_lists": [
+        "cloudflare",
+        "telegram",
+        "geoip_ru",
+        "ru_whitelist"
       ]
     },
     {
