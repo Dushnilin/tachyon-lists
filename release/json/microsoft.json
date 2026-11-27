@@ -3,6 +3,7 @@
   "rules": [
     {
       "domain": [
+        "aurora-customization-usw2.lithium.com",
         "github-api.arkoselabs.com",
         "github-cloud.s3.amazonaws.com",
         "github-production-release-asset-2e65be.s3.amazonaws.com",

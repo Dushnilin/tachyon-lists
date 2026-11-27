@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-11-26T21:28:09Z",
+  "generated_at": "2026-11-27T08:20:13Z",
   "repository": "https://github.com/Dushnilin/tachyon-lists",
   "total_lists": 155,
   "lists": [
@@ -118,7 +118,7 @@
       "fallback_srs": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/sing-box/rule-set-geosite/geosite-ru-blocked-all.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 1643206,
+        "domain_suffix": 1650120,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 853,
@@ -131,8 +131,8 @@
         "domains": "release/domains/ru_blocked_all.lst",
         "subnets": "release/subnets/ru_blocked_all.lst"
       },
-      "sha256_trs": "ef5082bfbfc0793b7de956768b1bda5266600dbc28d9b68cdfb09ab7953d7cc8",
-      "sha256_srs": "c74fa154ea59c56b46b136a05c730f9cd9d4f564cf8bad07ee48a36359d8aadf"
+      "sha256_trs": "399d4153b3a6540af066141599d12ed4cb24943d9366c1306eae5a0171de4eb7",
+      "sha256_srs": "2ac674798e682089b68279ac9f54166958880c436d3d8f7bd3227894de691759"
     },
     {
       "id": "antifilter",
@@ -2587,7 +2587,7 @@
       "description": "[Маршрут: В Прокси / VPN (для Copilot, Xbox и ISO Windows) или Direct] Все сервисы Microsoft: microsoft.com, live.com, office.com, sharepoint.com, onedrive.com, xbox.com, microsoftonline.com, visualstudio.com и серверы обновлений Windows.",
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/microsoft.srs",
       "counts": {
-        "domain": 16,
+        "domain": 17,
         "domain_suffix": 623,
         "domain_keyword": 3,
         "domain_regex": 0,
@@ -2601,8 +2601,8 @@
         "domains": "release/domains/microsoft.lst",
         "subnets": null
       },
-      "sha256_trs": "04779a5d5915e9f48845d0b5406888d48ce195d096768cddb1c49ca585db7be0",
-      "sha256_srs": "6edaaa8d73fae5ad4454e53c2f4d4615a50c5c243d735a611dfee12af28023b9"
+      "sha256_trs": "06e3277ff2fee67907ee0e16e631c66e4fc6812144b2f1ab406f03716014f060",
+      "sha256_srs": "fe2e0049a82202b112b39079e274c51218ec538faf78eb382515f97b130b6f05"
     },
     {
       "id": "google_play",
@@ -3241,7 +3241,7 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 728,
+        "ipv4_cidr": 716,
         "ipv6_cidr": 15
       },
       "files": {
@@ -3251,8 +3251,8 @@
         "domains": null,
         "subnets": "release/subnets/ovh.lst"
       },
-      "sha256_trs": "600281f87097c0908f827bc328c45f21d7772018540b616af09bb9706411bbec",
-      "sha256_srs": "7f15af3a380520463ac675d547b0de3f8a2a1fd0ead0229e13e23ff9a3131c34"
+      "sha256_trs": "6840ec276d4adfcbe12125bfe020132a0655e7adf17c7a3790e9e8880223df9e",
+      "sha256_srs": "577e146b439ffac8f5621a9cb69bcc2a7820aa6982af8335e70ed6e8dfcee7db"
     },
     {
       "id": "digitalocean",
@@ -3315,8 +3315,8 @@
       "description": "[Маршрут: В Прокси / VPN (для туннелирования DoH) или Блокировать (Block — для принудительного использования локального DNS роутера)] Полная база публичных серверов DNS-over-HTTPS (DoH) и DNS-over-TLS (DoT), включая домены и IP-адреса резолверов Cloudflare (1.1.1.1, cloudflare-dns.com), Google (8.8.8.8, dns.google), Quad9 (9.9.9.9, dns.quad9.net), AdGuard DNS, NextDNS, OpenDNS, Control D и Mullvad DNS.",
       "fallback_srs": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-doh.srs",
       "counts": {
-        "domain": 14,
-        "domain_suffix": 3535,
+        "domain": 9,
+        "domain_suffix": 3560,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 28,
@@ -3329,8 +3329,8 @@
         "domains": "release/domains/doh_dot_dns.lst",
         "subnets": "release/subnets/doh_dot_dns.lst"
       },
-      "sha256_trs": "71406e86ad1c75052da956cb5519a081bc99352ebe466c9b2e2a811959bc4d61",
-      "sha256_srs": "7e50d8700173df6b651d0fa88197718144b03d56593127082f93076d96706345"
+      "sha256_trs": "a464c60e3e3ef9673260739aebd979b652184a4c4f0e1ee7e6f71a87eb82051e",
+      "sha256_srs": "e6c705d93694c8dfd349eb62edd8b49e9c98032cc2679732cb508881739fbd28"
     },
     {
       "id": "vps_clouds",
@@ -3345,8 +3345,8 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 2620,
-        "ipv6_cidr": 1201
+        "ipv4_cidr": 2585,
+        "ipv6_cidr": 973
       },
       "files": {
         "trs": "release/tachyon/vps_clouds.trs",
@@ -3355,8 +3355,8 @@
         "domains": null,
         "subnets": "release/subnets/vps_clouds.lst"
       },
-      "sha256_trs": "62ddf4dfc44249363782d0f95ea839ef91e183f5d5bc4ab2e0fcf77b48993269",
-      "sha256_srs": "a35f595242a648303437b6d03e055d896d352fa297722c0401864bc2e3a245c1"
+      "sha256_trs": "901a8e32cb796d2cb157b6a9c842cc7ccee94043158868667b8073ed2fda9208",
+      "sha256_srs": "3e4d2bec5ca6e6a1b481aafb73cbe2dc61de406938938748e8ed67c209f14d07"
     },
     {
       "id": "crypto",
@@ -3758,7 +3758,7 @@
       "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/gambling_block.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 71807,
+        "domain_suffix": 72298,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -3771,8 +3771,8 @@
         "domains": "release/domains/gambling_block.lst",
         "subnets": null
       },
-      "sha256_trs": "e990d031c47710a6d7fef717f5179dc4e60f5815f02f08d3b9d89692956aa77f",
-      "sha256_srs": "b0303ff85994b78d48782b7feba4446322c66190592658c7d38d76dcc136bcc8"
+      "sha256_trs": "f71cd874f94a14fef6a25bd0e3ec17b1bbd49520279bf51d4b8df772caca7836",
+      "sha256_srs": "5c99ac9bf058ee241c768504340259131724e04c1862c038fac75f4556a14f95"
     },
     {
       "id": "phishing_malware_block",
@@ -3784,7 +3784,7 @@
       "fallback_srs": "https://github.com/Dushnilin/tachyon-lists/releases/latest/download/phishing_malware_block.srs",
       "counts": {
         "domain": 0,
-        "domain_suffix": 164813,
+        "domain_suffix": 169613,
         "domain_keyword": 0,
         "domain_regex": 0,
         "ipv4_cidr": 0,
@@ -3797,8 +3797,8 @@
         "domains": "release/domains/phishing_malware_block.lst",
         "subnets": null
       },
-      "sha256_trs": "b2cae0cb52074549632da380645d70cc20df18192582025271508b907f675766",
-      "sha256_srs": "383898f9b8993331233e3467a604824cda804af875683788d0a95db2dba01c73"
+      "sha256_trs": "919b0fbd105b02f467200750c30e9484eaa408bb3a58aec9b0912b07ecee3627",
+      "sha256_srs": "490be746e29e74ddc595108477232f5a21ef8ea77cdad99a325774c2ba5d3dcc"
     },
     {
       "id": "telemetry_mobile_block",
@@ -3839,7 +3839,7 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 17103,
+        "ipv4_cidr": 17095,
         "ipv6_cidr": 74
       },
       "files": {
@@ -3849,8 +3849,8 @@
         "domains": null,
         "subnets": "release/subnets/et_spamhaus_block.lst"
       },
-      "sha256_trs": "ba54333b830e1ea6966c33b38d3985be70dad6a81b9bc6c0fca74b3903b6d315",
-      "sha256_srs": "aa811145f76b9543d96fc6299ceef23534bf2dcbeb7e812ca76bbaf2b30b5477"
+      "sha256_trs": "5a89301100a1b9605579635209bac3e39f6b26720838a0fe3514b071598d8668",
+      "sha256_srs": "4ef8449045c4e9ce3b4c6fa5120aea4c748d9ba8542f29496e04bd63cacf0b5c"
     },
     {
       "id": "hagezi_tif_ip_block",
@@ -3865,7 +3865,7 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 30175,
+        "ipv4_cidr": 30179,
         "ipv6_cidr": 0
       },
       "files": {
@@ -3875,8 +3875,8 @@
         "domains": null,
         "subnets": "release/subnets/hagezi_tif_ip_block.lst"
       },
-      "sha256_trs": "12882c776993be41245369e255a36b0e4d9a94b8c54431b082828de4a790f930",
-      "sha256_srs": "e1edda9446f65a111b92bfa64d1c37083b77882e2b58e46882a814aa08aae5c5"
+      "sha256_trs": "9dab3093cd4afa9873c4dcbaf7acb03b6e88e30b46bd7f7b0e783634e441d549",
+      "sha256_srs": "aabaf2360cb4a8e6c13730c8505a1c2a548b208fe5767852e389cbc7f5943065"
     },
     {
       "id": "botnet_attackers_ip_block",
@@ -3891,7 +3891,7 @@
         "domain_suffix": 0,
         "domain_keyword": 0,
         "domain_regex": 0,
-        "ipv4_cidr": 21972,
+        "ipv4_cidr": 21448,
         "ipv6_cidr": 0
       },
       "files": {
@@ -3901,8 +3901,8 @@
         "domains": null,
         "subnets": "release/subnets/botnet_attackers_ip_block.lst"
       },
-      "sha256_trs": "71ba68aa358bcddb11109ca67c004d27ea17b0c3dd6e63be89883184d6a2d222",
-      "sha256_srs": "e98d0dc846e229b1bca8a3415c28f61752f1d12e4d6615dba9fb5187b947af68"
+      "sha256_trs": "ada213aec3c575096fc9b93ab581cb7bfbfd841869704dc8655a44e44613dc19",
+      "sha256_srs": "ed3d41cd1cb18c1e9c6f3dd23ebc7a8f74a4fa6599bc6e155856c61601b2c7a1"
     },
     {
       "id": "google_meet",
