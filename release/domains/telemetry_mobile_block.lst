@@ -167,6 +167,7 @@ advertising.amazon.nl
 advertising.amazon.sa
 advertising.apple.com
 advp.apple.com
+adx-ads-fr-heytapmobila-c7870.fr-w01.cngw.heytapmobile.com
 adx-ads-fr.heytapmobile.com
 adx-ads-ru.heytapmobile.com
 adx-ads.realmemobile.com
@@ -190,6 +191,7 @@ adx-op-fr.heytapmobile.com
 adx-op-in.heytapmobile.com
 adx-op-ru.heytapmobile.com
 adx-op-sg.heytapmobile.com
+adx-u-fr.heytapmobile.com
 adx-u-in-heytapmobile-a-9ae47.in-s01.cngw.heytapmobile.com
 adx-u-in.heytapmobile.com
 adx-u-ru.heytapmobile.com
@@ -344,7 +346,6 @@ beacon.sina.com.cn
 beaconcdn.qq.com
 bnc.lt
 books-analytics-events.apple.com
-books-analytics-events.news.apple-dns.net
 br-p.vivoglobal.com
 br.ekatox.com
 branch.io
@@ -357,6 +358,7 @@ browser-api-gl.heytapmobile.com
 browser-api-id.heytapmobile.com
 browser-api-in.heytapmobile.com
 browser-api-my.heytapmobile.com
+browser-api-nz.heytapmobile.com
 browser-api-ph.heytapmobile.com
 browser-api-ru.heytapmobile.com
 browser-api-th.heytapmobile.com
@@ -672,6 +674,7 @@ eu-cota.vivoglobal.com
 eu-domaincfg.vivoglobal.com
 eu-errup.vivoglobal.com
 eu-monitor-stsdk.vivoglobal.com
+eu-nrt-stsdk.vivoglobal.com
 eu-onrt-stsdk.vivoglobal.com
 eu-ort-stsdk.vivoglobal.com
 eu-p.vivoglobal.com
@@ -716,7 +719,6 @@ fe.us-west.ono.axp.amazon-adsystem.com
 featureinfo-service-sg.allawnos.com
 federatedanalytics.amazon.com
 feedbackws.fe.apple-dns.cn
-feedbackws.fe.apple-dns.net
 feedbackws.fe2.apple-dns.net
 feedbackws.icloud.com
 feedbackws.icloud.com.cn
@@ -1000,7 +1002,6 @@ logbak.hicloud.com
 logforward.browser.heytapmobi.com
 logger.qmai.cn
 logs.amap.com
-logserver.nzxcloud.cn
 logservice-dra.platform.hicloud.com
 logservice-dre.platform.dbankcloud.cn
 logservice-dre.platform.hicloud.com
@@ -1203,7 +1204,6 @@ news-events.apple.com
 news-notification-events.apple.com
 news-sports-events.apple.com
 notes-analytics-events.apple.com
-notes-analytics-events.news.apple-dns.net
 nsp-logservice-hiview-p01-drru.obs.ru-northwest-2.myhuaweicloud.ru
 nsp-logservice-hiview-p05-dra.obs.ap-southeast-3.myhuaweicloud.com
 nsp-logservice-hiview-p06-dra.obs.ap-southeast-3.myhuaweicloud.com
@@ -1319,7 +1319,6 @@ prod-event-relay-notes-api.v.aaplimg.com
 prod-event-relay-sports-api.v.aaplimg.com
 prod-event-relay-stocks-api.v.aaplimg.com
 prod-event-relay-weather-api.v.aaplimg.com
-prod-event-relay-web-api.v.aaplimg.com
 prod-iwork-events.v.aaplimg.com
 prod-news-notification-events.v.aaplimg.com
 proxy-skadnetwork.apple.com
@@ -1389,6 +1388,7 @@ ru-p.vivoglobal.com
 ru-pnrt-stsdk.vivoglobal.com
 ru-prt-stsdk.vivoglobal.com
 ru-romsp-unifyconfig.vivoglobal.com
+ru-rt-stsdk.vivoglobal.com
 ru-st-exappupgrade.vivoglobal.com
 ru-st-sl.vivoglobal.com
 ru-stsdk.vivoglobal.com
@@ -1488,6 +1488,7 @@ sponsored-ads-eu.amazon.nl
 sponsored-ads-eu.amazon.pl
 sponsored-ads-eu.amazon.sa
 sponsored-ads-eu.amazon.se
+sponsored-ads-eu.jobs.amazon.co.za
 sponsored-ads-euc-1.amazon-adsystem.com
 sponsored-ads-fe.amazon-adsystem.com
 sponsored-ads-na.amazon-adsystem.com
@@ -1532,7 +1533,6 @@ stats.vk-portal.net
 stgdata-ads-fr.heytapmobile.com
 sticker-service-in.allawnos.com
 stocks-analytics-events.apple.com
-stocks-analytics-events.news.apple-dns.net
 storedl1.nearme.com.cn
 storedl3f.nearme.com.cn
 storedl4f.nearme.com.cn
@@ -1680,7 +1680,6 @@ vq-us-east-1.amazon-adsystem.com
 vq-us-west-2.amazon-adsystem.com
 vungle.com
 weather-analytics-events.apple.com
-weather-analytics-events.news.apple-dns.net
 web-analytics.wildberries.ru
 webvisor.com
 webvisor.org
